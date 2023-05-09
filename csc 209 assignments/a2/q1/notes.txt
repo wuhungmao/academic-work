@@ -1,0 +1,39 @@
+Things to do:
+
+	1) understand test_libDict.c
+
+	2) Notice the #undef DEBUG in libDict.c
+           Change this to #def DEBUG and recompie and run
+
+	3) Build your solution one step at a time, here is a
+	   good order.
+
+		Dict * dictNew();
+		void dictFree(Dict *d);
+		int dictPut(Dict *d, char *key, int value);
+		DictEntry *dictGet(Dict *d, char *key);
+		int dictDel(Dict *d, char *key);
+
+	4) Take a look at the out directory, that was generated via
+
+		vim libDict.c #undef DEBUG
+		make
+		valgrind ./test_libDict 1>out/test_libDict.stdout 2> out/test_libDict.stderr
+		
+		vim libDict.c #define DEBUG
+		make
+		valgrind ./test_libDict 1>out/d_test_libDict.stdout 2> out/d_test_libDict.stderr
+		
+	   When you finish the assignment your output should match.
+
+	5) ADVICE: 
+	   a) Take this one simple step at a time, do little things, 
+	      make sure they work, compile, test, check, then go on to the
+	      next step. Writing lots of broken code makes it difficult to
+	      debug. 
+	   b) Make sure you understand
+	      1) What you want to happen
+	      2) The algorithm you want to implement
+	      3) Write code
+	      4) Check that (3) matches (2) and has the effect (1)
+

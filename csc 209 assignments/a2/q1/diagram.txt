@@ -1,0 +1,12 @@
+Dict *d=dictNew();
+...
+
+
+                  Dict
+               +--------------+           DictEntry    DictEntry    DictEntry    DictEntry
+        d ---->| numEntries=3 |        +-----------------------------------------------------+
+               | entries  ---------->  | (key, value) (key, value) (key, value) (xxx, xxxxx) |
+               | capacity=4   |        +-----------------------------------------------------+
+               +--------------+        
+
+

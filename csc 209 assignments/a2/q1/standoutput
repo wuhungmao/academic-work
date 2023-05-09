@@ -1,0 +1,1117 @@
+BEGIN: test_dictNew
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+	Dict: numEntries=0 capacity=8 []
+END  : test_dictNew
+BEGIN: test_dictGet_empty
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+END  : test_dictGet_empty
+BEGIN: test_stressTest
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+dictPut(d,(null))
+	Dict: numEntries=0 capacity=8 []
+BEGIN: addWords
+dictPut(d,A)
+	Dict: numEntries=0 capacity=8 []
+	Dict: numEntries=0 capacity=8 []
+	Dict: numEntries=1 capacity=8 []
+dictPut(d,A's)
+	Dict: numEntries=1 capacity=8 []
+	Dict: numEntries=1 capacity=8 []
+	Dict: numEntries=2 capacity=8 []
+dictPut(d,AMD)
+	Dict: numEntries=2 capacity=8 []
+	Dict: numEntries=2 capacity=8 []
+	Dict: numEntries=3 capacity=8 []
+dictPut(d,AMD's)
+	Dict: numEntries=3 capacity=8 []
+	Dict: numEntries=3 capacity=8 []
+	Dict: numEntries=4 capacity=8 []
+dictPut(d,AOL)
+	Dict: numEntries=4 capacity=8 []
+	Dict: numEntries=4 capacity=8 []
+	Dict: numEntries=5 capacity=8 []
+dictPut(d,AOL's)
+	Dict: numEntries=5 capacity=8 []
+	Dict: numEntries=5 capacity=8 []
+	Dict: numEntries=6 capacity=8 []
+dictPut(d,AWS)
+	Dict: numEntries=6 capacity=8 []
+	Dict: numEntries=6 capacity=8 []
+	Dict: numEntries=7 capacity=8 []
+dictPut(d,AWS's)
+	Dict: numEntries=7 capacity=8 []
+	Dict: numEntries=7 capacity=8 []
+	Dict: numEntries=8 capacity=8 []
+dictPut(d,Aachen)
+	Dict: numEntries=8 capacity=8 []
+	Dict: numEntries=8 capacity=8 []
+	Dict: numEntries=9 capacity=16 []
+dictPut(d,Aachen's)
+	Dict: numEntries=9 capacity=16 []
+	Dict: numEntries=9 capacity=16 []
+	Dict: numEntries=10 capacity=16 []
+dictPut(d,Aaliyah)
+	Dict: numEntries=10 capacity=16 []
+	Dict: numEntries=10 capacity=16 []
+	Dict: numEntries=11 capacity=16 []
+dictPut(d,Aaliyah's)
+	Dict: numEntries=11 capacity=16 []
+	Dict: numEntries=11 capacity=16 []
+	Dict: numEntries=12 capacity=16 []
+dictPut(d,Aaron)
+	Dict: numEntries=12 capacity=16 []
+	Dict: numEntries=12 capacity=16 []
+	Dict: numEntries=13 capacity=16 []
+dictPut(d,Aaron's)
+	Dict: numEntries=13 capacity=16 []
+	Dict: numEntries=13 capacity=16 []
+	Dict: numEntries=14 capacity=16 []
+dictPut(d,Abbas)
+	Dict: numEntries=14 capacity=16 []
+	Dict: numEntries=14 capacity=16 []
+	Dict: numEntries=15 capacity=16 []
+dictPut(d,Abbas's)
+	Dict: numEntries=15 capacity=16 []
+	Dict: numEntries=15 capacity=16 []
+	Dict: numEntries=16 capacity=16 []
+dictPut(d,Abbasid)
+	Dict: numEntries=16 capacity=16 []
+	Dict: numEntries=16 capacity=16 []
+	Dict: numEntries=17 capacity=32 []
+dictPut(d,Abbasid's)
+	Dict: numEntries=17 capacity=32 []
+	Dict: numEntries=17 capacity=32 []
+	Dict: numEntries=18 capacity=32 []
+dictPut(d,Abbott)
+	Dict: numEntries=18 capacity=32 []
+	Dict: numEntries=18 capacity=32 []
+	Dict: numEntries=19 capacity=32 []
+dictPut(d,Abbott's)
+	Dict: numEntries=19 capacity=32 []
+	Dict: numEntries=19 capacity=32 []
+	Dict: numEntries=20 capacity=32 []
+dictPut(d,Abby)
+	Dict: numEntries=20 capacity=32 []
+	Dict: numEntries=20 capacity=32 []
+	Dict: numEntries=21 capacity=32 []
+dictPut(d,Abby's)
+	Dict: numEntries=21 capacity=32 []
+	Dict: numEntries=21 capacity=32 []
+	Dict: numEntries=22 capacity=32 []
+dictPut(d,Abdul)
+	Dict: numEntries=22 capacity=32 []
+	Dict: numEntries=22 capacity=32 []
+	Dict: numEntries=23 capacity=32 []
+dictPut(d,Abdul's)
+	Dict: numEntries=23 capacity=32 []
+	Dict: numEntries=23 capacity=32 []
+	Dict: numEntries=24 capacity=32 []
+dictPut(d,Abe)
+	Dict: numEntries=24 capacity=32 []
+	Dict: numEntries=24 capacity=32 []
+	Dict: numEntries=25 capacity=32 []
+dictPut(d,Abe's)
+	Dict: numEntries=25 capacity=32 []
+	Dict: numEntries=25 capacity=32 []
+	Dict: numEntries=26 capacity=32 []
+dictPut(d,Abel)
+	Dict: numEntries=26 capacity=32 []
+	Dict: numEntries=26 capacity=32 []
+	Dict: numEntries=27 capacity=32 []
+dictPut(d,Abel's)
+	Dict: numEntries=27 capacity=32 []
+	Dict: numEntries=27 capacity=32 []
+	Dict: numEntries=28 capacity=32 []
+dictPut(d,Abelard)
+	Dict: numEntries=28 capacity=32 []
+	Dict: numEntries=28 capacity=32 []
+	Dict: numEntries=29 capacity=32 []
+dictPut(d,Abelard's)
+	Dict: numEntries=29 capacity=32 []
+	Dict: numEntries=29 capacity=32 []
+	Dict: numEntries=30 capacity=32 []
+dictPut(d,Abelson)
+	Dict: numEntries=30 capacity=32 []
+	Dict: numEntries=30 capacity=32 []
+	Dict: numEntries=31 capacity=32 []
+dictPut(d,Abelson's)
+	Dict: numEntries=31 capacity=32 []
+	Dict: numEntries=31 capacity=32 []
+	Dict: numEntries=32 capacity=32 []
+dictPut(d,Aberdeen)
+	Dict: numEntries=32 capacity=32 []
+	Dict: numEntries=32 capacity=32 []
+	Dict: numEntries=33 capacity=64 []
+dictPut(d,Aberdeen's)
+	Dict: numEntries=33 capacity=64 []
+	Dict: numEntries=33 capacity=64 []
+	Dict: numEntries=34 capacity=64 []
+dictPut(d,Abernathy)
+	Dict: numEntries=34 capacity=64 []
+	Dict: numEntries=34 capacity=64 []
+	Dict: numEntries=35 capacity=64 []
+dictPut(d,Abernathy's)
+	Dict: numEntries=35 capacity=64 []
+	Dict: numEntries=35 capacity=64 []
+	Dict: numEntries=36 capacity=64 []
+dictPut(d,Abidjan)
+	Dict: numEntries=36 capacity=64 []
+	Dict: numEntries=36 capacity=64 []
+	Dict: numEntries=37 capacity=64 []
+dictPut(d,Abidjan's)
+	Dict: numEntries=37 capacity=64 []
+	Dict: numEntries=37 capacity=64 []
+	Dict: numEntries=38 capacity=64 []
+dictPut(d,Abigail)
+	Dict: numEntries=38 capacity=64 []
+	Dict: numEntries=38 capacity=64 []
+	Dict: numEntries=39 capacity=64 []
+dictPut(d,Abigail's)
+	Dict: numEntries=39 capacity=64 []
+	Dict: numEntries=39 capacity=64 []
+	Dict: numEntries=40 capacity=64 []
+dictPut(d,Abilene)
+	Dict: numEntries=40 capacity=64 []
+	Dict: numEntries=40 capacity=64 []
+	Dict: numEntries=41 capacity=64 []
+dictPut(d,Abilene's)
+	Dict: numEntries=41 capacity=64 []
+	Dict: numEntries=41 capacity=64 []
+	Dict: numEntries=42 capacity=64 []
+dictPut(d,Abner)
+	Dict: numEntries=42 capacity=64 []
+	Dict: numEntries=42 capacity=64 []
+	Dict: numEntries=43 capacity=64 []
+dictPut(d,Abner's)
+	Dict: numEntries=43 capacity=64 []
+	Dict: numEntries=43 capacity=64 []
+	Dict: numEntries=44 capacity=64 []
+dictPut(d,Abraham)
+	Dict: numEntries=44 capacity=64 []
+	Dict: numEntries=44 capacity=64 []
+	Dict: numEntries=45 capacity=64 []
+dictPut(d,Abraham's)
+	Dict: numEntries=45 capacity=64 []
+	Dict: numEntries=45 capacity=64 []
+	Dict: numEntries=46 capacity=64 []
+dictPut(d,Abram)
+	Dict: numEntries=46 capacity=64 []
+	Dict: numEntries=46 capacity=64 []
+	Dict: numEntries=47 capacity=64 []
+dictPut(d,Abram's)
+	Dict: numEntries=47 capacity=64 []
+	Dict: numEntries=47 capacity=64 []
+	Dict: numEntries=48 capacity=64 []
+dictPut(d,Abrams)
+	Dict: numEntries=48 capacity=64 []
+	Dict: numEntries=48 capacity=64 []
+	Dict: numEntries=49 capacity=64 []
+dictPut(d,Abrams's)
+	Dict: numEntries=49 capacity=64 []
+	Dict: numEntries=49 capacity=64 []
+	Dict: numEntries=50 capacity=64 []
+dictPut(d,Absalom)
+	Dict: numEntries=50 capacity=64 []
+	Dict: numEntries=50 capacity=64 []
+	Dict: numEntries=51 capacity=64 []
+dictPut(d,Absalom's)
+	Dict: numEntries=51 capacity=64 []
+	Dict: numEntries=51 capacity=64 []
+	Dict: numEntries=52 capacity=64 []
+dictPut(d,Abuja)
+	Dict: numEntries=52 capacity=64 []
+	Dict: numEntries=52 capacity=64 []
+	Dict: numEntries=53 capacity=64 []
+dictPut(d,Abuja's)
+	Dict: numEntries=53 capacity=64 []
+	Dict: numEntries=53 capacity=64 []
+	Dict: numEntries=54 capacity=64 []
+dictPut(d,Abyssinia)
+	Dict: numEntries=54 capacity=64 []
+	Dict: numEntries=54 capacity=64 []
+	Dict: numEntries=55 capacity=64 []
+dictPut(d,Abyssinia's)
+	Dict: numEntries=55 capacity=64 []
+	Dict: numEntries=55 capacity=64 []
+	Dict: numEntries=56 capacity=64 []
+dictPut(d,Abyssinian)
+	Dict: numEntries=56 capacity=64 []
+	Dict: numEntries=56 capacity=64 []
+	Dict: numEntries=57 capacity=64 []
+dictPut(d,Abyssinian's)
+	Dict: numEntries=57 capacity=64 []
+	Dict: numEntries=57 capacity=64 []
+	Dict: numEntries=58 capacity=64 []
+dictPut(d,Ac)
+	Dict: numEntries=58 capacity=64 []
+	Dict: numEntries=58 capacity=64 []
+	Dict: numEntries=59 capacity=64 []
+dictPut(d,Ac's)
+	Dict: numEntries=59 capacity=64 []
+	Dict: numEntries=59 capacity=64 []
+	Dict: numEntries=60 capacity=64 []
+dictPut(d,Acadia)
+	Dict: numEntries=60 capacity=64 []
+	Dict: numEntries=60 capacity=64 []
+	Dict: numEntries=61 capacity=64 []
+dictPut(d,Acadia's)
+	Dict: numEntries=61 capacity=64 []
+	Dict: numEntries=61 capacity=64 []
+	Dict: numEntries=62 capacity=64 []
+dictPut(d,Acapulco)
+	Dict: numEntries=62 capacity=64 []
+	Dict: numEntries=62 capacity=64 []
+	Dict: numEntries=63 capacity=64 []
+dictPut(d,Acapulco's)
+	Dict: numEntries=63 capacity=64 []
+	Dict: numEntries=63 capacity=64 []
+	Dict: numEntries=64 capacity=64 []
+dictPut(d,Accenture)
+	Dict: numEntries=64 capacity=64 []
+	Dict: numEntries=64 capacity=64 []
+	Dict: numEntries=65 capacity=128 []
+dictPut(d,Accenture's)
+	Dict: numEntries=65 capacity=128 []
+	Dict: numEntries=65 capacity=128 []
+	Dict: numEntries=66 capacity=128 []
+dictPut(d,Accra)
+	Dict: numEntries=66 capacity=128 []
+	Dict: numEntries=66 capacity=128 []
+	Dict: numEntries=67 capacity=128 []
+dictPut(d,Accra's)
+	Dict: numEntries=67 capacity=128 []
+	Dict: numEntries=67 capacity=128 []
+	Dict: numEntries=68 capacity=128 []
+dictPut(d,Acevedo)
+	Dict: numEntries=68 capacity=128 []
+	Dict: numEntries=68 capacity=128 []
+	Dict: numEntries=69 capacity=128 []
+dictPut(d,Acevedo's)
+	Dict: numEntries=69 capacity=128 []
+	Dict: numEntries=69 capacity=128 []
+	Dict: numEntries=70 capacity=128 []
+dictPut(d,Achaean)
+	Dict: numEntries=70 capacity=128 []
+	Dict: numEntries=70 capacity=128 []
+	Dict: numEntries=71 capacity=128 []
+dictPut(d,Achaean's)
+	Dict: numEntries=71 capacity=128 []
+	Dict: numEntries=71 capacity=128 []
+	Dict: numEntries=72 capacity=128 []
+dictPut(d,Achebe)
+	Dict: numEntries=72 capacity=128 []
+	Dict: numEntries=72 capacity=128 []
+	Dict: numEntries=73 capacity=128 []
+dictPut(d,Achebe's)
+	Dict: numEntries=73 capacity=128 []
+	Dict: numEntries=73 capacity=128 []
+	Dict: numEntries=74 capacity=128 []
+dictPut(d,Achernar)
+	Dict: numEntries=74 capacity=128 []
+	Dict: numEntries=74 capacity=128 []
+	Dict: numEntries=75 capacity=128 []
+dictPut(d,Achernar's)
+	Dict: numEntries=75 capacity=128 []
+	Dict: numEntries=75 capacity=128 []
+	Dict: numEntries=76 capacity=128 []
+dictPut(d,Acheson)
+	Dict: numEntries=76 capacity=128 []
+	Dict: numEntries=76 capacity=128 []
+	Dict: numEntries=77 capacity=128 []
+dictPut(d,Acheson's)
+	Dict: numEntries=77 capacity=128 []
+	Dict: numEntries=77 capacity=128 []
+	Dict: numEntries=78 capacity=128 []
+dictPut(d,Achilles)
+	Dict: numEntries=78 capacity=128 []
+	Dict: numEntries=78 capacity=128 []
+	Dict: numEntries=79 capacity=128 []
+dictPut(d,Achilles's)
+	Dict: numEntries=79 capacity=128 []
+	Dict: numEntries=79 capacity=128 []
+	Dict: numEntries=80 capacity=128 []
+dictPut(d,Aconcagua)
+	Dict: numEntries=80 capacity=128 []
+	Dict: numEntries=80 capacity=128 []
+	Dict: numEntries=81 capacity=128 []
+dictPut(d,Aconcagua's)
+	Dict: numEntries=81 capacity=128 []
+	Dict: numEntries=81 capacity=128 []
+	Dict: numEntries=82 capacity=128 []
+dictPut(d,Acosta)
+	Dict: numEntries=82 capacity=128 []
+	Dict: numEntries=82 capacity=128 []
+	Dict: numEntries=83 capacity=128 []
+dictPut(d,Acosta's)
+	Dict: numEntries=83 capacity=128 []
+	Dict: numEntries=83 capacity=128 []
+	Dict: numEntries=84 capacity=128 []
+dictPut(d,Acropolis)
+	Dict: numEntries=84 capacity=128 []
+	Dict: numEntries=84 capacity=128 []
+	Dict: numEntries=85 capacity=128 []
+dictPut(d,Acrux)
+	Dict: numEntries=85 capacity=128 []
+	Dict: numEntries=85 capacity=128 []
+	Dict: numEntries=86 capacity=128 []
+dictPut(d,Acrux's)
+	Dict: numEntries=86 capacity=128 []
+	Dict: numEntries=86 capacity=128 []
+	Dict: numEntries=87 capacity=128 []
+dictPut(d,Actaeon)
+	Dict: numEntries=87 capacity=128 []
+	Dict: numEntries=87 capacity=128 []
+	Dict: numEntries=88 capacity=128 []
+dictPut(d,Actaeon's)
+	Dict: numEntries=88 capacity=128 []
+	Dict: numEntries=88 capacity=128 []
+	Dict: numEntries=89 capacity=128 []
+dictPut(d,Acton)
+	Dict: numEntries=89 capacity=128 []
+	Dict: numEntries=89 capacity=128 []
+	Dict: numEntries=90 capacity=128 []
+dictPut(d,Acton's)
+	Dict: numEntries=90 capacity=128 []
+	Dict: numEntries=90 capacity=128 []
+	Dict: numEntries=91 capacity=128 []
+dictPut(d,Acts)
+	Dict: numEntries=91 capacity=128 []
+	Dict: numEntries=91 capacity=128 []
+	Dict: numEntries=92 capacity=128 []
+dictPut(d,Acts's)
+	Dict: numEntries=92 capacity=128 []
+	Dict: numEntries=92 capacity=128 []
+	Dict: numEntries=93 capacity=128 []
+dictPut(d,Acuff)
+	Dict: numEntries=93 capacity=128 []
+	Dict: numEntries=93 capacity=128 []
+	Dict: numEntries=94 capacity=128 []
+dictPut(d,Acuff's)
+	Dict: numEntries=94 capacity=128 []
+	Dict: numEntries=94 capacity=128 []
+	Dict: numEntries=95 capacity=128 []
+dictPut(d,Ada)
+	Dict: numEntries=95 capacity=128 []
+	Dict: numEntries=95 capacity=128 []
+	Dict: numEntries=96 capacity=128 []
+dictPut(d,Ada's)
+	Dict: numEntries=96 capacity=128 []
+	Dict: numEntries=96 capacity=128 []
+	Dict: numEntries=97 capacity=128 []
+dictPut(d,Adam)
+	Dict: numEntries=97 capacity=128 []
+	Dict: numEntries=97 capacity=128 []
+	Dict: numEntries=98 capacity=128 []
+dictPut(d,Adam's)
+	Dict: numEntries=98 capacity=128 []
+	Dict: numEntries=98 capacity=128 []
+	Dict: numEntries=99 capacity=128 []
+dictPut(d,Adams)
+	Dict: numEntries=99 capacity=128 []
+	Dict: numEntries=99 capacity=128 []
+	Dict: numEntries=100 capacity=128 []
+dictPut(d,Adams's)
+	Dict: numEntries=100 capacity=128 []
+	Dict: numEntries=100 capacity=128 []
+	Dict: numEntries=101 capacity=128 []
+dictPut(d,Adan)
+	Dict: numEntries=101 capacity=128 []
+	Dict: numEntries=101 capacity=128 []
+	Dict: numEntries=102 capacity=128 []
+dictPut(d,Adan's)
+	Dict: numEntries=102 capacity=128 []
+	Dict: numEntries=102 capacity=128 []
+	Dict: numEntries=103 capacity=128 []
+dictPut(d,Adana)
+	Dict: numEntries=103 capacity=128 []
+	Dict: numEntries=103 capacity=128 []
+	Dict: numEntries=104 capacity=128 []
+dictPut(d,Adana's)
+	Dict: numEntries=104 capacity=128 []
+	Dict: numEntries=104 capacity=128 []
+	Dict: numEntries=105 capacity=128 []
+dictPut(d,Adar)
+	Dict: numEntries=105 capacity=128 []
+	Dict: numEntries=105 capacity=128 []
+	Dict: numEntries=106 capacity=128 []
+dictPut(d,Adar's)
+	Dict: numEntries=106 capacity=128 []
+	Dict: numEntries=106 capacity=128 []
+	Dict: numEntries=107 capacity=128 []
+dictPut(d,Addams)
+	Dict: numEntries=107 capacity=128 []
+	Dict: numEntries=107 capacity=128 []
+	Dict: numEntries=108 capacity=128 []
+dictPut(d,Addams's)
+	Dict: numEntries=108 capacity=128 []
+	Dict: numEntries=108 capacity=128 []
+	Dict: numEntries=109 capacity=128 []
+dictPut(d,Adderley)
+	Dict: numEntries=109 capacity=128 []
+	Dict: numEntries=109 capacity=128 []
+	Dict: numEntries=110 capacity=128 []
+dictPut(d,Adderley's)
+	Dict: numEntries=110 capacity=128 []
+	Dict: numEntries=110 capacity=128 []
+	Dict: numEntries=111 capacity=128 []
+dictPut(d,Addie)
+	Dict: numEntries=111 capacity=128 []
+	Dict: numEntries=111 capacity=128 []
+	Dict: numEntries=112 capacity=128 []
+dictPut(d,Addie's)
+	Dict: numEntries=112 capacity=128 []
+	Dict: numEntries=112 capacity=128 []
+	Dict: numEntries=113 capacity=128 []
+dictPut(d,Addison)
+	Dict: numEntries=113 capacity=128 []
+	Dict: numEntries=113 capacity=128 []
+	Dict: numEntries=114 capacity=128 []
+dictPut(d,Addison's)
+	Dict: numEntries=114 capacity=128 []
+	Dict: numEntries=114 capacity=128 []
+	Dict: numEntries=115 capacity=128 []
+dictPut(d,Adela)
+	Dict: numEntries=115 capacity=128 []
+	Dict: numEntries=115 capacity=128 []
+	Dict: numEntries=116 capacity=128 []
+dictPut(d,Adela's)
+	Dict: numEntries=116 capacity=128 []
+	Dict: numEntries=116 capacity=128 []
+	Dict: numEntries=117 capacity=128 []
+dictPut(d,Adelaide)
+	Dict: numEntries=117 capacity=128 []
+	Dict: numEntries=117 capacity=128 []
+	Dict: numEntries=118 capacity=128 []
+dictPut(d,Adelaide's)
+	Dict: numEntries=118 capacity=128 []
+	Dict: numEntries=118 capacity=128 []
+	Dict: numEntries=119 capacity=128 []
+dictPut(d,Adele)
+	Dict: numEntries=119 capacity=128 []
+	Dict: numEntries=119 capacity=128 []
+	Dict: numEntries=120 capacity=128 []
+dictPut(d,Adele's)
+	Dict: numEntries=120 capacity=128 []
+	Dict: numEntries=120 capacity=128 []
+	Dict: numEntries=121 capacity=128 []
+dictPut(d,Adeline)
+	Dict: numEntries=121 capacity=128 []
+	Dict: numEntries=121 capacity=128 []
+	Dict: numEntries=122 capacity=128 []
+dictPut(d,Adeline's)
+	Dict: numEntries=122 capacity=128 []
+	Dict: numEntries=122 capacity=128 []
+	Dict: numEntries=123 capacity=128 []
+dictPut(d,Aden)
+	Dict: numEntries=123 capacity=128 []
+	Dict: numEntries=123 capacity=128 []
+	Dict: numEntries=124 capacity=128 []
+dictPut(d,Aden's)
+	Dict: numEntries=124 capacity=128 []
+	Dict: numEntries=124 capacity=128 []
+	Dict: numEntries=125 capacity=128 []
+dictPut(d,Adenauer)
+	Dict: numEntries=125 capacity=128 []
+	Dict: numEntries=125 capacity=128 []
+	Dict: numEntries=126 capacity=128 []
+dictPut(d,Adenauer's)
+	Dict: numEntries=126 capacity=128 []
+	Dict: numEntries=126 capacity=128 []
+	Dict: numEntries=127 capacity=128 []
+dictPut(d,Adhara)
+	Dict: numEntries=127 capacity=128 []
+	Dict: numEntries=127 capacity=128 []
+	Dict: numEntries=128 capacity=128 []
+dictPut(d,Adhara's)
+	Dict: numEntries=128 capacity=128 []
+	Dict: numEntries=128 capacity=128 []
+	Dict: numEntries=129 capacity=256 []
+dictPut(d,Adidas)
+	Dict: numEntries=129 capacity=256 []
+	Dict: numEntries=129 capacity=256 []
+	Dict: numEntries=130 capacity=256 []
+dictPut(d,Adidas's)
+	Dict: numEntries=130 capacity=256 []
+	Dict: numEntries=130 capacity=256 []
+	Dict: numEntries=131 capacity=256 []
+dictPut(d,Adirondack)
+	Dict: numEntries=131 capacity=256 []
+	Dict: numEntries=131 capacity=256 []
+	Dict: numEntries=132 capacity=256 []
+dictPut(d,Adirondack's)
+	Dict: numEntries=132 capacity=256 []
+	Dict: numEntries=132 capacity=256 []
+	Dict: numEntries=133 capacity=256 []
+dictPut(d,Adirondacks)
+	Dict: numEntries=133 capacity=256 []
+	Dict: numEntries=133 capacity=256 []
+	Dict: numEntries=134 capacity=256 []
+dictPut(d,Adirondacks's)
+	Dict: numEntries=134 capacity=256 []
+	Dict: numEntries=134 capacity=256 []
+	Dict: numEntries=135 capacity=256 []
+dictPut(d,Adkins)
+	Dict: numEntries=135 capacity=256 []
+	Dict: numEntries=135 capacity=256 []
+	Dict: numEntries=136 capacity=256 []
+dictPut(d,Adkins's)
+	Dict: numEntries=136 capacity=256 []
+	Dict: numEntries=136 capacity=256 []
+	Dict: numEntries=137 capacity=256 []
+dictPut(d,Adler)
+	Dict: numEntries=137 capacity=256 []
+	Dict: numEntries=137 capacity=256 []
+	Dict: numEntries=138 capacity=256 []
+dictPut(d,Adler's)
+	Dict: numEntries=138 capacity=256 []
+	Dict: numEntries=138 capacity=256 []
+	Dict: numEntries=139 capacity=256 []
+dictPut(d,Adolf)
+	Dict: numEntries=139 capacity=256 []
+	Dict: numEntries=139 capacity=256 []
+	Dict: numEntries=140 capacity=256 []
+dictPut(d,Adolf's)
+	Dict: numEntries=140 capacity=256 []
+	Dict: numEntries=140 capacity=256 []
+	Dict: numEntries=141 capacity=256 []
+dictPut(d,Adolfo)
+	Dict: numEntries=141 capacity=256 []
+	Dict: numEntries=141 capacity=256 []
+	Dict: numEntries=142 capacity=256 []
+dictPut(d,Adolfo's)
+	Dict: numEntries=142 capacity=256 []
+	Dict: numEntries=142 capacity=256 []
+	Dict: numEntries=143 capacity=256 []
+dictPut(d,Adolph)
+	Dict: numEntries=143 capacity=256 []
+	Dict: numEntries=143 capacity=256 []
+	Dict: numEntries=144 capacity=256 []
+dictPut(d,Adolph's)
+	Dict: numEntries=144 capacity=256 []
+	Dict: numEntries=144 capacity=256 []
+	Dict: numEntries=145 capacity=256 []
+dictPut(d,Adonis)
+	Dict: numEntries=145 capacity=256 []
+	Dict: numEntries=145 capacity=256 []
+	Dict: numEntries=146 capacity=256 []
+dictPut(d,Adonis's)
+	Dict: numEntries=146 capacity=256 []
+	Dict: numEntries=146 capacity=256 []
+	Dict: numEntries=147 capacity=256 []
+dictPut(d,Adonises)
+	Dict: numEntries=147 capacity=256 []
+	Dict: numEntries=147 capacity=256 []
+	Dict: numEntries=148 capacity=256 []
+dictPut(d,Adrian)
+	Dict: numEntries=148 capacity=256 []
+	Dict: numEntries=148 capacity=256 []
+	Dict: numEntries=149 capacity=256 []
+dictPut(d,Adrian's)
+	Dict: numEntries=149 capacity=256 []
+	Dict: numEntries=149 capacity=256 []
+	Dict: numEntries=150 capacity=256 []
+END  : addWords
+BEGIN: checkWords
+END  : checkWords
+BEGIN: delWords
+dictDel(d,A's)
+	Dict: numEntries=150 capacity=256 []
+	Dict: numEntries=149 capacity=256 []
+dictDel(d,AMD's)
+	Dict: numEntries=149 capacity=256 []
+	Dict: numEntries=148 capacity=256 []
+dictDel(d,AOL's)
+	Dict: numEntries=148 capacity=256 []
+	Dict: numEntries=147 capacity=256 []
+dictDel(d,AWS's)
+	Dict: numEntries=147 capacity=256 []
+	Dict: numEntries=146 capacity=256 []
+dictDel(d,Aachen's)
+	Dict: numEntries=146 capacity=256 []
+	Dict: numEntries=145 capacity=256 []
+dictDel(d,Aaliyah's)
+	Dict: numEntries=145 capacity=256 []
+	Dict: numEntries=144 capacity=256 []
+dictDel(d,Aaron's)
+	Dict: numEntries=144 capacity=256 []
+	Dict: numEntries=143 capacity=256 []
+dictDel(d,Abbas's)
+	Dict: numEntries=143 capacity=256 []
+	Dict: numEntries=142 capacity=256 []
+dictDel(d,Abbasid's)
+	Dict: numEntries=142 capacity=256 []
+	Dict: numEntries=141 capacity=256 []
+dictDel(d,Abbott's)
+	Dict: numEntries=141 capacity=256 []
+	Dict: numEntries=140 capacity=256 []
+dictDel(d,Abby's)
+	Dict: numEntries=140 capacity=256 []
+	Dict: numEntries=139 capacity=256 []
+dictDel(d,Abdul's)
+	Dict: numEntries=139 capacity=256 []
+	Dict: numEntries=138 capacity=256 []
+dictDel(d,Abe's)
+	Dict: numEntries=138 capacity=256 []
+	Dict: numEntries=137 capacity=256 []
+dictDel(d,Abel's)
+	Dict: numEntries=137 capacity=256 []
+	Dict: numEntries=136 capacity=256 []
+dictDel(d,Abelard's)
+	Dict: numEntries=136 capacity=256 []
+	Dict: numEntries=135 capacity=256 []
+dictDel(d,Abelson's)
+	Dict: numEntries=135 capacity=256 []
+	Dict: numEntries=134 capacity=256 []
+dictDel(d,Aberdeen's)
+	Dict: numEntries=134 capacity=256 []
+	Dict: numEntries=133 capacity=256 []
+dictDel(d,Abernathy's)
+	Dict: numEntries=133 capacity=256 []
+	Dict: numEntries=132 capacity=256 []
+dictDel(d,Abidjan's)
+	Dict: numEntries=132 capacity=256 []
+	Dict: numEntries=131 capacity=256 []
+dictDel(d,Abigail's)
+	Dict: numEntries=131 capacity=256 []
+	Dict: numEntries=130 capacity=256 []
+dictDel(d,Abilene's)
+	Dict: numEntries=130 capacity=256 []
+	Dict: numEntries=129 capacity=256 []
+dictDel(d,Abner's)
+	Dict: numEntries=129 capacity=256 []
+	Dict: numEntries=128 capacity=256 []
+dictDel(d,Abraham's)
+	Dict: numEntries=128 capacity=256 []
+	Dict: numEntries=127 capacity=256 []
+dictDel(d,Abram's)
+	Dict: numEntries=127 capacity=256 []
+	Dict: numEntries=126 capacity=256 []
+dictDel(d,Abrams's)
+	Dict: numEntries=126 capacity=256 []
+	Dict: numEntries=125 capacity=256 []
+dictDel(d,Absalom's)
+	Dict: numEntries=125 capacity=256 []
+	Dict: numEntries=124 capacity=256 []
+dictDel(d,Abuja's)
+	Dict: numEntries=124 capacity=256 []
+	Dict: numEntries=123 capacity=256 []
+dictDel(d,Abyssinia's)
+	Dict: numEntries=123 capacity=256 []
+	Dict: numEntries=122 capacity=256 []
+dictDel(d,Abyssinian's)
+	Dict: numEntries=122 capacity=256 []
+	Dict: numEntries=121 capacity=256 []
+dictDel(d,Ac's)
+	Dict: numEntries=121 capacity=256 []
+	Dict: numEntries=120 capacity=256 []
+dictDel(d,Acadia's)
+	Dict: numEntries=120 capacity=256 []
+	Dict: numEntries=119 capacity=256 []
+dictDel(d,Acapulco's)
+	Dict: numEntries=119 capacity=256 []
+	Dict: numEntries=118 capacity=256 []
+dictDel(d,Accenture's)
+	Dict: numEntries=118 capacity=256 []
+	Dict: numEntries=117 capacity=256 []
+dictDel(d,Accra's)
+	Dict: numEntries=117 capacity=256 []
+	Dict: numEntries=116 capacity=256 []
+dictDel(d,Acevedo's)
+	Dict: numEntries=116 capacity=256 []
+	Dict: numEntries=115 capacity=256 []
+dictDel(d,Achaean's)
+	Dict: numEntries=115 capacity=256 []
+	Dict: numEntries=114 capacity=256 []
+dictDel(d,Achebe's)
+	Dict: numEntries=114 capacity=256 []
+	Dict: numEntries=113 capacity=256 []
+dictDel(d,Achernar's)
+	Dict: numEntries=113 capacity=256 []
+	Dict: numEntries=112 capacity=256 []
+dictDel(d,Acheson's)
+	Dict: numEntries=112 capacity=256 []
+	Dict: numEntries=111 capacity=256 []
+dictDel(d,Achilles's)
+	Dict: numEntries=111 capacity=256 []
+	Dict: numEntries=110 capacity=256 []
+dictDel(d,Aconcagua's)
+	Dict: numEntries=110 capacity=256 []
+	Dict: numEntries=109 capacity=256 []
+dictDel(d,Acosta's)
+	Dict: numEntries=109 capacity=256 []
+	Dict: numEntries=108 capacity=256 []
+dictDel(d,Acrux)
+	Dict: numEntries=108 capacity=256 []
+	Dict: numEntries=107 capacity=256 []
+dictDel(d,Actaeon)
+	Dict: numEntries=107 capacity=256 []
+	Dict: numEntries=106 capacity=256 []
+dictDel(d,Acton)
+	Dict: numEntries=106 capacity=256 []
+	Dict: numEntries=105 capacity=256 []
+dictDel(d,Acts)
+	Dict: numEntries=105 capacity=256 []
+	Dict: numEntries=104 capacity=256 []
+dictDel(d,Acuff)
+	Dict: numEntries=104 capacity=256 []
+	Dict: numEntries=103 capacity=256 []
+dictDel(d,Ada)
+	Dict: numEntries=103 capacity=256 []
+	Dict: numEntries=102 capacity=256 []
+dictDel(d,Adam)
+	Dict: numEntries=102 capacity=256 []
+	Dict: numEntries=101 capacity=256 []
+dictDel(d,Adams)
+	Dict: numEntries=101 capacity=256 []
+	Dict: numEntries=100 capacity=256 []
+dictDel(d,Adan)
+	Dict: numEntries=100 capacity=256 []
+	Dict: numEntries=99 capacity=256 []
+dictDel(d,Adana)
+	Dict: numEntries=99 capacity=256 []
+	Dict: numEntries=98 capacity=256 []
+dictDel(d,Adar)
+	Dict: numEntries=98 capacity=256 []
+	Dict: numEntries=97 capacity=256 []
+dictDel(d,Addams)
+	Dict: numEntries=97 capacity=256 []
+	Dict: numEntries=96 capacity=256 []
+dictDel(d,Adderley)
+	Dict: numEntries=96 capacity=256 []
+	Dict: numEntries=95 capacity=256 []
+dictDel(d,Addie)
+	Dict: numEntries=95 capacity=256 []
+	Dict: numEntries=94 capacity=256 []
+dictDel(d,Addison)
+	Dict: numEntries=94 capacity=256 []
+	Dict: numEntries=93 capacity=256 []
+dictDel(d,Adela)
+	Dict: numEntries=93 capacity=256 []
+	Dict: numEntries=92 capacity=256 []
+dictDel(d,Adelaide)
+	Dict: numEntries=92 capacity=256 []
+	Dict: numEntries=91 capacity=256 []
+dictDel(d,Adele)
+	Dict: numEntries=91 capacity=256 []
+	Dict: numEntries=90 capacity=256 []
+dictDel(d,Adeline)
+	Dict: numEntries=90 capacity=256 []
+	Dict: numEntries=89 capacity=256 []
+dictDel(d,Aden)
+	Dict: numEntries=89 capacity=256 []
+	Dict: numEntries=88 capacity=256 []
+dictDel(d,Adenauer)
+	Dict: numEntries=88 capacity=256 []
+	Dict: numEntries=87 capacity=256 []
+dictDel(d,Adhara)
+	Dict: numEntries=87 capacity=256 []
+	Dict: numEntries=86 capacity=256 []
+dictDel(d,Adidas)
+	Dict: numEntries=86 capacity=256 []
+	Dict: numEntries=85 capacity=256 []
+dictDel(d,Adirondack)
+	Dict: numEntries=85 capacity=256 []
+	Dict: numEntries=84 capacity=256 []
+dictDel(d,Adirondacks)
+	Dict: numEntries=84 capacity=256 []
+	Dict: numEntries=83 capacity=256 []
+dictDel(d,Adkins)
+	Dict: numEntries=83 capacity=256 []
+	Dict: numEntries=82 capacity=256 []
+dictDel(d,Adler)
+	Dict: numEntries=82 capacity=256 []
+	Dict: numEntries=81 capacity=256 []
+dictDel(d,Adolf)
+	Dict: numEntries=81 capacity=256 []
+	Dict: numEntries=80 capacity=256 []
+dictDel(d,Adolfo)
+	Dict: numEntries=80 capacity=256 []
+	Dict: numEntries=79 capacity=256 []
+dictDel(d,Adolph)
+	Dict: numEntries=79 capacity=256 []
+	Dict: numEntries=78 capacity=256 []
+dictDel(d,Adonis)
+	Dict: numEntries=78 capacity=256 []
+	Dict: numEntries=77 capacity=256 []
+dictDel(d,Adonises)
+	Dict: numEntries=77 capacity=256 []
+	Dict: numEntries=76 capacity=256 []
+dictDel(d,Adrian's)
+	Dict: numEntries=76 capacity=256 []
+	Dict: numEntries=75 capacity=256 []
+END  : delWords
+BEGIN: checkWords
+END  : checkWords
+BEGIN: delWords
+dictDel(d,A)
+	Dict: numEntries=75 capacity=256 []
+	Dict: numEntries=74 capacity=256 []
+dictDel(d,AMD)
+	Dict: numEntries=74 capacity=256 []
+	Dict: numEntries=73 capacity=256 []
+dictDel(d,AOL)
+	Dict: numEntries=73 capacity=256 []
+	Dict: numEntries=72 capacity=256 []
+dictDel(d,AWS)
+	Dict: numEntries=72 capacity=256 []
+	Dict: numEntries=71 capacity=256 []
+dictDel(d,Aachen)
+	Dict: numEntries=71 capacity=256 []
+	Dict: numEntries=70 capacity=256 []
+dictDel(d,Aaliyah)
+	Dict: numEntries=70 capacity=256 []
+	Dict: numEntries=69 capacity=256 []
+dictDel(d,Aaron)
+	Dict: numEntries=69 capacity=256 []
+	Dict: numEntries=68 capacity=256 []
+dictDel(d,Abbas)
+	Dict: numEntries=68 capacity=256 []
+	Dict: numEntries=67 capacity=256 []
+dictDel(d,Abbasid)
+	Dict: numEntries=67 capacity=256 []
+	Dict: numEntries=66 capacity=256 []
+dictDel(d,Abbott)
+	Dict: numEntries=66 capacity=256 []
+	Dict: numEntries=65 capacity=256 []
+dictDel(d,Abby)
+	Dict: numEntries=65 capacity=256 []
+	Dict: numEntries=64 capacity=256 []
+dictDel(d,Abdul)
+	Dict: numEntries=64 capacity=256 []
+	Dict: numEntries=63 capacity=256 []
+dictDel(d,Abe)
+	Dict: numEntries=63 capacity=256 []
+	Dict: numEntries=62 capacity=256 []
+dictDel(d,Abel)
+	Dict: numEntries=62 capacity=256 []
+	Dict: numEntries=61 capacity=256 []
+dictDel(d,Abelard)
+	Dict: numEntries=61 capacity=256 []
+	Dict: numEntries=60 capacity=256 []
+dictDel(d,Abelson)
+	Dict: numEntries=60 capacity=256 []
+	Dict: numEntries=59 capacity=256 []
+dictDel(d,Aberdeen)
+	Dict: numEntries=59 capacity=256 []
+	Dict: numEntries=58 capacity=256 []
+dictDel(d,Abernathy)
+	Dict: numEntries=58 capacity=256 []
+	Dict: numEntries=57 capacity=256 []
+dictDel(d,Abidjan)
+	Dict: numEntries=57 capacity=256 []
+	Dict: numEntries=56 capacity=256 []
+dictDel(d,Abigail)
+	Dict: numEntries=56 capacity=256 []
+	Dict: numEntries=55 capacity=256 []
+dictDel(d,Abilene)
+	Dict: numEntries=55 capacity=256 []
+	Dict: numEntries=54 capacity=256 []
+dictDel(d,Abner)
+	Dict: numEntries=54 capacity=256 []
+	Dict: numEntries=53 capacity=256 []
+dictDel(d,Abraham)
+	Dict: numEntries=53 capacity=256 []
+	Dict: numEntries=52 capacity=256 []
+dictDel(d,Abram)
+	Dict: numEntries=52 capacity=256 []
+	Dict: numEntries=51 capacity=256 []
+dictDel(d,Abrams)
+	Dict: numEntries=51 capacity=256 []
+	Dict: numEntries=50 capacity=256 []
+dictDel(d,Absalom)
+	Dict: numEntries=50 capacity=256 []
+	Dict: numEntries=49 capacity=256 []
+dictDel(d,Abuja)
+	Dict: numEntries=49 capacity=256 []
+	Dict: numEntries=48 capacity=256 []
+dictDel(d,Abyssinia)
+	Dict: numEntries=48 capacity=256 []
+	Dict: numEntries=47 capacity=256 []
+dictDel(d,Abyssinian)
+	Dict: numEntries=47 capacity=256 []
+	Dict: numEntries=46 capacity=256 []
+dictDel(d,Ac)
+	Dict: numEntries=46 capacity=256 []
+	Dict: numEntries=45 capacity=256 []
+dictDel(d,Acadia)
+	Dict: numEntries=45 capacity=256 []
+	Dict: numEntries=44 capacity=256 []
+dictDel(d,Acapulco)
+	Dict: numEntries=44 capacity=256 []
+	Dict: numEntries=43 capacity=256 []
+dictDel(d,Accenture)
+	Dict: numEntries=43 capacity=256 []
+	Dict: numEntries=42 capacity=256 []
+dictDel(d,Accra)
+	Dict: numEntries=42 capacity=256 []
+	Dict: numEntries=41 capacity=256 []
+dictDel(d,Acevedo)
+	Dict: numEntries=41 capacity=256 []
+	Dict: numEntries=40 capacity=256 []
+dictDel(d,Achaean)
+	Dict: numEntries=40 capacity=256 []
+	Dict: numEntries=39 capacity=256 []
+dictDel(d,Achebe)
+	Dict: numEntries=39 capacity=256 []
+	Dict: numEntries=38 capacity=256 []
+dictDel(d,Achernar)
+	Dict: numEntries=38 capacity=256 []
+	Dict: numEntries=37 capacity=256 []
+dictDel(d,Acheson)
+	Dict: numEntries=37 capacity=256 []
+	Dict: numEntries=36 capacity=256 []
+dictDel(d,Achilles)
+	Dict: numEntries=36 capacity=256 []
+	Dict: numEntries=35 capacity=256 []
+dictDel(d,Aconcagua)
+	Dict: numEntries=35 capacity=256 []
+	Dict: numEntries=34 capacity=256 []
+dictDel(d,Acosta)
+	Dict: numEntries=34 capacity=256 []
+	Dict: numEntries=33 capacity=256 []
+dictDel(d,Acropolis)
+	Dict: numEntries=33 capacity=256 []
+	Dict: numEntries=32 capacity=256 []
+dictDel(d,Acrux's)
+	Dict: numEntries=32 capacity=256 []
+	Dict: numEntries=31 capacity=256 []
+dictDel(d,Actaeon's)
+	Dict: numEntries=31 capacity=256 []
+	Dict: numEntries=30 capacity=256 []
+dictDel(d,Acton's)
+	Dict: numEntries=30 capacity=256 []
+	Dict: numEntries=29 capacity=256 []
+dictDel(d,Acts's)
+	Dict: numEntries=29 capacity=256 []
+	Dict: numEntries=28 capacity=256 []
+dictDel(d,Acuff's)
+	Dict: numEntries=28 capacity=256 []
+	Dict: numEntries=27 capacity=256 []
+dictDel(d,Ada's)
+	Dict: numEntries=27 capacity=256 []
+	Dict: numEntries=26 capacity=256 []
+dictDel(d,Adam's)
+	Dict: numEntries=26 capacity=256 []
+	Dict: numEntries=25 capacity=256 []
+dictDel(d,Adams's)
+	Dict: numEntries=25 capacity=256 []
+	Dict: numEntries=24 capacity=256 []
+dictDel(d,Adan's)
+	Dict: numEntries=24 capacity=256 []
+	Dict: numEntries=23 capacity=256 []
+dictDel(d,Adana's)
+	Dict: numEntries=23 capacity=256 []
+	Dict: numEntries=22 capacity=256 []
+dictDel(d,Adar's)
+	Dict: numEntries=22 capacity=256 []
+	Dict: numEntries=21 capacity=256 []
+dictDel(d,Addams's)
+	Dict: numEntries=21 capacity=256 []
+	Dict: numEntries=20 capacity=256 []
+dictDel(d,Adderley's)
+	Dict: numEntries=20 capacity=256 []
+	Dict: numEntries=19 capacity=256 []
+dictDel(d,Addie's)
+	Dict: numEntries=19 capacity=256 []
+	Dict: numEntries=18 capacity=256 []
+dictDel(d,Addison's)
+	Dict: numEntries=18 capacity=256 []
+	Dict: numEntries=17 capacity=256 []
+dictDel(d,Adela's)
+	Dict: numEntries=17 capacity=256 []
+	Dict: numEntries=16 capacity=256 []
+dictDel(d,Adelaide's)
+	Dict: numEntries=16 capacity=256 []
+	Dict: numEntries=15 capacity=256 []
+dictDel(d,Adele's)
+	Dict: numEntries=15 capacity=256 []
+	Dict: numEntries=14 capacity=256 []
+dictDel(d,Adeline's)
+	Dict: numEntries=14 capacity=256 []
+	Dict: numEntries=13 capacity=256 []
+dictDel(d,Aden's)
+	Dict: numEntries=13 capacity=256 []
+	Dict: numEntries=12 capacity=256 []
+dictDel(d,Adenauer's)
+	Dict: numEntries=12 capacity=256 []
+	Dict: numEntries=11 capacity=256 []
+dictDel(d,Adhara's)
+	Dict: numEntries=11 capacity=256 []
+	Dict: numEntries=10 capacity=256 []
+dictDel(d,Adidas's)
+	Dict: numEntries=10 capacity=256 []
+	Dict: numEntries=9 capacity=256 []
+dictDel(d,Adirondack's)
+	Dict: numEntries=9 capacity=256 []
+	Dict: numEntries=8 capacity=256 []
+dictDel(d,Adirondacks's)
+	Dict: numEntries=8 capacity=256 []
+	Dict: numEntries=7 capacity=256 []
+dictDel(d,Adkins's)
+	Dict: numEntries=7 capacity=256 []
+	Dict: numEntries=6 capacity=256 []
+dictDel(d,Adler's)
+	Dict: numEntries=6 capacity=256 []
+	Dict: numEntries=5 capacity=256 []
+dictDel(d,Adolf's)
+	Dict: numEntries=5 capacity=256 []
+	Dict: numEntries=4 capacity=256 []
+dictDel(d,Adolfo's)
+	Dict: numEntries=4 capacity=256 []
+	Dict: numEntries=3 capacity=256 []
+dictDel(d,Adolph's)
+	Dict: numEntries=3 capacity=256 []
+	Dict: numEntries=2 capacity=256 []
+dictDel(d,Adonis's)
+	Dict: numEntries=2 capacity=256 []
+	Dict: numEntries=1 capacity=256 []
+dictDel(d,Adrian)
+	Dict: numEntries=1 capacity=256 []
+	Dict: numEntries=0 capacity=256 []
+END  : delWords
+BEGIN: checkWords
+END  : checkWords
+END  : test_stressTest

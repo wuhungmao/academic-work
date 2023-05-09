@@ -1,0 +1,139 @@
++-----------------------------------------------------------------------------+
+|                            Code: q0/chatServer                              |
++-----------------------------------------------------------------------------+
+q0) [1 Marks]
+
+Please go to the website 
+
+	https://cs.utm.utoronto.ca/~csc209ta/index.php
+
+and pickup your port number. Replace 0000 below with your prot number.
+
+	MY PORT NUMBER IS: 9225
+
+Please do not use someone elses port. Running multiple servers 
+on the same port is not allowed.
+
+Play with the code, compile it, run the chatServer, connect with nc
+and have a conversation with yourself. Try out the protocol.
+
++-----------------------------------------------------------------------------+
+|                            Code: q1/chatServer                              |
++-----------------------------------------------------------------------------+
+q1) [5 Marks: Easy]
+
+  $ cp -r q0/* q1
+
+  Your job: modify the code in q1 (a copy of q0) so that 
+
+  q1/chatServer assumes that messages arrive complete and can be sent
+  complete. In this case, we can send and receive messages of size 
+  MAX_MESSAGE_LEN. For example 
+
+	char buff[MAX_MESSAGE_LEN];
+	int len = recv(fd, buff, MAX_MESSAGE_LEN, 0);
+	
+	// OR
+	
+	char buff[MAX_MESSAGE_LEN];
+	int len = read(fd, buff, MAX_MESSAGE_LEN);
+
+  Now this is a bad assumption, but it probably works for most messages
+  in our nice and controlled environment. 
+
+  The transcript here will look identical to those for q0/chatServer
+  since each client-server conversation is disjoint.
+
++-----------------------------------------------------------------------------+
+|                            Code: q2/chatServer                              |
++-----------------------------------------------------------------------------+
+q2) [15 Marks: Medium/Hard]
+
+  $ cp -r q1/* q2
+
+  Your job: modify the code in q2 (a copy of q1, once completed) so that 
+
+- q2/chatServer does not fork a connection to deal
+  with each connected client. Instead, q2/chatServer
+  itself deals with all communication to and from all clients.
+
+- q2/chatServer multiplexes the conversation between
+  all connected clients using select. 
+
+- q2/chatServer queues and delivers messages for all connected client.
+  That is, this server actually delivers messages between clients.
+
+- q2/chatServer should support up to 32 simultaneous connected clients
+
+Note: 
+
+  You will need some data structures (struct) to handle all of the
+  conversations. For example, you will need a queue for each client.
+
+  So here we are not using fork, we are using select, and
+  we are assuming all messages are sent/received atomically
+  (this is a bad assumption in general), a transcript might look like:
+
+In a terminal:
+
+        $ q0/chatServer 7009   # use your port number!
+
+        In another terminal:                                  In another terminal:
+
+        $ nc 127.0.0.1 7009                                   $ nc 127.0.0.1
+
+        C register:arnold                                     C register:sid
+        S registered                                          S registered
+        C list                                                C list
+        S users:arnold sid                                    S users:arnold sid
+                                                              C getMessage
+                                                              S noMessage
+        C message:arnold:sid:this is message 1                
+                                                              C message:sid:arnold:Hey hows life?
+                                                              S messageQueued
+        S messageQueued
+        C getMessage
+        S message:sid:arnold:Hey hows life?                   C getMessage
+                                                              S message:arnold:sid:this is message 1
+        C message:arnold:sid:Life is great!
+        S messageQueued
+                                                              C getMessage
+                                                              S message:arnold:sid:Life is great!
+        C quit
+        S closing
+
+
++-----------------------------------------------------------------------------+
+|                            Code: q3/chatServer                              |
++-----------------------------------------------------------------------------+
+q3) [5 Marks:Medium/Hard]
+
+  $ cp -r q2/* q3
+
+  Your job: modify the code in q3 (a copy of q2, once completed) so that 
+
+- q2/chatServer deals with partial message sends and receives.
+   
+  So for example: 
+
+	char buff[MAX_MESSAGE_LEN];
+	len = recv(fd, buff, MAX_MESSAGE_LEN, 0);
+
+  may fill buffer with a partial message, like:
+
+    	"message:arnold:sid:this is the"
+
+  and a subsequent call may fill in more of the message, or the rest:
+
+	len = recv(fd, &buff[len], MAX_MESSAGE_LEN-len,0);
+
+  now buffer has:
+        	"message:arnold:sid:this is the whole message\n"
+
+- q2/chatServer deals with multiple messages present in 
+  the incoming buffer at the same time. 
+
+Do this by managing a collection of fromClient and toClient buffers, 
+at least one pair for each client file descriptor.
+
+A transcript here will look like the ones for q2.

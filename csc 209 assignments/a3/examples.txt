@@ -1,0 +1,198 @@
++-----------------------------------------------------------------------------+
+|                            Example1:                                        |
++-----------------------------------------------------------------------------+
+
+	$ ./parallelDo -n 3 -o e1dir "echo {}" ::: 1 2 3 4 5 6 7 8 9 10
+
+Run the following in parallel
+ 
+	echo 1; 
+	echo 2; 
+	... 
+	echo 10;
+
+outputting each instances output to e1dir/PID.stdout and e1dir/PID.stderr.
+Tries to run 3 echos at the same time.
+
+At the end, it outputs...
+
+	10 10 0
+	96522 1 0 echo 1
+	96523 1 0 echo 2
+	96524 1 0 echo 3
+	96525 1 0 echo 4
+	96526 1 0 echo 5
+	96527 1 0 echo 6
+	96528 1 0 echo 7
+	96529 1 0 echo 8
+	96530 1 0 echo 9
+	96531 1 0 echo 10
+
++-----------------------------------------------------------------------------+
+|                            Example2:                                        |
++-----------------------------------------------------------------------------+
+
+	$ ./parallelDo -n 4 -o e2dir 'sleep 10; echo {} {}.{}.gif;' ::: 1 2 3 4 5 6 7 8 9 10
+
+Run the following in parallel
+
+	sleep 10; echo 1 1.1.gif; 
+	sleep 10; echo 2 2.2.gif; 
+	...
+	sleep 10; echo 10 10.10.gif; 
+
+outputting each instances output to e2dir/PID.stdout and e2dir/PID.stderr.
+Tries to keep 4 commands running at the same time.
+
+While the above is running, in another terminal...
+
+	$ pstree -p $(ps -o pid= -C parallelDo)
+	parallelDo(96633)─┬─bash(96662)───sleep(96667)/*???*/
+                  	├─bash(96663)───sleep(96666)
+                  	├─bash(96664)───sleep(96668)
+                  	└─bash(96665)───sleep(96669)
+
+At the end, it outputs...
+
+10 10 0
+96634 1 0 sleep 10; echo 1 1.1.gif;
+96635 1 0 sleep 10; echo 2 2.2.gif;
+96636 1 0 sleep 10; echo 3 3.3.gif;
+96637 1 0 sleep 10; echo 4 4.4.gif;
+96662 1 0 sleep 10; echo 5 5.5.gif;
+96663 1 0 sleep 10; echo 6 6.6.gif;
+96664 1 0 sleep 10; echo 7 7.7.gif;
+96665 1 0 sleep 10; echo 8 8.8.gif;
+96693 1 0 sleep 10; echo 9 9.9.gif;
+96694 1 0 sleep 10; echo 10 10.10.gif;
+
++-----------------------------------------------------------------------------+
+|                            Example3:                                        |
++-----------------------------------------------------------------------------+
+ 
+	for i in $(seq 1000000000 1000001000)
+	do
+		./isPrime $i
+	done > e3.stdout
+
+Run the following sequentially
+
+	./isPrime 1000000000
+	./isPrime 1000000001
+	./isPrime 1000000002
+	...
+	./isPrime 1000000999
+	./isPrime 1000001000
+
+stdout is sent to e3.stdout
+
+When I time the above, on my old laptop I get
+
+	real	6m51.228s
+	user	6m50.215s
+	sys	0m0.769s
+
++-----------------------------------------------------------------------------+
+|                            Example4:                                        |
++-----------------------------------------------------------------------------+
+	
+	$ ./parallelDo -n 20 -o e4dir "./isPrime {}" ::: $(seq 1000000000 1000001000)
+
+Run the following in parallel
+
+	./isPrime 1000000000
+	./isPrime 1000000001
+	./isPrime 1000000002
+	...
+	./isPrime 1000000999
+	./isPrime 1000001000
+
+outputting each instances output to e4dir/PID.stdout and e4dir/PID.stderr.
+Tries to keep 20 commands are running at the same time.
+
+While the above is running, in another terminal...
+
+	$ pstree -p $(ps -o pid= -C parallelDo)
+	parallelDo(88481)─┬─isPrime(88489)
+                  	├─isPrime(88491)
+                  	├─isPrime(88503)
+                  	├─isPrime(88515)
+                  	├─isPrime(88569)
+                  	├─isPrime(88575)
+                  	├─isPrime(88579)
+                  	├─isPrime(88585)
+                  	├─isPrime(88605)
+                  	├─isPrime(88663)
+                  	├─isPrime(88689)
+                  	├─isPrime(88705)
+                  	├─isPrime(88723)
+                  	├─isPrime(88753)
+                  	├─isPrime(88771)
+                  	├─isPrime(88779)
+                  	├─isPrime(88803)
+                  	├─isPrime(88831)
+                  	├─isPrime(88845)
+                  	└─isPrime(88885)
+
+While the above is running, in another terminal, find the pid of ./parallelDo
+
+	$ ps -C parallelDo
+
+Now send signals to the pid of parallelDo to get updates while it is running...
+
+In another terminal, get a brief summary...
+
+	$ kill -s SIGUSR1  PID_FROM_ABOVE
+
+causes parallelDo to print ...
+
+	1001 384 20
+
+In another terminal, get a full summary...
+
+	$ kill -s SIGUSR2  PID_FROM_ABOVE
+
+causes parallelDo to print ...
+	1001 384 20
+	96835 1 0 ./isPrime 1000000000
+	96836 1 0 ./isPrime 1000000001
+	96837 1 0 ./isPrime 1000000002
+	96838 1 0 ./isPrime 1000000003
+	96839 1 0 ./isPrime 1000000004
+	96840 1 0 ./isPrime 1000000005
+	96841 1 0 ./isPrime 1000000006
+	96842 1 1 ./isPrime 1000000007
+	96843 1 0 ./isPrime 1000000008
+	96844 1 1 ./isPrime 1000000009
+	...
+	97215 1 0 ./isPrime 1000000380
+	97216 1 0 ./isPrime 1000000381
+	97217 1 0 ./isPrime 1000000382
+	97218 1 0 ./isPrime 1000000383
+
+Or if you like to do things quicker!!
+
+	$ kill -s SIGUSR1 $(ps -o pid= -C parallelDo)
+	$ kill -s SIGUSR2 $(ps -o pid= -C parallelDo)
+
+On completion, paralledDo prints full summary...
+
+	1001 1001 0
+	96835 1 0 ./isPrime 1000000000
+	96836 1 0 ./isPrime 1000000001
+	96837 1 0 ./isPrime 1000000002
+	96838 1 0 ./isPrime 1000000003
+	96839 1 0 ./isPrime 1000000004
+	96840 1 0 ./isPrime 1000000005
+	96841 1 0 ./isPrime 1000000006
+	...
+	97879 1 0 ./isPrime 1000000998
+	97880 1 0 ./isPrime 1000000999
+	97881 1 0 ./isPrime 1000001000
+
+When I time the above, on my old laptop I get
+
+	real	2m34.064s
+	user	9m55.842s
+	sys	0m0.528s
+

@@ -1,0 +1,102 @@
+q0) Complete addPhotos
+
+    addPhotos dir1 [dir2] ...
+    add all photos in directories dir1 ... into $PHOTOS_DIR
+
+    addPhotos -v dir1 [dir2] ...
+    add all photos in directories dir1 ... into $PHOTOS_DIR
+    with verbose output, identifying the fate of each file in dir1 ...
+    
+    addPhotos --help
+    print usage message and exit
+
+    Behaviour: 
+        If the arguments to this script are incorrect, print a usage message
+        See cat --help for an example (or see the usage.txt file here)
+
+        If a directory does not exist, send the message "directory $dir does not exist" to stderr and skip it
+
+        If they choose the -v option (verbose), print out information about each file processed as follows
+        exactly one of the following for each file:
+
+            copied $FILE_NAME
+            duplicateImage $FILE_NAME
+
+        If an image is already in our $PHOTOS_DIR (based on file contents), don't re-add it.
+
+        Two instances of this script should not be running at the same time, for this, see
+        https://stackoverflow.com/questions/185451/quick-and-dirty-way-to-ensure-only-one-instance-of-a-shell-script-is-running-at
+        Try the mkdir solution
+
+        All new files added to $PHOTOS_DIR should have names distinct from files already in $PHOTOS_DIR
+    
+    Architecture and limitations: 
+        You can only use standard unix tools for addPhotos, so for example, you can't use any of
+            https://www.makeuseof.com/best-tools-find-and-remove-duplicate-files-linux/
+        but you should lookup some ideas on how to get this job done. See fdupes for example.
+
+        You can create txt files in $DB_DIR to manage the photos.
+        These files must have an obvious, machine readable format, and be managed
+        by standard unix tools (no sqlite3 etc.), just grep, sed, uniq, sort, awk, ...
+        
+        Your code must run on our lab systems. The photos database will be in
+
+            QUESTION_DIR="$HOME/csc209_23s_a1q1"
+            DB_DIR="$QUESTION_DIR/database"
+            PHOTOS_DIR="$DB_DIR/photos"
+
+        Do not change these and do not commit tons of files!! Thats why we placed the
+        samples directory in 
+
+            SAMPLES_DIR="$HOME/csc209_23s_a1q1_samples"
+
+        outside your repo.
+    
+    Starter code:
+	addPhotos is incorrect in a few ways.
+
+        a) No checking of arguments
+        b) No -v option
+        c) copies over existing file name, (could be different file contents)
+        d) allows two copies of the same file contents (could be different names)
+        e) I can run this script twice at the same time which may corrupt my photos database
+
+    Getting Started: 
+
+        # on our lab systems
+
+        cd repo_$USER/assignments/a1/q1
+        ./setup # take a look at this as well as randomFiles.py
+        # Take a look at the contents of $HOME/csc209_23s_a1q1
+        # Take a look at the contents of $HOME/csc209_23s_a1q1_samples
+        
+        find $HOME/csc209_23s_a1q1 -print | more
+        find $HOME/csc209_23s_a1q1_samples -print | more
+        
+        ./addPhotos $HOME/csc209_23s_a1q1_samples/directory02 $HOME/csc209_23s_a1q1_samples/directory04
+        find $HOME/csc209_23s_a1q1 -print | more
+        find $HOME/csc209_23s_a1q1_samples -print | more
+
+
+
+q1) Explain any files you create to manage your photos. Explain the format
+    and their use.
+
+	direcotries00-09 contains all photos with random names. The directory photo which is in database store 
+    all the photos that are copied from a given directory. I create a file call addphototest to copy file from 
+    directory02 to directory03 to test whether addPhotos goes into branch that test for duplicate image. I invoke 
+    addPhotos on directory03, then on direcotry02. My script successfully reports that a portion of images are same.
+
+q2) Explain how you manage to maintain unique file names for your photos.
+
+	I use command cmp -s source_file destination_file. s option suppress all output but exit with a different exit
+    code when two files are not the same. This command compares two files' size. If they share same size, this command
+    further look into each byte. By which, all files copied will have different content. Then, I search through
+    remaining files to find files with same names. Last, I append the word "copy" to original filename.
+
+q3) Explain how you make sure the contents of your photos database consists
+    only of unique images
+    I use command cmp -s source_file destination_file. If a file is found to share exactly same content with another
+    file, I would print the word "duplicateImage" or skip to next file. 
+	
+

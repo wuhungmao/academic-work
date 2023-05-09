@@ -1,0 +1,73 @@
+General notes:
+
+	a) We will valgrind your code, memory leaks will cost marks!
+	b) Full marks for simple, clear, concise code.
+	c) Do not change the function signatures, nor the macros we defined for you.
+   	   Your modifications should be in the function bodies. I left my comments
+   	   in the code to guide you.
+
+Q1) [10 Marks]
+    Complete Dict so that it implements a simple dictionary. This simple 
+    dictionary does not use hashing. To compare, Dict is essentially an 
+    ArrayList (as in the lab) but in this case, an entry consists of 
+    (key, value) pairs. For Q1, (key, value) has type (char *, int).
+
+    In Q2,3,4 Dict, (key, value) will be (char *, void *) so that the 
+    dictionary can store references to anything.
+
+    PLEASE SEE q1/diagram.txt and q1/libDict.h
+
+    Lets keep this simple: New (key, value) pairs are always added to the 
+    end of the array of SimpleDictEntry.
+
+Q2) [20 Marks]
+    Complete Dict so that it implements a dictionary (similar to Pythons). 
+    This Dict uses hashing to identify the DictRow where the key belongs, and
+    then chaining. In our case, we are NOT chaining using a linked list,
+
+    Compare with: https://medium.com/codex/internal-implementation-of-dictionary-in-python-5b739d5535a4
+
+    The DictRow keeps an array of DictEntry where each 
+    (key,value) = (char *, void *) lives. When a DictRow runs out of space
+    it reallocates and expands to accomodate new entries. 
+ 
+    PLEASE SEE q2/diagram.txt and libDict.h
+ 
+    Lets keep this simple: New (key, value) are always added to the end
+    of the array of DictEntry.
+
+    A q2/DictRow here looks a lot like a q1/Dict. The differences
+    are
+
+       q1/DictEntry consists of (char *, int)
+       q2/DictEntry consists of (char *, void *)
+
+Q3) [5 Marks] 
+    When your code from Q2 is done, 
+
+    cp -r q2/* q3 
+
+    Now change q3 so that (key,value) pairs are stored in order in the
+    DictRow (in the array of DictEntry). If the size is small use a linear
+    search, otherwise use a binary search. You tune it to perform.
+
+Q4) [6 Marks]
+    When your code from Q2 or Q3 is done copy one of them to q4
+
+    cp -r q2/* q4
+
+    # OR
+
+    cp -r q3/* q4
+
+    Now change q4 so that when the some of the rows are 'full enough' you
+    create a new dictionary with more hash slots (rows) and copy the 
+    contents of the old dictionary to the new one. Hopefully the rows 
+    in the new dictionary are now shorter. Make sure to free up all the resources
+    from the old dictionary in a way that does not corrupt the new dictionary. 
+
+    This question also has you free up space if your dictionary becomes empty enough.
+
+Q5) [5 Marks]
+    Compare the performance of Q4 and Q2. To do this, you will have to 
+    load test each and time them. 

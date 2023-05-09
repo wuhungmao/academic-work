@@ -1,0 +1,20 @@
+We care about how correctness, code (simple, clear, concise) and efficiency
+
+Mark: /12 correctness
+      +2 stderr, stdout correct and switched by -v
+      +2 Usage message looks like a real command, appears with --help or bad arguments
+      +4 file name conflicts are handled
+      +4 only new images are added to $PHOTOS_DIR (this is the challenging part!)
+
+Mark: /4 quality
+         simple, clear, concise, easy to understand code, with some interesting ideas
+         explain the few ideas that make your code do interesting things really well
+       0/4 for unnecessarily long code and difficult to understand
+       2/4 for long code but explained, or short code difficult to understand
+       4/4 for simple, clear, concise easy to understand code
+
+Mark: /4 for a fast system. We will run on large examples and race yours against ours
+
+Mark: /2 for answers to questions.txt (this is your documentation)
+
+TOTAL: /22

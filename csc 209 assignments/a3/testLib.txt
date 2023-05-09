@@ -1,0 +1,34 @@
+testLib should behave as follows:
+Use this to confirm that your createCommand is functioning properly
+
+$ ./testLib -n 20 -o someOutDir "MY_COMMAND {}" ::: this that other
+
+retVal=1
+maxNumRunning=20
+outputDir=someOutDir
+commandTemplate=MY_COMMAND {}
+argumentList=this that other
+that
+THISthat
+tTHIShat
+thTHISat
+thaTHISt
+thatTHIS
+THISTHISthat
+THIStTHIShat
+THISthTHISat
+THISthaTHISt
+THISthatTHIS
+tTHISTHIShat
+tTHIShTHISat
+tTHIShaTHISt
+tTHIShatTHIS
+thTHISTHISat
+thTHISaTHISt
+thTHISatTHIS
+thTHISTHISat
+thTHISaTHISt
+THISthTHISatTHIS
+thTHISTHISatTHIS
+thTHISaTHIStTHIS
+thTHISatTHISTHIS

@@ -1,0 +1,2 @@
+Complete libProcessControl.c so that parallelDo behaves as described by its usage
+and as described by the examples (see examples directory).
