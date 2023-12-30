@@ -1,88 +1,71 @@
 #!/bin/bash
-# The following goes first, so we can refer back the directory containing these scripts.
+# The following goes first, so we can refer back to the directory containing these scripts.
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 QUESTION_DIR="$HOME/csc209_23s_a1q1"
 DB_DIR="$QUESTION_DIR/database"
 PHOTOS_DIR="$DB_DIR/photos"
 
-
-if [ "$1" == "--help" ];
-then
-	echo "addPhotos -v dir1 [dir2] ..."
-	exit
+if [ "$1" == "--help" ]; then
+    echo "addPhotos -v dir1 [dir2] ..."
+    exit
 elif [ "$1" == "-v" ]; then
-shift
-	while (( $# > 0 ))
-	do
-		if [ ! -d "$1" ]; then
-			echo "directory "$1" does not exist" >&2
-			shift
-		else
-			for f in $1/*
-			do
-				if [ -f "$f" ]; then
-					dp=1
-					for f2 in $PHOTOS_DIR/*
-					do
-						# why is $f2 = /student/wuhungma/csc209_23s_a1q1/database/photos/* ? shouldn't
-						# this be a file in photo directory
-						cmp -s $f $f2
-						if [ $? -eq 0 ]; then
-							dp=0
-							echo "duplicateImage $f"
-							break
-						fi
-					done
-					# convert $f into array and combine with photo directory. 
-					# For example /student/wuhungma/csc209_23s_a1q1/database/photos/aqzcbhuikbkrcn , 
-					IFS="/" read -a myarray <<< $f
-					str=${myarray[5]}
-					finalpath=$PHOTOS_DIR/$str
-					#trying to check if a file with same name but different content already exist in Photo directory
-					#if exists, move the file to photo directory and change its name and print copied as filename copy
-					#if no file in photo directory has same name, copy files and then print copied $f.
-					# How do I know if a file already exist in the directory?
-					if [[ $dp -eq 1 && -f "$finalpath" ]]; then
-						echo "copied as $f copy"
-						cp "$f" "$PHOTOS_DIR/$str copy"
-					elif [[ $dp -eq 1 ]]; then
-						echo "copied $f"
-						cp $f $PHOTOS_DIR
-					fi
-				fi
-			done
-			shift
-		fi
-	done
+    shift
+    while (( $# > 0 )); do
+        if [ ! -d "$1" ]; then
+            echo "directory '$1' does not exist" >&2
+            shift
+        else
+            for f in "$1"/*; do
+                if [ -f "$f" ]; then
+                    dp=1
+                    for f2 in "$PHOTOS_DIR"/*; do
+                        cmp -s "$f" "$f2"
+                        if [ $? -eq 0 ]; then
+                            dp=0
+                            echo "duplicateImage $f"
+                            break
+                        fi
+                    done
+                    IFS="/" read -a myarray <<< "$f"
+                    str=${myarray[5]}
+                    finalpath="$PHOTOS_DIR/$str"
+                    if [[ $dp -eq 1 && -f "$finalpath" ]]; then
+                        echo "copied as $f copy"
+                        cp "$f" "$PHOTOS_DIR/${str}_copy"
+                    elif [[ $dp -eq 1 ]]; then
+                        echo "copied $f"
+                        cp "$f" "$PHOTOS_DIR"
+                    fi
+                fi
+            done
+            shift
+        fi
+    done
 elif [ -d "$1" ]; then
-	while (( $# > 0 ))
-	do
-		for f in $1/*
-		do
-			if [ -f "$f" ]; then
-				dp=1
-				for f2 in $PHOTOS_DIR/*
-				do
-					cmp -s $f $f2
-					if [ $? -eq 0 ]; then
-						dp=0
-						break
-					fi
-				done
-				IFS="/" read -a myarray <<< $f
-				str=${myarray[5]}
-				finalpath=$PHOTOS_DIR/$str
-				if [[ $dp -eq 1 && -f $finalpath ]]; then
-					cp "$f" "$PHOTOS_DIR/$f copy"
-				elif [[ $dp -eq 1 ]]; then
-					cp $f $PHOTOS_DIR
-				fi
-			fi
-		done
-		shift
-	done
+    while (( $# > 0 )); do
+        for f in "$1"/*; do
+            if [ -f "$f" ]; then
+                dp=1
+                for f2 in "$PHOTOS_DIR"/*; do
+                    cmp -s "$f" "$f2"
+                    if [ $? -eq 0 ]; then
+                        dp=0
+                        break
+                    fi
+                done
+                IFS="/" read -a myarray <<< "$f"
+                str=${myarray[5]}
+                finalpath="$PHOTOS_DIR/$str"
+                if [[ $dp -eq 1 && -f "$finalpath" ]]; then
+                    cp "$f" "$PHOTOS_DIR/${str}_copy"
+                elif [[ $dp -eq 1 ]]; then
+                    cp "$f" "$PHOTOS_DIR"
+                fi
+            fi
+        done
+        shift
+    done
 else
-	echo "addPhotos [option]... dir1 [dir2]..."
+    echo "addPhotos [option]... dir1 [dir2]..."
 fi
-
