@@ -1,4 +1,0 @@
-for f in  $HOME/csc209_23s_a1q1_samples/directory02/*
-do 
-	cp $f $HOME/csc209_23s_a1q1_samples/directory03
-done 

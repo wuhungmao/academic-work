@@ -1,0 +1,17 @@
+#!/bin/bash
+# Must be first
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+QUESTION_DIR="$HOME/csc209_23s_a1q1"
+DB_DIR="$QUESTION_DIR/database"
+PHOTOS_DIR="$DB_DIR/photos"
+SAMPLES_DIR="$HOME/csc209_23s_a1q1_samples"
+
+rm -fr "$QUESTION_DIR"
+
+mkdir -p "$PHOTOS_DIR"
+mkdir -p "$SAMPLES_DIR"
+
+cd "$SAMPLES_DIR"
+
+"$SCRIPT_DIR/randomFiles.py" 1234
