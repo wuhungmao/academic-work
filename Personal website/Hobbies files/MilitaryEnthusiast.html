@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Military enthusiast</title>
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" type="text/css" href="..\styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function()
+      {
+        $("#navbar").load("../navbar.html");
+      });
+    </script>
+</head>
+
+<body>
+    <header class>
+        <div id="navbar"></div>
+        <h1>Tanks and Helicopters!</h1>
+    </header>
+    <section id="content">
+      <h2>Favorite tank and military camps</h2>
+      <img src="../Hobbies pics/Military equipment/Tiger_131.jpg" alt="pic not found"width="500" height="300"/>
+      <p>
+          This is the tiger 1(Panzerkampfwagen Tiger Ausf. E). 
+          This has always been and always will be my favorite tank, 
+          though I've never seen one in real life(the
+          only operational one is in UK).
+          I also attended military camps in my country where I get to see
+          some modern military equipment such as AH-64 or UH-60M, and 
+          learnt about the history related to those military equipment.
+          You can find some photos of me with this military equipment in the album.
+      </p>
+      <iframe width="100%" height="315" src="https://www.youtube.com/watch?v=UvzlKAZpN6w" frameborder="0" allowfullscreen></iframe>
+
+      <button class="album-button" onclick="toggleAlbum()">
+          <span>Open Album</span>
+      </button>
+
+      <div id="album-container">
+        <div class="photo">
+          <img src="../Hobbies pics/Military equipment/20230705_144732.jpg" alt="Photo 1">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/Military equipment/20230705_144808.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/Military equipment/20230705_144823.jpg" alt="Photo 2">
+        </div>
+        
+        <div class="photo">
+          <img src="../Hobbies pics/Military equipment/20230707_083335.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/Military equipment/20230707_084823.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/Military equipment/20230707_084829.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/Military equipment/20230707_084837.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/Military equipment/20230707_084844.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/Military equipment/20230707_091427.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/Military equipment/20230824_101646.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/Military equipment/20230824_101659.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/Military equipment/20230824_101704.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/Military equipment/IMG_20230707_185546_554.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/Military equipment/1692367993926-1.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/Military equipment/1692368021610-7.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/Military equipment/1692368265769-17.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/Military equipment/1692368265769-2.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/Military equipment/1692368482788-14.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/Military equipment/1692368501116-15.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/Military equipment/1692368605942-0.jpg" alt="Photo 2">
+        </div>
+      </div>
+    </section>
+
+    <script>
+        function toggleAlbum() 
+        {
+          var albumContainer = document.getElementById('album-container');
+          albumContainer.style.display = (albumContainer.style.display === 'none' || albumContainer.style.display === '') ? 'flex' : 'none';
+        }
+    </script>
+</body>

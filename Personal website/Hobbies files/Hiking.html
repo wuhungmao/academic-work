@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiking</title>
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" type="text/css" href="..\styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function()
+      {
+        $("#navbar").load("../navbar.html");
+      });
+    </script>
+</head>
+
+<body>
+    <header class>
+        <div id="navbar"></div>
+        <h1>My Hiking Adventures</h1>
+    </header>
+    <section id="content">
+      <h2>Favorite hiking trails</h2>
+      <img src="..\Hobbies pics\hiking pictures\HuangDiDanHikingTrail.png" alt="pic not found" width="500" height="300"/>
+      <p>
+        The island of taiwan is formed through the collision of tectonic plates. Hence, many 
+        hiking trails including this are steep and it is very dangerous to hike with unexperienced
+        hiker. However, if a person is experienced enough, then it is quite fun to go hiking every 
+        once a while and feel the thrill of hiking. Below are some pictures I took while hiking. 
+        Maybe you will have a idea why I loving hiking.
+      </p>
+
+      <button class="album-button" onclick="toggleAlbum()">
+        <span>Open Album</span>
+      </button>
+
+      <div id="album-container">
+        <div class="photo">
+          <img src="../Hobbies pics/hiking pictures/steep slope.jpg" alt="Photo 1">
+        </div>
+
+
+
+        <div class="photo">
+          <img src="../Hobbies pics/hiking pictures/20220530_115016.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/hiking pictures/20220530_115402.jpg" alt="Photo 2">
+        </div>
+        
+        <div class="photo">
+          <img src="../Hobbies pics/hiking pictures/20220530_123831.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/hiking pictures/20220530_123838.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/hiking pictures/20220530_125415.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/hiking pictures/20220530_125800.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/hiking pictures/20220530_125906.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/hiking pictures/20220530_130200_01.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/hiking pictures/20220530_130208.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/hiking pictures/20220530_130310.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/hiking pictures/20220530_131126.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/hiking pictures/20220603_161305.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/hiking pictures/20220603_161528.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/hiking pictures/20220603_161728.jpg" alt="Photo 2">
+        </div>  
+
+        <div class="photo">
+          <img src="../Hobbies pics/hiking pictures/20220603_161851.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/hiking pictures/20230703_164015.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/hiking pictures/20230703_164513.jpg" alt="Photo 2">
+        </div>
+        
+        <div class="photo">
+          <img src="../Hobbies pics/hiking pictures/small trails.jpg" alt="Photo 2">
+        </div>
+
+        <div class="photo">
+          <img src="../Hobbies pics/hiking pictures/20220530_125808.jpg" alt="Photo 2">
+        </div>
+      </div>
+    </section>
+
+    <script>
+        function toggleAlbum() 
+        {
+          var albumContainer = document.getElementById('album-container');
+          albumContainer.style.display = (albumContainer.style.display === 'none' || albumContainer.style.display === '') ? 'flex' : 'none';
+        }
+    </script>
+</body>
+

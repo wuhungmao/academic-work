@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking</title>
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" type="text/css" href="..\styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function(){
+        $("#navbar").load("../navbar.html");
+    });
+    </script>
+</head>
+
+<body>
+    <header class>
+        <div id="navbar"></div>
+        <h1>Cooking</h1>
+    </header>
+    <section id="content">
+        <p class="description">
+            I took a cooking lesson during summer of second year. There were 8 courses 
+            spanning over 2 months, each course teaches two chinese dishes. Honestly,
+            in real life situations, I'd just hit the street to find the food if I 
+            ever want to have chinese dishes. Each dish take so much time to prepare, first step 
+            like buying raw ingredient already take too much time and cooking will take another
+            2 hours, so it's quite unrealistic to cook chinese dishes every day. But from the 
+            course I still learnt basic cooking skills. Not looking to become a chef, but 
+            knowing how to cook some decent meal was my goal.
+        </p>
+
+        <button class="album-button" onclick="toggleAlbum()">
+            <span>Open Album</span>
+        </button>
+    
+        <div id="album-container">
+            <div class="photo"> 
+                <img src="../Hobbies pics/Cooking/20220619_143235.jpg" alt="Photo 1">
+            </div>
+
+            <div class="photo">
+                <img src="../Hobbies pics/Cooking/20220619_153649.jpg" alt="Photo 2">
+            </div>
+
+            <div class="photo">
+                <img src="../Hobbies pics/Cooking/20220626_154353.jpg" alt="Photo 2">
+            </div>
+            
+            <div class="photo">
+                <img src="../Hobbies pics/Cooking/20220702_143553.jpg" alt="Photo 2">
+            </div>
+
+            <div class="photo">
+                <img src="../Hobbies pics/Cooking/20220702_150009.jpg" alt="Photo 2">
+            </div>
+
+            <div class="photo">
+                <img src="../Hobbies pics/Cooking/20220702_150655.jpg" alt="Photo 2">
+            </div>
+
+            <div class="photo">
+                <img src="../Hobbies pics/Cooking/20220702_151552.jpg" alt="Photo 2">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleAlbum() 
+        {
+          var albumContainer = document.getElementById('album-container');
+          albumContainer.style.display = (albumContainer.style.display === 'none' || albumContainer.style.display === '') ? 'flex' : 'none';
+        }
+    </script>
+</body>
