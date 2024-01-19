@@ -42,7 +42,6 @@ public class Main {
             if ("POST".equals(exchange.getRequestMethod())) {
                 String response = "Lecture foobar foobar Received POST request for /test";
 
-
                 String clientAddress = exchange.getRemoteAddress().getAddress().toString();
                 String requestMethod = exchange.getRequestMethod();
                 String requestURI = exchange.getRequestURI().toString();
