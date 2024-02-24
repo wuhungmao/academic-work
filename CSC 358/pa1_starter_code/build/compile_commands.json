@@ -1,0 +1,236 @@
+[
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/util",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -o CMakeFiles/util_debug.dir/address.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/util/address.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/util/address.cc",
+  "output": "util/CMakeFiles/util_debug.dir/address.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/util",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -o CMakeFiles/util_debug.dir/arp_message.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/util/arp_message.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/util/arp_message.cc",
+  "output": "util/CMakeFiles/util_debug.dir/arp_message.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/util",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -o CMakeFiles/util_debug.dir/ethernet_header.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/util/ethernet_header.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/util/ethernet_header.cc",
+  "output": "util/CMakeFiles/util_debug.dir/ethernet_header.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/util",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -o CMakeFiles/util_debug.dir/file_descriptor.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/util/file_descriptor.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/util/file_descriptor.cc",
+  "output": "util/CMakeFiles/util_debug.dir/file_descriptor.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/util",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -o CMakeFiles/util_debug.dir/ipv4_header.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/util/ipv4_header.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/util/ipv4_header.cc",
+  "output": "util/CMakeFiles/util_debug.dir/ipv4_header.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/util",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -o CMakeFiles/util_debug.dir/socket.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/util/socket.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/util/socket.cc",
+  "output": "util/CMakeFiles/util_debug.dir/socket.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/util",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -fno-sanitize-recover=all -fsanitize=undefined -fsanitize=address -o CMakeFiles/util_sanitized.dir/address.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/util/address.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/util/address.cc",
+  "output": "util/CMakeFiles/util_sanitized.dir/address.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/util",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -fno-sanitize-recover=all -fsanitize=undefined -fsanitize=address -o CMakeFiles/util_sanitized.dir/arp_message.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/util/arp_message.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/util/arp_message.cc",
+  "output": "util/CMakeFiles/util_sanitized.dir/arp_message.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/util",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -fno-sanitize-recover=all -fsanitize=undefined -fsanitize=address -o CMakeFiles/util_sanitized.dir/ethernet_header.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/util/ethernet_header.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/util/ethernet_header.cc",
+  "output": "util/CMakeFiles/util_sanitized.dir/ethernet_header.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/util",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -fno-sanitize-recover=all -fsanitize=undefined -fsanitize=address -o CMakeFiles/util_sanitized.dir/file_descriptor.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/util/file_descriptor.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/util/file_descriptor.cc",
+  "output": "util/CMakeFiles/util_sanitized.dir/file_descriptor.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/util",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -fno-sanitize-recover=all -fsanitize=undefined -fsanitize=address -o CMakeFiles/util_sanitized.dir/ipv4_header.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/util/ipv4_header.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/util/ipv4_header.cc",
+  "output": "util/CMakeFiles/util_sanitized.dir/ipv4_header.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/util",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -fno-sanitize-recover=all -fsanitize=undefined -fsanitize=address -o CMakeFiles/util_sanitized.dir/socket.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/util/socket.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/util/socket.cc",
+  "output": "util/CMakeFiles/util_sanitized.dir/socket.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/util",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -O2 -o CMakeFiles/util_optimized.dir/address.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/util/address.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/util/address.cc",
+  "output": "util/CMakeFiles/util_optimized.dir/address.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/util",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -O2 -o CMakeFiles/util_optimized.dir/arp_message.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/util/arp_message.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/util/arp_message.cc",
+  "output": "util/CMakeFiles/util_optimized.dir/arp_message.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/util",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -O2 -o CMakeFiles/util_optimized.dir/ethernet_header.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/util/ethernet_header.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/util/ethernet_header.cc",
+  "output": "util/CMakeFiles/util_optimized.dir/ethernet_header.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/util",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -O2 -o CMakeFiles/util_optimized.dir/file_descriptor.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/util/file_descriptor.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/util/file_descriptor.cc",
+  "output": "util/CMakeFiles/util_optimized.dir/file_descriptor.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/util",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -O2 -o CMakeFiles/util_optimized.dir/ipv4_header.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/util/ipv4_header.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/util/ipv4_header.cc",
+  "output": "util/CMakeFiles/util_optimized.dir/ipv4_header.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/util",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -O2 -o CMakeFiles/util_optimized.dir/socket.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/util/socket.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/util/socket.cc",
+  "output": "util/CMakeFiles/util_optimized.dir/socket.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/src",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -o CMakeFiles/compNet_debug.dir/network_interface.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/src/network_interface.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/src/network_interface.cc",
+  "output": "src/CMakeFiles/compNet_debug.dir/network_interface.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/src",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -o CMakeFiles/compNet_debug.dir/webget.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/src/webget.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/src/webget.cc",
+  "output": "src/CMakeFiles/compNet_debug.dir/webget.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/src",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -fno-sanitize-recover=all -fsanitize=undefined -fsanitize=address -o CMakeFiles/compNet_sanitized.dir/network_interface.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/src/network_interface.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/src/network_interface.cc",
+  "output": "src/CMakeFiles/compNet_sanitized.dir/network_interface.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/src",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -fno-sanitize-recover=all -fsanitize=undefined -fsanitize=address -o CMakeFiles/compNet_sanitized.dir/webget.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/src/webget.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/src/webget.cc",
+  "output": "src/CMakeFiles/compNet_sanitized.dir/webget.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/src",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -O2 -o CMakeFiles/compNet_optimized.dir/network_interface.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/src/network_interface.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/src/network_interface.cc",
+  "output": "src/CMakeFiles/compNet_optimized.dir/network_interface.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/src",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -O2 -o CMakeFiles/compNet_optimized.dir/webget.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/src/webget.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/src/webget.cc",
+  "output": "src/CMakeFiles/compNet_optimized.dir/webget.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/src",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -o CMakeFiles/webget.dir/webget.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/src/webget.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/src/webget.cc",
+  "output": "src/CMakeFiles/webget.dir/webget.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/tests",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -o CMakeFiles/compNet_testing_debug.dir/common.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/tests/common.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/tests/common.cc",
+  "output": "tests/CMakeFiles/compNet_testing_debug.dir/common.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/tests",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -fno-sanitize-recover=all -fsanitize=undefined -fsanitize=address -o CMakeFiles/compNet_testing_sanitized.dir/common.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/tests/common.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/tests/common.cc",
+  "output": "tests/CMakeFiles/compNet_testing_sanitized.dir/common.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/tests",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -fno-sanitize-recover=all -fsanitize=undefined -fsanitize=address -o CMakeFiles/net_interface_test_typical_sanitized.dir/net_interface_test_typical.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_typical.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_typical.cc",
+  "output": "tests/CMakeFiles/net_interface_test_typical_sanitized.dir/net_interface_test_typical.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/tests",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -o CMakeFiles/net_interface_test_typical.dir/net_interface_test_typical.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_typical.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_typical.cc",
+  "output": "tests/CMakeFiles/net_interface_test_typical.dir/net_interface_test_typical.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/tests",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -fno-sanitize-recover=all -fsanitize=undefined -fsanitize=address -o CMakeFiles/net_interface_test_reply_sanitized.dir/net_interface_test_reply.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_reply.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_reply.cc",
+  "output": "tests/CMakeFiles/net_interface_test_reply_sanitized.dir/net_interface_test_reply.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/tests",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -o CMakeFiles/net_interface_test_reply.dir/net_interface_test_reply.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_reply.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_reply.cc",
+  "output": "tests/CMakeFiles/net_interface_test_reply.dir/net_interface_test_reply.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/tests",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -fno-sanitize-recover=all -fsanitize=undefined -fsanitize=address -o CMakeFiles/net_interface_test_learn_sanitized.dir/net_interface_test_learn.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_learn.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_learn.cc",
+  "output": "tests/CMakeFiles/net_interface_test_learn_sanitized.dir/net_interface_test_learn.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/tests",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -o CMakeFiles/net_interface_test_learn.dir/net_interface_test_learn.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_learn.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_learn.cc",
+  "output": "tests/CMakeFiles/net_interface_test_learn.dir/net_interface_test_learn.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/tests",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -fno-sanitize-recover=all -fsanitize=undefined -fsanitize=address -o CMakeFiles/net_interface_test_pending_sanitized.dir/net_interface_test_pending.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_pending.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_pending.cc",
+  "output": "tests/CMakeFiles/net_interface_test_pending_sanitized.dir/net_interface_test_pending.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/tests",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -o CMakeFiles/net_interface_test_pending.dir/net_interface_test_pending.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_pending.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_pending.cc",
+  "output": "tests/CMakeFiles/net_interface_test_pending.dir/net_interface_test_pending.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/tests",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -fno-sanitize-recover=all -fsanitize=undefined -fsanitize=address -o CMakeFiles/net_interface_test_expiry_sanitized.dir/net_interface_test_expiry.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_expiry.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_expiry.cc",
+  "output": "tests/CMakeFiles/net_interface_test_expiry_sanitized.dir/net_interface_test_expiry.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/tests",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -o CMakeFiles/net_interface_test_expiry.dir/net_interface_test_expiry.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_expiry.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_expiry.cc",
+  "output": "tests/CMakeFiles/net_interface_test_expiry.dir/net_interface_test_expiry.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/tests",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -fno-sanitize-recover=all -fsanitize=undefined -fsanitize=address -o CMakeFiles/net_interface_test_independence_sanitized.dir/net_interface_test_independence.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_independence.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_independence.cc",
+  "output": "tests/CMakeFiles/net_interface_test_independence_sanitized.dir/net_interface_test_independence.cc.o"
+},
+{
+  "directory": "/student/wuhungma/CSC358/pa1_starter_code/build/tests",
+  "command": "/usr/bin/c++  -I/student/wuhungma/CSC358/pa1_starter_code/util -I/student/wuhungma/CSC358/pa1_starter_code/src  -Wall -Wpedantic -Wextra -Weffc++ -Werror -Wshadow -Wpointer-arith -Wcast-qual -Wformat=2 -Wno-unqualified-std-cast-call -g -std=gnu++20 -o CMakeFiles/net_interface_test_independence.dir/net_interface_test_independence.cc.o -c /student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_independence.cc",
+  "file": "/student/wuhungma/CSC358/pa1_starter_code/tests/net_interface_test_independence.cc",
+  "output": "tests/CMakeFiles/net_interface_test_independence.dir/net_interface_test_independence.cc.o"
+}
+]
