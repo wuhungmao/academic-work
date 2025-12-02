@@ -1,0 +1,31 @@
+The file system implementation makes use of mutexes for the super block, group descriptor, bitmaps, and each inode in the inode table.
+There are no mutexes for each individual data block because each data block can only be assigned to one inode.
+Two inodes cannot point to the same data block, hence holding a lock on an inode also implicitly locks all the data blocks that inode points to.
+All commands directly handle the inode locks, while allocate-helper functions would use the locks for the super block, group descriptor, and bitmaps.
+For each command, the paths perform two checks:
+
+1. Path Status Check
+For each path given, commands would try to find two inodes, which may not exist: the final destination of a given path, referred to as the target inode;
+the parent directory inode, referred to as the parent inode. During the traversal, the inodes on the path would be locked and unlocked one at a time,
+until the path has been completely traversed. The status of the traversal is then returned to the calling command, which may or may not return.
+
+2. Inode Status Check
+The command now has information on whether or not the target or parent inode exists. With this information, 
+the command would either return an appropriate error code or proceed. If the command can proceed, 
+then it will continue to hold onto the locks for its operations.
+
+With the parent directory locked, the command is free to make or remove directory entries. 
+This may involve making a new file, copying from a source, or deleting files. After the operations are complete, the locks are released.
+
+All mutex locking is handled by the helper functions lock_resource() and unlock_resource(). 
+These are convenient helper functions that we define to enforce locking order. 
+The user is able to pass in up to two inode numbers to be locked, which will be locked in ascending order. 
+If the two inode numbers are the same, the mutex is only locked once. The function can also be specified to lock the super block,
+group descriptor, block bitmap, inode bitmap. This is to avoid causing a circular wait between these mutexes.
+unlock_resource() unlock mutexes, and unlocks in the reverse order for non inode locks. 
+
+Error handling and cleanup:
+At the bottom of each command source file, you would see a session where we handle error code and try to revert 
+the file system to the state before error had occurred. The macro defined in e2fs.h is used to handle error code and 
+jump to clean up session. You would see unlocking handled in different scenarios in case helper function return error. 
+
