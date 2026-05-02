@@ -1,4 +1,24 @@
 const projects = [
+  // ── Industry (Ericsson) ───────────────────────────────────────────────────
+  {
+    id: 'gphy2',
+    name: 'Gphy2.0 — GPU-Accelerated LDPC Encoding',
+    category: 'Industry (Ericsson)',
+    date: 'Feb 2025 – Sep 2025',
+    tags: ['CUDA', 'C++', 'Bazel', 'Nsight Systems', 'Nsight Compute', 'Gerrit'],
+    description: 'Offloaded LDPC encoding from an Intel accelerator onto the latest Nvidia GPU within Ericsson\'s 5G vDU stack. Created a new GPU branch in the existing codebase, profiled latency using Nsight Systems and Nsight Compute across servers with different GPUs, and tuned CUDA kernels to improve SM occupancy. Also collected and compared latency baselines from the Intel accelerator branch using CPU cycle counters.',
+    link: null,
+  },
+  {
+    id: 'gemini',
+    name: 'Gemini — Digital Twin for 5G Radio',
+    category: 'Industry (Ericsson)',
+    date: 'May 2024 – Feb 2025',
+    tags: ['CUDA', 'C++', 'Vue3', 'SQLite', 'LTTng', 'Docker', 'AWS', 'Jenkins'],
+    description: 'Digital twin simulation for Radio, RF Channel, and UEs in Ericsson\'s 5G vDU stack. Built a constellation diagram UI using Vue3 and the Ericsson Design System. Wrote multi-threaded CUDA unit tests for a real-time system under a strict ~35 μs timing constraint. Developed an SQLite pipeline that generated histograms from LTTng trace data for channel quality analysis.',
+    link: null,
+  },
+
   // ── AI & ML ──────────────────────────────────────────────────────────────
   {
     id: 'ai-video-detection',
@@ -158,6 +178,6 @@ const projects = [
   },
 ]
 
-export const categories = ['All', 'AI & ML', 'Research & Open Source', 'Systems & HPC', 'Web & Backend', 'Course Projects']
+export const categories = ['All', 'Industry (Ericsson)', 'AI & ML', 'Research & Open Source', 'Systems & HPC', 'Web & Backend', 'Course Projects']
 
 export default projects
