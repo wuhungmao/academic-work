@@ -6,7 +6,7 @@
 \hypersetup{
     colorlinks=true,
     linkcolor=black,
-    filecolor=magenta,      
+    filecolor=magenta,
     urlcolor=black,
     pdftitle={Overleaf Example},
     pdfpagemode=FullScreen,
@@ -82,8 +82,20 @@ University of Toronto Mississauga (expected graduation with PEY CO-OP - August 2
   \end{itemize}
 \end{itemize}
 
-\section*{Main Projects}
+\section*{Academic Papers}
 \begin{itemize}
+\item[] Course Research, University of Toronto Mississauga \hfill Apr 2026
+ \begin{itemize}
+ \item[] \textbf{Wu, H.-M.}, Bi, F., Abdelhadi, Y., Lin, W., Khan, L. \href{https://drive.google.com/file/d/1KaVo7DM9onu-ap9cOaXpPX9bg1vr4znx/view?usp=sharing} {Ensemble Deep Learning Approaches for AI-Altered Video Detection}. Computer Science Implementation Project (CSC492).
+    \vspace{3px}
+    \item[] Riku, T., Ahmed, K., \textbf{Wu, H.-M.}, Usman, R. \href{https://drive.google.com/file/d/1YPqEK_rhctJtD1Wj-wzSBSfd9r5xmhBI/view?usp=sharing}{Can Agents Debug Better Than a Software Engineer?}. Course Research White Paper (CSC398).
+  \end{itemize}
+\end{itemize}
+
+% ── AI & Machine Learning ──────────────────────────────────────────────────────
+\section*{AI \& Machine Learning Projects}
+\begin{itemize}
+
 \item[] \textbf{AI-Video Detection Ensemble} $\mid$ \textit{Python, PyTorch, OpenCV, NumPy} \hfill \href{https://github.com/utmgdsc/AI-Video-Detection}{Link} $\mid$ Feb 2026
   \begin{itemize}
     \item Built an ensemble composed of 4 models (EfficientNet, MesoNet, XceptionNet, AASIST) to detect general \& deepfake AI-generated video.
@@ -94,13 +106,6 @@ University of Toronto Mississauga (expected graduation with PEY CO-OP - August 2
     \item Enabled parallel inference and took weighted scores to make the final REAL/FAKE prediction; communicated backend results with the frontend through HTTP requests.
     \item Co-authored the unpublished research manuscript {``Ensemble Deep Learning Approaches for AI-Altered Video Detection,''} detailing the multimodal architecture, performance metrics, and ensemble strategies.
     \item Served as both Project Manager and Senior Developer of a 5-member team; actively participated in two weekly meetings --- a Sunday sync facilitated by the mentor to review weekly progress, identify blockers, and plan upcoming tasks, and a Monday meeting to present results to the professor.
-  \end{itemize}
-  \vspace{3px}
-
-  \item[] \textbf{Frozen Lake Solver} $\mid$ \textit{Python} \hfill \href{https://github.com/wuhungmao/frozen_lake}{Link} $\mid$ Feb 2025
-  \begin{itemize}
-    \item Implemented a reinforcement learning agent to solve the Frozen Lake environment from OpenAI Gym.
-    \item Adopted the value iteration algorithm to find the optimal policy.
   \end{itemize}
   \vspace{3px}
 
@@ -121,20 +126,72 @@ University of Toronto Mississauga (expected graduation with PEY CO-OP - August 2
     \item Built a lightweight prediction script using only pure Python and NumPy because no external ML libraries are allowed, keeping the final model under 10MB for efficient deployment.
     \item Planned to test and tune 3 different types of models, selecting the best hyperparameters to ensure the model performs well on unseen test data rather than just memorizing the training set.
   \end{itemize}
-\end{itemize}
+  \vspace{3px}
 
-\section*{Academic Papers}
-\begin{itemize}
-\item[] Course Research, University of Toronto Mississauga \hfill Apr 2026
- \begin{itemize}
- \item[] \textbf{Wu, H.-M.}, Bi, F., Abdelhadi, Y., Lin, W., Khan, L. \href{https://drive.google.com/file/d/1KaVo7DM9onu-ap9cOaXpPX9bg1vr4znx/view?usp=sharing} {Ensemble Deep Learning Approaches for AI-Altered Video Detection}. Computer Science Implementation Project (CSC492).
-    \vspace{3px}
-    \item[] Riku, T., Ahmed, K., \textbf{Wu, H.-M.}, Usman, R. \href{https://drive.google.com/file/d/1YPqEK_rhctJtD1Wj-wzSBSfd9r5xmhBI/view?usp=sharing}{Can Agents Debug Better Than a Software Engineer?}. Course Research White Paper (CSC398).
+  \item[] \textbf{Frozen Lake Solver} $\mid$ \textit{Python} \hfill \href{https://github.com/wuhungmao/frozen_lake}{Link} $\mid$ Feb 2025
+  \begin{itemize}
+    \item Implemented a reinforcement learning agent to solve the Frozen Lake environment from OpenAI Gym.
+    \item Adopted the value iteration algorithm to find the optimal policy.
   \end{itemize}
+  \vspace{3px}
+
+  \item[] \textbf{Pacman AI Agent} $\mid$ \textit{Python} \hfill \href{https://github.com/wuhungmao/academic-work/tree/main/CSC384/Pacman\%20project/search}{Link} $\mid$ Sep 2023 - Oct 2023
+  \begin{itemize}
+    \item Implemented a Pacman game agent utilizing classical search algorithms (DFS, BFS, UCS, A*) with custom heuristics for the CSC384 AI course.
+    \item Scored 80/100 on the assignment.
+  \end{itemize}
+
 \end{itemize}
 
-\section*{Other Projects}
+% ── Systems & High-Performance Computing ──────────────────────────────────────
+\section*{Systems \& High-Performance Computing Projects}
 \begin{itemize}
+
+  \item[] \textbf{Image Processing with GPU} $\mid$ \textit{C, CUDA} \hfill \href{https://github.com/wuhungmao/academic-work/tree/main/CSC367/Image\%20processing\%20with\%20GPU}{Link} $\mid$ Nov 2023 - Dec 2023
+  \begin{itemize}
+    \item Used GPU and parallel programming to process a 10MB x 10MB PGM image in under 10 milliseconds, achieving a 70x speedup compared to sequential processing. Scored 100/100 on the assignment.
+    \item Broke down the entire project into smaller components, demonstrating strong time management skills that led to well-formatted code and detailed documentation.
+    \item Employed C and CUDA to parallelize execution.
+  \end{itemize}
+  \vspace{3px}
+
+  \item[] \textbf{Database Join with OpenMP and MPI} $\mid$ \textit{C, OpenMP, MPI} \hfill \href{https://github.com/wuhungmao/academic-work/tree/main/CSC367/Database\%20join\%20with\%20openMP\%20and\%20MPI}{Link} $\mid$ Oct 2023 - Nov 2023
+  \begin{itemize}
+    \item Performed database joins in both shared and distributed memory spaces, optimizing join speed. Achieved the merging of over ten thousand queries in under 200 milliseconds.
+    \item Utilized C along with parallel programming concepts including OpenMP for multi-core and MPI for multi-node execution.
+  \end{itemize}
+  \vspace{3px}
+
+  \item[] \textbf{File System Simulation} $\mid$ \textit{C, mmap, Pthreads} \hfill \href{https://github.com/wuhungmao/academic-work/tree/main/CSC369/File_Systems}{Link} $\mid$ Sep 2025 - Dec 2025
+  \begin{itemize}
+    \item Led a team to implement a Unix-like file system driver in C, utilizing memory mapping (mmap) to directly manipulate disk images.
+    \item Managed disk layout structures including superblocks, inode tables, and bitmaps to track free inode and data blocks. Allocated resources as needed.
+    \item Designed helper functions for path resolution and directory entry parsing to support nested directories and file lookups.
+    \item Engineered logic for hard and symbolic links, managing reference counts and inode pointers to ensure data consistency.
+    \item Designed a thread-safe synchronization scheme using fine-grained mutex locks to prevent race conditions during concurrent file operations.
+  \end{itemize}
+  \vspace{3px}
+
+  \item[] \textbf{Ethernet Frame and ARP Request Simulation} $\mid$ \textit{C++} \hfill \href{https://github.com/wuhungmao/academic-work/tree/main/CSC358/pa1_starter_code}{Link} $\mid$ Feb 2024
+  \begin{itemize}
+    \item Implemented a \texttt{NetworkInterface} in C++ that resolves IP-to-MAC addresses via ARP requests and caches replies, simulating Layer 2 switch forwarding.
+    \item Demonstrated understanding of Ethernet frame encapsulation, ARP protocol flow, and network switch behaviour.
+  \end{itemize}
+
+\end{itemize}
+
+% ── Web & Full-Stack Development ──────────────────────────────────────────────
+\section*{Web \& Full-Stack Development Projects}
+\begin{itemize}
+
+  \item[] \textbf{Personal Portfolio Website} $\mid$ \textit{React 18, Vite, React Router, CSS Modules, GitHub Actions} \hfill \href{https://wuhungmao.github.io/academic-work/}{Link} $\mid$ Dec 2023 - Present
+  \begin{itemize}
+    \item Designed and built a personal portfolio at \href{https://wuhungmao.github.io/academic-work/}{wuhungmao.github.io/academic-work} with a terminal/hacker aesthetic using React 18 and Vite; features 7 pages including a typewriter home, project gallery, course reviews, publications, and an interactive timeline.
+    \item Migrated from an original plain HTML/CSS/jQuery site (built from scratch to self-teach web development) to a component-based React architecture with CSS Modules for per-component scoped styling and React Router v6 for client-side navigation.
+    \item Configured automated CI/CD via GitHub Actions: every push to \texttt{main} triggers a Vite build and deploys \texttt{portfolio/dist/} to GitHub Pages with no manual steps.
+  \end{itemize}
+  \vspace{3px}
+
   \item[] \textbf{Decidophobia.com} $\mid$ \textit{Django, React, JavaScript, HTML/CSS, SQL} \hfill Jan 2024 - Apr 2024
   \begin{itemize}
     \item Acted as a Full Stack Developer to develop a responsive website that compares products from Amazon, Best Buy, eBay, and others, tailoring search results based on user preferences.
@@ -145,6 +202,15 @@ University of Toronto Mississauga (expected graduation with PEY CO-OP - August 2
   \end{itemize}
   \vspace{3px}
 
+  \item[] \textbf{Microservice API} $\mid$ \textit{Java, SQLite} \hfill \href{https://github.com/wuhungmao/academic-work/tree/main/CSC301}{Link} $\mid$ Jan 2024 - Apr 2024
+  \begin{itemize}
+    \item Implemented a bidirectional REST-based API, handling HTTP requests on both server and client sides. The API communicated with the database to update User and Product tables, providing HTTP responses upon completion.
+    \item Created this project from the ground up and self-taught numerous new concepts.
+    \item Collaborated with team members to break down the entire project into smaller, manageable tasks.
+    \item Employed Java to interact with an SQLite database, leveraging JSON-formatted messages.
+  \end{itemize}
+  \vspace{3px}
+
   \item[] \textbf{Game Collection Website} $\mid$ \textit{PHP, PostgreSQL} \hfill Feb 2024
   \begin{itemize}
     \item Developed a website which incorporates different kinds of games (rock paper scissors, guessing numbers, frog puzzle).
@@ -152,58 +218,23 @@ University of Toronto Mississauga (expected graduation with PEY CO-OP - August 2
   \end{itemize}
   \vspace{3px}
 
-  \item[] \textbf{Wordle Game} $\mid$ \textit{Node.js, Express.js, jQuery} \hfill \href{}{Link} $\mid$ Mar 2024
+  \item[] \textbf{Wordle Game} $\mid$ \textit{Node.js, Express.js, jQuery} \hfill Mar 2024
   \begin{itemize}
     \item Designed a Wordle game which allows the player to guess a 5-letter word.
     \item Utilized the jQuery library to run JavaScript code on the front end and the Express.js framework to build a web application with Node.js and construct a RESTful API.
   \end{itemize}
-  \vspace{3px}
 
-  \item[] \textbf{Image Processing with GPU} $\mid$ \textit{C, CUDA} \hfill \href{https://github.com/wuhungmao/academic-work/tree/main/CSC367/Image\%20processing\%20with\%20GPU}{Link} $\mid$ Nov 2023 - Dec 2023
-  \begin{itemize}
-    \item Used GPU and parallel programming to process a 10MB x 10MB PGM image in under 10 milliseconds, achieving a 70x speedup compared to sequential processing. Scored 100/100 on the assignment.
-    \item Broke down the entire project into smaller components, demonstrating strong time management skills that led to well-formatted code and detailed documentation.
-    \item Employed C and CUDA to parallelize execution.
-  \end{itemize}
-  \vspace{3px}
+\end{itemize}
 
-  \item[] \textbf{Database Join with OpenMP and MPI} $\mid$ \textit{C} \hfill \href{https://github.com/wuhungmao/academic-work/tree/main/CSC367/Database\%20join\%20with\%20openMP\%20and\%20MPI}{Link} $\mid$ Oct 2023 - Nov 2023
-  \begin{itemize}
-    \item Performed database joins in both shared and distributed memory spaces, optimizing join speed. Achieved the merging of over ten thousand queries in under 200 milliseconds.
-    \item Utilized C along with parallel programming concepts.
-  \end{itemize}
-  \vspace{3px}
+% ── Other Course Projects ──────────────────────────────────────────────────────
+\section*{Other Course Projects}
+\begin{itemize}
 
-  \item[] \textbf{Microservice API} $\mid$ \textit{Java, SQLite} \hfill \href{https://github.com/wuhungmao/academic-work/tree/main/CSC301}{Link} $\mid$ Jan 2024 - Apr 2024
-  \begin{itemize}
-    \item Implemented a bidirectional REST-based API, handling HTTP requests on both server and client sides. The API communicated with the database to update User and Product tables, providing HTTP responses upon completion.
-    \item Created this project from the ground up and self-taught numerous new concepts.
-    \item Collaborated with team members to break down the entire project into smaller, manageable tasks.
-    \item Employed Java to interact with an SQLite database, leveraging JSON-formatted messages. Utilized generative AI to enhance productivity.
-  \end{itemize}
-  \vspace{3px}
-
-  \item[] \textbf{File System Simulation} $\mid$ \textit{C} \hfill \href{https://github.com/wuhungmao/academic-work/tree/main/CSC369/File_Systems}{Link} $\mid$ Sep 2025 - Dec 2025
-  \begin{itemize}
-    \item Led a team to implement a Unix-like file system driver in C, utilizing memory mapping (mmap) to directly manipulate disk images.
-    \item Managed disk layout structures including superblocks, inode tables, and bitmaps to track free inode and data blocks. Allocated resources as needed.
-    \item Designed helper functions for path resolution and directory entry parsing to support nested directories and file lookups.
-    \item Engineered logic for hard and symbolic links, managing reference counts and inode pointers to ensure data consistency.
-    \item Designed a thread-safe synchronization scheme using fine-grained mutex locks to prevent race conditions during concurrent file operations.
-  \end{itemize}
-  \vspace{3px}
-
-  \item[] \textbf{Boggle Game} $\mid$ \textit{Java, JavaFX} \hfill \href{https://github.com/wuhungmao/academic-work/tree/95369cac8bbce77f4c321954c4afb07f3d207d28/csc\%20207\%20Group\%20Project}{Link} $\mid$ Oct 2022 - Dec 2022
+  \item[] \textbf{Boggle Game} $\mid$ \textit{Java, JavaFX} \hfill \href{https://github.com/wuhungmao/academic-work/tree/main/CSC207}{Link} $\mid$ Oct 2022 - Dec 2022
   \begin{itemize}
     \item Led a team using Scrum methodology for Boggle game development, fostering active team communication. Successfully decomposed large group tasks, assigned them, and coordinated team efforts, resulting in a high-grade achievement.
     \item Created user personas and user stories, and generated detailed reports, showcasing excellent project management.
     \item Developed the game using Java and JavaFX, while utilizing GitHub for software development and project management.
-  \end{itemize}
-  \vspace{3px}
-
-  \item[] \textbf{File Compression} $\mid$ \textit{Python} \hfill \href{https://github.com/wuhungmao/academic-work/tree/main/CSC148/a2\%20huffman\%20algorithm\%20and\%20compression}{Link} $\mid$ Jan 2022 - Feb 2022
-  \begin{itemize}
-    \item Used the Huffman algorithm for both file compression and decompression.
   \end{itemize}
   \vspace{3px}
 
@@ -213,24 +244,11 @@ University of Toronto Mississauga (expected graduation with PEY CO-OP - August 2
   \end{itemize}
   \vspace{3px}
 
-  \item[] \textbf{Pacman Game} $\mid$ \textit{Python} \hfill \href{https://github.com/wuhungmao/academic-work/tree/main/CSC384/Pacman\%20project/search}{Link} $\mid$ Sep 2023 - Oct 2023
+  \item[] \textbf{File Compression} $\mid$ \textit{Python} \hfill \href{https://github.com/wuhungmao/academic-work/tree/main/CSC148/a2\%20huffman\%20algorithm\%20and\%20compression}{Link} $\mid$ Jan 2022 - Feb 2022
   \begin{itemize}
-    \item Implemented a Pacman game utilizing search algorithms like DFS, BFS, A*, etc., achieving a score of 80.
+    \item Used the Huffman algorithm for both file compression and decompression.
   \end{itemize}
-  \vspace{3px}
 
-  \item[] \textbf{Personal Website} $\mid$ \textit{HTML, CSS, JavaScript} \hfill \href{https://github.com/wuhungmao/academic-work/tree/main/Personal\%20website}{Link} $\mid$ Dec 2023 - Jan 2024
-  \begin{itemize}
-    \item Developed a website showcasing my hobbies, course reflections, and school projects.
-    \item Independently learned HTML, CSS, and JavaScript to craft a responsive website.
-  \end{itemize}
-  \vspace{3px}
-
-  \item[] \textbf{Ethernet Frame and ARP Request} $\mid$ \textit{C++} \hfill \href{https://github.com/wuhungmao/academic-work/tree/main/CSC358/pa1_starter_code}{Link} $\mid$ Feb 2024
-  \begin{itemize}
-    \item Demonstrated understanding and application of concepts related to Ethernet frames and ARP requests.
-    \item Used C++ to simulate how switches handle Ethernet frames.
-  \end{itemize}
 \end{itemize}
 
 \end{document}
