@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './PhotoAlbum.css'
 
-const BASE = '/academic-work/Personal%20website/Hobbies%20pics'
+const BASE = '/academic-work/images'
 
 export default function PhotoAlbum({ photos }) {
   const [open, setOpen] = useState(false)
