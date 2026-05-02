@@ -1,0 +1,96 @@
+.projects-page {
+  flex: 1;
+  padding: 32px 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.project-card {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.15s ease;
+}
+
+.project-card:hover {
+  border-color: var(--green-dim);
+}
+
+.project-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.project-icon {
+  font-size: 20px;
+  color: var(--green);
+  margin-top: 2px;
+}
+
+.project-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  font-family: var(--font);
+  line-height: 1.3;
+}
+
+.project-course {
+  display: inline-block;
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-top: 3px;
+  background: var(--bg-secondary);
+  padding: 1px 8px;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+}
+
+.project-desc {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.project-tag {
+  font-size: 11px;
+  background: rgba(57, 211, 83, 0.08);
+  border: 1px solid var(--green-dim);
+  color: var(--green);
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+
+.project-link {
+  font-size: 12px;
+  color: var(--green);
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  display: block;
+  transition: color 0.15s;
+}
+
+.project-link:hover {
+  color: var(--green-bright);
+  text-decoration: none;
+}

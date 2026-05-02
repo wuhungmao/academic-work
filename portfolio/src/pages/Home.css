@@ -1,0 +1,129 @@
+.home {
+  flex: 1;
+  padding: 32px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 800px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tw-output {
+  padding: 4px 0 12px 16px;
+  color: var(--green);
+  font-size: 13px;
+  border-left: 2px solid var(--green-dim);
+  margin-bottom: 8px;
+}
+
+.bio-text {
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
+  color: var(--green);
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 4px 0 16px 16px;
+}
+
+.skill-tag {
+  background: rgba(57, 211, 83, 0.08);
+  border: 1px solid var(--green-dim);
+  color: var(--green);
+  padding: 2px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.contact-block {
+  padding: 8px 0 8px 16px;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.json-brace { color: var(--text-dim); }
+.json-row { padding-left: 16px; }
+.json-key { color: #79c0ff; }
+.json-colon { color: var(--text-dim); margin: 0 4px; }
+.json-val { color: #a5d6ff; }
+
+/* Quick nav */
+.quick-nav {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quick-nav-title {
+  color: var(--text-dim);
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.quick-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+.quick-card:hover {
+  border-color: var(--green-dim);
+  background: rgba(57, 211, 83, 0.05);
+  color: var(--text);
+}
+
+.quick-icon { font-size: 20px; }
+
+.quick-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.quick-desc {
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+
+.quick-arrow {
+  margin-left: auto;
+  color: var(--green-dim);
+  font-size: 16px;
+}
+
+.quick-card:hover .quick-arrow {
+  color: var(--green);
+}
