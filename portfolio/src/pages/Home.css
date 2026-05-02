@@ -152,6 +152,15 @@
 .json-val { color: #a5d6ff; }
 
 /* Quick nav */
+.resume-btn {
+  border-color: var(--green-dim) !important;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.resume-btn:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
 .quick-nav {
   background: var(--bg-secondary);
   border: 1px solid var(--border);

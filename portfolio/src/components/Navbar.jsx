@@ -3,8 +3,10 @@ import './Navbar.css'
 
 const links = [
   { to: '/', label: '~/home' },
+  { to: '/timeline', label: '~/timeline' },
   { to: '/courses', label: '~/courses' },
   { to: '/projects', label: '~/projects' },
+  { to: '/publications', label: '~/publications' },
   { to: '/hobbies', label: '~/hobbies' },
 ]
 

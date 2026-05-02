@@ -143,14 +143,42 @@ export default function Home() {
               </div>
               <span className="quick-arrow">→</span>
             </Link>
+            <Link to="/publications" className="quick-card">
+              <span className="quick-icon">📄</span>
+              <div>
+                <div className="quick-name">Publications</div>
+                <div className="quick-desc">2 co-authored research papers</div>
+              </div>
+              <span className="quick-arrow">→</span>
+            </Link>
+            <Link to="/timeline" className="quick-card">
+              <span className="quick-icon">📅</span>
+              <div>
+                <div className="quick-name">Timeline</div>
+                <div className="quick-desc">Education, internship & milestones</div>
+              </div>
+              <span className="quick-arrow">→</span>
+            </Link>
             <Link to="/hobbies" className="quick-card">
               <span className="quick-icon">🎯</span>
               <div>
                 <div className="quick-name">Hobbies</div>
-                <div className="quick-desc">Hiking, military, cooking & more</div>
+                <div className="quick-desc">Hiking, gaming, cooking & more</div>
               </div>
               <span className="quick-arrow">→</span>
             </Link>
+            <a
+              href="/academic-work/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="quick-card resume-btn"
+            >
+              <span className="quick-icon">⬇</span>
+              <div>
+                <div className="quick-name">Download CV</div>
+                <div className="quick-desc">resume.pdf</div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
