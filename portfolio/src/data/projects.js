@@ -19,7 +19,7 @@ const projects = [
     link: null,
   },
 
-  // ── AI & ML ──────────────────────────────────────────────────────────────
+  // ── Main Projects ─────────────────────────────────────────────────────────
   {
     id: 'ai-video-detection',
     name: 'AI-Video Detection Ensemble',
@@ -39,26 +39,6 @@ const projects = [
     link: 'https://github.com/wuhungmao/frozen_lake',
   },
   {
-    id: 'ml-painting-classifier',
-    name: 'Machine Learning Painting Classifier',
-    category: 'AI & ML',
-    date: 'Feb 2026',
-    tags: ['Python', 'Pandas', 'NumPy'],
-    description: 'Built a lightweight painting classifier using only pure Python and NumPy (no external ML libraries), keeping the final model under 10 MB. Used Pandas/NumPy for feature analysis and tuned multiple model types to generalize on unseen data.',
-    link: 'https://github.com/wuhungmao/Machine-Learning-Challenge',
-  },
-  {
-    id: 'pacman',
-    name: 'Pacman AI Agent',
-    category: 'AI & ML',
-    date: 'Sep – Oct 2023',
-    tags: ['Python', 'DFS', 'BFS', 'A*', 'Search Algorithms'],
-    description: 'Implemented a Pacman game agent using classical search algorithms (DFS, BFS, A*, etc.) for the CSC384 AI course. Scored 80/100.',
-    link: 'https://github.com/wuhungmao/academic-work/tree/main/CSC384/Pacman%20project/search',
-  },
-
-  // ── Research & Open Source ───────────────────────────────────────────────
-  {
     id: 'jetbrains-lca',
     name: 'JetBrains LCA Benchmark Contribution',
     category: 'Research & Open Source',
@@ -67,16 +47,43 @@ const projects = [
     description: 'Contributed to the open-source JetBrains LCA benchmark, extending bug localization to automated fix application. Expanded evaluation metrics for coding agents (Claude Code, Codex). Co-authored a technical white paper and presented findings to 40+ attendees.',
     link: 'https://github.com/CSC392-CSC492-Building-AI-ML-systems/JetBrains-LCA-Winter2026',
   },
-
-  // ── Systems & HPC ────────────────────────────────────────────────────────
   {
-    id: 'file-system',
-    name: 'Unix-like File System Simulation',
-    category: 'Systems & HPC',
-    date: 'Sep – Dec 2025',
-    tags: ['C', 'mmap', 'Pthreads', 'OS'],
-    description: 'Led a team to implement a Unix-like file system driver in C using mmap for direct disk image manipulation. Implemented superblocks, inode tables, bitmaps, hard/symbolic links, path resolution, and thread-safe synchronization with fine-grained mutex locks.',
-    link: 'https://github.com/wuhungmao/academic-work/tree/main/CSC369/File_Systems',
+    id: 'ml-painting-classifier',
+    name: 'Machine Learning Painting Classifier',
+    category: 'AI & ML',
+    date: 'Feb 2026',
+    tags: ['Python', 'Pandas', 'NumPy'],
+    description: 'Built a lightweight painting classifier using only pure Python and NumPy (no external ML libraries), keeping the final model under 10 MB. Used Pandas/NumPy for feature analysis and tuned multiple model types to generalize on unseen data.',
+    link: 'https://github.com/wuhungmao/Machine-Learning-Challenge',
+  },
+
+  // ── Other Projects ────────────────────────────────────────────────────────
+  {
+    id: 'decidophobia',
+    name: 'Decidophobia.com',
+    category: 'Web & Backend',
+    date: 'Jan – Apr 2024',
+    tags: ['Django', 'React', 'JavaScript', 'HTML/CSS', 'SQL', 'Jira'],
+    description: 'Full stack developer on a product comparison website aggregating results from Amazon, Best Buy, and eBay based on user preferences. Implemented eBay product retrieval, a questionnaire page, and back-end product models with SQL queries. Converted HTML to React for a more responsive UI.',
+    link: null,
+  },
+  {
+    id: 'game-collection',
+    name: 'Game Collection Website',
+    category: 'Web & Backend',
+    date: 'Feb 2024',
+    tags: ['PHP', 'PostgreSQL', 'MVC', 'Session Management'],
+    description: 'Developed a website hosting multiple games (rock paper scissors, number guessing, frog puzzle) using PHP with session management, CSRF tokens, MVC architecture, and PostgreSQL for data storage.',
+    link: null,
+  },
+  {
+    id: 'wordle',
+    name: 'Wordle Game',
+    category: 'Web & Backend',
+    date: 'Mar 2024',
+    tags: ['Node.js', 'Express.js', 'jQuery', 'REST API'],
+    description: 'Designed a Wordle game with a RESTful API backend built with Express.js/Node.js and jQuery on the frontend for DOM manipulation.',
+    link: null,
   },
   {
     id: 'gpu-image',
@@ -99,26 +106,6 @@ const projects = [
     pdf: '/academic-work/CSC367/Database%20join%20with%20openMP%20and%20MPI/report.pdf',
   },
   {
-    id: 'ethernet-arp',
-    name: 'Ethernet Frame & ARP Request Simulation',
-    category: 'Systems & HPC',
-    date: 'Feb 2024',
-    tags: ['C++', 'Networking', 'Ethernet', 'ARP'],
-    description: 'Simulated how switches handle Ethernet frames and ARP requests in C++, demonstrating understanding of Layer 2 networking concepts.',
-    link: 'https://github.com/wuhungmao/academic-work/tree/main/CSC358/pa1_starter_code',
-  },
-
-  // ── Web & Backend ────────────────────────────────────────────────────────
-  {
-    id: 'decidophobia',
-    name: 'Decidophobia.com',
-    category: 'Web & Backend',
-    date: 'Jan – Apr 2024',
-    tags: ['Django', 'React', 'JavaScript', 'HTML/CSS', 'SQL', 'Jira'],
-    description: 'Full stack developer on a product comparison website aggregating results from Amazon, Best Buy, and eBay based on user preferences. Implemented eBay product retrieval, a questionnaire page, and back-end product models with SQL queries. Converted HTML to React for a more responsive UI.',
-    link: null,
-  },
-  {
     id: 'microservice-api',
     name: 'Microservice REST API',
     category: 'Web & Backend',
@@ -128,25 +115,14 @@ const projects = [
     link: 'https://github.com/wuhungmao/academic-work/tree/main/CSC301',
   },
   {
-    id: 'wordle',
-    name: 'Wordle Game',
-    category: 'Web & Backend',
-    date: 'Mar 2024',
-    tags: ['Node.js', 'Express.js', 'jQuery', 'REST API'],
-    description: 'Designed a Wordle game with a RESTful API backend built with Express.js/Node.js and jQuery on the frontend for DOM manipulation.',
-    link: null,
+    id: 'file-system',
+    name: 'Unix-like File System Simulation',
+    category: 'Systems & HPC',
+    date: 'Sep – Dec 2025',
+    tags: ['C', 'mmap', 'Pthreads', 'OS'],
+    description: 'Led a team to implement a Unix-like file system driver in C using mmap for direct disk image manipulation. Implemented superblocks, inode tables, bitmaps, hard/symbolic links, path resolution, and thread-safe synchronization with fine-grained mutex locks.',
+    link: 'https://github.com/wuhungmao/academic-work/tree/main/CSC369/File_Systems',
   },
-  {
-    id: 'game-collection',
-    name: 'Game Collection Website',
-    category: 'Web & Backend',
-    date: 'Feb 2024',
-    tags: ['PHP', 'PostgreSQL', 'MVC', 'Session Management'],
-    description: 'Developed a website hosting multiple games (rock paper scissors, number guessing, frog puzzle) using PHP with session management, CSRF tokens, MVC architecture, and PostgreSQL for data storage.',
-    link: null,
-  },
-
-  // ── Course Projects ──────────────────────────────────────────────────────
   {
     id: 'boggle',
     name: 'Boggle Game',
@@ -156,6 +132,15 @@ const projects = [
     description: 'Led a team using Scrum to build a full Boggle game in Java with JavaFX. Created user personas, user stories, and detailed reports. Managed task decomposition and team coordination for a high-grade result.',
     link: 'https://github.com/wuhungmao/academic-work/tree/main/CSC207',
     pdf: '/academic-work/CSC207/project_phase1_template.pdf',
+  },
+  {
+    id: 'file-compression',
+    name: 'File Compression (Huffman)',
+    category: 'Course Projects',
+    date: 'Jan – Feb 2022',
+    tags: ['Python', 'Huffman Algorithm', 'Data Structures'],
+    description: 'Implemented file compression and decompression using the Huffman encoding algorithm in Python.',
+    link: 'https://github.com/wuhungmao/academic-work/tree/main/CSC148/a2%20huffman%20algorithm%20and%20compression',
   },
   {
     id: 'simon-game',
@@ -168,13 +153,22 @@ const projects = [
     pdf: '/academic-work/CSC258/Simon%20game%20guide.pdf',
   },
   {
-    id: 'file-compression',
-    name: 'File Compression (Huffman)',
-    category: 'Course Projects',
-    date: 'Jan – Feb 2022',
-    tags: ['Python', 'Huffman Algorithm', 'Data Structures'],
-    description: 'Implemented file compression and decompression using the Huffman encoding algorithm in Python.',
-    link: 'https://github.com/wuhungmao/academic-work/tree/main/CSC148/a2%20huffman%20algorithm%20and%20compression',
+    id: 'pacman',
+    name: 'Pacman AI Agent',
+    category: 'AI & ML',
+    date: 'Sep – Oct 2023',
+    tags: ['Python', 'DFS', 'BFS', 'A*', 'Search Algorithms'],
+    description: 'Implemented a Pacman game agent using classical search algorithms (DFS, BFS, A*, etc.) for the CSC384 AI course. Scored 80/100.',
+    link: 'https://github.com/wuhungmao/academic-work/tree/main/CSC384/Pacman%20project/search',
+  },
+  {
+    id: 'ethernet-arp',
+    name: 'Ethernet Frame & ARP Request Simulation',
+    category: 'Systems & HPC',
+    date: 'Feb 2024',
+    tags: ['C++', 'Networking', 'Ethernet', 'ARP'],
+    description: 'Simulated how switches handle Ethernet frames and ARP requests in C++, demonstrating understanding of Layer 2 networking concepts.',
+    link: 'https://github.com/wuhungmao/academic-work/tree/main/CSC358/pa1_starter_code',
   },
 ]
 
