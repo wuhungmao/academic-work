@@ -27,7 +27,7 @@
 
 .hobby-card:hover {
   border-color: var(--green-dim);
-  background: rgba(57, 211, 83, 0.05);
+  background: rgba(255, 255, 255, 0.04);
   color: var(--text);
   text-decoration: none;
 }

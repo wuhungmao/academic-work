@@ -3,7 +3,13 @@ import { Link } from 'react-router-dom'
 import TerminalWindow, { Prompt } from '../components/TerminalWindow'
 import './Home.css'
 
-const skills = ['Python', 'Java', 'C', 'C++', 'JavaScript', 'React', 'HTML/CSS', 'SQL', 'Git', 'CUDA', 'OpenMP', 'MPI', 'MIPS Assembly', 'Shell Scripting']
+const skills = {
+  'Languages': ['Python', 'C', 'C++', 'Java', 'SQL', 'JavaScript', 'HTML/CSS', 'PHP'],
+  'Frameworks': ['React', 'Node.js', 'jQuery', 'Django', 'Express.js', 'Vue3'],
+  'Tools': ['Linux', 'Git', 'Docker', 'AWS', 'Jenkins', 'Jira', 'Bazel', 'Gerrit'],
+  'Databases': ['PostgreSQL', 'SQLite'],
+  'Profiling & HPC': ['CUDA', 'OpenMP', 'MPI', 'Nsight Systems', 'LTTng', 'Valgrind'],
+}
 
 function TypeWriter({ text, speed = 40, onDone }) {
   const [displayed, setDisplayed] = useState('')
@@ -35,7 +41,7 @@ export default function Home() {
             <Prompt path="~" command="whoami" />
             {step >= 0 && (
               <div className="tw-output">
-                <TypeWriter text="Wu Hung Mao" speed={60} onDone={() => setStep(1)} />
+                <TypeWriter text="Marvin Wu (Wu Hung Mao)" speed={50} onDone={() => setStep(1)} />
               </div>
             )}
 
@@ -43,8 +49,8 @@ export default function Home() {
             {step >= 1 && (
               <div className="tw-output">
                 <TypeWriter
-                  text="Software Developer | University of Toronto Mississauga"
-                  speed={25}
+                  text="CS Specialist @ UofT Mississauga | Former Physical Layer (vDU) Developer Intern @ Ericsson | C++, CUDA & Machine Learning"
+                  speed={18}
                   onDone={() => setStep(2)}
                 />
               </div>
@@ -53,16 +59,54 @@ export default function Home() {
             {step >= 2 && <Prompt path="~" command="cat bio.txt" />}
             {step >= 2 && (
               <div className="tw-output bio-text">
-                <p>I'm a Computer Science student at UTM, admitted in 2021. My interests span systems programming, parallel computing, AI, and robotics.</p>
-                <p style={{ marginTop: 8 }}>I use AI tools like ChatGPT and Copilot daily — but I've learned that blindly trusting them creates bugs nobody catches. A good developer knows when to trust the tool and when to question it.</p>
+                <p>
+                  Honours BSc Computer Science Specialist at the University of Toronto Mississauga
+                  (GPA 3.45/4.0, graduating August 2026 with PEY CO-OP).
+                </p>
+                <p style={{ marginTop: 8 }}>
+                  Most recently a <strong>Physical Layer (vDU) Developer Intern at Ericsson</strong> (May 2024 – Sep 2025),
+                  where I offloaded LDPC encoding onto Nvidia GPUs using CUDA, profiled latency with Nsight Systems and
+                  Nsight Compute, and built a digital twin for Radio/RF/UE simulation including a constellation diagram
+                  (Vue3), multi-threaded CUDA unit tests, and an SQLite + LTTng channel quality analysis pipeline.
+                </p>
+                <p style={{ marginTop: 8 }}>
+                  I work across the full stack — from CUDA kernels and OS-level systems programming to React frontends
+                  and REST APIs. Currently focused on AI/ML: led a 5-person team building an ensemble deep learning
+                  system for AI-generated video detection (EfficientNet, MesoNet, XceptionNet, AASIST), and contributed
+                  to the JetBrains LCA benchmark for evaluating coding agents like Claude Code and Codex.
+                </p>
+              </div>
+            )}
+
+            {step >= 2 && <Prompt path="~" command="cat experience.txt" />}
+            {step >= 2 && (
+              <div className="experience-block">
+                <div className="exp-item">
+                  <div className="exp-header">
+                    <span className="exp-role">Physical Layer (vDU) Developer Intern</span>
+                    <span className="exp-date">May 2024 – Sep 2025</span>
+                  </div>
+                  <div className="exp-company">Ericsson · Ottawa, Ontario</div>
+                  <ul className="exp-bullets">
+                    <li>Offloaded LDPC encoding onto latest Nvidia GPU (Gphy2.0) using CUDA; profiled with Nsight Systems & Compute</li>
+                    <li>Built digital twin (Gemini) for Radio, RF Channel & UE simulation using Vue3 and the Ericsson Design System</li>
+                    <li>Wrote multi-threaded CUDA unit tests for a real-time system under ~35 μs timing constraint</li>
+                    <li>Developed SQLite + LTTng histogram pipeline for channel quality analysis</li>
+                  </ul>
+                </div>
               </div>
             )}
 
             {step >= 2 && <Prompt path="~" command="ls skills/" />}
             {step >= 2 && (
-              <div className="skills-grid">
-                {skills.map(s => (
-                  <span key={s} className="skill-tag">{s}</span>
+              <div className="skills-section">
+                {Object.entries(skills).map(([cat, items]) => (
+                  <div key={cat} className="skill-group">
+                    <span className="skill-cat">{cat}:</span>
+                    <div className="skills-grid">
+                      {items.map(s => <span key={s} className="skill-tag">{s}</span>)}
+                    </div>
+                  </div>
                 ))}
               </div>
             )}
@@ -71,7 +115,7 @@ export default function Home() {
             {step >= 2 && (
               <div className="contact-block">
                 <span className="json-brace">{'{'}</span>
-                <div className="json-row"><span className="json-key">"email"</span><span className="json-colon">:</span> <a href="mailto:wuhungmao.marvinwu@gmail.com" className="json-val">"wuhungmao.marvinwu@gmail.com"</a></div>
+                <div className="json-row"><span className="json-key">"email"</span><span className="json-colon">:</span> <a href="mailto:hongmao.wu@mail.utoronto.ca" className="json-val">"hongmao.wu@mail.utoronto.ca"</a></div>
                 <div className="json-row"><span className="json-key">"linkedin"</span><span className="json-colon">:</span> <a href="https://www.linkedin.com/in/hungmao-wu/" target="_blank" rel="noreferrer" className="json-val">"linkedin.com/in/hungmao-wu"</a></div>
                 <div className="json-row"><span className="json-key">"github"</span><span className="json-colon">:</span> <a href="https://github.com/wuhungmao" target="_blank" rel="noreferrer" className="json-val">"github.com/wuhungmao"</a></div>
                 <span className="json-brace">{'}'}</span>
@@ -95,7 +139,7 @@ export default function Home() {
               <span className="quick-icon">⚙️</span>
               <div>
                 <div className="quick-name">Projects</div>
-                <div className="quick-desc">4 school projects</div>
+                <div className="quick-desc">20+ projects across AI, systems & web</div>
               </div>
               <span className="quick-arrow">→</span>
             </Link>

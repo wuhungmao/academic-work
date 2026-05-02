@@ -39,7 +39,7 @@
 }
 
 .ls-row:hover {
-  background: rgba(57, 211, 83, 0.05);
+  background: rgba(255, 255, 255, 0.04);
   border-color: var(--border);
 }
 
