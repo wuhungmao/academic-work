@@ -6,7 +6,7 @@ import './Courses.css'
 function DifficultyBar({ value }) {
   if (value === null) return <span className="ls-na">—</span>
   const pct = (value / 10) * 100
-  const color = value >= 7 ? '#f85149' : value >= 5 ? '#e3b341' : '#39d353'
+  const color = value >= 7 ? '#f85149' : value >= 5 ? '#e3b341' : '#c9d1d9'
   return (
     <div className="diff-bar-wrap">
       <div className="diff-bar">
