@@ -1,16 +1,28 @@
-Programming Assignments
-==============================
+# Ethernet Frame & ARP Request Simulation
 
-This repository contains programming assignments of the course. They are based on Stanford's CS 144 assignments.
+CSC358 — Computer Networks | University of Toronto Mississauga | Feb 2024
 
-To set up the build system: `cmake -S . -B build`
+## Description
+Simulates how network switches handle Ethernet frames and ARP (Address Resolution Protocol) requests in C++. Based on Stanford's CS 144 networking labs.
 
-To compile: `cmake --build build`
+Implements a `NetworkInterface` that maps IP addresses to MAC addresses, sending ARP requests to resolve unknown addresses and caching replies.
 
-To run tests: `cmake --build build --target test`
+## Key Files
+- `src/network_interface.cc` — main implementation
+- `src/network_interface.hh` — interface definition
 
-To run speed benchmarks: `cmake --build build --target speed`
+## Key Concepts
+- Ethernet frame encapsulation (Layer 2)
+- ARP request/reply protocol
+- IP-to-MAC address resolution and caching
+- Switch forwarding tables
 
-To run clang-tidy (which suggests improvements): `cmake --build build --target tidy`
+## How to Build & Run
+```bash
+cmake -S . -B build
+cmake --build build
+cmake --build build --target test   # run tests
+```
 
-To format code: `cmake --build build --target format`
+## Tech Stack
+C++, CMake, Ethernet/ARP protocols, Layer 2 networking
