@@ -32,11 +32,17 @@ jobs:
       - name: Build
         run: cd portfolio && npm run build
 
+      - name: Compile resume PDF
+        run: |
+          sudo apt-get install -y texlive-latex-extra texlive-fonts-recommended > /dev/null 2>&1
+          pdflatex -interaction=nonstopmode main.tex
+          cp main.pdf portfolio/dist/resume.pdf
+
       - name: Copy hobby images into build
         run: |
           mkdir -p portfolio/dist/images
-          cp -r "Personal website/Hobbies pics/hiking pictures" portfolio/dist/images/hiking
-          cp -r "Personal website/Hobbies pics/Cooking" portfolio/dist/images/cooking
+          cp -r assets/hobbies/hiking portfolio/dist/images/hiking
+          cp -r assets/hobbies/cooking portfolio/dist/images/cooking
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
