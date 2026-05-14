@@ -1,0 +1,65 @@
+.iterm-wrap {
+  background: #010409;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  min-height: 260px;
+  max-height: 420px;
+  overflow-y: auto;
+  cursor: text;
+  font-family: var(--font);
+  font-size: 12px;
+}
+
+.iterm-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.iterm-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.iterm-prompt {
+  color: #3fb950;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.iterm-text {
+  font-family: var(--font);
+  font-size: 12px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.6;
+}
+
+.iterm-input .iterm-text,
+.iterm-output .iterm-text {
+  color: var(--text);
+}
+
+.iterm-output .iterm-text {
+  color: var(--text-dim);
+  padding-left: 0;
+}
+
+.iterm-input-row {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.iterm-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 12px;
+  flex: 1;
+  caret-color: #3fb950;
+}

@@ -1,15 +1,10 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import TerminalWindow, { Prompt } from '../components/TerminalWindow'
+import SkillBars from '../components/SkillBars'
+import GitHubActivity from '../components/GitHubActivity'
+import InteractiveTerminal from '../components/InteractiveTerminal'
 import './Home.css'
-
-const skills = {
-  'Languages': ['Python', 'C', 'C++', 'Java', 'SQL', 'JavaScript', 'HTML/CSS', 'PHP'],
-  'Frameworks': ['React', 'Node.js', 'jQuery', 'Django', 'Express.js', 'Vue3'],
-  'Tools': ['Linux', 'Git', 'Docker', 'AWS', 'Jenkins', 'Jira', 'Bazel', 'Gerrit'],
-  'Databases': ['PostgreSQL', 'SQLite'],
-  'Profiling & HPC': ['CUDA', 'OpenMP', 'MPI', 'Nsight Systems', 'LTTng', 'Valgrind'],
-}
 
 function TypeWriter({ text, speed = 40, onDone }) {
   const [displayed, setDisplayed] = useState('')
@@ -35,6 +30,7 @@ export default function Home() {
 
   return (
     <main className="home">
+      {/* ── Main grid ────────────────────────────────────── */}
       <div className="home-grid">
         <div className="home-left">
           <TerminalWindow title="wu@portfolio: ~">
@@ -98,18 +94,10 @@ export default function Home() {
             )}
 
             {step >= 2 && <Prompt path="~" command="ls skills/" />}
-            {step >= 2 && (
-              <div className="skills-section">
-                {Object.entries(skills).map(([cat, items]) => (
-                  <div key={cat} className="skill-group">
-                    <span className="skill-cat">{cat}:</span>
-                    <div className="skills-grid">
-                      {items.map(s => <span key={s} className="skill-tag">{s}</span>)}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
+            {step >= 2 && <SkillBars />}
+
+            {step >= 2 && <Prompt path="~" command="cat github-activity.log" />}
+            {step >= 2 && <GitHubActivity username="wuhungmao" />}
 
             {step >= 2 && <Prompt path="~" command="cat contact.json" />}
             {step >= 2 && (
@@ -181,6 +169,14 @@ export default function Home() {
             </a>
           </div>
         </div>
+      </div>
+
+      {/* ── Interactive terminal ──────────────────────────── */}
+      <div className="home-terminal-section">
+        <TerminalWindow title="wu@portfolio: ~ (interactive shell)">
+          <Prompt path="~" command="bash --interactive" />
+          <InteractiveTerminal />
+        </TerminalWindow>
       </div>
     </main>
   )

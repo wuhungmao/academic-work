@@ -1,0 +1,83 @@
+.ai-flow-wrap {
+  margin-top: 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #010409;
+}
+
+.ai-flow-title {
+  padding: 10px 16px 4px;
+  font-size: 12px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.ai-flow-hint {
+  padding: 0 16px 8px;
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+.ai-flow-canvas {
+  height: 320px;
+}
+
+/* ── React Flow overrides ───────────────────────────── */
+.react-flow__background { background: #010409; }
+.react-flow__controls { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 6px; }
+.react-flow__controls-button { background: var(--bg-secondary); border-color: var(--border); color: var(--text); fill: var(--text-dim); }
+.react-flow__controls-button:hover { background: var(--bg-tertiary); }
+
+/* ── Custom nodes ───────────────────────────────────── */
+.pipeline-node {
+  position: relative;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-family: var(--font);
+  font-size: 11px;
+  text-align: center;
+  white-space: pre-line;
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  color: var(--text);
+  cursor: default;
+  min-width: 140px;
+  transition: border-color 0.15s;
+}
+
+.pipeline-node:hover { border-color: #58a6ff; }
+
+.pipeline-node.source   { border-color: #388bfd; color: #79c0ff; }
+.pipeline-node.process  { border-color: #3d444d; color: var(--text-dim); }
+.pipeline-node.model    { border-color: #26a641; color: #3fb950; }
+.pipeline-node.ensemble { border-color: #e3b341; color: #e3b341; }
+.pipeline-node.output   { border-color: #f0f6fc; color: #f0f6fc; font-weight: 700; }
+
+.pipeline-node-label { line-height: 1.4; }
+
+.pipeline-node-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 11px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  width: 230px;
+  line-height: 1.5;
+  white-space: normal;
+  z-index: 999;
+  pointer-events: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+}
+
+.react-flow__handle {
+  background: var(--green-dim);
+  width: 6px;
+  height: 6px;
+  border: none;
+}

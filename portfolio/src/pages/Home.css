@@ -41,41 +41,9 @@
   50% { opacity: 0; }
 }
 
-.skills-section {
-  padding: 4px 0 16px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.skill-group {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.skill-cat {
-  color: var(--text-dim);
-  font-size: 11px;
-  min-width: 110px;
-  padding-top: 3px;
-}
-
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  flex: 1;
-}
-
-.skill-tag {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid var(--green-dim);
-  color: var(--green);
-  padding: 2px 10px;
-  border-radius: 3px;
-  font-size: 12px;
+/* interactive terminal section */
+.home-terminal-section {
+  margin-top: 24px;
 }
 
 /* Work experience */

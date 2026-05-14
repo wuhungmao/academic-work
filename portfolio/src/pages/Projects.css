@@ -150,6 +150,24 @@
   line-height: 1.65;
 }
 
+/* ── Diagram toggle ─────────────────────────────────────── */
+.diagram-toggle {
+  width: 100%;
+  background: transparent;
+  border: 1px dashed var(--border);
+  border-radius: 4px;
+  color: var(--text-dim);
+  font-family: var(--font);
+  font-size: 11px;
+  padding: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.diagram-toggle:hover {
+  border-color: var(--green-dim);
+  color: var(--text);
+}
+
 /* ── Tags ───────────────────────────────────────────────── */
 .project-tags {
   display: flex;
