@@ -105,7 +105,7 @@ const projects = [
     solution: 'CUDA parallelization with tiled shared memory and tuned kernel launch config, achieving a 70× speedup and completing in under 10 ms. Scored 100/100.',
     tags: ['C', 'CUDA', 'Parallel Computing', 'GPU'],
     link: 'https://github.com/wuhungmao/academic-work/tree/main/CSC367/Image%20processing%20with%20GPU',
-    pdf: '/academic-work/CSC367/Image%20processing%20with%20GPU/report.pdf',
+    pdf: 'https://github.com/wuhungmao/academic-work/blob/main/CSC367/Image%20processing%20with%20GPU/report.pdf',
   },
   {
     id: 'db-join',
@@ -116,7 +116,7 @@ const projects = [
     solution: 'Parallelized joins in shared memory with OpenMP and across nodes with MPI, merging all queries in under 200 ms.',
     tags: ['C', 'OpenMP', 'MPI', 'Parallel Computing'],
     link: 'https://github.com/wuhungmao/academic-work/tree/main/CSC367/Database%20join%20with%20openMP%20and%20MPI',
-    pdf: '/academic-work/CSC367/Database%20join%20with%20openMP%20and%20MPI/report.pdf',
+    pdf: 'https://github.com/wuhungmao/academic-work/blob/main/CSC367/Database%20join%20with%20openMP%20and%20MPI/report.pdf',
   },
   {
     id: 'microservice-api',
@@ -126,7 +126,7 @@ const projects = [
     problem: 'Build a bidirectional REST API for User and Product management from scratch with no framework scaffolding.',
     solution: 'Java HTTP server and client communicating via JSON-formatted messages with an SQLite database for persistent storage.',
     tags: ['Java', 'SQLite', 'REST', 'HTTP'],
-    link: 'https://github.com/wuhungmao/academic-work/tree/main/CSC301',
+    link: null,
   },
   {
     id: 'file-system',
@@ -147,7 +147,7 @@ const projects = [
     solution: 'Led sprint planning, user story decomposition, and team coordination; shipped the game in Java + JavaFX using Builder and Observer design patterns.',
     tags: ['Java', 'JavaFX', 'Scrum', 'OOP', 'Design Patterns'],
     link: 'https://github.com/wuhungmao/academic-work/tree/main/CSC207',
-    pdf: '/academic-work/CSC207/project_phase1_template.pdf',
+    pdf: 'https://github.com/wuhungmao/academic-work/blob/main/CSC207/project_phase1_template.pdf',
   },
   {
     id: 'file-compression',
@@ -168,7 +168,7 @@ const projects = [
     solution: 'Built the full Simon game in RISC-V assembly with subroutine design, stack frame management, and hardware I/O. Scored 90/100.',
     tags: ['RISC-V Assembly', 'Computer Organization'],
     link: 'https://github.com/wuhungmao/academic-work/tree/main/CSC258',
-    pdf: '/academic-work/CSC258/Simon%20game%20guide.pdf',
+    pdf: 'https://github.com/wuhungmao/academic-work/blob/main/CSC258/Simon%20game%20guide.pdf',
   },
   {
     id: 'pacman',
