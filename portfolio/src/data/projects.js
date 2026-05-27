@@ -28,9 +28,10 @@ const projects = [
     category: 'AI & ML',
     date: 'Feb 2026',
     problem: 'Single models fail to reliably detect multi-modal AI-generated and deepfake video across diverse generation methods.',
-    solution: 'Built an ensemble of 4 models (EfficientNet, MesoNet, XceptionNet, AASIST) with parallel inference and weighted scoring, fine-tuned on AIGVDBench and FaceForensics++.',
-    tags: ['Python', 'PyTorch', 'OpenCV', 'NumPy', 'EfficientNet', 'MTCNN'],
+    solution: 'Built an ensemble of 4 models (EfficientNet, MesoNet, XceptionNet, AASIST) with parallel inference and weighted scoring, fine-tuned on AIGVDBench and FaceForensics++. Deployed as a full-stack web app: React frontend on Vercel, serverless GPU inference on Modal.',
+    tags: ['Python', 'PyTorch', 'OpenCV', 'React', 'Modal', 'Vercel', 'EfficientNet', 'MTCNN'],
     link: 'https://github.com/utmgdsc/AI-Video-Detection',
+    demo: 'https://deepfake-detector-gamma.vercel.app/',
     pdf: 'https://drive.google.com/file/d/1KaVo7DM9onu-ap9cOaXpPX9bg1vr4znx/view?usp=sharing',
   },
   {

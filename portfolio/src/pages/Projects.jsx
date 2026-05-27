@@ -57,6 +57,11 @@ function ProjectCard({ p, delay }) {
       </div>
 
       <div className="project-links">
+        {p.demo && (
+          <a href={p.demo} target="_blank" rel="noreferrer" className="project-link demo-link">
+            ▶ live demo
+          </a>
+        )}
         {p.link && (
           <a href={p.link} target="_blank" rel="noreferrer" className="project-link code-link">
             ⎇ view code
