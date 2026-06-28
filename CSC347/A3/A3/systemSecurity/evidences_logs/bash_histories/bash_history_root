@@ -1,0 +1,4 @@
+vim /var/log/auth.log 
+/home/bill/.ssh/authorized_keys
+cat /home/bill/.ssh/authorized_keys
+cat /home/charlie/.ssh/authorized_keys

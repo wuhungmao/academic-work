@@ -1,6 +1,7 @@
 import { HashRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
+import Chat from './pages/Chat'
 import Courses from './pages/Courses'
 import CoursePage from './pages/CoursePage'
 import Projects from './pages/Projects'
@@ -15,6 +16,7 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/chat" element={<Chat />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/courses/:id" element={<CoursePage />} />
         <Route path="/projects" element={<Projects />} />

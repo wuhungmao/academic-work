@@ -1,0 +1,65 @@
+<html>
+	<body>
+		<h1> # FIX OWASP A6: SENSITIVE DATA EXPOSURE </h1>
+		<h2> The Vulnerability </h2>
+		<ul>
+			<li> Brief explanation:
+<xmp>
+			Exposing sensitive data like user password, credit card info, health records unintentionally. This is due to weak security measures, wrong configuration.
+</xmp>
+			</li>
+			<li> Example code etc.:
+<xmp>
+			$dbconn = pg_connect_db();
+			# FIX OWASP 2013 A1: SQL Injection, use prepared statements
+			$query = "SELECT id, username, firstName, lastName, passwd FROM account WHERE username=$1 AND passwd=$2";
+			$result = pg_prepare($dbconn, "", $query);
+			$result = pg_execute($dbconn, "", array($user, $password));
+</xmp>
+			</li>
+			<li> How attacker exploits this: 
+<xmp>
+			The attacker could use SQL injection or other methods to retrieve sensitive data like user password from the database. 
+			if the passwords are stored in plaintext, the attacker could easily get all user passwords. If the passwords are hashed but without salt,
+			the attacker could use rainbow table to crack the hashes and get the original passwords. 
+</xmp>
+			</li>
+			<li> Impact: CIAaa and some details
+<xmp>
+			Confidentiality:  retrieve sensitive data from the database.
+			Integrity:  modify or delete data in the database.
+			Availability:  delete all the data in the database.
+			Authentication: bypass authentication and login as another user once knowing password of other user.
+			Authorization: gain unauthorized access to data.
+</xmp>
+			</li>
+		</ul>
+
+		<h2> INSTRUCTIONS TO VERIFY VULNERABILITY BELOW </h2>
+<xmp>
+			1. Go to fourFours web application and login
+			2. attacker could use SQL injection like - password = ' OR '1'='1 to get all user password
+			3. then the attacker would see plain user password if the passwords are stored in plaintext
+			4. if the passwords are hashed but without salt, the attacker could use rainbow table
+</xmp>
+               <h2> INSTRUCTIONS TO VERIFY VULNERABILITY BELOW </h2>
+<xmp>
+</xmp>
+                <h2> The Fix </h2>
+                <ul>
+                        <li> Explain the fix:
+<xmp>
+						Prof told me we can assume the passwords stored in the database is hashed already. So I simply use password_verify to 
+						compare the hashed password stored in the database with the user input password. 
+						As for using https instead of https, I generate a self-signed certificate and configure apache to use https. Please see apache.crt and apache.key and default-ssl file for details.
+</xmp>
+                        </li>
+                        <li> How the fix resolves the issue:
+<xmp>
+						Even if the database info is leaked because of sql injection or other method, the attacker could not get the plain user password.
+</xmp>
+                        </li>
+                </ul>
+
+	</body>
+</html>

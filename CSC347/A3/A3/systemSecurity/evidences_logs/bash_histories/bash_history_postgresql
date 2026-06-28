@@ -1,0 +1,16 @@
+createuser --interactive --pwprompt
+createuser --help
+creatuser
+createuser
+createdb -O ff fourFours
+psql
+psql -U ff -d fourFours
+man psql
+psql -U ff -d fourFours
+psql -h localhost -U ff -d fourFours
+history
+createdb -O ff fourfours
+psql -h localhost -U ff -d fourfours
+psql
+psql -h localhost -U ff -d fourfours
+dropdb fourFours

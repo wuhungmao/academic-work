@@ -1,0 +1,14 @@
+Files: 
+    -Commands.txt: all commands attempted to crack the pdf's password
+    -custom.txt: keywords likely to appear in the pdf's password
+    -dz2.pdf: the pdf file
+    -dz2.txt: the extracted hash of the dz2.pdf
+
+Algorithm: 
+    PDF 1.4 - 1.6 (Acrobat 5 - 8)
+
+Steps: 
+    -On Mac, I downloaded dz2.pdf from the Piazza bonus post by right clicking the link and choose "save link as...". 
+    -On Kali VM, I extracted pdf's hash using "./pdf2john.pl dz2.pdf", then copy-pasted the hash into dz2.txt. 
+    -Since dz2.pdf contains an exam, its password probably contains some course code. Therefore, I searched prof. Daniel Zingaro on ratemyprofessors.com to find the courses he taught, and added them to custom.txt. In addition, I also added some other useful keywords such as exam, fall, and winter. 
+    -I used hashcat with different wordlists, combined with custom.txt and rules, to attempt to crack pdf's password. All the commands tried are in Commands.txt. 

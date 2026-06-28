@@ -1,0 +1,78 @@
+a) vulnerability: buffer overflow 
+sending over 1066 bytes could crash the service and get "Cannot determine peer address at tcpclientA.pl 
+line 26" error. This indicate the attacker could overflow the buffer and cause remote service to crash.
+
+To replicate this vulnerability, simply run "perl tcpclientA.pl". Then when it crashes, you would see count is x 
+That mean the xinet server stop to function after inputting x bytes, which is larger than the size of buffer.
+
+-----------------------------------------------------------------------------------------------------------------------------
+b) vulnerability: remote code execution
+
+sending carefully designed input to xinetd could let the xinet server run executable that is not supposed to be run
+
+To replicate this vulnerability, simply run "perl tcpclientB.pl"
+
+Then hit enter which will show you recieve: ����������������...
+
+This is xinet responding that it receives the shellcode that we input in, which is just a bunch of hexadecimal that cannot be decoded.
+
+The stack should be replaced by /bin/bash root shell at this point, then the client would expect user to input something
+in standard input. So, you need to enter shell command like ls, cd .., etc. to tell shell running on xinet to execute the command. 
+
+Hit enter, you will see "RECIEVED: ������������ is not a palindrome", this is the left over hex from shell code. 
+seeing this because we pass in over 1024 bytes. 
+
+Hit enter again, you should see the output of the shell command you input earlier. For example, I see for "ls"
+
+RECIEVED: bin
+boot
+dev
+etc
+home
+initrd
+lib
+lost+found
+misc
+mnt
+opt
+proc
+questions
+root
+sbin
+tmp
+usr
+var
+vulnerable
+
+-----------------------------------------------------------------------------------------------------------------------------
+c) format string vulnerability
+
+Inject %x, %s at appropriate location to reveal memory address at the stack, provided the script use printf.
+
+To replicate this, simply run "perl tcpclientC.pl".
+
+This will out following, 
+RECIEVED: Palindrome server, 'quit' to quit:
+RECIEVED:  bffffd64 bffffce8 8048545 0 0 bffff8e0 bffff8fa you got me!! is not a palindrome
+
+the bffffd64, bffffce8 are the memory address printed by printf, 
+and you got me! is the string on the Palindrome.c which attacker find and then inject the memory address into the buffer.
+
+-----------------------------------------------------------------------------------------------------------------------------
+d) 
+palindrome.c in this directory fix all the vulnerability, the original palindrome code is in palindrome_bad.c
+
+I have written a script called replace_palindrome.sh. PLEASE MAKE SURE to run the script with root, while running the script. 
+You should see the output which tell you what the script has done. The script will replace current palindrome service 
+that is being used by xinetd with my fixed palindrome.c
+
+Once you see the service's been restarted. You can run "perl tcpclientA.pl", "perl tcpclientB.pl", "perl tcpclientC.pl" outside the VM.
+
+For buffer overflow/remote code execution vulnerability, I allow user to send as many bytes as he wants, but at the palindrome.c,
+I will only accept the first 1024 bytes if user type in more than that, the rest will be discarded. So user cannot overflow the buffer.
+
+For string formatting vulnerability, I use 	printf("%s", s); instead, which will treat %x, %s, ... as strings. so you see 
+RECIEVED: Palindrome server, 'quit' to quit:
+RECIEVED:  %x %x %x %x %x %x %x %s is not a palindrome
+from running perl tcpclientC.pl
+

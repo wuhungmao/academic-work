@@ -1,0 +1,13 @@
+6) As hacker, explain how hacker exploits /questions/race/race so that they end up with a root shell
+Be careful when doing this you may lock yourself out of the system!!
+I have made a backup of /etc/passwd in /etc/passwd.bak make sure you have a root shell when playing with the passwd file.
+
+Hacker exploits /questions/race/race by using the same race condition as before [replacing /tmp/permitted as a symlink to /etc/passwd]. When the writing access (as root because of setuid bit) to /etc/passwd is "granted", the hacker writes a new entry that gives access to the root's shell. After hacker's input is saved in /etc/passwd, the hacker can login with the same password (since /etc/shadow holding the real passwords wasn't changed) and check that now it has root access.
+
+New entry in /etc/passwd:
+hacker::0:0:root:/root:/bin/bash
+
+**skips the password section
+Both 0s sets hacker's UID & GID to be the root's
+
+When logged in, the terminal prompt will change from $ to #. If hacker types id, the output will show that the uid, gid, and groups changed to 0. Also, now it will have permission to files such as /etc/shadow.

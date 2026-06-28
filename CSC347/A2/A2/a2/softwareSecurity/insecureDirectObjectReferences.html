@@ -1,0 +1,69 @@
+<html>
+	<body>
+		<h1> # FIX OWASP 2013 A4: INSECURE DIRECT OBJECT REFERENCES </h1>
+		<h2> The Vulnerability </h2>
+		<ul>
+			<li> Brief explanation:
+<xmp>
+		Insecure Direct Object Reference happens when an application provides direct access to objects based on user-supplied input. 
+		As a result, attackers can manipulate those references to access unauthorized data.
+</xmp>
+			</li>
+			<li> Example code etc.:
+<xmp>
+		$expressionId = $_REQUEST['expressionId'];
+		$accountId=$_REQUEST['accountId'];
+		$dbconn = pg_connect_db();
+		$result = pg_prepare($dbconn, "", "DELETE FROM solution WHERE id=$expressionId AND accountId=$accountId");
+		$result = pg_execute($dbconn, "", array());
+</xmp>
+			</li>
+			<li> How attacker exploits this: 
+<xmp>
+		The attacker could manipulate the expressionId and accountId parameters in the request to delete other user's expressions.
+		For example, if the attacker knows another user's accountId is 2, he could send a request like:
+		http://fourFours/index.php?expressionId=5&accountId=2&operation=delete
+		This would delete the expression with id 5 that belongs to user with accountId 2, which the attacker is not authorized to do.
+</xmp>
+			</li>
+			<li> Impact: CIAaa and some details
+<xmp>
+		Confidentiality:  gain unauthorized access to other user's data, allow attacker to delete data.
+		Integrity:  modify or delete other user's data.
+		Availability:  delete other user's data, making it unavailable to them.
+		Authentication: bypass authentication and access other user's data.
+		Authorization: gain unauthorized access to data.
+</xmp>
+			</li>
+		</ul>
+
+		<h2> INSTRUCTIONS TO VERIFY VULNERABILITY BELOW </h2>
+<xmp>
+		1. Go to fourFours web application and login as user1
+		2. Create a new expression, note down the expressionId and accountid
+		3. Log out and login as user2
+		4. Send a request to delete user1's expression using user1's accountId and the expressionId
+		   For example: http://fourFours/index.php?expressionId=user1_expressionId&accountId=user1_accountId&operation=deleteExpression
+		5. User1's expression should be deleted, even though user2 is not authorized to do so.
+</xmp>
+               <h2> INSTRUCTIONS TO VERIFY VULNERABILITY BELOW </h2>
+<xmp>
+</xmp>
+                <h2> The Fix </h2>
+                <ul>
+                        <li> Explain the fix:
+<xmp>
+		We check if the logged-in user's accountId matches the accountId associated with the expression entered by the user before allowing deletion.
+		In addition, we attempt to retrieve expression with the given expressionId and accountId, if no such expression exists, we do not proceed with deletion.
+</xmp>
+                        </li>
+                        <li> How the fix resolves the issue:
+<xmp>
+		Even if an attacker manipulates the accountId parameter, they cannot delete expressions that do not belong to them because accountId doesn't match.
+		Additionally, if the expressionId does not belong to the user, the deletion will not proceed.
+</xmp>
+                        </li>
+                </ul>
+
+	</body>
+</html>

@@ -1,0 +1,53 @@
+For this question, you are given a pcap file 
+smallFlows.pcap 
+(Hint: You will want to use a lot of the statistics menu to answer these questions)
+(Hint: Right clicking on packets often brings up "export" and other options).
+
+5pts (0.5 each)
+
+Answer the following questions below:
+
+1) How many packets were captured in the capture file? 
+bottom right
+14261
+
+2) At what point in seconds relative to the start time being 0 did the network experience
+the most traffic?
+statistics -> io graph
+configure stuff skull emoji then...
+240s
+
+3) How many resolved addresses contain the name amazon, and what are they?
+statistics -> resolved addresses
+erm... there... are none?
+0
+None
+
+4) How many ethernet or IPv6 conversationss were there?
+13 ethernet
+
+5) Between which two addresses were the most packets sent (in either direction) conversation.
+a) What are the 2 addresses?
+192.168.3.131 and 65.54.95.68
+
+b) How many packets were transmitted?
+1,939
+
+c) How long in seconds was their conversation?
+167.9554
+
+d) Who transmitted more packets?
+65.54.95.68
+
+e) What was the transmission rate between the 2 addresses?
+1939/167.9554 = about 11.5 packets per second
+
+6) What are 5 hotmail accounts mentioned through the capture file? 
+(there are more, but you just need to find 5)
+ctrl f findby string search in packet bytes type ascii, type hotmail.com
+rakslice@hotmail.com
+fig_newton@hotmail.com
+thewaker7@hotmail.com
+jasonlousier@hotmail.com
+jedscea@hotmail.com
+blarrg@hotmail.com

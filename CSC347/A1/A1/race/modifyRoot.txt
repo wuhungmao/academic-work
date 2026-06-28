@@ -1,0 +1,14 @@
+5) As hacker, explain how hacker exploits /questions/race/race so that they modify the root only readable and writable file /etc/passwd2
+Where is this coming from? Why could there be a race condition?
+
+Hacker would exploit /questions/race/race by replacing fn (/tmp/permitted) with a symlink to /etc/passwd2. symlink (symbolic/soft link) is a special type of file that points to another file or directory. 
+
+After the program calls access() and before fopen() runs, the hacker can quickly type in commands:
+1) unlink /tmp/permitted
+2) ln -s/--symbolic /etc/passwd2 /tmp/permitted
+OR ln -sf /etc/passwd2 /tmp/permitted 
+** -sf includes unlink
+to deceive the system and gain its writing access to /etc/passwd2. These commands unlink the original fn (Linux doesn't allow on to create a link if it already exists) and makes /tmp/permitted a symlink for /etc/passwd2. (Best to run on one terminal, type command in the other)
+
+This is possible because quesitons/race/race is setuid root (set in Makefile), so fopen() executes with root privileges, not hacker's. The race condition exists because access() and fopen() are separate system calls that creates a short gap between the time the kernel checks the file and when it opens it.
+

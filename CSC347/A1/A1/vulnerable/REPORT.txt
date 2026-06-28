@@ -1,0 +1,191 @@
+--------------------------------------------------------------------
+                              ISSUE 0:
+Vulnerability: main, L163-L181, atoi permits negatives/overflow (honestly this is all to ocmmon)
+check fromAmount-amount>0 allows negative amounts to credit sender, addition can overflow
+
+Exploit 0: amount=-1000000000 to increase balance or wrap values
+Impact 0: attacker can artificially increase their balance to billions of credits or 
+cause balance to wrap to negative values corrupting the accounting system
+
+Did you provide a fix for this issue: yes
+
+--------------------------------------------------------------------
+                             ISSUE 1
+Vulnerability: Buffer overflow, strncat misuse across multiple functions
+
+ISSUE 11: getAccount, L61-L63 (fileName[100] + strncat), strncat(fileName, user, 100) 
+ignores remaining capacity, so path + user can overflow fileName
+Exploit 11: set very long USER and perform transfer to trigger getAccount
+Impact 11: program crashes when buffer overflows or could allow code execution 
+if running as setuid root allowing attacker to gain root privileges
+
+ISSUE 12: setAccount, L74-L76, same misuse of strncat can overflow fileName
+Exploit 12: overlong USER during account creation or transfer
+Impact 12: program crashes or allows attacker to execute arbitrary code as root
+
+ISSUE 13: report, L109-L111, strncat with fixed count ignores remaining capacity
+Exploit 13: overlong USER in report path (argc==2) crashes on fopen/read
+Impact 13: program crashes or allows code execution compromising the system
+
+Note: basically all the same stuff but not really, i'll enclose it in 1 issue though, you'll see this throughout the report
+
+Did you provide a fix for this issue: yes
+
+--------------------------------------------------------------------
+                             ISSUE 2
+Vulnerability: Path traversal, username in getAccount and report functions
+
+ISSUE 21: getAccount L61-L63; report L109-L116, username concatenated directly into filesystem path enables "../" traversal
+Exploit 21: USER="../log" -> report reads /vulnerable/log, traversals can reach other readable files
+Impact 21: attacker can read any file on the system that root can access 
+
+ISSUE 22: setAccount L74-L80, fopen(path, "w") on attacker-controlled path writes/truncates arbitrary files
+Exploit 22: USER="../../tmp/owned" -> creates/overwrites /tmp/owned as root; risk to system files 
+Impact 22: attacker can overwrite or create any file as root including system config files 
+potentially gaining full root access
+
+Did you provide a fix for this issue: yes
+
+--------------------------------------------------------------------
+                             ISSUE 3
+Vulnerability: authenticate, L95-L101, fscanf(file, "%s %s\n", u, p) has no field widths -> overflow
+
+Exploit 3: long tokens in passwords file cause overflow
+Impact 3: program crashes or allows attacker to overwrite memory and execute arbitrary code as root
+
+Did you provide a fix for this issue: yes
+
+--------------------------------------------------------------------
+                             ISSUE 4
+Vulnerability: authenticate L94; report L111, fopen return not checked before IO; null deref crashes
+
+Exploit 4: missing/renamed files cause immediate crash
+Impact 4: attacker can crash the setuid program by deleting the passwords file causing denial of service
+
+Did you provide a fix for this issue: yes
+
+--------------------------------------------------------------------
+                             ISSUE 5
+Vulnerability: main, L134 (getenv("USER")), in setuid root, USER env is attacker controlled
+used as identity and filename component
+
+Exploit 5: export USER=victim; run program to create/use victim account with attacker password
+Impact 5: attacker can impersonate any user by setting USER environment variable allowing them to 
+steal credits or access other accounts
+
+Did you provide a fix for this issue: yes
+
+--------------------------------------------------------------------
+                             ISSUE 6
+Vulnerability: main, L137-L143; logTransaction L84-L87, repeated strncat with constant bound 2048 
+does not track remaining space
+
+Exploit 6: many/long argv elements overflow transaction buffer
+Impact 6: program crashes when transaction buffer overflows or attacker can corrupt memory and execute code
+
+Did you provide a fix for this issue: yes
+
+--------------------------------------------------------------------
+                             ISSUE 7 (POTENTIALLY NOT REAL IDK I MAY BE DELIERIOUS)
+Vulnerability: main, L163-L176, no file locking on account balance operations
+race condition in read modify write sequence
+
+Exploit 7: concurrent transfers from same account can bypass balance check
+time of check and time of use race
+Impact 7: attacker can double spend by making concurrent transfers that both 
+read the same balance before deducting allowing them to spend more than they have
+
+NOTE: This vulnerability exists in the code logic i think but cannot be reliably demonstrated
+look at account_old.c and compare_versions.sh, I hope there actually is a vulnerability there but I did learn in OS and parallel programming taht they might
+
+Did you provide a fix for this issue: yes
+
+--------------------------------------------------------------------
+                             ISSUE 8
+Vulnerability: logTransaction L84-L87, main L137-L143, log file injection via unsanitized transaction data
+unbounded log growth from repeated large transactions
+
+Exploit 8: supply very long argv elements (a 5000+ char target username) to bloat transaction string, 
+causing log file DoS and potential log injection
+Impact 8: attacker can fill up disk space with massive log entries causing system to 
+stop working or inject fake log entries to hide their tracks
+
+Did you provide a fix for this issue: yes
+
+--------------------------------------------------------------------
+                             ISSUE 9 (ALSO DOESN't REALLY WORK BUT THIS ONE IS 100% REAL I PROMISE)
+Vulnerability: authenticate L98-L99, early return statements without fclose() cause file descriptor leak
+
+Exploit 9: repeated authentication attempts with wrong passwords leak 
+file descriptors until exhaustion crashes program
+Impact 9: attacker can exhaust all available file descriptors by repeatedly authenticating 
+with wrong passwords causing the program to crash and deny service
+
+Did you provide a fix for this issue: yes
+
+--------------------------------------------------------------------
+                             ISSUE 10
+Vulnerability: main L134, strncpy(user,getenv("USER"),100) does not guarantee null 
+termination if USER is EXACTLY 100 chars
+
+Exploit 10: export USER with exactly 100 characters causes undefined behavior when user string is used
+Impact 10: program crashes or behaves unpredictably when using non null terminated 
+strings potentially allowing memory corruption
+
+Did you provide a fix for this issue: yes
+
+--------------------------------------------------------------------
+                             ISSUE 11
+Vulnerability: authenticate L96, fscanf(file,"%s %s\n",u, p) splits on whitespace & passwords file parsing ambiguity
+
+Exploit 11: insert password entry with spaces (user withspace pass) causes 
+fscanf to misparse username/password fields
+Impact 11: attacker can bypass authentication by exploiting whitespace parsing 
+allowing them to login as users with malformed password entries
+
+Did you provide a fix for this issue: yes
+
+--------------------------------------------------------------------
+                             ISSUE 12
+Vulnerability: main L163-L176, no validation that target account (argv[3]) is different from source user
+allows self transfer
+
+Exploit 12: transfer credits to self to artificially inflate balance without deduction
+Impact 12: attacker can infinitely increase their own balance by transferring 
+money to themselves without any deduction creating unlimited credits
+
+Did you provide a fix for this issue: yes
+
+--------------------------------------------------------------------
+                             ISSUE 13
+Vulnerability: main L166, argv[3] (target account) passed directly to getAccount() 
+without length or content validation in main()
+
+Exploit 13: supply extremely long target account name (500+ chars) to main which passes 
+unchecked to getAccount causing overflow
+Impact 13: program crashes when extremely long target account names overflow buffers or attacker can execute code
+
+Did you provide a fix for this issue: yes
+
+--------------------------------------------------------------------
+                             ISSUE 14
+Vulnerability: main L164, atoi(argv[2]) accepts non-numeric input and returns 0
+no validation that amount is a valid positive integer
+
+Exploit 14: supply non-numeric amount like "NOTANUMBER" or "0" to bypass amount checks or cause confusion 
+Impact 14: attacker can create invalid zero credit transfers or cause confusion in audit logs by using non numeric amounts
+
+Did you provide a fix for this issue: yes
+
+--------------------------------------------------------------------
+                             ISSUE 15
+Vulnerability: main L174, toAmount+amount can overflow INT_MAX
+no check that recipient balance won't overflow when adding transfer amount
+
+Exploit 15: transfer credits to account with balance near INT_MAX causing integer overflow to negative value
+Impact 15: attacker can corrupt victim accounts by causing their balance to overflow from 
+maximum positive to large negative destroying their credits
+
+Did you provide a fix for this issue: yes
+
+--------------------------------------------------------------------

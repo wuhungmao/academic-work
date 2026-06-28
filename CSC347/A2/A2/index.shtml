@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="/~csc347/20f/styles.css" type="text/css" />
+    <title>CSC347: Assignment 2</title>
+  </head>
+  <body>
+<div class="content">
+
+<h2>Assignment 2</h2>
+<table>
+<tr><th align=left>Due: </th><td> See MarkUs for the exact deadline</td></tr>
+<tr><th align=left>Late penalty:</th><td>20% if handed in up to 48 hours late. Not accepted after that.</td></tr>
+<tr><th align=left>Hand in:</th><td>
+	Please submit your solution
+	electronically on our course Markus (directories and files; no compressed files please)
+	</td></tr>
+
+</td></tr>
+<tr><th align=left>Groups:</th><td> Groups of size 1, 2 or 3. </td></tr>
+</table>
+</center>
+<hr />
+<b>Note:</b>
+<ul>
+	<li>
+		The assignment is to be done using the Ubuntu804Server_owasp Virtual Machine (same as for L5) as well as on Ubuntu22043 found in /virtual/csc347: 
+<xmp>
+scp -r UTORID@dh2020pcXX.utm.utoronto.ca:/virtual/csc347/Ubuntu804Server_owasp.zip .
+$ md5sum Ubuntu804Server_owasp.zip
+85f5dbdaa4f5df7b11c7c9571583bec9  Ubuntu804Server_owasp.zip
+$ sha256sum Ubuntu804Server_owasp.zip
+d8d29bd28e8c3450180b62c4676716f8ac28af53694b056db86fc9cf60dcac34  Ubuntu804Server_owasp.zip
+</xmp>
+<br> Other checksums:
+<xmp>md5sum Ubuntu804Server_owasp_VBox.ova
+8daa47b23b6c23c2b50d07283aa2ece0  Ubuntu804Server_owasp_VBox.ova
+md5sum Ubuntu22043.ova 
+f320652468b52e99c25d1fe80c5243c4  Ubuntu22043.ova
+md5sum Ubuntu22043VmWare.zip 
+b1492eb2b1f67b6edfb95cfa7522985a  Ubuntu22043VmWare.zip
+</xmp>
+<br>
+	You will also need a <a href=https://www.kali.org>Kali Linux</a> VM configured to be able to connect the Ubuntu VMs used in this assignment. (Use the appropriate VM files for the Ubuntu VMs depending on whether you are on VirtualBox (.ova) or VMWare)
+
+	Using NAT, allows Kali to talk both the the outside internet as well as the Ubuntu804_owasp server (though your setup may differ, as long as Kali can connect to the target VMs it's ok). .
+</li><br>
+	<li> We will run your exploits/solutions on an unmodified Ubuntu804Server_owasp. </li>
+</ul>
+<hr />
+<h3>Software Security</h3>
+<b>[20 Marks]</b> Ubuntu804Server_owasp running <code>fourFours</code>.
+This web application is available at http://192.168.10.100/fourFours/ (obviously the IP address depends on what your VM's IP address is, this is just an example).
+<p>
+The fourFours web application has many vulnerabilities. For this exercise, we will explore
+some of the vulnerabilities and then fix them. <code>/var/www/fourFours/index_fixed.php</code>
+has directions outlining the vulnerabilities in the application as well as how you can fix them
+as outlined in a2/softwareSecurity/index.html
+For SQL Injection, please use SQLMAP in Kali Linux to attack <code>index.php</code>
+
+<br>
+<b>What you need to do</b>: change index_fixed.php so that the vulnerabilities are fixed; complete the html files in a similar fashion to printf.html and the reports from a1 (provide details, make it easy for the TAs to award you points).<br>
+You will have to learn about new vulnerabilities (listed in *.html files), exploits and how to fix them in addition to the ones we have covered in lectures.
+</p>
+<p>
+Please refer to the <a href=a2/softwareSecurity/index.html>index.html</a> file for more reference.
+<p>
+For reference, please take a look at
+<a href=OWASPTop102013.pdf>The OWASP Top 10 (2013 edition)</a>.
+		</p>
+		<p> <b>Some pointers</b>: To change to root, execute
+<xmp>
+sudo bash
+</xmp>
+entering arnold's password. This user is in the sudoers group. You can find the web application in the directory <code>/var/www</code>.
+</p>
+<hr />
+<h3>System Security</h3>
+<ol>
+	<li> <b>[2 Marks]</b> Tripwire has been installed on the Ubuntu804_owasp server.
+		Your job is to complete the setup of tripwire by building the database. We set all pass-phrases to "pass-phrase".
+<xmp>
+init the tripwire database
+run a tripwire check
+produce a report and submit the report
+</xmp>
+	<li> <b>[10 Marks]</b>
+		If an attacker has physical access to a system, they own the system. You are going to prove this right now... (take a snapshot of the VM before you start)
+		<br/><br/>
+		You are now an attacker who has snuck into the server room.
+		You have 'physical access to the Ubuntu804_owasp server' and have brought along your Kali linux laptop.
+		<ol type="a">
+			<li> <b>[5 Marks]</b>
+				Document the steps you took to 'take the drive out of the Ubuntu804_owasp VM
+				and place it in the Kali VM'. So you will have to turn off the Ubuntu804_owasp VM.
+				<b>Note:</b> As a defender, this technique is useful for data recovery as well!!!
+			</li>
+			<li> <b>[3 Marks]</b>
+				Copy the shadow file to the Kali VM and see if you can determine some of the passwords
+				using John the ripper (submit username:passwords which you detect; note: do not melt your computer).
+			</li>
+			<li> <b>[2 Marks]</b>
+				Modify user sid so that they are now a root user with password 'password'.
+			</li>
+			<li> <b>[0 Marks]</b>
+				'Remove the hard disk from Kali and place it back in the Ubuntu804_owasp vm', start it up,
+				and verify that sid can now login with password 'password' and has root.
+				Have sid
+<xmp>
+touch /bin/cat
+touch /bin/ps
+</xmp>
+				and then logout. You can imagine that the attacker could have even modified these
+				for some other purposes, like installing a rootkit. The attacker then logs out.
+			</li>
+		</ol>
+	</li><br>
+	<li> <b>[6 Marks]</b> You are now the sysadmin again. Examine the system to see if there was evidence of tampering.
+		<ol type="a">
+			<li> <b>[2 Marks]</b> Run tripwire again to see if anything has changed.
+				Submit your tripwire report. Did tripwire identify any changes that might cause some concern.
+			</li>
+			<li> <b>[4 Marks]</b>
+				Take a look at
+<xmp>
+last # this is a command
+uptime # this is a command
+/var/log/* # these are log files
+.bash_history # what is this, whos should you look at and why are you looking?
+</xmp>
+				and report what these tell you about a possible compromise.
+			</li>
+		</ol>
+	</li>
+	<li> <b>[2 Marks]</b> Document updates to policy that would prevent the above attack or aid in recovery. </li>
+	<li> <b>[2 Marks]</b> Report on what the attacker could have done to leave fewer traces than they did in this attack.
+		What would you do to detect a compromise even in this case?
+	</li>
+</ol>
+<hr />
+
+<h3>Configuration Errors and Security Implications</h3>
+<ol>
+	<li> <b>[4 Marks]</b> Use the Ubuntu22043 VM for this one and Kali. Setup instructions are in the smbMisconfigurations directory provided in the starter code. You will actively work on Kali to gain access to Ubuntu22043 by exploiting a misconfigured samba service using the smb protocol as well as other protocols you are familiar with such as ssh. 
+</ol>
+<br>
+<hr>
+<h3>Very simple hashes - more practice with JTR</h3><ol>
+<li><b>[1 Mark]</b> Someone has obtained a file containing several password hashes during a data breach. For 0.1 marks, what hashing algorithm was used to hash the passwords in the file a2q4.txt. For another 0.9 marks, what are the passwords that these hashes represent? Hint: one password is closer to 733t-speak (rather than being a real word in the English language) but is short; passwords are between 4 and 7 characters long. Your answer also must include the john the ripper command(s) you used.  </li> 
+
+</ol>
+<br>
+<hr>
+<h3>Not so simple hashes - even more practice with JTR (or hashcat)</h3><ol>
+<li><b>[3 Marks]</b> Someone has obtained a file containing several password hashes during a data breach. 
+These passwords are more secure, you will need to use JTR's or hashcat's ability to apply various rules to the passwords before generating hashes. 
+Passwords are in a2q5.txt in the jtr2 directory. 
+1 mark each for determining what the passwords are that these hashes represent?
+ Your answer also must include the john the ripper or hashcat command(s) you used otherwise no points will be awarded.  </li> 
+
+</ol>
+
+
+</ol>
+<br>
+<hr>
+<h3>System security</h3><ol>
+<li><b>[2 Marks]</b> 
+On the VM server that hosts the fourfours application, identify an additional server misconfiguration. In particular you are looking for world readable and writable files. <br>
+This is a common exercise to ensure no data leaks from the webserver unintentionally. 
+
+For this exercise you may be root and run the script you develop on the vm itself. <br>
+Deliverable: A shell script that scans for and prints out ALL world writeable files (0.5 points); a shell script that scans for and prints out all world readable files(0.5 points); a URL that would allow an attacker externally to view a world readable file via the browser with the fourfours URL as the basis (1 mark). (e.g., http://127.0.0.1/fourfours/../foobar.txt) 
+</li>
+</ol>
+
+</ol>
+<br>
+<hr>
+<h3>SQLI</h3><ol>
+<li><b>[1 Mark]</b> 
+In the sqli directory of the starter material, answer the questions in tasks.txt<br>
+You can start a php server on your machine if you are in the sqli directory: php -S localhost:9000 <br>
+and then in your browser navigate to http://127.0.0.1:9000/search.php
+</li>
+</ol>
+
+<hr />
+<hr />
+<hr />
+End of A2 (53 Marks available)
+            </div> <!-- content -->
+    <div class="spacer" />
+  </body>
+</html>

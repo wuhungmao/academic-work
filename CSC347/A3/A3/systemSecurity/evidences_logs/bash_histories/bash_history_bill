@@ -1,0 +1,59 @@
+more ~bill/.bash_history
+history
+tripwire --check
+tripwire --check | more
+pwd
+tripwire --check > ~/tripwire_report.txt
+vim tripwire_report.txt 
+ls
+mkdir ransom
+mv tripwire_report.txt ransom/
+ls
+cd ransom
+ls
+mv /var/lib/tripwire/* .
+ls
+cd ..
+ls
+cd ransom/
+ls
+vim notes.txt
+ls
+gpg
+ls
+cd ..
+ls
+tar -zcf ransom ransom
+tar -zcf ransom.tar.gz ransom
+ls
+rm -fr ransom
+ls
+gpg --symmetric ransom.tar.gz 
+ls
+mv ransom.tar.gz z
+gpg ransom.tar.gz.gpg 
+ls
+rm ransom.tar.gz
+rm z
+mv ransom.tar.gz.gpg myPrivateFiles
+ls
+pwd
+history
+tripwire --check
+shutdown -h now
+sudo bash
+cd /var/lib/tripwire/
+ls
+shutdown -h now
+cd ../../tmp/
+ls
+ls
+cd ..
+ls
+pass wd
+grep 'anne' /var/log/auth.log | grep '172.16.107.140'
+sudo grep 'anne' /var/log/auth.log | grep '172.16.107.140'
+grep 'anne' /var/log/auth.log | grep '172.16.107.140'
+ls
+grep 'anne' /var/log/auth.log | grep '172.16.107.140'
+sudo grep 'bill' /var/log/auth.log | grep '172.16.107.140'

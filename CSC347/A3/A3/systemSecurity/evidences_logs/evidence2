@@ -1,0 +1,7 @@
+  File: `mysql.log.2.gz'
+  Size: 20        	Blocks: 8          IO Block: 4096   regular file
+Device: 801h/2049d	Inode: 174083      Links: 1
+Access: (0640/-rw-r-----)  Uid: (  104/   mysql)   Gid: (    4/     adm)
+Access: 2025-11-07 11:14:37.000000000 -0500
+Modify: 2020-11-09 22:45:57.000000000 -0500
+Change: 2025-11-07 06:48:31.000000000 -0500

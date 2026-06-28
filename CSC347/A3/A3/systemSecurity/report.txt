@@ -1,0 +1,695 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++                     How HACKER gained access                          +
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Please outline the steps the attacker took to gain access to the system.
+This can be broken down into different phases, based on their efforts
+to elevate privileges. Fill in the sections below that apply.
+
++-----------------------------------------------------------------------+
+| As unprivileged (system or services user) attackers approach was      |
++-----------------------------------------------------------------------+
+	A description of hackers approach, while an unprivileged user.
+	
+		Hacker log in as arnold, switch to root with arnold's password and grant bill root access.
+		add user charlie, add user ff
+		Update tripwire database file.
+	
+	-----------------------------------------------------------------
+	How I know: (command I executed, sample of the evidence, explanation)
+	-----------------------------------------------------------------
+	COMMAND: 
+		sudo find / -name ".bash_history"
+		sudo cat /home/arnold/.bash_history and enter password
+		Cat /var/log/auth.log
+
+	EVIDENCE: (sample of the evidence)
+		!!! For all the evidences in this report, I am refering to the files in evidences_logs/ folder, which I scp from the vm
+		!!! I am honestly confused by what exactly each phase wants me to put, so I am just puting relevant information into each phase
+
+		From bash_history_arnold:
+		adduser charlie
+		usermod -a -G admin bill
+
+		From auth_log:
+		Nov  9 23:02:51 ubuntuA3 sshd[5609]: Accepted password for arnold from 172.16.107.136 port 49912 ssh2
+		Nov  9 23:08:54 ubuntuA3 sshd[5661]: Accepted password for bill from 172.16.107.136 port 38707 ssh2
+		Nov  9 23:10:59 ubuntuA3 sshd[5686]: Accepted password for bill from 172.16.107.136 port 49940 ssh2
+		Nov 10 09:50:33 ubuntuA3 useradd[15232]: new user: name=ff, UID=1002, GID=1002, home=/home/ff, shell=/bin/bash
+
+	EXPLANATION: (explain the evidence)
+		The hacker add user charlie and grant user bill root access privilege.
+
+	-----------------------------------------------------------------
+	COMMAND: 
+		sudo cat /home/arnold/.bash_history and enter password
+
+	EVIDENCE: (sample of the evidence)
+
+		From bash_histroy_arnold:
+		tripwire --check
+		tripwire --check | more
+		tripwire --update
+		ls /var/lib/tripwire/report/ubuntuA3-2020111*
+		tripwire --update /var/lib/tripwire/report/ubuntuA3-20201111-102142.twr
+		tripwire --help
+		tripwire --update --twrfile /var/lib/tripwire/report/ubuntuA3-20201111-102142.twr
+		shutdown -h now
+		tripwire --check
+
+	EXPLANATION: (explain the evidence)
+		The hacker find the baseline tripwire database and update it to try to erase his trace stored
+		in original database file, so that when another user runs tripwire, it cannot notice the hacker's 
+		activity from the output.
+	-----------------------------------------------------------------
+
++-----------------------------------------------------------------------+
+| As Privileged for SERVICE the attackers approach was                  |
++-----------------------------------------------------------------------+
+	First SERVICE account broken: postgres
+	Date and time attacker broke account: Nov 10 09:48:27
+	Evidence for the above (command, output, explanation): 
+
+	From auth_log:
+		Nov 10 09:48:27 ubuntuA3 su[15222]: Successful su for postgres by root
+
+	-----------------------------------------------------------------
+	A description of hackers approach, while an unprivileged user.
+		Hacker first login as arnold, then switch to root using arnold's password.
+		After switching to root, hacker switch to postgres user after a while.
+		
+	-----------------------------------------------------------------
+	How I know: (command I executed, sample of the evidence, explanation)
+	-----------------------------------------------------------------
+	COMMAND: 
+		sudo find / -name ".bash_history"
+		sudo cat /home/ff/.bash_history
+		sudo cat /var/lib/postgresql/.bash_history
+		sudo cat /root/.bash_history
+		cat /var/log/postgresql/postgresql-8.3-main.log.1
+		cat /var/log/auth.log
+
+	EVIDENCE: (sample of the evidence)
+		From bash_history_postgresql:
+		createuser --interactive --pwprompt
+		createuser --help
+		creatuser
+		createuser
+		createdb -O ff fourFours
+		psql
+		psql -U ff -d fourFours
+		man psql
+		psql -U ff -d fourFours
+		psql -h localhost -U ff -d fourFours
+		history
+		...
+
+		From bash_history_ff:
+		psql
+		psql -U ff -d fourFours
+
+		From auth_log:
+		Nov 10 09:48:27 ubuntuA3 su[15222]: Successful su for postgres by root
+		Nov 10 09:48:27 ubuntuA3 su[15222]: + pts/1 root:postgres
+		Nov 10 09:48:27 ubuntuA3 su[15222]: pam_unix(su:session): session opened for user postgres by bill(uid=0)
+		Nov 10 09:50:16 ubuntuA3 su[15222]: pam_unix(su:session): session closed for user postgres
+		Nov 10 09:50:33 ubuntuA3 groupadd[15231]: new group: name=ff, GID=1002
+		Nov 10 09:50:33 ubuntuA3 useradd[15232]: new user: name=ff, UID=1002, GID=1002, home=/home/ff, shell=/bin/bash
+		Nov 10 09:50:47 ubuntuA3 passwd[15235]: pam_unix(passwd:chauthtok): password changed for ff
+		Nov 10 09:50:51 ubuntuA3 chfn[15236]: changed user `ff' information
+		Nov 10 09:52:20 ubuntuA3 su[15239]: Successful su for ff by root
+		Nov 10 09:52:20 ubuntuA3 su[15239]: + pts/1 root:ff
+		Nov 10 09:52:20 ubuntuA3 su[15239]: pam_unix(su:session): session opened for user ff by bill(uid=0)
+		Nov 10 09:54:31 ubuntuA3 su[15239]: pam_unix(su:session): session closed for user ff
+		Nov 10 09:54:36 ubuntuA3 su[15263]: Successful su for postgres by root
+		Nov 10 09:54:36 ubuntuA3 su[15263]: + pts/1 root:postgres
+		Nov 10 09:54:36 ubuntuA3 su[15263]: pam_unix(su:session): session opened for user postgres by bill(uid=0)
+		Nov 10 09:56:26 ubuntuA3 su[15263]: pam_unix(su:session): session closed for user postgres
+		Nov 10 09:56:28 ubuntuA3 su[15284]: Successful su for ff by root
+		Nov 10 09:56:28 ubuntuA3 su[15284]: + pts/1 root:ff
+		Nov 10 09:56:28 ubuntuA3 su[15284]: pam_unix(su:session): session opened for user ff by bill(uid=0)
+		Nov 10 09:58:09 ubuntuA3 su[15284]: pam_unix(su:session): session closed for user ff
+		Nov 10 09:58:11 ubuntuA3 su[15310]: Successful su for postgres by root
+		Nov 10 09:58:11 ubuntuA3 su[15310]: + pts/1 root:postgres
+		Nov 10 09:58:11 ubuntuA3 su[15310]: pam_unix(su:session): session opened for user postgres by bill(uid=0)
+		Nov 10 10:00:43 ubuntuA3 su[15310]: pam_unix(su:session): session closed for user postgres
+
+	EXPLANATION: (explain the evidence)
+		As postgres user, the hacker create new database fourFours, fourfours, then drop fourFours
+		Then add ff as database user.
+		Then, use ff account to connect to database on fourFours, commands are present in bash_history_ff.
+		I want to guess the hacker is performing sql injection at this time, however, time stamp in postgresql-8.3-main.log.1
+		does not match with the time in auth_log. I think hacker could have modified time stamp in the auth_log since in bash_history_root, 
+		it has a line saying vim /var/log/auth.log. 
+
++-----------------------------------------------------------------------+
+| As a system user: before obtaining root                               |
++-----------------------------------------------------------------------+
+	First system account broken: 
+	Date and time attacker broke account: 
+	Evidence for the above (command, output, explanation): 
+	
+	-----------------------------------------------------------------
+	A description of hackers approach, while an unprivileged user.
+
+	Hacker attempts to run command with sudo.
+	
+	-----------------------------------------------------------------
+	How I know: (command I executed, sample of the evidence, explanation)
+	-----------------------------------------------------------------
+	COMMAND: 
+		
+	EVIDENCE: (sample of the evidence)
+
+
+	EXPLANATION: (explain the evidence)
+
++-----------------------------------------------------------------------+
+| Privilege: Got root!!!                                                |
++-----------------------------------------------------------------------+
+	First system account broken: arnold
+	Date and time attacker broke account: Nov  9 22:50:19
+	Evidence for the above (command, output, explanation): 
+
+	From bash_histroy_root:
+	vim /var/log/auth.log 
+	/home/bill/.ssh/authorized_keys
+	cat /home/bill/.ssh/authorized_keys
+	cat /home/charlie/.ssh/authorized_keys
+
+	From auth_log(auth.log):
+	Nov  9 22:50:19 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/home/arnold ; USER=root ; COMMAND=/bin/bash
+
+	Clearly, the first thing attacker do after accessing arnold account, is to do sudo /bin/bash to get root
+	However, the bash history shows root have edited auth.log, so hacker might have removed first few lines in auth.log
+
++-----------------------------------------------------------------------+
+| whole story                                                           |
++-----------------------------------------------------------------------+
+Based on piazza response here: https://piazza.com/class/mf3x1e8t5775xb/post/468
+I should describe the full story.
+First, hacker gain access to arnold's account. Because Arnold's account is in admin group,
+so hacker immediately have root access. He does it by typing sudo /bin/bash to switch to root.
+Then, he add user bill to admin group, granting him the root access. Hacker uses bill account 
+to steal tripwire files in mv /var/lib/tripwire/* and gpg encrypt them to get myPrivateFile.
+Then, based on auth_log, hacker attempts to uninstall/purge tripwire from the system as well as updating 
+baseline database file with arnold account. Detailed changed change be seen in user.log. 
+Hacker wants to ask the company for ransom in exchange for those security data. 
+Other than bill, hacker also add user ff and take over user postgres. Hacker created a new database fourfours with postgres account and user ff into it.
+Then, hacker login into the database with user ff. Evidences from postgresql-8.3-main.log.1 and access.log.1 shows that hacker
+was performing sql injection, probing database to gain data, and try to overload database with a lot of get request. 
+Then, hacker install build-essential and reload xinetd configuration, this could be with an intention to install malicious code.
+bash_history_root indicate that hacker has stolen privates key of bill account and charlie account, allowing him to login without authentication.
+Hacker also modify auth.log in an attempt to trick Security team.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++                          System Changes                               +
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+-------------------------------------------------------------------------
+HACKER CHANGED: 
+Add user ff 
+Modify bill password so hacker can login as bill, add bill to admin group
+Add user sid
+Add user charlie 
+try to modify above user GECOS information.
+
+EVIDENCE: 
+From /var/log/auth.log
+Nov 10 09:50:33 ubuntuA3 groupadd[15231]: new group: name=ff, GID=1002
+Nov 10 09:50:33 ubuntuA3 useradd[15232]: new user: name=ff, UID=1002, GID=1002, home=/home/ff, shell=/bin/bash
+Nov 10 09:50:47 ubuntuA3 passwd[15235]: pam_unix(passwd:chauthtok): password changed for ff
+Nov 10 09:50:51 ubuntuA3 chfn[15236]: changed user `ff' information
+Nov 10 09:52:20 ubuntuA3 su[15239]: Successful su for ff by root
+
+Nov  9 23:03:28 ubuntuA3 useradd[5645]: new group: name=bill, GID=1001
+Nov  9 23:03:28 ubuntuA3 useradd[5645]: new user: name=bill, UID=1001, GID=1001, home=/home/bill, shell=/bin/sh
+Nov  9 23:03:33 ubuntuA3 userdel[5646]: delete user `bill'
+Nov  9 23:03:33 ubuntuA3 userdel[5646]: removed group `bill' owned by `bill'
+Nov  9 23:03:36 ubuntuA3 groupadd[5648]: new group: name=bill, GID=1001
+Nov  9 23:03:36 ubuntuA3 useradd[5649]: new user: name=bill, UID=1001, GID=1001, home=/home/bill, shell=/bin/bash
+Nov  9 23:03:42 ubuntuA3 passwd[5652]: pam_unix(passwd:chauthtok): password changed for bill
+Nov  9 23:03:44 ubuntuA3 chfn[5653]: changed user `bill' information
+Nov  9 23:08:54 ubuntuA3 sshd[5661]: Accepted password for bill from 172.16.107.136 port 38707 ssh2
+
+Nov 11 10:16:14 ubuntuA3 usermod[5603]: add `bill' to group `admin'
+Nov 11 10:16:14 ubuntuA3 usermod[5603]: add `bill' to shadow group `admin'
+
+Nov 10 10:24:08 ubuntuA3 groupadd[15833]: new group: name=sid, GID=1003
+Nov 10 10:24:08 ubuntuA3 useradd[15834]: new user: name=sid, UID=1003, GID=1003, home=/home/sid, shell=/bin/bash
+Nov 10 10:24:25 ubuntuA3 passwd[15837]: pam_unix(passwd:chauthtok): password changed for sid
+Nov 10 10:24:29 ubuntuA3 chfn[15839]: changed user `sid' information
+
+Nov 11 10:14:41 ubuntuA3 groupadd[5596]: new group: name=charlie, GID=1004
+Nov 11 10:14:41 ubuntuA3 useradd[5597]: new user: name=charlie, UID=1004, GID=1004, home=/home/charlie, shell=/bin/bash
+Nov 11 10:14:46 ubuntuA3 passwd[5600]: pam_unix(passwd:chauthtok): password changed for charlie
+Nov 11 10:14:51 ubuntuA3 chfn[5601]: changed user `charlie' information
+Nov 11 10:16:14 ubuntuA3 usermod[5603]: add `bill' to group `admin'
+Nov 11 10:16:14 ubuntuA3 usermod[5603]: add `bill' to shadow group `admin'
+
+WHY: 
+The hacker add multiple accounts to ensure that even if he loses arnold's account. He can still have access to other accounts, 
+like bill's account that has root privilege.
+
+IMPACT OF CHANGE: maintain access, privilege escalation, lateral movement and data access (dos, maintain access, hide tracks, unknown, exfiltrate data, ...) 
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+HACKER CHANGED: install php5-pgsql
+
+EVIDENCE: 
+
+From /var/log/auth.log:
+Nov 10 10:03:48 ubuntuA3 sudo:   arnold : TTY=pts/1 ; PWD=/var/www/fourFours/dev ; USER=root ; COMMAND=/usr/bin/apt-get install php5-pgsql
+
+From evidence5:
+Log started: 2020-11-10  10:09:15
+(Reading database ... 19984 files and directories currently installed.)
+Preparing to replace php5-mysql 5.2.4-2ubuntu5.10 (using .../php5-mysql_5.2.4-2ubuntu5.27_amd64.deb) ...
+Unpacking replacement php5-mysql ...
+Preparing to replace libapache2-mod-php5 5.2.4-2ubuntu5.10 (using .../libapache2-mod-php5_5.2.4-2ubuntu5.27_amd64.deb) ...
+Unpacking replacement libapache2-mod-php5 ...
+Preparing to replace php5-common 5.2.4-2ubuntu5.10 (using .../php5-common_5.2.4-2ubuntu5.27_amd64.deb) ...
+Unpacking replacement php5-common ...
+Selecting previously deselected package php5-pgsql.
+Unpacking php5-pgsql (from .../php5-pgsql_5.2.4-2ubuntu5.27_amd64.deb) ...
+Setting up php5-common (5.2.4-2ubuntu5.27) ...
+Installing new version of config file /etc/cron.d/php5 ...
+Setting up libapache2-mod-php5 (5.2.4-2ubuntu5.27) ...
+ * Reloading web server config apache2
+   ...done.
+Setting up php5-mysql (5.2.4-2ubuntu5.27) ...
+Setting up php5-pgsql (5.2.4-2ubuntu5.27) ...
+Log ended: 2020-11-10  10:09:17
+
+From dpkg.log.1:
+2020-11-10 10:09:15 install php5-pgsql <none> 5.2.4-2ubuntu5.27
+2020-11-10 10:09:15 status half-installed php5-pgsql 5.2.4-2ubuntu5.27
+2020-11-10 10:09:15 status unpacked php5-pgsql 5.2.4-2ubuntu5.27
+2020-11-10 10:09:15 status unpacked php5-pgsql 5.2.4-2ubuntu5.27
+2020-11-10 10:09:16 configure php5-pgsql 5.2.4-2ubuntu5.27 5.2.4-2ubuntu5.27
+2020-11-10 10:09:16 status unpacked php5-pgsql 5.2.4-2ubuntu5.27
+2020-11-10 10:09:16 status unpacked php5-pgsql 5.2.4-2ubuntu5.27
+2020-11-10 10:09:16 status unpacked php5-pgsql 5.2.4-2ubuntu5.27
+2020-11-10 10:09:16 status half-configured php5-pgsql 5.2.4-2ubuntu5.27
+2020-11-10 10:09:16 status installed php5-pgsql 5.2.4-2ubuntu5.27
+
+WHY: 
+Exploit the Web Application: By installing this, the hacker sets the stage for running an 
+exploit through the fourFours web service (as the command was run from that directory). 
+This could allow them to execute SQL Injection attacks through the web front-end.
+
+Facilitate the Database Exploit: It creates the necessary environment for any of their scripts
+(like the r.sh downloaded earlier) to interact with the database, potentially running malicious 
+SQL queries to gain operating system root access from the database context.
+
+IMPACT OF CHANGE: (dos, maintain access, hide tracks, unknown, exfiltrate data, ...) 
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+HACKER CHANGED: install build-essential
+
+EVIDENCE: 
+From /var/log/auth.log:
+Nov 10 10:27:12 ubuntuA3 sudo:   arnold : TTY=pts/1 ; PWD=/var/www/fourFours/dev ; USER=root ; COMMAND=/usr/bin/apt-get install build-essential
+
+From evidence5:
+Log started: 2020-11-10  10:27:16
+(Reading database ... 20017 files and directories currently installed.)
+Preparing to replace libc6 2.7-10ubuntu5 (using .../libc6_2.7-10ubuntu8.3_amd64.deb) ...
+Unpacking replacement libc6 ...
+Setting up libc6 (2.7-10ubuntu8.3) ...
+
+Processing triggers for libc6 ...
+ldconfig deferred processing now taking place
+/sbin/ldconfig.real: File /lib/libexploit.so is empty, not checked.
+Selecting previously deselected package binutils.
+(Reading database ... 20017 files and directories currently installed.)
+Unpacking binutils (from .../binutils_2.18.1~cvs20080103-0ubuntu1_amd64.deb) ...
+Selecting previously deselected package linux-libc-dev.
+Unpacking linux-libc-dev (from .../linux-libc-dev_2.6.24-32.107_amd64.deb) ...
+Selecting previously deselected package libc6-dev.
+Unpacking libc6-dev (from .../libc6-dev_2.7-10ubuntu8.3_amd64.deb) ...
+Selecting previously deselected package libgomp1.
+Unpacking libgomp1 (from .../libgomp1_4.2.4-1ubuntu4_amd64.deb) ...
+Selecting previously deselected package gcc-4.2.
+Unpacking gcc-4.2 (from .../gcc-4.2_4.2.4-1ubuntu4_amd64.deb) ...
+Selecting previously deselected package gcc.
+Unpacking gcc (from .../gcc_4%3a4.2.3-1ubuntu6_amd64.deb) ...
+Selecting previously deselected package libstdc++6-4.2-dev.
+Unpacking libstdc++6-4.2-dev (from .../libstdc++6-4.2-dev_4.2.4-1ubuntu4_amd64.deb) ...
+Selecting previously deselected package g++-4.2.
+Unpacking g++-4.2 (from .../g++-4.2_4.2.4-1ubuntu4_amd64.deb) ...
+Selecting previously deselected package g++.
+Unpacking g++ (from .../g++_4%3a4.2.3-1ubuntu6_amd64.deb) ...
+Selecting previously deselected package make.
+Unpacking make (from .../make_3.81-3build1_amd64.deb) ...
+Selecting previously deselected package libtimedate-perl.
+Unpacking libtimedate-perl (from .../libtimedate-perl_1.1600-9_all.deb) ...
+Selecting previously deselected package patch.
+Unpacking patch (from .../patch_2.5.9-4_amd64.deb) ...
+Selecting previously deselected package dpkg-dev.
+Unpacking dpkg-dev (from .../dpkg-dev_1.14.16.6ubuntu4.2_all.deb) ...
+Selecting previously deselected package build-essential.
+Unpacking build-essential (from .../build-essential_11.3ubuntu1_amd64.deb) ...
+Setting up binutils (2.18.1~cvs20080103-0ubuntu1) ...
+
+Setting up linux-libc-dev (2.6.24-32.107) ...
+Setting up libc6-dev (2.7-10ubuntu8.3) ...
+Setting up libgomp1 (4.2.4-1ubuntu4) ...
+
+Setting up gcc-4.2 (4.2.4-1ubuntu4) ...
+Setting up gcc (4:4.2.3-1ubuntu6) ...
+
+Setting up make (3.81-3build1) ...
+Setting up libtimedate-perl (1.1600-9) ...
+Setting up patch (2.5.9-4) ...
+Setting up dpkg-dev (1.14.16.6ubuntu4.2) ...
+Setting up libstdc++6-4.2-dev (4.2.4-1ubuntu4) ...
+Setting up g++-4.2 (4.2.4-1ubuntu4) ...
+Setting up g++ (4:4.2.3-1ubuntu6) ...
+
+Setting up build-essential (11.3ubuntu1) ...
+Processing triggers for libc6 ...
+ldconfig deferred processing now taking place
+/sbin/ldconfig.real: File /lib/libexploit.so is empty, not checked.
+
+WHY: 
+Compile Custom Code: It allows the hacker to compile source code directly on the victim's system. This could be a sophisticated rootkit, a custom payload, or a specific exploit that they may have downloaded but needs to be compiled before it can run.
+
+Ensure Exploit Success: Many exploits or backdoors are released as C/C++ source code to be platform-independent or to evade signature-based detection, making local compilation necessary.
+
+Prepare for Hardened Persistence: The ability to compile code is essential for creating native, more difficult-to-detect malware or kernel modules for deep persistence.
+
+IMPACT OF CHANGE: (dos, maintain access, hide tracks, unknown, exfiltrate data, ...) 
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+HACKER CHANGED: reload xinetd configuration files after installing backdoor malicious software
+without shutting down the service.
+
+EVIDENCE: 
+From /var/log/auth.log:
+Nov 10 13:11:00 ubuntuA3 sudo:   arnold : TTY=pts/0 ; PWD=/root/package/cron ; USER=root ; COMMAND=/usr/bin/killall -HUP xinetd
+Nov 10 13:13:55 ubuntuA3 sudo:   arnold : TTY=pts/0 ; PWD=/var/log ; USER=root ; COMMAND=/usr/bin/killall -HUP xinetd
+
+From evidence5:
+Log started: 2020-11-10  10:25:42
+Selecting previously deselected package xinetd.
+(Reading database ... 19989 files and directories currently installed.)
+Unpacking xinetd (from .../xinetd_1%3a2.3.14-5_amd64.deb) ...
+Setting up xinetd (1:2.3.14-5) ...
+ * Stopping internet superserver xinetd
+   ...done.
+ * Starting internet superserver xinetd
+   ...done.
+
+Log ended: 2020-11-10  10:25:43
+
+
+WHY: 
+The hacker could have modified the xinetd configuration to set up a hidden network service
+and use the killall -HUP xinetd command to load new and malicious configuration.
+IMPACT OF CHANGE: (dos, maintain access, hide tracks, unknown, exfiltrate data, ...) 
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+HACKER CHANGED: modify multiple log file, zip multiple log file
+
+EVIDENCE: 
+From evidence 1, 2, 3, 4
+	stat initial-status
+  	File: `initial-status'
+  	Size: 289380    	Blocks: 576        IO Block: 4096   regular file
+	Device: 801h/2049d	Inode: 180456      Links: 1
+	Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+	Access: 2025-11-07 10:32:10.000000000 -0500
+	Modify: 2020-11-09 22:46:12.000000000 -0500
+	Change: 2025-11-07 10:32:05.000000000 -0500
+
+	stat mysql.log.2.gz
+  	File: `mysql.log.2.gz'
+  	Size: 20        	Blocks: 8          IO Block: 4096   regular file
+	Device: 801h/2049d	Inode: 174083      Links: 1
+	Access: (0640/-rw-r-----)  Uid: (  104/   mysql)   Gid: (    4/     adm)
+	Access: 2025-11-07 11:14:37.000000000 -0500
+	Modify: 2020-11-09 22:45:57.000000000 -0500
+	Change: 2025-11-07 06:48:31.000000000 -0500
+
+	stat pycentral.log
+	File: `pycentral.log'
+	Size: 0         	Blocks: 0          IO Block: 4096   regular empty file
+	Device: 801h/2049d	Inode: 173162      Links: 1
+	Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+	Access: 2025-11-07 11:17:24.000000000 -0500
+	Modify: 2020-11-09 22:45:41.000000000 -0500
+	Change: 2020-11-09 22:45:41.000000000 -0500
+
+	stat syslog.1.gz/syslog.2.gz
+	File: `syslog.1.gz'
+  	Size: 263751    	Blocks: 528        IO Block: 4096   regular file
+	Device: 801h/2049d	Inode: 174057      Links: 1
+	Access: (0640/-rw-r-----)  Uid: (  102/  syslog)   Gid: (    4/     adm)
+	Access: 2020-11-10 18:29:46.000000000 -0500
+	Modify: 2025-11-06 06:25:01.000000000 -0500
+	Change: 2025-11-07 06:48:32.000000000 -0500
+	File: `syslog.2.gz'
+	Size: 16375     	Blocks: 32         IO Block: 4096   regular file
+	Device: 801h/2049d	Inode: 174091      Links: 1
+	Access: (0640/-rw-r-----)  Uid: (  102/  syslog)   Gid: (    4/     adm)
+	Access: 2020-11-10 13:12:41.000000000 -0500
+	Modify: 2020-11-10 06:39:01.000000000 -0500
+	Change: 2025-11-07 06:48:32.000000000 -0500
+
+WHY: 
+ modify log to erase evidence, to hide their backdoor software, and disturb analysis to compromised systems
+
+IMPACT OF CHANGE: maintain access, hide traces(dos, maintain access, hide tracks, unknown, exfiltrate data, ...) 
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+HACKER CHANGED: sql injection and dos attack to the database used by fourFours
+
+EVIDENCE: 
+From access.log.1
+...hundred of similar lines
+172.16.107.140 - - [11/Nov/2020:13:19:27 -0500] "GET /fourFours/index.php?user=%27+or+%28username+like+%27anne%25%27+and+passwd+like+%27liok%25%27%29%3B+--&password=&operation=login HTTP/1.1" 200 593 "-" "Python-urllib/3.8"
+172.16.107.140 - - [11/Nov/2020:13:19:27 -0500] "GET /fourFours/index.php?user=%27+or+%28username+like+%27anne%25%27+and+passwd+like+%27liol%25%27%29%3B+--&password=&operation=login HTTP/1.1" 200 593 "-" "Python-urllib/3.8"
+172.16.107.140 - - [11/Nov/2020:13:19:27 -0500] "GET /fourFours/index.php?user=%27+or+%28username+like+%27anne%25%27+and+passwd+like+%27liom%25%27%29%3B+--&password=&operation=login HTTP/1.1" 200 593 "-" "Python-urllib/3.8"
+172.16.107.140 - - [11/Nov/2020:13:19:27 -0500] "GET /fourFours/index.php?user=%27+or+%28username+like+%27anne%25%27+and+passwd+like+%27lion%25%27%29%3B+--&password=&operation=login HTTP/1.1" 200 65788 "-" "Python-urllib/3.8"
+172.16.107.140 - - [11/Nov/2020:13:19:27 -0500] "GET /fourFours/index.php?user=%27+or+%28username+like+%27anne%25%27+and+passwd+like+%27liona%25%27%29%3B+--&password=&operation=login HTTP/1.1" 200 594 "-" "Python-urllib/3.8"
+172.16.107.140 - - [11/Nov/2020:13:19:27 -0500] "GET /fourFours/index.php?user=%27+or+%28username+like+%27anne%25%27+and+passwd+like+%27lionb%25%27%29%3B+--&password=&operation=login HTTP/1.1" 200 594 "-" "Python-urllib/3.8"
+172.16.107.140 - - [11/Nov/2020:13:19:27 -0500] "GET /fourFours/index.php?user=%27+or+%28username+like+%27anne%25%27+and+passwd+like+%27lionc%25%27%29%3B+--&password=&operation=login HTTP/1.1" 200 594 "-" "Python-urllib/3.8"
+172.16.107.140 - - [11/Nov/2020:13:19:27 -0500] "GET /fourFours/index.php?user=%27+or+%28username+like+%27anne%25%27+and+passwd+like+%27liond%25%27%29%3B+--&password=&operation=login HTTP/1.1" 200 594 "-" "Python-urllib/3.8"
+172.16.107.140 - - [11/Nov/2020:13:19:27 -0500] "GET /fourFours/index.php?user=%27+or+%28username+like+%27anne%25%27+and+passwd+like+%27lione%25%27%29%3B+--&password=&operation=login HTTP/1.1" 200 594 "-" "Python-urllib/3.8"
+172.16.107.140 - - [11/Nov/2020:13:19:27 -0500] "GET /fourFours/index.php?user=%27+or+%28username+like+%27anne%25%27+and+passwd+like+%27lionf%25%27%29%3B+--&password=&operation=login HTTP/1.1" 200 594 "-" "Python-urllib/3.8"
+172.16.107.140 - - [11/Nov/2020:13:19:27 -0500] "GET /fourFours/index.php?user=%27+or+%28username+like+%27anne%25%27+and+passwd+like+%27liong%25%27%29%3B+--&password=&operation=login HTTP/1.1" 200 594 "-" "Python-urllib/3.8"
+172.16.107.140 - - [11/Nov/2020:13:19:27 -0500] "GET /fourFours/index.php?user=%27+or+%28username+like+%27anne%25%27+and+passwd+like+%27lionh%25%27%29%3B+--&password=&operation=login HTTP/1.1" 200 594 "-" "Python-urllib/3.8"
+172.16.107.140 - - [11/Nov/2020:13:19:27 -0500] "GET /fourFours/index.php?user=%27+or+%28username+like+%27anne%25%27+and+passwd+like+%27lioni%25%27%29%3B+--&password=&operation=login HTTP/1.1" 200 594 "-" "Python-urllib/3.8"
+172.16.107.140 - - [11/Nov/2020:13:19:27 -0500] "GET /fourFours/index.php?user=%27+or+%28username+like+%27anne%25%27+and+passwd+like+%27lionj%25%27%29%3B+--&password=&operation=login HTTP/1.1" 200 594 "-" "Python-urllib/3.8"
+172.16.107.140 - - [11/Nov/2020:13:19:27 -0500] "GET /fourFours/index.php?user=%27+or+%28username+like+%27anne%25%27+and+passwd+like+%27lionk%25%27%29%3B+--&password=&operation=login HTTP/1.1" 200 594 "-" "Python-urllib/3.8"
+172.16.107.140 - - [11/Nov/2020:13:19:27 -0500] "GET /fourFours/index.php?user=%27+or+%28username+like+%27anne%25%27+and+passwd+like+%27lionl%25%27%29%3B+--&password=&operation=login HTTP/1.1" 200 594 "-" "Python-urllib/3.8"
+172.16.107.140 - - [11/Nov/2020:13:19:27 -0500] "GET /fourFours/index.php?user=%27+or+%28username+like+%27anne%25%27+and+passwd+like+%27lionm%25%27%29%3B+--&password=&operation=login HTTP/1.1" 200 594 "-" "Python-urllib/3.8"
+172.16.107.140 - - [11/Nov/2020:13:19:27 -0500] "GET /fourFours/index.php?user=%27+or+%28username+like+%27anne%25%27+and+passwd+like+%27lionn%25%27%29%3B+--&password=&operation=login HTTP/1.1" 200 594 "-" "Python-urllib/3.8"
+172.16.107.140 - - [11/Nov/2020:13:19:27 -0500] "GET /fourFours/index.php?user=%27+or+%28username+like+%27anne%25%27+and+passwd+like+%27liono%25%27%29%3B+--&password=&operation=login HTTP/1.1" 200 594 "-" "Python-urllib/3.8"
+172.16.107.140 - - [11/Nov/2020:13:19:27 -0500] "GET /fourFours/index.php?user=%27+or+%28username+like+%27anne%25%27+and+passwd+like+%27lionp%25%27%29%3B+--&password=&operation=login HTTP/1.1" 200 594 "-" "Python-urllib/3.8"
+
+From /var/log/postgresql/postgresql-8.3-main.log.1:
+2020-11-11 12:52:38 EST ERROR:  syntax error at or near "something" at character 81
+2020-11-11 12:52:38 EST STATEMENT:  SELECT id, username, firstName, lastName, passwd FROM account WHERE username='' something ' AND passwd=''
+2020-11-11 12:52:38 EST ERROR:  unnamed prepared statement does not exist
+2020-11-11 12:54:09 EST ERROR:  unterminated quoted string at or near "' AND passwd=''" at character 89
+2020-11-11 12:54:09 EST STATEMENT:  SELECT id, username, firstName, lastName, passwd FROM account WHERE username=' ' OR 1=1;' AND passwd=''
+2020-11-11 12:54:09 EST ERROR:  unnamed prepared statement does not exist
+2020-11-11 13:06:21 EST ERROR:  syntax error at or near "something" at character 44
+2020-11-11 13:06:21 EST STATEMENT:  SELECT * FROM solution WHERE expression='' something --'
+2020-11-11 13:06:21 EST ERROR:  unnamed prepared statement does not exist
+2020-11-11 13:06:21 EST ERROR:  syntax error at or near "something" at character 67
+2020-11-11 13:06:21 EST STATEMENT:  insert into solution (value, expression, accountId) values (3, '' something --', 1)
+2020-11-11 13:06:21 EST ERROR:  unnamed prepared statement does not exist
+2020-11-11 13:08:41 EST ERROR:  cannot insert multiple commands into a prepared statement
+2020-11-11 13:08:41 EST STATEMENT:  SELECT id, username, firstName, lastName, passwd FROM account WHERE username='' OR 1=1; UPDATE solution SET expression=(SELECT username FROM account LIMIT 1) WHERE expressionId=4;--' AND passwd=''
+
+WHY: 
+Attacker tried to leak user data on fourFours webpage and bypass authentication
+
+Above get request can be translated to below, which is a classical sql injection attack pattern
+- ' or (username like 'anne%' and passwd like 'liok%'); --
+
+The fact that the attacker is able to send hundred of get request to the web server within a few seconds prove that it is 
+ddos attack, it is meant to overwhelm web server resources, making the database slow or completely inaccessible to other users
+
+IMPACT OF CHANGE: dos, exfiltrate data(dos, maintain access, hide tracks, unknown, exfiltrate data, ...) 
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+HACKER CHANGED: update tripwire database file, re-initialize and then completely remove/purge the Tripwire security tool
+
+EVIDENCE: 
+
+From bash_histroy
+	tripwire --check
+	tripwire --check | more
+	tripwire --update
+	ls /var/lib/tripwire/report/ubuntuA3-2020111*
+	tripwire --update /var/lib/tripwire/report/ubuntuA3-20201111-102142.twr
+	tripwire --help
+	tripwire --update --twrfile /var/lib/tripwire/report/ubuntuA3-20201111-102142.twr
+	shutdown -h now
+	tripwire --check
+
+From /var/log/auth.log:
+Nov 10 16:48:29 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/etc/tripwire ; USER=root ; COMMAND=/usr/sbin/tripwire --init
+Nov 10 17:44:56 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/ ; USER=root ; COMMAND=/usr/bin/apt-get install tripwire
+Nov 10 18:07:07 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/etc ; USER=root ; COMMAND=/usr/bin/apt-get remove tripwire
+Nov 10 18:07:15 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/etc ; USER=root ; COMMAND=/usr/bin/apt-get purge tripwire
+Nov 10 18:08:01 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/ ; USER=root ; COMMAND=/usr/bin/apt-get purge tripwire
+
+From dpkg.log:
+...
+2020-11-10 17:50:23 status unpacked tripwire 2.3.1.2.0-11
+2020-11-10 17:50:23 status unpacked tripwire 2.3.1.2.0-11
+2020-11-10 17:50:23 status unpacked tripwire 2.3.1.2.0-11
+2020-11-10 17:50:23 status unpacked tripwire 2.3.1.2.0-11
+2020-11-10 17:50:23 status half-configured tripwire 2.3.1.2.0-11
+2020-11-10 17:50:23 status installed tripwire 2.3.1.2.0-11
+2020-11-10 17:58:27 startup packages remove
+2020-11-10 17:58:27 status installed tripwire 2.3.1.2.0-11
+2020-11-10 17:58:27 remove tripwire 2.3.1.2.0-11 2.3.1.2.0-11
+2020-11-10 17:58:27 status half-configured tripwire 2.3.1.2.0-11
+2020-11-10 17:58:27 status half-installed tripwire 2.3.1.2.0-11
+2020-11-10 17:58:27 status config-files tripwire 2.3.1.2.0-11
+2020-11-10 17:58:27 status config-files tripwire 2.3.1.2.0-11
+2020-11-10 17:58:52 startup archives unpack
+2020-11-10 17:58:52 install tripwire 2.3.1.2.0-11 2.3.1.2.0-11
+2020-11-10 17:58:52 status half-installed tripwire 2.3.1.2.0-11
+2020-11-10 17:58:52 status unpacked tripwire 2.3.1.2.0-11
+2020-11-10 17:58:52 status unpacked tripwire 2.3.1.2.0-11
+2020-11-10 17:58:53 startup packages configure
+2020-11-10 17:58:53 configure tripwire 2.3.1.2.0-11 2.3.1.2.0-11
+2020-11-10 17:58:53 status unpacked tripwire 2.3.1.2.0-11
+2020-11-10 17:58:53 status unpacked tripwire 2.3.1.2.0-11
+2020-11-10 17:58:53 status unpacked tripwire 2.3.1.2.0-11
+2020-11-10 17:58:53 status unpacked tripwire 2.3.1.2.0-11
+2020-11-10 17:58:53 status half-configured tripwire 2.3.1.2.0-11
+2020-11-10 17:58:53 status installed tripwire 2.3.1.2.0-11
+2020-11-10 18:07:09 startup packages remove
+2020-11-10 18:07:09 status installed tripwire 2.3.1.2.0-11
+2020-11-10 18:07:09 remove tripwire 2.3.1.2.0-11 2.3.1.2.0-11
+2020-11-10 18:07:09 status half-configured tripwire 2.3.1.2.0-11
+2020-11-10 18:07:09 status half-installed tripwire 2.3.1.2.0-11
+2020-11-10 18:07:09 status config-files tripwire 2.3.1.2.0-11
+2020-11-10 18:07:09 status config-files tripwire 2.3.1.2.0-11
+2020-11-10 18:09:53 startup archives unpack
+2020-11-10 18:09:53 install tripwire 2.3.1.2.0-11 2.3.1.2.0-11
+2020-11-10 18:09:53 status half-installed tripwire 2.3.1.2.0-11
+...
+
+From evidence5:
+Log started: 2020-11-10  16:53:38
+(Reading database ... 22110 files and directories currently installed.)
+Removing tripwire ...
+Log ended: 2020-11-10  16:53:39
+
+Log started: 2020-11-10  16:53:46
+Selecting previously deselected package tripwire.
+(Reading database ... 22081 files and directories currently installed.)
+Unpacking tripwire (from .../tripwire_2.3.1.2.0-11_amd64.deb) ...
+Setting up tripwire (2.3.1.2.0-11) ...
+Can't open /etc/tripwire/twcfg.txt: No such file or directory.
+Can't open /etc/tripwire/twcfg.txt: No such file or directory.
+chmod: cannot access `/etc/tripwire/site.key': No such file or directory
+chmod: cannot access `/etc/tripwire/-local.key': No such file or directory
+
+Log ended: 2020-11-10  16:53:47
+
+Log started: 2020-11-10  16:54:34
+(Reading database ... 22110 files and directories currently installed.)
+Removing tripwire ...
+Log ended: 2020-11-10  16:54:34
+
+Log started: 2020-11-10  16:55:11
+Selecting previously deselected package tripwire.
+(Reading database ... 22081 files and directories currently installed.)
+Unpacking tripwire (from .../tripwire_2.3.1.2.0-11_amd64.deb) ...
+Setting up tripwire (2.3.1.2.0-11) ...
+Can't open /etc/tripwire/twcfg.txt: No such file or directory.
+Can't open /etc/tripwire/twcfg.txt: No such file or directory.
+chmod: cannot access `/etc/tripwire/site.key': No such file or directory
+chmod: cannot access `/etc/tripwire/-local.key': No such file or directory
+
+Log ended: 2020-11-10  16:55:12
+
+From user.log:
+Nov 10 18:20:31 ubuntuA3 tripwire[6688]: Database initialization Failed: File could not be opened.
+Nov 10 18:26:09 ubuntuA3 tripwire[6727]: Database initialized: /var/lib/tripwire/ubuntuA3.twd
+Nov 10 18:27:04 ubuntuA3 tripwire[6740]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201110182701 V:176 S:100 A:87 R:86 C:3
+Nov 10 18:35:50 ubuntuA3 tripwire[6813]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201110183547 V:182 S:100 A:89 R:87 C:6
+Nov 10 18:58:20 ubuntuA3 tripwire[5628]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201110185814 V:15619 S:100 A:7565 R:7974 C:80
+Nov 10 19:01:55 ubuntuA3 tripwire[5633]: Database Update Complete: /var/lib/tripwire/ubuntuA3.twd
+Nov 10 19:02:10 ubuntuA3 tripwire[5639]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201110190207 V:172 S:100 A:86 R:86 C:0
+Nov 10 19:03:25 ubuntuA3 tripwire[5645]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201110190322 V:172 S:100 A:86 R:86 C:0
+Nov 10 19:05:01 ubuntuA3 tripwire[5679]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201110190458 V:172 S:100 A:86 R:86 C:0
+Nov 10 19:49:40 ubuntuA3 tripwire[5601]: Database Update Failed: File could not be opened.
+Nov 10 19:50:05 ubuntuA3 tripwire[5602]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201110194958 V:16812 S:100 A:8228 R:8438 C:146
+Nov 10 19:50:12 ubuntuA3 tripwire[5604]: Database Update Failed: File could not be opened.
+Nov 10 19:54:12 ubuntuA3 tripwire[5608]: Database Update Complete: /var/lib/tripwire/ubuntuA3.twd
+Nov 10 19:55:34 ubuntuA3 tripwire[5635]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201110195531 V:173 S:100 A:86 R:86 C:1
+Nov 11 10:20:44 ubuntuA3 tripwire[5690]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201111102038 V:11977 S:100 A:6000 R:5793 C:184
+Nov 11 10:23:00 ubuntuA3 tripwire[5692]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201111102142 V:12059 S:100 A:6082 R:5793 C:184
+Nov 11 10:23:14 ubuntuA3 tripwire[5695]: Database Update Failed: File could not be opened.
+Nov 11 10:26:14 ubuntuA3 tripwire[5712]: Database Update Complete: /var/lib/tripwire/ubuntuA3.twd
+Nov 11 10:29:01 ubuntuA3 tripwire[5622]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201111102855 V:17486 S:100 A:8656 R:8733 C:97
+Nov 13 08:15:56 ubuntuA3 tripwire[5631]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201113081550 V:17683 S:100 A:8754 R:8832 C:97
+Nov 13 08:22:02 ubuntuA3 tripwire[5632]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201113081609 V:17765 S:100 A:8836 R:8832 C:97
+Nov 13 08:25:22 ubuntuA3 tripwire[5648]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201113082205 V:17769 S:100 A:8840 R:8832 C:97
+Nov 13 08:28:06 ubuntuA3 tripwire[5656]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201113082803 V:17687 S:100 A:8758 R:8832 C:97
+Nov 13 08:38:18 ubuntuA3 tripwire[5764]: Integrity Check Failed: File could not be opened for writing.
+
+
+WHY: 
+To completely remove tripwire so we cannot find out use tripwire to check what files have been changed or erased
+a wild guess is to install malicious script during the installation process
+
+IMPACT OF CHANGE: hide traces(dos, maintain access, hide tracks, unknown, exfiltrate data, ...) 
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+HACKER CHANGED: bill move the files inside whole tripwire folder into its own folder and encrypt it with gpg
+
+EVIDENCE: 
+
+From bash_history_bill
+	tripwire --check > ~/tripwire_report.txt
+	vim tripwire_report.txt 
+	ls
+	mkdir ransom
+	mv tripwire_report.txt ransom/
+	ls
+	cd ransom
+	ls
+	mv /var/lib/tripwire/* .
+	ls
+	cd ..
+	ls
+	cd ransom/
+	ls
+	vim notes.txt
+	ls
+	gpg
+	ls
+	cd ..
+	ls
+	tar -zcf ransom ransom
+	tar -zcf ransom.tar.gz ransom
+	ls
+	rm -fr ransom
+	ls
+	gpg --symmetric ransom.tar.gz 
+	ls
+	mv ransom.tar.gz z
+	gpg ransom.tar.gz.gpg 
+	ls
+	rm ransom.tar.gz
+	rm z
+	mv ransom.tar.gz.gpg myPrivateFiles
+
+WHY: 
+	To lock security data away, so hacker can threathen the company to get money
+IMPACT OF CHANGE: hide traces, dos(dos, maintain access, hide tracks, unknown, exfiltrate data, ...) 
+-------------------------------------------------------------------------
+
+

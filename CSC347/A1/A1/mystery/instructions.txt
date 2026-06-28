@@ -1,0 +1,114 @@
+Your colleague has already done some work and augmented the code with a few comments.
+However, your colleague got stuck quite quickly and needs your help in 
+determining the purpose of these two functions found in some malware. 
+
+Answer the questions below each of the code snippets.
+
+Function #1
+
+0x001 ;;            	
+mov 	eax, [esp+4] ; 
+eax = *(esp+4) [C syntax] => eax = next address in stack => update as current stack ptr
+
+0x002 ;;    	
+next:   
+cmp     byte ptr [eax], 0;;  CF, OF, SF, ZF, AF, and PF should be set here
+compare 0 and single byte at address stored in eax
+
+0x003 ;;                
+je  	DLabel
+if equal, jump to Dlabel
+
+0x004 ;;                
+inc 	eax
+increment eax's content by 1 => since char is 1 byte
+
+0x005 ;;            	
+jmp 	next
+jump to next
+
+0x006 ;;    	
+DLabel:   
+sub 	eax, [esp+4]	;; 
+eax = eax - [esp+4]
+(since esp hasn't been changed by any instructions in between)
+
+0x007 ;;                
+ret
+return (jump to return address)
+eax returns function value
+Function 1 end
+
+Question 1A)
+What is this function doing? (be as brief as possible, one word is enough).
+
+strlen()
+
+Question 1B)
+Describe briefly what gave it away, when did you realize that this is what the function is doing?
+(We'll accept any reasonable answer that convinces us that you understand this piece of code, but keep it below 4 sentences, don't go overboard with your explanation).
+
+The loop between next and 0x005 and 0x004's increment by 1 each iteration made me think it's traversing through something. 0x002 gave it away once I understood it was comparing one byte of eax with 0, essentially trying to find a null-terminator. Piecing it together, this function starts at the beginning of an argument string, increments by 1 byte to compare each char of the string to a null terminator, and returns the string's length in eax (offset calculated in DLabel) following its encounter with the null-terminator.
+--------------------
+Function #2
+
+;; 0x001        mov      eax,  [esp+4]         
+
+;; 0x002        mov      ecx,  eax            
+
+;; 0x003        pxor     xmm0, xmm0
+bitwise XOR with 128-bit xmm registers
+SSE extension =>single instruction multiple data = can operate on 16 bytes      
+Set xmm0 to be 0      
+
+;; 0x004        and      ecx,  0FH            
+biwise and ecx with hex 0FH => keep last 4 bits of ecx
+
+;; 0x005        and      eax,  -10H   
+bitwise and eax with hex -10H => clear last 4 bits of eax         
+
+;; 0x006        movdqa   xmm1, [eax]
+move aligned double quadword => load xmm1 with value in eax         
+;; 0x007        pcmpeqb  xmm1, xmm0
+compare packed data for equal => compare bytes in dest & src  
+if null-terminator => 1, else 0          
+;; 0x008        pmovmskb edx,  xmm1  
+move byte mask => create mask made up of most significant bit of each byte of xmm1, store result in low byte of edx          
+;; 0x009        shr      edx,  cl        
+shift bits right in edx by value in cl     
+;; 0x010        shl      edx,  cl            
+shift bits left in edx by value in cl
+;; 0x011        bsf      edx,  edx            
+bit scan forward = scan bit by bit from least signficant bits in edx
+IF bits all 0, ZF = 1. Otherwise, ZF is cleared, load bit index of first set bit into edx
+;; 0x012        jnz      A200             
+jump to A200 if ZF is NOT 0     
+
+; Main loop, search 16 bytes at a time
+;; 0x013 A100:   add      eax,  10H   
+move to next 16 bytes, 10H = 16 decimal    
+;; 0x014        movdqa   xmm1, [eax]          
+;; 0x015        pcmpeqb  xmm1, xmm0            
+;; 0x016        pmovmskb edx,  xmm1           
+;; 0x017        bsf      edx,  edx           
+;; 0x018        jz       A100                 
+jump to A100 if ZF is 0
+
+;; 0x019 A200:
+;; 0x020        sub      eax,  [esp+4]
+offset from start address & current 16 byte's address        
+;; 0x021        add      eax,  edx
+edx = index of the null-terminator in the last 16 bytes            
+;; 0x022        ret
+
+Function 2 end
+
+Question 2A)
+What is this function doing? (be as brief as possible, one word is enough).
+
+strlen() using 16 bytes
+
+Question 2B)
+Describe briefly what gave it away, when did you realize that this is what the function is doing? (We'll accept any reasonable answer that convinces us that you understand this piece of code, but keep it below 4 sentences, don't go overboard with your explanation).
+
+The usage of xmm registers and bsf instructions are key to understanding this function because they show this function operates on 16 bytes at a time and scans for null-terminators. The function checks 16 bytes of the string at once to find the first null-terminator assisted by pcmpeqb marking the null-terminators as 1 to be caught by bsf (if not found at 0x011, loop in A100). If found, it jumps to A200 and adds the offset and the null-terminator index to correctly return the string's length stored in eax.

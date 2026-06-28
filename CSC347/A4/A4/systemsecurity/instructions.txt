@@ -1,0 +1,65 @@
+
+Using kali linux run the following command.
+
+lynis audit system
+
+[1 Point] Place the generated report file in lynisReport.txt
+
+[4.5 Points]
+Identify the warnings listed; there should be approximately 30 to 60 warnings depending on the age and state of your system (if you have 0 warnings, create a fresh Kali VM).
+Pick 3 of these warnings (list them below) and list/describe the steps/commands you would use to address (i.e., fix) each of the 4 warnings that you have chosen.
+
+For each warning, describe its impact in terms of CIAaa and what you need to fix it.
+
+
+# Warning:
+suggestion[]=AUTH-9286|Configure maximum password age in /etc/login.defs|-|-|
+
+# CIAaa and why:
+Confidentiality: if a password is stolen, then hacker has access to the account forever because it is set to maximum password age. The hacker can study the data 
+stored in that account.
+Integrity: If an attacker gains access using an old, compromised password, they can modify, corrupt, or delete critical system files and logs.
+Availability: An attacker with unauthorized access can shut down services, crash the system, or delete essential data, making the system unavailable to other legit users.
+# Your steps/commands to fix this
+sudo nano /etc/login.defs
+control + w and type pass_max_days
+change the value from 99999 to 90 day
+save
+
+# Warning:
+suggestion[]=DEB-0880|Install fail2ban to automatically ban hosts that commit multiple authentication errors.|-|-|
+# CIAaa and why:
+Confidentiality: without fali2ban, the hacker can keep guessing password or use whatever tool they have to keep trying until they breach into the system and steal the data.
+With fali2ban, the hacker can only try a few times every once a while.
+Integrity: fali2ban stop hacker from installing malware, modifying system binaries, or changing configuration files.
+Availability: fali2ban ban hacker ip address if hacker cannot login in a few tries. preventing hacker from sending thousands of requests in a short time frame.
+# Your steps/commands to fix this
+sudo apt-get update
+sudo apt-get install fail2ban
+sudo systemctl enable fail2ban
+
+# Warning:
+suggestion[]=USB-1000|Disable drivers like USB storage when not used, to prevent unauthorized storage or data theft|-|-|
+
+# CIAaa and why:
+Confidentiality: Prevents data stealing. Without this, anyone with physical access to the dh2026 machine
+ can plug in a USB drive and copy sensitive files off the system in seconds.
+Integrity: Prevents installing malware. hacker can use USB drives to introduce viruses or ransomware into
+ a dh labs network and remove all student's assignment progress. Disabling the driver blocks this entry path.
+Availability: hacker can plug in its malware and change student's password, preventing utm students to login with their utorid and password
+# Your steps/commands to fix this
+echo "blacklist usb-storage" | sudo tee /etc/modprobe.d/blacklist-usb-storage.conf
+sudo modprobe -r usb-storage
+
+[4.5 Points]
+Using Kali again investigate the options (help menu/man pages) of a tool called wfuzz.
+In A3,the attacker performed a brute force attack for fourFour's users anne (among others...);
+write down the command that could be used to fuzz the password of Anne, your answer must make use
+of a wordlist. 
+(Hint: be mindful of the return codes and the page size that is returned). 
+
+YOUR wfuzz COMMAND BELOW:
+(i.e., wfuzz -option -other_option option_parameter http://192.168.10.100/fourFours/........)
+
+wfuzz -c -w /usr/share/wordlists/rockyou.txt -d "username=anne&password=FUZZ" --hh 0 http://192.168.10.100/fourFours/index.php
+

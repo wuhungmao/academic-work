@@ -1,0 +1,5 @@
+#3) Explain how you check if setuid bit is checked on a file.
+
+To check if the setuid bit is checked on a file, one can run "ls -l <filename>" for the detailed info about the file and look for an "s" (the setuid flag) in the 4th position of the permissions. Another way to check is to run "stat <filename>" to see the metadata's permissions of that file. Since it also shows the numeric (in octal) form, if setuid bit is checked, the first number will be set to a 4 [EX: 4XXX].
+
+(Verified for this file by cat Makefile, it contains chmod +s race)

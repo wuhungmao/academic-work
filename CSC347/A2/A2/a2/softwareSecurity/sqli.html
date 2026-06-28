@@ -1,0 +1,61 @@
+<html>
+	<body>
+		<h1> # FIX OWASP 2013 A1: SQL Injection, use prepared statements </h1>
+		<h2> The Vulnerability </h2>
+		<ul>
+			<li> Brief explanation:
+<xmp>
+		It happens when user input is not sanitized properly and is directly included in SQL query. An attacker could inject malicious SQL statements 
+		into an entry field for execution. This could allow the attacker to view data that they are not normally able to retrieve,
+		modify or delete data.
+</xmp>
+			</li>
+			<li> Example code etc.:
+<xmp>
+		sql code example:
+   		x'; SELECT password FROM users WHERE username="another user";
+</xmp>
+			</li>
+			<li> How attacker exploits this: 
+<xmp>
+		The attacker could inject the above malicious SQL statements into an entry field, and he would be able to retrieve another user's password.
+</xmp>
+			</li>
+			<li> Impact: CIAaa and some details
+<xmp>
+		Confidentiality:  retrieve sensitive data from the database.
+		Integrity:  modify or delete data in the database.
+		Availability:  delete all the data in the database.
+		Authentication: bypass authentication and login as another user once knowing password of other user.
+		Authorization: gain unauthorized access to data.
+</xmp>
+			</li>
+		</ul>
+
+		<h2> INSTRUCTIONS TO VERIFY VULNERABILITY BELOW </h2>
+<xmp>
+		1. Go to fourFours web application and login
+		2. In the expression input field, enter the following code:
+			'; DROP TABLE solution; --
+</xmp>
+               <h2> INSTRUCTIONS TO VERIFY VULNERABILITY BELOW </h2>
+<xmp>
+</xmp>
+                <h2> The Fix </h2>
+                <ul>
+                        <li> Explain the fix:
+<xmp>
+		We use prepared statements with parameterized queries to prevent SQL injection. Prepared statements ensure that a query is first interpreted by database, 
+		then the parameter are then later provided. So the database cannot interpret the parameter as part of the SQL command. 
+		This way, the user input is treated as data only, and not executable code.
+</xmp>
+                        </li>
+                        <li> How the fix resolves the issue:
+<xmp>
+		The fix will teach database to interpret "'; DROP TABLE solution; --" as a string value, not executable code. So the malicious SQL statements will not be executed.
+</xmp>
+                        </li>
+                </ul>
+
+	</body>
+</html>

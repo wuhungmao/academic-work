@@ -1,0 +1,38 @@
+vmplaYou are given the VM a1LinuxNinjaa.ova in the usual location. 
+As well as an a1LinuxNinjaaVMWare file in the usual location.
+(Use whichever one you need!).
+
+
+Set it up in the usual way and log in to it. 
+wsl7
+user: andi
+password: nottheanswer
+
+Your task:
+What is the flag in /root/flag.txt? 
+You must describe in detail how you obtained this and explain your thought process. 
+
+Hint: This can be accomplished with 2nd year CS knowledge. No fancy tool usage required, just 
+explore and look around the VM, start thinking like an adversary in order to develop methods to keep adversaries out.
+
+Note: you must start your exploration from within the running vm as user andi (see login credentials above). 
+_________________________________________________
+
+I tried cd /root in multiple directories after cd ..
+Result: cd: /root: Permission denied
+I tried using sudo because it's like a masterkey if I am given sudo permissions.
+Result: user andi may not run sudo on rh72.
+I tried reading the file directly (ls -l /root/flag.txt) without entering /root.
+Result: ls: /root/flag.txt: Permission denied
+vi /root/flag.txt
+Opened a new file.
+
+The results show I don't have any permissions which is understandable because /root is only accessible to root user.
+
+I checked the hidden files with ls -la. I read bash_history which showed someone switched users to anne and exited.
+
+Tried going into every directory. Eventually found usr/local/bin's readFile. stat usr/local/bin/readFile shows me that I can run the executable with root privileges because it has the 's' setuid bit turned on. Ran readFile on /root/flag.txt => Error: can't open file
+
+Took anne's path: su anne, password: letmein (after trying 0000, 1234, password, passwd, anne, andi, nottheanswer, root, flag.txt). Switched user to anne, cd.. from andi, cd into anne.
+
+checked anne's .bash_history => an unusual combination of letters. su root with Xy12aYTaBB (had to ask Andi because the T was changed into a lowercase for some reason). As root from \ cd root, cat flag.txt => flag{regularLinuxCommands}

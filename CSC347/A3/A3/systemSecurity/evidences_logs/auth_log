@@ -1,0 +1,611 @@
+Nov  9 22:46:41 ubuntuA3 sshd[5170]: Server listening on :: port 22.
+Nov  9 22:46:41 ubuntuA3 sshd[5170]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov  9 22:50:08 ubuntuA3 login[5527]: pam_unix(login:session): session opened for user arnold by LOGIN(uid=0)
+Nov  9 22:50:19 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/home/arnold ; USER=root ; COMMAND=/bin/bash
+Nov  9 22:50:19 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov  9 22:50:19 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov  9 23:02:51 ubuntuA3 sshd[5609]: Accepted password for arnold from 172.16.107.136 port 49912 ssh2
+Nov  9 23:02:51 ubuntuA3 sshd[5611]: pam_unix(sshd:session): session opened for user arnold by (uid=0)
+Nov  9 23:03:25 ubuntuA3 sudo:   arnold : TTY=pts/0 ; PWD=/home/arnold ; USER=root ; COMMAND=/bin/bash
+Nov  9 23:03:25 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov  9 23:03:25 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov  9 23:03:28 ubuntuA3 useradd[5645]: new group: name=bill, GID=1001
+Nov  9 23:03:28 ubuntuA3 useradd[5645]: new user: name=bill, UID=1001, GID=1001, home=/home/bill, shell=/bin/sh
+Nov  9 23:03:33 ubuntuA3 userdel[5646]: delete user `bill' 
+Nov  9 23:03:33 ubuntuA3 userdel[5646]: removed group `bill' owned by `bill' 
+Nov  9 23:03:36 ubuntuA3 groupadd[5648]: new group: name=bill, GID=1001
+Nov  9 23:03:36 ubuntuA3 useradd[5649]: new user: name=bill, UID=1001, GID=1001, home=/home/bill, shell=/bin/bash
+Nov  9 23:03:42 ubuntuA3 passwd[5652]: pam_unix(passwd:chauthtok): password changed for bill
+Nov  9 23:03:44 ubuntuA3 chfn[5653]: changed user `bill' information
+Nov  9 23:08:54 ubuntuA3 sshd[5661]: Accepted password for bill from 172.16.107.136 port 38707 ssh2
+Nov  9 23:08:54 ubuntuA3 sshd[5663]: pam_unix(sshd:session): session opened for user bill by (uid=0)
+Nov  9 23:09:01 ubuntuA3 CRON[5668]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  9 23:09:01 ubuntuA3 CRON[5668]: pam_unix(cron:session): session closed for user root
+Nov  9 23:10:59 ubuntuA3 sshd[5686]: Accepted password for bill from 172.16.107.136 port 49940 ssh2
+Nov  9 23:10:59 ubuntuA3 sshd[5688]: pam_unix(sshd:session): session opened for user bill by (uid=0)
+Nov  9 23:17:01 ubuntuA3 CRON[5843]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  9 23:17:01 ubuntuA3 CRON[5843]: pam_unix(cron:session): session closed for user root
+Nov  9 23:19:13 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:13 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:14 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:14 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:15 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:15 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:16 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:16 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:17 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:17 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:18 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:18 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:19 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:19 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:20 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:20 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:21 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:21 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:22 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:22 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:23 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:23 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:24 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:24 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:25 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:25 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:26 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:26 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:27 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:27 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:28 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:28 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:29 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:29 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:30 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:30 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:31 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:31 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:32 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:32 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:33 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:33 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:34 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:34 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:35 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:35 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:36 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:36 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:37 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:37 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:38 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:38 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:39 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:39 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:40 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:40 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:41 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:41 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:42 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:42 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:43 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:43 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:44 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:44 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:45 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:45 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:46 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:46 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:47 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:47 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:48 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:48 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:49 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:49 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:50 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:50 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:51 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:51 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:52 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:52 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:53 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:53 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:54 ubuntuA3 sshd[5688]: channel 3: open failed: connect failed: Connection refused
+Nov  9 23:19:54 ubuntuA3 sshd[5688]: channel 4: open failed: connect failed: Connection refused
+Nov  9 23:19:54 ubuntuA3 sshd[5688]: Received disconnect from 172.16.107.136: 11: disconnected by user
+Nov  9 23:19:54 ubuntuA3 sshd[5688]: pam_unix(sshd:session): session closed for user bill
+Nov  9 23:35:55 ubuntuA3 sshd[5876]: Accepted password for bill from 172.16.107.136 port 50268 ssh2
+Nov  9 23:35:55 ubuntuA3 sshd[5878]: pam_unix(sshd:session): session opened for user bill by (uid=0)
+Nov  9 23:35:55 ubuntuA3 sshd[5878]: Received disconnect from 172.16.107.136: 11: disconnected by user
+Nov  9 23:35:55 ubuntuA3 sshd[5878]: pam_unix(sshd:session): session closed for user bill
+Nov  9 23:36:04 ubuntuA3 sshd[5611]: Received disconnect from 172.16.107.136: 11: disconnected by user
+Nov  9 23:36:04 ubuntuA3 sshd[5611]: pam_unix(sshd:session): session closed for user arnold
+Nov  9 23:36:14 ubuntuA3 sshd[5883]: Accepted password for bill from 172.16.107.136 port 50270 ssh2
+Nov  9 23:36:14 ubuntuA3 sshd[5885]: pam_unix(sshd:session): session opened for user bill by (uid=0)
+Nov  9 23:38:53 ubuntuA3 sshd[5930]: Accepted password for bill from 172.16.107.136 port 50288 ssh2
+Nov  9 23:38:54 ubuntuA3 sshd[5932]: pam_unix(sshd:session): session opened for user bill by (uid=0)
+Nov  9 23:38:54 ubuntuA3 sshd[5932]: Received disconnect from 172.16.107.136: 11: disconnected by user
+Nov  9 23:38:54 ubuntuA3 sshd[5932]: pam_unix(sshd:session): session closed for user bill
+Nov  9 23:39:01 ubuntuA3 CRON[5941]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  9 23:39:01 ubuntuA3 CRON[5941]: pam_unix(cron:session): session closed for user root
+Nov 10 00:02:01 ubuntuA3 CRON[5986]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 00:02:01 ubuntuA3 CRON[5986]: pam_unix(cron:session): session closed for user root
+Nov 10 00:09:01 ubuntuA3 CRON[6006]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 00:09:01 ubuntuA3 CRON[6006]: pam_unix(cron:session): session closed for user root
+Nov 10 00:17:01 ubuntuA3 CRON[6030]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 00:17:01 ubuntuA3 CRON[6030]: pam_unix(cron:session): session closed for user root
+Nov 10 00:39:01 ubuntuA3 CRON[6065]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 00:39:01 ubuntuA3 CRON[6065]: pam_unix(cron:session): session closed for user root
+Nov 10 01:09:01 ubuntuA3 CRON[6119]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 01:09:01 ubuntuA3 CRON[6119]: pam_unix(cron:session): session closed for user root
+Nov 10 01:17:01 ubuntuA3 CRON[6143]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 01:17:01 ubuntuA3 CRON[6143]: pam_unix(cron:session): session closed for user root
+Nov 10 01:39:01 ubuntuA3 CRON[6185]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 01:39:01 ubuntuA3 CRON[6185]: pam_unix(cron:session): session closed for user root
+Nov 10 02:09:01 ubuntuA3 CRON[6241]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 02:09:01 ubuntuA3 CRON[6241]: pam_unix(cron:session): session closed for user root
+Nov 10 02:17:01 ubuntuA3 CRON[6264]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 02:17:01 ubuntuA3 CRON[6264]: pam_unix(cron:session): session closed for user root
+Nov 10 02:39:01 ubuntuA3 CRON[6298]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 02:39:01 ubuntuA3 CRON[6298]: pam_unix(cron:session): session closed for user root
+Nov 10 03:09:01 ubuntuA3 CRON[6361]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 03:09:01 ubuntuA3 CRON[6361]: pam_unix(cron:session): session closed for user root
+Nov 10 03:17:01 ubuntuA3 CRON[6376]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 03:17:01 ubuntuA3 CRON[6376]: pam_unix(cron:session): session closed for user root
+Nov 10 03:39:01 ubuntuA3 CRON[6419]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 03:39:01 ubuntuA3 CRON[6419]: pam_unix(cron:session): session closed for user root
+Nov 10 04:09:01 ubuntuA3 CRON[6475]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 04:09:01 ubuntuA3 CRON[6475]: pam_unix(cron:session): session closed for user root
+Nov 10 04:17:01 ubuntuA3 CRON[6499]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 04:17:01 ubuntuA3 CRON[6499]: pam_unix(cron:session): session closed for user root
+Nov 10 04:39:01 ubuntuA3 CRON[6542]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 04:39:01 ubuntuA3 CRON[6542]: pam_unix(cron:session): session closed for user root
+Nov 10 05:02:01 ubuntuA3 CRON[6580]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 05:02:01 ubuntuA3 CRON[6580]: pam_unix(cron:session): session closed for user root
+Nov 10 05:09:01 ubuntuA3 CRON[6600]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 05:09:01 ubuntuA3 CRON[6600]: pam_unix(cron:session): session closed for user root
+Nov 10 05:17:01 ubuntuA3 CRON[6615]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 05:17:01 ubuntuA3 CRON[6615]: pam_unix(cron:session): session closed for user root
+Nov 10 05:39:01 ubuntuA3 CRON[6658]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 05:39:01 ubuntuA3 CRON[6658]: pam_unix(cron:session): session closed for user root
+Nov 10 06:09:01 ubuntuA3 CRON[6713]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 06:09:01 ubuntuA3 CRON[6713]: pam_unix(cron:session): session closed for user root
+Nov 10 06:17:01 ubuntuA3 CRON[6737]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 06:17:01 ubuntuA3 CRON[6737]: pam_unix(cron:session): session closed for user root
+Nov 10 06:25:01 ubuntuA3 CRON[6748]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 06:39:01 ubuntuA3 CRON[6792]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 06:39:01 ubuntuA3 CRON[6792]: pam_unix(cron:session): session closed for user root
+Nov 10 06:39:53 ubuntuA3 CRON[6748]: pam_unix(cron:session): session closed for user root
+Nov 10 07:09:01 ubuntuA3 CRON[14795]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 07:09:01 ubuntuA3 CRON[14795]: pam_unix(cron:session): session closed for user root
+Nov 10 07:17:02 ubuntuA3 CRON[14810]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 07:17:02 ubuntuA3 CRON[14810]: pam_unix(cron:session): session closed for user root
+Nov 10 07:39:01 ubuntuA3 CRON[14852]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 07:39:01 ubuntuA3 CRON[14852]: pam_unix(cron:session): session closed for user root
+Nov 10 08:09:01 ubuntuA3 CRON[14906]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 08:09:01 ubuntuA3 CRON[14906]: pam_unix(cron:session): session closed for user root
+Nov 10 08:17:01 ubuntuA3 CRON[14930]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 08:17:01 ubuntuA3 CRON[14930]: pam_unix(cron:session): session closed for user root
+Nov 10 08:38:27 ubuntuA3 sshd[14972]: Accepted password for bill from 172.16.107.136 port 50350 ssh2
+Nov 10 08:38:27 ubuntuA3 sshd[14974]: pam_unix(sshd:session): session opened for user bill by (uid=0)
+Nov 10 08:38:35 ubuntuA3 su[14993]: Successful su for arnold by bill
+Nov 10 08:38:35 ubuntuA3 su[14993]: + pts/1 bill:arnold
+Nov 10 08:38:35 ubuntuA3 su[14993]: pam_unix(su:session): session opened for user arnold by bill(uid=1001)
+Nov 10 08:38:42 ubuntuA3 sudo:   arnold : TTY=pts/1 ; PWD=/home/arnold ; USER=root ; COMMAND=/bin/bash
+Nov 10 08:38:42 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by bill(uid=0)
+Nov 10 08:38:42 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 08:39:01 ubuntuA3 CRON[15029]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 08:39:01 ubuntuA3 CRON[15029]: pam_unix(cron:session): session closed for user root
+Nov 10 09:09:01 ubuntuA3 CRON[15085]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 09:09:01 ubuntuA3 CRON[15085]: pam_unix(cron:session): session closed for user root
+Nov 10 09:17:01 ubuntuA3 CRON[15109]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 09:17:01 ubuntuA3 CRON[15109]: pam_unix(cron:session): session closed for user root
+Nov 10 09:36:02 ubuntuA3 sshd[5663]: pam_unix(sshd:session): session closed for user bill
+Nov 10 09:39:01 ubuntuA3 CRON[15144]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 09:39:01 ubuntuA3 CRON[15144]: pam_unix(cron:session): session closed for user root
+Nov 10 09:40:42 ubuntuA3 sshd[15156]: Accepted password for arnold from 172.16.107.136 port 51458 ssh2
+Nov 10 09:40:42 ubuntuA3 sshd[15158]: pam_unix(sshd:session): session opened for user arnold by (uid=0)
+Nov 10 09:40:43 ubuntuA3 sshd[15158]: Received disconnect from 172.16.107.136: 11: disconnected by user
+Nov 10 09:40:43 ubuntuA3 sshd[15158]: pam_unix(sshd:session): session closed for user arnold
+Nov 10 09:42:59 ubuntuA3 sshd[15194]: Accepted password for arnold from 172.16.107.136 port 52008 ssh2
+Nov 10 09:42:59 ubuntuA3 sshd[15196]: pam_unix(sshd:session): session opened for user arnold by (uid=0)
+Nov 10 09:42:59 ubuntuA3 sshd[15196]: Received disconnect from 172.16.107.136: 11: disconnected by user
+Nov 10 09:42:59 ubuntuA3 sshd[15196]: pam_unix(sshd:session): session closed for user arnold
+Nov 10 09:48:27 ubuntuA3 su[15222]: Successful su for postgres by root
+Nov 10 09:48:27 ubuntuA3 su[15222]: + pts/1 root:postgres
+Nov 10 09:48:27 ubuntuA3 su[15222]: pam_unix(su:session): session opened for user postgres by bill(uid=0)
+Nov 10 09:50:16 ubuntuA3 su[15222]: pam_unix(su:session): session closed for user postgres
+Nov 10 09:50:33 ubuntuA3 groupadd[15231]: new group: name=ff, GID=1002
+Nov 10 09:50:33 ubuntuA3 useradd[15232]: new user: name=ff, UID=1002, GID=1002, home=/home/ff, shell=/bin/bash
+Nov 10 09:50:47 ubuntuA3 passwd[15235]: pam_unix(passwd:chauthtok): password changed for ff
+Nov 10 09:50:51 ubuntuA3 chfn[15236]: changed user `ff' information
+Nov 10 09:52:20 ubuntuA3 su[15239]: Successful su for ff by root
+Nov 10 09:52:20 ubuntuA3 su[15239]: + pts/1 root:ff
+Nov 10 09:52:20 ubuntuA3 su[15239]: pam_unix(su:session): session opened for user ff by bill(uid=0)
+Nov 10 09:54:31 ubuntuA3 su[15239]: pam_unix(su:session): session closed for user ff
+Nov 10 09:54:36 ubuntuA3 su[15263]: Successful su for postgres by root
+Nov 10 09:54:36 ubuntuA3 su[15263]: + pts/1 root:postgres
+Nov 10 09:54:36 ubuntuA3 su[15263]: pam_unix(su:session): session opened for user postgres by bill(uid=0)
+Nov 10 09:56:26 ubuntuA3 su[15263]: pam_unix(su:session): session closed for user postgres
+Nov 10 09:56:28 ubuntuA3 su[15284]: Successful su for ff by root
+Nov 10 09:56:28 ubuntuA3 su[15284]: + pts/1 root:ff
+Nov 10 09:56:28 ubuntuA3 su[15284]: pam_unix(su:session): session opened for user ff by bill(uid=0)
+Nov 10 09:58:09 ubuntuA3 su[15284]: pam_unix(su:session): session closed for user ff
+Nov 10 09:58:11 ubuntuA3 su[15310]: Successful su for postgres by root
+Nov 10 09:58:11 ubuntuA3 su[15310]: + pts/1 root:postgres
+Nov 10 09:58:11 ubuntuA3 su[15310]: pam_unix(su:session): session opened for user postgres by bill(uid=0)
+Nov 10 10:00:43 ubuntuA3 su[15310]: pam_unix(su:session): session closed for user postgres
+Nov 10 10:02:01 ubuntuA3 CRON[15350]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 10:02:01 ubuntuA3 CRON[15350]: pam_unix(cron:session): session closed for user root
+Nov 10 10:03:48 ubuntuA3 sudo:   arnold : TTY=pts/1 ; PWD=/var/www/fourFours/dev ; USER=root ; COMMAND=/usr/bin/apt-get install php5-pgsql
+Nov 10 10:03:48 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by bill(uid=0)
+Nov 10 10:03:48 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 10:08:37 ubuntuA3 sshd[15479]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.16.107.136  user=arnold
+Nov 10 10:08:39 ubuntuA3 sshd[15479]: Failed password for arnold from 172.16.107.136 port 58988 ssh2
+Nov 10 10:08:42 ubuntuA3 sshd[15479]: Accepted password for arnold from 172.16.107.136 port 58988 ssh2
+Nov 10 10:08:42 ubuntuA3 sshd[15481]: pam_unix(sshd:session): session opened for user arnold by (uid=0)
+Nov 10 10:08:42 ubuntuA3 sshd[15481]: Received disconnect from 172.16.107.136: 11: disconnected by user
+Nov 10 10:08:42 ubuntuA3 sshd[15481]: pam_unix(sshd:session): session closed for user arnold
+Nov 10 10:09:01 ubuntuA3 CRON[15491]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 10:09:01 ubuntuA3 CRON[15491]: pam_unix(cron:session): session closed for user root
+Nov 10 10:09:13 ubuntuA3 sudo:   arnold : TTY=pts/1 ; PWD=/etc/apt ; USER=root ; COMMAND=/usr/bin/apt-get install php5-pgsql
+Nov 10 10:09:13 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by bill(uid=0)
+Nov 10 10:09:13 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 10:10:36 ubuntuA3 su[15689]: Successful su for postgres by root
+Nov 10 10:10:36 ubuntuA3 su[15689]: + pts/1 root:postgres
+Nov 10 10:10:36 ubuntuA3 su[15689]: pam_unix(su:session): session opened for user postgres by bill(uid=0)
+Nov 10 10:11:40 ubuntuA3 su[15689]: pam_unix(su:session): session closed for user postgres
+Nov 10 10:14:48 ubuntuA3 sshd[15739]: Accepted password for arnold from 172.16.107.136 port 60480 ssh2
+Nov 10 10:14:48 ubuntuA3 sshd[15741]: pam_unix(sshd:session): session opened for user arnold by (uid=0)
+Nov 10 10:14:48 ubuntuA3 sshd[15741]: Received disconnect from 172.16.107.136: 11: disconnected by user
+Nov 10 10:14:48 ubuntuA3 sshd[15741]: pam_unix(sshd:session): session closed for user arnold
+Nov 10 10:17:01 ubuntuA3 CRON[15778]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 10:17:01 ubuntuA3 CRON[15778]: pam_unix(cron:session): session closed for user root
+Nov 10 10:19:27 ubuntuA3 passwd[15795]: pam_unix(passwd:chauthtok): password changed for bill
+Nov 10 10:21:30 ubuntuA3 su[15812]: Successful su for postgres by root
+Nov 10 10:21:30 ubuntuA3 su[15812]: + pts/1 root:postgres
+Nov 10 10:21:30 ubuntuA3 su[15812]: pam_unix(su:session): session opened for user postgres by bill(uid=0)
+Nov 10 10:21:37 ubuntuA3 su[15812]: pam_unix(su:session): session closed for user postgres
+Nov 10 10:24:08 ubuntuA3 groupadd[15833]: new group: name=sid, GID=1003
+Nov 10 10:24:08 ubuntuA3 useradd[15834]: new user: name=sid, UID=1003, GID=1003, home=/home/sid, shell=/bin/bash
+Nov 10 10:24:25 ubuntuA3 passwd[15837]: pam_unix(passwd:chauthtok): password changed for sid
+Nov 10 10:24:29 ubuntuA3 chfn[15839]: changed user `sid' information
+Nov 10 10:27:12 ubuntuA3 sudo:   arnold : TTY=pts/1 ; PWD=/var/www/fourFours/dev ; USER=root ; COMMAND=/usr/bin/apt-get install build-essential
+Nov 10 10:27:12 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by bill(uid=0)
+Nov 10 10:27:12 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 10:39:01 ubuntuA3 CRON[16304]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 10:39:01 ubuntuA3 CRON[16304]: pam_unix(cron:session): session closed for user root
+Nov 10 11:09:01 ubuntuA3 CRON[16387]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 11:09:01 ubuntuA3 CRON[16387]: pam_unix(cron:session): session closed for user root
+Nov 10 11:17:01 ubuntuA3 CRON[16418]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 11:17:01 ubuntuA3 CRON[16418]: pam_unix(cron:session): session closed for user root
+Nov 10 11:39:01 ubuntuA3 CRON[16473]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 11:39:01 ubuntuA3 CRON[16473]: pam_unix(cron:session): session closed for user root
+Nov 10 12:09:01 ubuntuA3 CRON[16565]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 12:09:01 ubuntuA3 CRON[16565]: pam_unix(cron:session): session closed for user root
+Nov 10 12:17:01 ubuntuA3 CRON[16587]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 12:17:01 ubuntuA3 CRON[16587]: pam_unix(cron:session): session closed for user root
+Nov 10 12:39:01 ubuntuA3 CRON[16650]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 12:39:01 ubuntuA3 CRON[16650]: pam_unix(cron:session): session closed for user root
+Nov 10 12:55:00 ubuntuA3 sshd[16756]: Accepted password for arnold from 172.16.107.136 port 42524 ssh2
+Nov 10 12:55:00 ubuntuA3 sshd[16758]: pam_unix(sshd:session): session opened for user arnold by (uid=0)
+Nov 10 12:55:00 ubuntuA3 sshd[16758]: Received disconnect from 172.16.107.136: 11: disconnected by user
+Nov 10 12:55:00 ubuntuA3 sshd[16758]: pam_unix(sshd:session): session closed for user arnold
+Nov 10 12:55:37 ubuntuA3 su[16762]: Successful su for arnold by bill
+Nov 10 12:55:37 ubuntuA3 su[16762]: + pts/0 bill:arnold
+Nov 10 12:55:37 ubuntuA3 su[16762]: pam_unix(su:session): session opened for user arnold by bill(uid=1001)
+Nov 10 12:55:41 ubuntuA3 sudo:   arnold : TTY=pts/0 ; PWD=/home/arnold ; USER=root ; COMMAND=/bin/bash
+Nov 10 12:55:41 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by bill(uid=0)
+Nov 10 12:55:41 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 13:00:39 ubuntuA3 sshd[16846]: Accepted password for arnold from 172.16.107.136 port 43892 ssh2
+Nov 10 13:00:39 ubuntuA3 sshd[16848]: pam_unix(sshd:session): session opened for user arnold by (uid=0)
+Nov 10 13:00:39 ubuntuA3 sshd[16848]: Received disconnect from 172.16.107.136: 11: disconnected by user
+Nov 10 13:00:39 ubuntuA3 sshd[16848]: pam_unix(sshd:session): session closed for user arnold
+Nov 10 13:03:14 ubuntuA3 sudo:   arnold : TTY=pts/0 ; PWD=/home/arnold ; USER=root ; COMMAND=/bin/bash
+Nov 10 13:03:14 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by bill(uid=0)
+Nov 10 13:03:14 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 13:09:01 ubuntuA3 CRON[17072]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 13:09:01 ubuntuA3 CRON[17072]: pam_unix(cron:session): session closed for user root
+Nov 10 13:11:00 ubuntuA3 sudo:   arnold : TTY=pts/0 ; PWD=/root/package/cron ; USER=root ; COMMAND=/usr/bin/killall -HUP xinetd
+Nov 10 13:11:00 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by bill(uid=0)
+Nov 10 13:11:00 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 13:13:55 ubuntuA3 sudo:   arnold : TTY=pts/0 ; PWD=/var/log ; USER=root ; COMMAND=/usr/bin/killall -HUP xinetd
+Nov 10 13:13:55 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by bill(uid=0)
+Nov 10 13:13:55 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 13:17:01 ubuntuA3 CRON[17136]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 13:17:01 ubuntuA3 CRON[17136]: pam_unix(cron:session): session closed for user root
+Nov 10 13:19:22 ubuntuA3 su[16762]: pam_unix(su:session): session closed for user arnold
+Nov 10 13:19:23 ubuntuA3 sshd[5885]: Received disconnect from 172.16.107.136: 11: disconnected by user
+Nov 10 13:19:23 ubuntuA3 sshd[5885]: pam_unix(sshd:session): session closed for user bill
+Nov 10 13:19:41 ubuntuA3 sshd[17191]: Accepted password for bill from 172.16.107.136 port 48400 ssh2
+Nov 10 13:19:41 ubuntuA3 sshd[17193]: pam_unix(sshd:session): session opened for user bill by (uid=0)
+Nov 10 13:19:46 ubuntuA3 sshd[17193]: Received disconnect from 172.16.107.136: 11: disconnected by user
+Nov 10 13:19:46 ubuntuA3 sshd[17193]: pam_unix(sshd:session): session closed for user bill
+Nov 10 13:39:01 ubuntuA3 CRON[17269]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 13:39:01 ubuntuA3 CRON[17269]: pam_unix(cron:session): session closed for user root
+Nov 10 14:09:01 ubuntuA3 CRON[17351]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 14:09:01 ubuntuA3 CRON[17351]: pam_unix(cron:session): session closed for user root
+Nov 10 14:17:01 ubuntuA3 CRON[17382]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 14:17:01 ubuntuA3 CRON[17382]: pam_unix(cron:session): session closed for user root
+Nov 10 14:39:01 ubuntuA3 CRON[17437]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 14:39:01 ubuntuA3 CRON[17437]: pam_unix(cron:session): session closed for user root
+Nov 10 15:02:01 ubuntuA3 CRON[17506]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 15:02:01 ubuntuA3 CRON[17506]: pam_unix(cron:session): session closed for user root
+Nov 10 15:09:01 ubuntuA3 CRON[17533]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 15:09:01 ubuntuA3 CRON[17533]: pam_unix(cron:session): session closed for user root
+Nov 10 15:17:01 ubuntuA3 CRON[17554]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 15:17:01 ubuntuA3 CRON[17554]: pam_unix(cron:session): session closed for user root
+Nov 10 15:39:01 ubuntuA3 CRON[17616]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 15:39:01 ubuntuA3 CRON[17616]: pam_unix(cron:session): session closed for user root
+Nov 10 16:09:01 ubuntuA3 CRON[17728]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 16:09:01 ubuntuA3 CRON[17728]: pam_unix(cron:session): session closed for user root
+Nov 10 16:13:18 ubuntuA3 sshd[5185]: Server listening on :: port 22.
+Nov 10 16:13:18 ubuntuA3 sshd[5185]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 10 16:13:32 ubuntuA3 login[5548]: pam_unix(login:session): session opened for user arnold by LOGIN(uid=0)
+Nov 10 16:13:38 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/home/arnold ; USER=root ; COMMAND=/bin/bash
+Nov 10 16:13:38 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 10 16:13:38 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 16:17:01 ubuntuA3 CRON[5602]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 16:17:01 ubuntuA3 CRON[5602]: pam_unix(cron:session): session closed for user root
+Nov 10 16:17:57 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/home/arnold ; USER=root ; COMMAND=/bin/bash
+Nov 10 16:17:57 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 10 16:17:57 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 16:18:07 ubuntuA3 su[5632]: Successful su for bill by root
+Nov 10 16:18:07 ubuntuA3 su[5632]: + tty1 root:bill
+Nov 10 16:18:07 ubuntuA3 su[5632]: pam_unix(su:session): session opened for user bill by arnold(uid=0)
+Nov 10 16:18:21 ubuntuA3 su[5632]: pam_unix(su:session): session closed for user bill
+Nov 10 16:18:23 ubuntuA3 su[5653]: Successful su for bill by root
+Nov 10 16:18:23 ubuntuA3 su[5653]: + tty1 root:bill
+Nov 10 16:18:23 ubuntuA3 su[5653]: pam_unix(su:session): session opened for user bill by arnold(uid=0)
+Nov 10 16:18:26 ubuntuA3 su[5653]: pam_unix(su:session): session closed for user bill
+Nov 10 16:18:33 ubuntuA3 su[5675]: Successful su for arnold by root
+Nov 10 16:18:33 ubuntuA3 su[5675]: + tty1 root:arnold
+Nov 10 16:18:33 ubuntuA3 su[5675]: pam_unix(su:session): session opened for user arnold by arnold(uid=0)
+Nov 10 16:18:37 ubuntuA3 su[5675]: pam_unix(su:session): session closed for user arnold
+Nov 10 16:20:05 ubuntuA3 passwd[5698]: pam_unix(passwd:chauthtok): password changed for arnold
+Nov 10 16:20:47 ubuntuA3 login[5548]: pam_unix(login:session): session closed for user arnold
+Nov 10 16:21:21 ubuntuA3 login[5702]: pam_unix(login:session): session opened for user arnold by LOGIN(uid=0)
+Nov 10 16:39:01 ubuntuA3 CRON[5768]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 16:39:01 ubuntuA3 CRON[5768]: pam_unix(cron:session): session closed for user root
+Nov 10 16:46:28 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/home/arnold ; USER=root ; COMMAND=/bin/bash
+Nov 10 16:46:28 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 10 16:46:28 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 16:48:29 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/etc/tripwire ; USER=root ; COMMAND=/usr/sbin/tripwire --init
+Nov 10 16:48:29 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 10 16:48:29 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 16:49:50 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/etc/tripwire ; USER=root ; COMMAND=/usr/sbin/tripwire --init
+Nov 10 16:49:50 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 10 16:49:50 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 16:54:32 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/home/arnold ; USER=root ; COMMAND=/usr/bin/apt-get remove tripwire
+Nov 10 16:54:32 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 10 16:54:32 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 16:56:39 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/home/arnold ; USER=root ; COMMAND=/usr/bin/apt-get remove tripwire
+Nov 10 16:56:39 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 10 16:56:39 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 16:56:52 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/home/arnold ; USER=root ; COMMAND=/usr/bin/apt-get remove -f tripwire
+Nov 10 16:56:52 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 10 16:56:52 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 17:09:01 ubuntuA3 CRON[6065]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 17:09:01 ubuntuA3 CRON[6065]: pam_unix(cron:session): session closed for user root
+Nov 10 17:17:01 ubuntuA3 CRON[6087]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 17:17:01 ubuntuA3 CRON[6087]: pam_unix(cron:session): session closed for user root
+Nov 10 17:39:01 ubuntuA3 CRON[6151]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 17:39:01 ubuntuA3 CRON[6151]: pam_unix(cron:session): session closed for user root
+Nov 10 17:44:54 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/ ; USER=root ; COMMAND=/usr/bin/apt-get install tripwire
+Nov 10 17:44:54 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 10 17:44:54 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 17:44:56 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/ ; USER=root ; COMMAND=/usr/bin/apt-get install tripwire
+Nov 10 17:44:56 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 10 17:44:56 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 18:07:07 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/etc ; USER=root ; COMMAND=/usr/bin/apt-get remove tripwire
+Nov 10 18:07:07 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 10 18:07:08 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 18:07:15 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/etc ; USER=root ; COMMAND=/usr/bin/apt-get purge tripwire
+Nov 10 18:07:15 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 10 18:07:15 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 18:08:01 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/ ; USER=root ; COMMAND=/usr/bin/apt-get purge tripwire
+Nov 10 18:08:01 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 10 18:08:01 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 18:09:01 ubuntuA3 CRON[6530]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 18:09:01 ubuntuA3 CRON[6530]: pam_unix(cron:session): session closed for user root
+Nov 10 18:17:01 ubuntuA3 CRON[6613]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 18:17:01 ubuntuA3 CRON[6613]: pam_unix(cron:session): session closed for user root
+Nov 10 18:18:34 ubuntuA3 sshd[6618]: Accepted password for arnold from 172.16.107.136 port 54566 ssh2
+Nov 10 18:18:34 ubuntuA3 sshd[6621]: pam_unix(sshd:session): session opened for user arnold by (uid=0)
+Nov 10 18:18:34 ubuntuA3 sshd[6621]: Received disconnect from 172.16.107.136: 11: disconnected by user
+Nov 10 18:18:34 ubuntuA3 sshd[6621]: pam_unix(sshd:session): session closed for user arnold
+Nov 10 18:18:50 ubuntuA3 sshd[6623]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.16.107.136  user=arnold
+Nov 10 18:18:52 ubuntuA3 sshd[6623]: Failed password for arnold from 172.16.107.136 port 54568 ssh2
+Nov 10 18:18:58 ubuntuA3 sshd[6623]: Accepted password for arnold from 172.16.107.136 port 54568 ssh2
+Nov 10 18:18:58 ubuntuA3 sshd[6626]: pam_unix(sshd:session): session opened for user arnold by (uid=0)
+Nov 10 18:19:06 ubuntuA3 sudo:   arnold : TTY=pts/0 ; PWD=/home/arnold ; USER=root ; COMMAND=/bin/bash
+Nov 10 18:19:06 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 10 18:19:06 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 18:32:30 ubuntuA3 sshd[6782]: Accepted password for arnold from 172.16.107.136 port 54680 ssh2
+Nov 10 18:32:30 ubuntuA3 sshd[6785]: pam_unix(sshd:session): session opened for user arnold by (uid=0)
+Nov 10 18:32:30 ubuntuA3 sshd[6785]: Received disconnect from 172.16.107.136: 11: disconnected by user
+Nov 10 18:32:30 ubuntuA3 sshd[6785]: pam_unix(sshd:session): session closed for user arnold
+Nov 10 18:37:53 ubuntuA3 sshd[6626]: Received disconnect from 172.16.107.136: 11: disconnected by user
+Nov 10 18:37:53 ubuntuA3 sshd[6626]: pam_unix(sshd:session): session closed for user arnold
+Nov 10 18:38:42 ubuntuA3 sudo: pam_unix(sudo:auth): authentication failure; logname=arnold uid=0 euid=0 tty=/dev/tty1 ruser= rhost=  user=arnold
+Nov 10 18:38:50 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/home ; USER=root ; COMMAND=/bin/more arnold/.bash_history bill/.bash_history ff/.bash_history
+Nov 10 18:38:50 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 10 18:38:50 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 18:39:01 ubuntuA3 CRON[6843]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 10 18:39:01 ubuntuA3 CRON[6843]: pam_unix(cron:session): session closed for user root
+Nov 10 18:39:05 ubuntuA3 login[5702]: pam_unix(login:session): session closed for user arnold
+Nov 10 18:39:15 ubuntuA3 login[6850]: pam_unix(login:session): session opened for user arnold by arnold(uid=0)
+Nov 10 18:39:22 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/home/arnold ; USER=root ; COMMAND=/sbin/shutdown -h now
+Nov 10 18:39:22 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 10 18:39:22 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 18:53:15 ubuntuA3 sshd[5179]: Server listening on :: port 22.
+Nov 10 18:53:15 ubuntuA3 sshd[5179]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 10 18:53:16 ubuntuA3 sshd[5179]: Received SIGHUP; restarting.
+Nov 10 18:53:16 ubuntuA3 sshd[5306]: Server listening on :: port 22.
+Nov 10 18:53:16 ubuntuA3 sshd[5306]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 10 18:53:27 ubuntuA3 sshd[5581]: Address 172.16.107.1 maps to arnoldubuntu, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!
+Nov 10 18:53:34 ubuntuA3 sshd[5581]: Accepted password for arnold from 172.16.107.1 port 42636 ssh2
+Nov 10 18:53:34 ubuntuA3 sshd[5583]: pam_unix(sshd:session): session opened for user arnold by (uid=0)
+Nov 10 18:53:43 ubuntuA3 sudo:   arnold : TTY=pts/0 ; PWD=/home/arnold ; USER=root ; COMMAND=/bin/bash
+Nov 10 18:53:43 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 10 18:53:43 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 18:55:29 ubuntuA3 sudo:   arnold : TTY=pts/0 ; PWD=/etc ; USER=root ; COMMAND=/sbin/shutdown -r now
+Nov 10 18:55:29 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 10 18:55:29 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 18:56:07 ubuntuA3 sshd[5185]: Server listening on :: port 22.
+Nov 10 18:56:07 ubuntuA3 sshd[5185]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 10 18:56:08 ubuntuA3 sshd[5185]: Received SIGHUP; restarting.
+Nov 10 18:56:08 ubuntuA3 sshd[5311]: Server listening on :: port 22.
+Nov 10 18:56:08 ubuntuA3 sshd[5311]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 10 18:57:54 ubuntuA3 sshd[5592]: Accepted password for arnold from 172.16.107.136 port 54688 ssh2
+Nov 10 18:57:54 ubuntuA3 sshd[5594]: pam_unix(sshd:session): session opened for user arnold by (uid=0)
+Nov 10 18:58:05 ubuntuA3 sudo:   arnold : TTY=pts/0 ; PWD=/home/arnold ; USER=root ; COMMAND=/bin/bash
+Nov 10 18:58:05 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 10 18:58:05 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 19:05:52 ubuntuA3 sshd[5594]: Received disconnect from 172.16.107.136: 11: disconnected by user
+Nov 10 19:05:52 ubuntuA3 sshd[5594]: pam_unix(sshd:session): session closed for user arnold
+Nov 10 19:06:54 ubuntuA3 login[5577]: pam_unix(login:session): session opened for user arnold by LOGIN(uid=0)
+Nov 10 19:07:02 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/home/arnold ; USER=root ; COMMAND=/bin/bash
+Nov 10 19:07:02 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 10 19:07:02 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 10 19:08:01 ubuntuA3 sshd[5130]: Server listening on :: port 22.
+Nov 10 19:08:01 ubuntuA3 sshd[5130]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 10 19:08:02 ubuntuA3 sshd[5130]: Received SIGHUP; restarting.
+Nov 10 19:08:02 ubuntuA3 sshd[5273]: Server listening on :: port 22.
+Nov 10 19:08:02 ubuntuA3 sshd[5273]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 10 19:48:06 ubuntuA3 sshd[5178]: Server listening on :: port 22.
+Nov 10 19:48:06 ubuntuA3 sshd[5178]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 10 19:48:23 ubuntuA3 login[5544]: pam_unix(login:session): session opened for user arnold by LOGIN(uid=0)
+Nov 10 19:48:31 ubuntuA3 sudo:   arnold : TTY=tty1 ; PWD=/home/arnold ; USER=root ; COMMAND=/bin/bash
+Nov 10 19:48:31 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 10 19:48:31 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 11 10:12:27 ubuntuA3 sshd[5181]: Server listening on :: port 22.
+Nov 11 10:12:27 ubuntuA3 sshd[5181]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 11 10:14:13 ubuntuA3 sshd[5559]: Accepted password for arnold from 172.16.107.136 port 52764 ssh2
+Nov 11 10:14:13 ubuntuA3 sshd[5561]: pam_unix(sshd:session): session opened for user arnold by (uid=0)
+Nov 11 10:14:28 ubuntuA3 sudo:   arnold : TTY=pts/0 ; PWD=/home/arnold ; USER=root ; COMMAND=/bin/bash
+Nov 11 10:14:28 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 11 10:14:28 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 11 10:14:41 ubuntuA3 groupadd[5596]: new group: name=charlie, GID=1004
+Nov 11 10:14:41 ubuntuA3 useradd[5597]: new user: name=charlie, UID=1004, GID=1004, home=/home/charlie, shell=/bin/bash
+Nov 11 10:14:46 ubuntuA3 passwd[5600]: pam_unix(passwd:chauthtok): password changed for charlie
+Nov 11 10:14:51 ubuntuA3 chfn[5601]: changed user `charlie' information
+Nov 11 10:16:14 ubuntuA3 usermod[5603]: add `bill' to group `admin'
+Nov 11 10:16:14 ubuntuA3 usermod[5603]: add `bill' to shadow group `admin'
+Nov 11 10:16:23 ubuntuA3 sshd[5561]: Received disconnect from 172.16.107.136: 11: disconnected by user
+Nov 11 10:16:23 ubuntuA3 sshd[5561]: pam_unix(sshd:session): session closed for user arnold
+Nov 11 10:16:51 ubuntuA3 sshd[5607]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.16.107.136  user=bill
+Nov 11 10:16:53 ubuntuA3 sshd[5607]: Failed password for bill from 172.16.107.136 port 52766 ssh2
+Nov 11 10:17:01 ubuntuA3 CRON[5609]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 11 10:17:01 ubuntuA3 CRON[5609]: pam_unix(cron:session): session closed for user root
+Nov 11 10:17:11 ubuntuA3 sshd[5607]: Accepted password for bill from 172.16.107.136 port 52766 ssh2
+Nov 11 10:17:11 ubuntuA3 sshd[5612]: pam_unix(sshd:session): session opened for user bill by (uid=0)
+Nov 11 10:17:25 ubuntuA3 sudo:     bill : TTY=pts/0 ; PWD=/home/bill ; USER=root ; COMMAND=/bin/bash
+Nov 11 10:17:25 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by bill(uid=0)
+Nov 11 10:17:25 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 11 10:17:28 ubuntuA3 sshd[5612]: Received disconnect from 172.16.107.136: 11: disconnected by user
+Nov 11 10:17:28 ubuntuA3 sshd[5612]: pam_unix(sshd:session): session closed for user bill
+Nov 11 10:20:08 ubuntuA3 sshd[5652]: Accepted password for arnold from 172.16.107.136 port 52768 ssh2
+Nov 11 10:20:08 ubuntuA3 sshd[5654]: pam_unix(sshd:session): session opened for user arnold by (uid=0)
+Nov 11 10:20:16 ubuntuA3 sudo:   arnold : TTY=pts/0 ; PWD=/home/arnold ; USER=root ; COMMAND=/bin/bash
+Nov 11 10:20:16 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 11 10:20:16 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 11 10:28:08 ubuntuA3 sshd[5166]: Server listening on :: port 22.
+Nov 11 10:28:08 ubuntuA3 sshd[5166]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 11 10:28:11 ubuntuA3 sshd[5166]: Received SIGHUP; restarting.
+Nov 11 10:28:11 ubuntuA3 sshd[5385]: Server listening on :: port 22.
+Nov 11 10:28:11 ubuntuA3 sshd[5385]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 11 10:28:31 ubuntuA3 sshd[5586]: Accepted password for arnold from 172.16.107.136 port 52770 ssh2
+Nov 11 10:28:31 ubuntuA3 sshd[5588]: pam_unix(sshd:session): session opened for user arnold by (uid=0)
+Nov 11 10:28:50 ubuntuA3 sudo:   arnold : TTY=pts/0 ; PWD=/home/arnold ; USER=root ; COMMAND=/bin/bash
+Nov 11 10:28:50 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by arnold(uid=0)
+Nov 11 10:28:50 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 11 12:43:41 ubuntuA3 sshd[5178]: Server listening on :: port 22.
+Nov 11 12:43:41 ubuntuA3 sshd[5178]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 11 13:00:01 ubuntuA3 sshd[5614]: Invalid user anne from 172.16.107.140
+Nov 11 13:00:01 ubuntuA3 sshd[5614]: Failed none for invalid user anne from 172.16.107.140 port 60328 ssh2
+Nov 11 13:00:05 ubuntuA3 sshd[5614]: pam_unix(sshd:auth): check pass; user unknown
+Nov 11 13:00:05 ubuntuA3 sshd[5614]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.16.107.140 
+Nov 11 13:00:07 ubuntuA3 sshd[5614]: Failed password for invalid user anne from 172.16.107.140 port 60328 ssh2
+Nov 11 13:00:35 ubuntuA3 sshd[5614]: pam_unix(sshd:auth): check pass; user unknown
+Nov 11 13:00:36 ubuntuA3 sshd[5614]: Failed password for invalid user anne from 172.16.107.140 port 60328 ssh2
+Nov 11 13:00:40 ubuntuA3 sshd[5614]: pam_unix(sshd:auth): check pass; user unknown
+Nov 11 13:00:42 ubuntuA3 sshd[5614]: Failed password for invalid user anne from 172.16.107.140 port 60328 ssh2
+Nov 11 13:00:42 ubuntuA3 sshd[5614]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.16.107.140 
+Nov 11 13:01:13 ubuntuA3 sshd[5617]: Invalid user steve from 172.16.107.140
+Nov 11 13:01:13 ubuntuA3 sshd[5617]: Failed none for invalid user steve from 172.16.107.140 port 60330 ssh2
+Nov 11 13:01:16 ubuntuA3 sshd[5617]: pam_unix(sshd:auth): check pass; user unknown
+Nov 11 13:01:16 ubuntuA3 sshd[5617]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.16.107.140 
+Nov 11 13:01:18 ubuntuA3 sshd[5617]: Failed password for invalid user steve from 172.16.107.140 port 60330 ssh2
+Nov 11 13:01:20 ubuntuA3 sshd[5617]: pam_unix(sshd:auth): check pass; user unknown
+Nov 11 13:01:22 ubuntuA3 sshd[5617]: Failed password for invalid user steve from 172.16.107.140 port 60330 ssh2
+Nov 11 13:01:24 ubuntuA3 sshd[5617]: pam_unix(sshd:auth): check pass; user unknown
+Nov 11 13:01:25 ubuntuA3 sshd[5617]: Failed password for invalid user steve from 172.16.107.140 port 60330 ssh2
+Nov 11 13:01:25 ubuntuA3 sshd[5617]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.16.107.140 
+Nov 11 13:09:01 ubuntuA3 CRON[5640]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 11 13:09:01 ubuntuA3 CRON[5640]: pam_unix(cron:session): session closed for user root
+Nov 11 13:17:01 ubuntuA3 CRON[5677]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 11 13:17:01 ubuntuA3 CRON[5677]: pam_unix(cron:session): session closed for user root
+Nov 11 13:24:24 ubuntuA3 sshd[11165]: Invalid user anne from 172.16.107.140
+Nov 11 13:24:24 ubuntuA3 sshd[11165]: Failed none for invalid user anne from 172.16.107.140 port 43042 ssh2
+Nov 11 13:24:27 ubuntuA3 sshd[11165]: pam_unix(sshd:auth): check pass; user unknown
+Nov 11 13:24:27 ubuntuA3 sshd[11165]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.16.107.140 
+Nov 11 13:24:29 ubuntuA3 sshd[11165]: Failed password for invalid user anne from 172.16.107.140 port 43042 ssh2
+Nov 11 13:24:32 ubuntuA3 sshd[11165]: pam_unix(sshd:auth): check pass; user unknown
+Nov 11 13:24:34 ubuntuA3 sshd[11165]: Failed password for invalid user anne from 172.16.107.140 port 43042 ssh2
+Nov 11 13:24:35 ubuntuA3 sshd[11165]: Failed password for invalid user anne from 172.16.107.140 port 43042 ssh2
+Nov 11 13:24:35 ubuntuA3 sshd[11165]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.16.107.140 
+Nov 11 13:24:45 ubuntuA3 sshd[11167]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.16.107.140  user=bill
+Nov 11 13:24:47 ubuntuA3 sshd[11167]: Failed password for bill from 172.16.107.140 port 43044 ssh2
+Nov 11 13:24:53 ubuntuA3 sshd[11167]: Accepted password for bill from 172.16.107.140 port 43044 ssh2
+Nov 11 13:24:53 ubuntuA3 sshd[11170]: pam_unix(sshd:session): session opened for user bill by (uid=0)
+Nov 11 13:33:46 ubuntuA3 sudo:     bill : TTY=pts/0 ; PWD=/home/bill ; USER=root ; COMMAND=/bin/bash
+Nov 11 13:33:46 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by bill(uid=0)
+Nov 11 13:33:46 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 11 13:39:01 ubuntuA3 CRON[11247]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 11 13:39:01 ubuntuA3 CRON[11247]: pam_unix(cron:session): session closed for user root
+Nov 11 13:39:36 ubuntuA3 sshd[11258]: Accepted password for charlie from 172.16.107.140 port 43050 ssh2
+Nov 11 13:39:36 ubuntuA3 sshd[11260]: pam_unix(sshd:session): session opened for user charlie by (uid=0)
+Nov 11 13:39:36 ubuntuA3 sshd[11260]: Received disconnect from 172.16.107.140: 11: disconnected by user
+Nov 11 13:39:36 ubuntuA3 sshd[11260]: pam_unix(sshd:session): session closed for user charlie
+Nov 11 13:39:57 ubuntuA3 sshd[11266]: Accepted publickey for charlie from 172.16.107.140 port 43052 ssh2
+Nov 11 13:39:57 ubuntuA3 sshd[11268]: pam_unix(sshd:session): session opened for user charlie by (uid=0)
+Nov 11 13:39:59 ubuntuA3 sshd[11268]: Received disconnect from 172.16.107.140: 11: disconnected by user
+Nov 11 13:39:59 ubuntuA3 sshd[11268]: pam_unix(sshd:session): session closed for user charlie
+Nov 11 13:40:18 ubuntuA3 sshd[11292]: Accepted password for bill from 172.16.107.140 port 43058 ssh2
+Nov 11 13:40:18 ubuntuA3 sshd[11295]: pam_unix(sshd:session): session opened for user bill by (uid=0)
+Nov 11 13:40:18 ubuntuA3 sshd[11295]: Received disconnect from 172.16.107.140: 11: disconnected by user
+Nov 11 13:40:18 ubuntuA3 sshd[11295]: pam_unix(sshd:session): session closed for user bill
+Nov 11 14:09:01 ubuntuA3 CRON[11429]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 11 14:09:01 ubuntuA3 CRON[11429]: pam_unix(cron:session): session closed for user root
+Nov 11 14:17:01 ubuntuA3 CRON[11461]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 11 14:17:01 ubuntuA3 CRON[11461]: pam_unix(cron:session): session closed for user root
+Nov 11 14:18:12 ubuntuA3 sshd[11170]: Received disconnect from 172.16.107.140: 11: disconnected by user
+Nov 11 14:18:12 ubuntuA3 sshd[11170]: pam_unix(sshd:session): session closed for user bill
+Nov 11 14:18:14 ubuntuA3 sshd[11472]: Accepted publickey for bill from 172.16.107.140 port 43656 ssh2
+Nov 11 14:18:14 ubuntuA3 sshd[11474]: pam_unix(sshd:session): session opened for user bill by (uid=0)
+Nov 11 14:18:39 ubuntuA3 sudo:     bill : TTY=pts/0 ; PWD=/home/bill ; USER=root ; COMMAND=/bin/bash
+Nov 11 14:18:39 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by bill(uid=0)
+Nov 11 14:18:39 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 11 14:19:39 ubuntuA3 sudo:     bill : TTY=pts/0 ; PWD=/home/bill ; USER=root ; COMMAND=/bin/bash
+Nov 11 14:19:39 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by bill(uid=0)
+Nov 11 14:19:39 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 11 14:20:36 ubuntuA3 sshd[11474]: Received disconnect from 172.16.107.140: 11: disconnected by user
+Nov 11 14:20:36 ubuntuA3 sshd[11474]: pam_unix(sshd:session): session closed for user bill
+Nov 13 08:14:23 ubuntuA3 sshd[5213]: Server listening on :: port 22.
+Nov 13 08:14:23 ubuntuA3 sshd[5213]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 13 08:15:29 ubuntuA3 sshd[5596]: Accepted publickey for bill from 172.16.107.140 port 34866 ssh2
+Nov 13 08:15:29 ubuntuA3 sshd[5598]: pam_unix(sshd:session): session opened for user bill by (uid=0)
+Nov 13 08:15:42 ubuntuA3 sudo:     bill : TTY=pts/0 ; PWD=/home/bill ; USER=root ; COMMAND=/bin/bash
+Nov 13 08:15:42 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by bill(uid=0)
+Nov 13 08:15:42 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root
+Nov 13 08:17:01 ubuntuA3 CRON[5635]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 13 08:17:01 ubuntuA3 CRON[5635]: pam_unix(cron:session): session closed for user root
+Nov 13 08:32:40 ubuntuA3 sshd[5706]: Accepted publickey for bill from 172.16.107.140 port 34868 ssh2
+Nov 13 08:32:40 ubuntuA3 sshd[5708]: pam_unix(sshd:session): session opened for user bill by (uid=0)
+Nov 13 08:32:40 ubuntuA3 sshd[5708]: Received disconnect from 172.16.107.140: 11: disconnected by user
+Nov 13 08:32:40 ubuntuA3 sshd[5708]: pam_unix(sshd:session): session closed for user bill
+Nov 13 08:41:11 ubuntuA3 sshd[5185]: Server listening on :: port 22.
+Nov 13 08:41:11 ubuntuA3 sshd[5185]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 13 08:41:15 ubuntuA3 sshd[5560]: Accepted publickey for bill from 172.16.107.140 port 34872 ssh2
+Nov 13 08:41:15 ubuntuA3 sshd[5562]: pam_unix(sshd:session): session opened for user bill by (uid=0)
+Nov 13 08:41:25 ubuntuA3 sudo:     bill : TTY=pts/0 ; PWD=/home/bill ; USER=root ; COMMAND=/bin/bash
+Nov 13 08:41:25 ubuntuA3 sudo: pam_unix(sudo:session): session opened for user root by bill(uid=0)
+Nov 13 08:41:25 ubuntuA3 sudo: pam_unix(sudo:session): session closed for user root

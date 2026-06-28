@@ -1,0 +1,8 @@
+Modify shellcode.h (the string in it) so that with this single string ...
+
+First: the function hacked is called on return from foo
+Second: /bin/sh is executed on return from hacked.
+
+(in other words: we should see the output of hacked immediately before we get a shell)
+
+No other modifications are allowed.

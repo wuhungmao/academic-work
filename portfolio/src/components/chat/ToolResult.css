@@ -1,0 +1,310 @@
+.tool-result {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px 0;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.tool-result-header {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #7ee787;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* Tags */
+.tr-tag {
+  display: inline-block;
+  background: #161b22;
+  border: 1px solid #30363d;
+  color: #79c0ff;
+  font-size: 0.7rem;
+  padding: 2px 7px;
+  border-radius: 12px;
+  margin: 2px 3px 2px 0;
+}
+
+.tr-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color: #7ee787;
+  text-decoration: none;
+}
+.tr-link:hover { text-decoration: underline; }
+
+/* Projects */
+.tr-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tr-project-card {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.tr-project-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.tr-project-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #e6edf3;
+}
+
+.tr-project-date {
+  font-size: 0.68rem;
+  color: #8b949e;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.tr-project-desc {
+  font-size: 0.75rem;
+  color: #8b949e;
+  line-height: 1.5;
+  margin: 0 0 8px 0;
+}
+
+.tr-see-all {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.75rem;
+  color: #7ee787;
+  text-decoration: none;
+  text-align: center;
+}
+.tr-see-all:hover { text-decoration: underline; }
+
+/* Skills */
+.tr-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tr-skill-group {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.tr-skill-cat {
+  font-size: 0.7rem;
+  color: #8b949e;
+  min-width: 110px;
+  padding-top: 3px;
+}
+
+.tr-skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Experience */
+.tr-exp-card {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 6px;
+  padding: 14px;
+}
+
+.tr-exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  gap: 12px;
+}
+
+.tr-exp-role {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #e6edf3;
+}
+
+.tr-exp-company {
+  font-size: 0.73rem;
+  color: #79c0ff;
+  margin-top: 2px;
+}
+
+.tr-exp-date {
+  font-size: 0.68rem;
+  color: #8b949e;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.tr-exp-bullets {
+  margin: 0;
+  padding-left: 16px;
+  color: #8b949e;
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.tr-exp-bullets li { margin-bottom: 6px; }
+
+/* Publications */
+.tr-pubs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tr-pub-card {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.tr-pub-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #e6edf3;
+  margin-bottom: 4px;
+}
+
+.tr-pub-authors {
+  font-size: 0.72rem;
+  color: #79c0ff;
+  margin-bottom: 2px;
+}
+
+.tr-pub-venue {
+  font-size: 0.7rem;
+  color: #8b949e;
+}
+
+/* Timeline */
+.tr-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.tr-timeline-item {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 12px;
+  position: relative;
+}
+
+.tr-timeline-item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 20px;
+  bottom: 0;
+  width: 1px;
+  background: #21262d;
+}
+
+.tr-timeline-dot {
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  width: 20px;
+  text-align: center;
+}
+
+.tr-timeline-content { flex: 1; }
+
+.tr-timeline-date {
+  font-size: 0.68rem;
+  color: #8b949e;
+  margin-bottom: 2px;
+}
+
+.tr-timeline-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #e6edf3;
+  margin-bottom: 2px;
+}
+
+.tr-timeline-desc {
+  font-size: 0.72rem;
+  color: #8b949e;
+  line-height: 1.5;
+}
+
+/* Contact */
+.tr-contact {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tr-contact-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.tr-contact-key {
+  font-size: 0.72rem;
+  color: #f78166;
+  min-width: 70px;
+}
+
+.tr-contact-val {
+  font-size: 0.75rem;
+  color: #79c0ff;
+  text-decoration: none;
+}
+.tr-contact-val:hover { text-decoration: underline; }
+
+/* Hobbies */
+.tr-hobbies {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tr-hobby-card {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+.tr-hobby-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.tr-hobby-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #e6edf3;
+  margin-bottom: 2px;
+}
+
+.tr-hobby-summary {
+  font-size: 0.72rem;
+  color: #8b949e;
+}

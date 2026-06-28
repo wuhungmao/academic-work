@@ -1,0 +1,19 @@
+
+Question 3:
+You already saw that obfuscation does not work when hiding the 
+true purpose of a function. 
+Security by obsurity does not work. 
+You are now given a complete program in an obscure, but well known, programming language. 
+This program creates another (potential) program. 
+
+
+ What resources, sites, approaches did you use to determine what the program and algorithm are?
+
+I opened <code> and noticed that the file is some characters following some pattern, so I googled "programming language of only + - > < . [ ]". 
+In "https://www.reddit.com/r/learnprogramming/comments/1777633/whats_the_most_confusing_programming_language/", there is a comment talking about a programming language called "Brainfuck" which looks similar to what <code> has. 
+Then, I found an online compiler in "https://www.jdoodle.com/execute-b******k-online", then pasted the code in the compiler, and found out what program does. 
+
+ What does the resulting program do, what is the algorithm it is implementing?
+
+The resulting program outputs a python function, which is implementing merge sort algorithm. 
+

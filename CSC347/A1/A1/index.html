@@ -1,0 +1,206 @@
+<h2>Assignment 1</h2>
+<table>
+<tr><th align=left>Due: </th><td> See syllabus, quercus and MarkUs</td></tr>
+<tr><th align=left>Late penalty:</th><td>20% if handed in up to 48 hours late. Not accepted after that.</td></tr>
+<tr><th align=left>Hand in:</th><td>
+	Electronic submit ..... Please upload
+	your solution keeping the directory structure in a1 and upload to MarkUs, according to the <a href=submitChecklist.txt>submit checklist</a>.
+</td></tr>
+<tr><th align=left>Marking:</th><td>
+		see <a href=A1MarkingScheme.txt>A1MarkingScheme.txt</a>
+</td></tr>
+<tr><th align=left>Groups:</th><td> Groups of at most size 3. </td></tr>
+</table>
+</center>
+<b>Note:</b>
+<ul>
+	<li> This assignment is to be done under the RH7.2 Virtual Machine and the A1LinuxNinjaa VM (you set this up just like the RH7.2 VM, no difference). 
+		Remember, you prepared this during Lab0.
+	</li>
+	<li> Some code for this assignment is on the VMs <b>EXCEPT</b> for <i>account.c</i> and <i>race.c</i>. There is an update below on what to do with these files. </li>
+	<li> We will run your exploit on unmodified, original source code on a newly installed RH72 and A1LinuxNinjaaVM. </li>
+	<li> Download <a href=a1.zip>a1.zip</a>, extract it, your solution to this assignment will be placed in this directory. Never upload zip files.</li>
+	<li> You might want to consider taking a snapshot of the VM before you begin in case you destroy it accidentially.</li>
+	<li> This assignment is heavily based on last years A1. I am providing you a marking guide which is still available from
+		last year, but have modified the marks to match this year's assignment.
+		The marking scheme from last year can guide you to the right answers, or will be referenced directly in
+		some questions. Use it to your advantage, this is providing you with a lot of hints and direction. Last year's
+		marking scheme and questions form the basis for this year's assignment. In some cases this will provide guidance
+		to you, in other cases it will serve as the basis from which you will answer this year's questions.
+		Because this is made available to you, we will be a bit more reserved in providing additional hints via piazza though.</li>
+  <li>ANY and ALL IP addresses referenced are just examples and you will need to change them to match your setup, whether that's on the lab machines or on your own machines</li>
+</ul>
+<ol>
+	<li> <b>[10 Marks]</b> Race Conditions. Replace /questions/race/race.c with the race.c file from the starter code.
+		Then solve the questions in race.c. You should perform the following steps.
+		<xmp>
+host (e.g., SCP the race.c and account.c files to the VM):
+scp -oKexAlgorithms=+diffie-hellman-group1-sha1 -c aes256-cbc race.c hacker@10.10.10.12:
+scp -oKexAlgorithms=+diffie-hellman-group1-sha1 -c aes256-cbc setup.bash hacker@10.10.10.12:
+
+
+guest (as root):
+cd /questions/race
+rm -f race.c
+cp ~hacker/race.c .
+cp ~hacker/setup.bash .
+./setup.bash
+make race
+
+guest (as hacker):
+touch /tmp/permitted # to create the file, owned by hacker,
+
+# default permissions should be
+# -rw-rw-r--    1 hacker   hacker          5 Sep 30 19:38 /tmp/permitted
+# so no other, non-root user should be able to write to this with race.
+		</xmp>
+You should then run race as hacker and compare
+what happens when you run race as other (non-root) users.
+<br/>
+This setuid program (race) will restrict access to the owner of the
+file, no matter which owner it is. Since hacker owns it, other non-root
+users will not be able to manipulate the file with race. (Find other non-root users
+on the VM to try this with). <br>
+Find the steps(questions) inside the race.c file. <hr/>
+
+	<li> <b>[25 Marks]</b> Your VM has code installed in <code>/vulnerable</code>.
+		<br/>
+		<b>IMPORTANT:</b> As root on the VM, replace /vulnerable/account.c with this <a href=vulnerable/account.c>account.c</a>
+		and then <code>setup.bash</code>. You may have to <code>chmod +x setup.bash</code>
+		<br/>
+		<br/>
+		Your task for this question is to identify vulnerabilities, demonstrate exploits and explain the
+		exploits impact and fix the vulnerabilities. See for example, <a href=http://www.kb.cert.org/vuls>cert.org vulnerability notes</a> and <a href=https://cve.mitre.org/cve/search_cve_list.html>Common Vulnerabilities and Exposures</a>.
+		You do not have to exploit buffer overrun vulnerabilities for this part of the assignment, just identify vulnerable code
+		and explain the potential impact.
+		Look at A1MarkingScheme, and pick any 10 out of the 20 vulnerabilities listed.
+		Write a report (see <a href=./vulnerable/REPORT.txt>REPORT.txt</a>) listing each vulnerability you choose,
+		 include a collection of exploits for the vulnerability (code, inputs, scripts etc. we can run to
+		see the exploit in action), the impact of the vulnerability, and identify a category (CIA) for the impact (see the list below).
+		Include inputs, scripts, code etc. demonstrating each exploit.
+
+		<p><b>To think about this question, consider the following:</b>
+			Secure properties (CIA)
+			<ul>
+			<li> Confidentiality
+			<li> Integrity
+			<li> Availability
+			</ul>
+		In other words: These vulnerabilities include, buffer overruns, integer overflows, canonical naming, directory traversals,...
+		Once you identify a vulnerability, demonstrate associated exploits (code/inputs). Describe the impact of the
+		exploit. Impacts include things like denial of service, authentication issues, accountability issues,
+		priviledge escalation (see principle of least priviledge), ...
+		Finally identify the impact as a violation of Confidentiality, Integrity or Availability and <b>justify your answer</b>.<br><br>
+		<b>Hint:</b> Thinking in terms of the above list is a good way to start thinking about potential exploits
+		and you can map them to the vulnerabilities mentioned in A1MarkingScheme. Look through A1MarkingScheme,
+		identify 10 vulnerabilities of your choice from this list in the code file, and complete REPORT.txt
+		<p>
+		Finally fix the code, explaining how you fixed the vulnerabilities and prevented the exploit and restored CIA.<br>
+		Copy accounts.c to accounts_fixed.c and fix the vulnerabilities you identified.
+		In REPORT.txt note for each issues whether you have fixed this vulernability
+		in accounts_fixed.c.
+		<br><br> <b>Grading</b><br>
+		10 marks for correctly identifying vulnerable code
+		(be precise, only include vulnerable line numbers, don't say "addUser() is vulernable to bufferoverrun",
+		 that is already given to you,
+		 instead provide exact line numbers and examples),
+		completing the report correctly for each issue and including a fix.<br>
+		Upto 15 marks for providing exploits for any number of unique vulnerabilities in the original file. (exploit must be listed in REPORT.txt)
+    <br>==> Your report will contain the writeup, description, examples of the vulernability and notes whether you fixed it, etc. (up to 10 points),
+		and the exploit, or identify the exploit in the exploit directory which you can create (up to 15 points).
+	<br>==> You will also provide accounts_fixed.c where you fixed the vulnerabilities. (marks for this are part of the 10 marks for the report).
+
+		</p>
+		<hr/>
+	<li> <b>[12 Marks]</b> xinetd is the internet super server, it can turn any unix program that reads stdin and writes stdout into
+		a 'web service'. Take a look at <code>/etc/xinetd.d</code> in the VM to see a collection of programs that
+		are running under xinetd on your RH7.2 VM. One of these is <code>palindrome.c</code>, please take a look
+		at <code>/etc/xinetd.d/palindrome</code> to see how this service is run (which port etc). For convenience,
+		I am having it run out of <code>/root/a1</code> where you can find the source code as well. Simply recompiling
+		</code>/root/a1/palindrome.c</code> will cause the online service to update. If you want to restart <code>xinetd</code> you should
+		execute <code>/etc/rc.d/init.d/xinetd restart</code>.
+		<p>
+		You will investigate this service, show how
+		a user from outside the RH7.2 VM (ie on the host machine) can gain unauthorized access to the VM. You might
+		want to take a look at <a href=tcpclient.pl>tcpclient.pl</a>. Fix tcpclient.pl so that it has the IP address of your VM.
+		(might be already done for you).
+		Yes, you will have to learn a bit of perl.
+		<ol type="a">
+		<li> [1 Mark] <a href=https://owasp.org/www-community/Fuzzing>Fuzzing</a> the palindrome service for buffer overruns.
+			Submit a modified <b>tcpclient.pl</b>, called <code>tcpclientA.pl</code> which explores
+			the service from the outside and determines if there is a potential buffer overrun vulnerability.
+			Do this by sending input to the service and seeing what happens.
+		<li> [5 Marks] Submit a modified <b>tcpclient.pl</b> (called <code>tcpclientB.pl</code>) which obtains a root
+			shell on the remote server running <code>palindrome</code>. The console user running <code>tcpclientB.pl</code>
+			should be able to interactively enter commands and see the result. <br><b>Note:</b> Entering commands
+			may not be as smooth as running a real console, this is ok. At the very least, a user should be able to
+			execute <code>ls</code> a couple of times. To help you, we have supplied <b>makeShellCode.pl</b>.
+		<li> [1 Mark] <a href=https://owasp.org/www-community/Fuzzing>Fuzzing</a> the palindrome service for another vulnerability.
+			Submit a modified <b>tcpclient.pl</b>, called tcpclientC.pl which explores
+			the service from the outside and determines if there is another potential vulnerability.
+			Do this by sending appropriate input to the service. This one should be really easy!!!!
+		<li> [5 Marks] Fix the palindrome service so that it is no longer vulnerable to the two vulnerabilities you found above.
+			Submit the modified code as well as a discussion of any other changes you feel are
+			necessary to make the <code>palindrome</code> service more secure. Submit scripts etc. that will allow us to install
+			your secure version of the service.
+		</ol>
+	</li>
+	<hr>
+	<li> <b>[3 Marks]</b> Reverse Engineer Obfuscated Malware
+		<br/>
+		Open instructions.txt in the mystery directory of a1 and answer the question in it. <br><br>
+
+		Scenario: You are working at a software security firm. Your team is in charge of
+		reverse engineering malware. Once a piece of code is identified as malware,
+		it is important to identify what the malware is doing, how specifically it is doing this
+		(i.e., does it connect to Command and Control servers to receive new instructions,
+		which servers is it connecting to, is it replicating or changing itself,
+		what other nefarious activities is it performing
+		(e.g., mining cryptocurrency or using CPU cycles for other tasks
+		 on the infected machine, encryptying the users files, recording audio/video, stealing files and corporate secrets, etc),
+		when are these actions taking place, etc.).
+<br><br>
+		To avoid detection, malware is often obfuscated (i.e., instructions
+		are intentionally changed or made more complicated to hide their true purpose).
+		This obfuscation is not only applied to the malicious pieces of the code
+		(i.e., the functions that are actually bad), but also all other functionality
+		 that is relatively common (e.g., opening/closing files,
+		 printing to stdout, getting the time of day, etc.). This is done to force analysts to inspect every piece of the executable, which takes time, time during which the malware continues to do damadge to the victims.
+<br><br>
+
+		One of your team members has analyzed two functions in the suspected malware
+		 in order to narrow down what this particular piece of code is doing.
+<br><br>
+		But now your colleague is stuck and comes to you for help.
+		Use your knowledge of assembly (look up any instructions you don't know)
+		to help identify what this piece of code does. (like code tracing, but for assembly).<br><br>
+<hr>
+<li> <b>[2 Marks]</b> Bufferoverrun and StackSmashing     <br/>
+Instructions are in the bufferoverrunStackSmash directory. This question is combining skills from week 1 and week 2.
+<br> Your task is to provide a malicious string that can call a function within the code itself, before starting a shell.
+<br><br><br>
+</li><hr><br>
+<li> <b>[3 Marks]</b> Bufferoverrun and StackSmashing Part 2   <br/>
+Instructions are in the bufferoverrunStackSmash2 directory. This question is combining skills from week 1 and week 2 again but taking everything one step further.
+<br> Instructions are in questionsStack2.txt. Your task is to modify the program so that it calls hacked and then returns to main without crashing so that the program exits normally.
+<br><br><br>
+</li><hr><br>
+<li><b>[2 Marks]</b> Linux Ninja <br/>
+Instructions are in the directory named LinuxNinja and is to be done with the VM called LinuxNinjaa (set this up just like you did for the RH72 VM, all you need is the ability to start the VM, SSH is optional, you'll only need 1 terminal open so if you want you can just log into the VM directly). 
+
+<hr>
+<li> <b>[3 Marks]</b> Bonus  <br/>
+
+Instructions are in the bonus directory . The scenario is identical to Q4. Your junior colleague has found a code segement
+that is clearly obfuscated. It is up to you to help your colleage determine what this function does.
+<br> There will be no hints given for this. However, when you feel sufficiently confident about your solution, please feel free to stop by office hours
+to discuss your solution or approach (same goes for when you are hopelessly stuck, see me in office hours any time, but remember, this is only a bonus.). <hr>
+<br><br><br>
+
+
+End of A1 (7 questions, 57 points, plus 3 points available as a bonus)
+
+
+            </div> <!-- content -->
+    <div class="spacer" />
+  </body>

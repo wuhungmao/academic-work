@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="/~csc347/20f/styles.css" type="text/css" />
+    <title>CSC347H: A4</title>
+  </head>
+  <body>
+<nav>
+
+	<div class="content">
+
+<h2>Assignment 4</h2>
+<table>
+<tr><th align=left>Due: </th><td>
+		Refer to syllabus and or MarkUs
+	</td></tr>
+<tr><th align=left>Late penalty:</th><td>20% if handed in up to 48 hours late. Not accepted after that.</td></tr>
+<tr><th align=left>Hand in:</th><td>
+		All relevant files to MarkUs
+</td></tr>
+<tr><th align=left>Marking:</th><td>
+</td></tr>
+<tr><th align=left>Groups:</th><td> Groups of size 3, 2 or 1. </td></tr>
+</table>
+</center>
+
+<li>
+This assigment should take the majority of you between 2 and 8 hours to complete (some will take more, some will take less).
+<li>
+See the note about the late penalty.
+<li> Most questions' difficulty is "easy" or "medium". 
+
+<h3>SystemSecurity (approx. 30 minutes)</h3>
+	<b>[10 Marks]</b> To be done on your Kali VM.
+      <p> Navigate to the systemsecurity directory and complete instructions.txt
+
+
+
+<h3>Cryptography (approx. 30-90 minutes)</h3>
+	<b>[10 Marks]</b> Public Key Cryptography (<a href=https://www.openssl.org/docs/man1.1.1/>openssl</a> on Kali)
+        <p>
+                Please find the following:
+                <ul>
+                <li> Arnolds Certificate: <a href=crypto/arnoldscert.pem>arnoldscert.pem</a>. View this via
+			<code>openssl x509 -in arnoldscert.pem -inform pem -text -noout</code>.
+
+                <li> BigBad Inc. Certificate: <a href=crypto/bigbadcert.pem>bigbadcert.pem</a>. View this via
+			<code>openssl x509 -in bigbadcert.pem -inform pem -text -noout</code>.
+
+                <li> A Certificate Signing Request: <a href=crypto/req.pem>req.pem</a>. View this via
+			<code>openssl req -verify -in req.pem -text -noout</code>.
+                <li> Yes the files have a .txt extension so when you copy them, just remove the .txt extension.
+                <li> These are in the openssl directory that shipped with the assignment.
+                  You can complete this on Kali.
+                </ul>
+        </p>
+        <p>
+                Your job, understand and document the following scripts (in this order):
+                <ul>
+                <li> openssl/caSetup
+                <li> openssl/caAnswerCSR
+                <li> makeCSR/doIt
+                <li> crypto/doIt (you need to complete this one)
+                </ul>
+                The result of running these scripts leaves files in the openssl directory.
+                Submit those files in this directory.
+
+		<br/>
+		<b>Note:</b> Please run  each script from the directory the script is in.
+		<br><b>Note:</b> Some certs are expired, this is fine for this question, <b>proceed as if they were not expired</b>.
+        <br> <b>Hint:</b> Read the scripts before running them.</p>
+<h3>Network Security (approx. 105-330 minutes)</h3>
+Please navigate to the directory called network and complete the following questions.
+<ol>
+<li> <b>[3 Marks]</b> nmap (approx. 15-30 minutes)</li>
+<li> <b>[24 Marks]</b> [28 in 2024: 26 and 2] Big Network (approx. 60-180 minutes) </li>
+<li> <b>[8 Marks]</b> Wireshark, instructions.txt (approx. 20 - 90 minutes, NOTE, you MUST include a screenshot using Wireshark to solve this question, failure to submit a screenshot proving that you did the work to solve this question will result in a 0 for this question. )</li>
+<li> <b>[5 Marks]</b> Wireshark 2, instructions2.txt (approx. 10 - 30 minutes, NOTE, you MUST include a screenshot using wireshark to solve this question, failure to submit this screenshot will result in a 0 for this question.)</li>
+</ol>
+
+<h3> Bonus Question (approx. 40-110 minutes) </h3>
+Option 1:<br>
+In week 12 (most likely) we will have one or more guest speakers.
+(details will be on piazza the week before). 
+You receive 100% of the bonus, if at least 50% of your
+team attends the guest speaker portion of the lecture.
+(this means if you are a team of 1, you'll need to attend;
+if you are a team of 2, at least 1 needs to attend; if you are 
+a team of 3, at least 2 need to attend). 
+<br>Option 2:<br>
+Should the guest speaker have to cancel, then the bonus is null and void and I will
+give a lecture for which attendance is highly encouraged, but no points will be awarded. 
+<ol>
+<li> <b>[3 Marks]</b> Attend Guest lecture</li>
+</ol>
+End of A4
+  </body>
+</html>

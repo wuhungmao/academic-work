@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import courses from '../data/courses'
 import TerminalWindow from '../components/TerminalWindow'
-import useInView from '../hooks/useInView'
 import './Courses.css'
 
 function DifficultyBar({ value }) {
@@ -18,24 +17,6 @@ function DifficultyBar({ value }) {
   )
 }
 
-function CourseRow({ course, i }) {
-  const [ref, inView] = useInView()
-  return (
-    <Link
-      ref={ref}
-      key={course.id}
-      to={`/courses/${course.id}`}
-      className={`ls-row fade-in-up ${inView ? 'visible' : ''}`}
-      style={{ transitionDelay: `${i * 40}ms` }}
-    >
-      <span className="ls-name">{course.name}</span>
-      <span className="ls-title">{course.title}</span>
-      <span className="ls-grade">{course.grade !== null ? `${course.grade}%` : '—'}</span>
-      <DifficultyBar value={course.difficulty} />
-    </Link>
-  )
-}
-
 export default function Courses() {
   return (
     <main className="courses-page">
@@ -47,8 +28,13 @@ export default function Courses() {
           <span className="ls-col">difficulty</span>
         </div>
         <div className="ls-list">
-          {courses.map((course, i) => (
-            <CourseRow key={course.id} course={course} i={i} />
+          {courses.map(course => (
+            <Link key={course.id} to={`/courses/${course.id}`} className="ls-row">
+              <span className="ls-name">{course.name}</span>
+              <span className="ls-title">{course.title}</span>
+              <span className="ls-grade">{course.grade !== null ? `${course.grade}%` : '—'}</span>
+              <DifficultyBar value={course.difficulty} />
+            </Link>
           ))}
         </div>
       </TerminalWindow>

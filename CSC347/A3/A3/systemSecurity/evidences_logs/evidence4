@@ -1,0 +1,14 @@
+  File: `syslog.1.gz'
+  Size: 263751    	Blocks: 528        IO Block: 4096   regular file
+Device: 801h/2049d	Inode: 174057      Links: 1
+Access: (0640/-rw-r-----)  Uid: (  102/  syslog)   Gid: (    4/     adm)
+Access: 2020-11-10 18:29:46.000000000 -0500
+Modify: 2025-11-06 06:25:01.000000000 -0500
+Change: 2025-11-07 06:48:32.000000000 -0500
+  File: `syslog.2.gz'
+  Size: 16375     	Blocks: 32         IO Block: 4096   regular file
+Device: 801h/2049d	Inode: 174091      Links: 1
+Access: (0640/-rw-r-----)  Uid: (  102/  syslog)   Gid: (    4/     adm)
+Access: 2020-11-10 13:12:41.000000000 -0500
+Modify: 2020-11-10 06:39:01.000000000 -0500
+Change: 2025-11-07 06:48:32.000000000 -0500

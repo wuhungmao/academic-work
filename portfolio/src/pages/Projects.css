@@ -1,7 +1,7 @@
 .projects-page {
   flex: 1;
   padding: 32px 24px;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
   width: 100%;
 }
@@ -38,12 +38,11 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 16px;
   margin-top: 8px;
 }
 
-/* ── Card ───────────────────────────────────────────────── */
 .project-card {
   background: var(--bg-tertiary);
   border: 1px solid var(--border);
@@ -51,7 +50,7 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
   transition: border-color 0.15s ease;
 }
 
@@ -59,41 +58,37 @@
   border-color: var(--green-dim);
 }
 
-/* ── Header ─────────────────────────────────────────────── */
 .project-header {
   display: flex;
-  flex-direction: column;
-  gap: 6px;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.project-icon {
+  font-size: 20px;
+  color: var(--green);
+  margin-top: 2px;
 }
 
 .project-name {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--text);
   font-family: var(--font);
-  line-height: 1.4;
-}
-
-.project-name-link {
-  color: var(--text);
-  text-decoration: none;
-  transition: color 0.15s;
-}
-
-.project-name-link:hover {
-  color: var(--green);
+  line-height: 1.3;
 }
 
 .project-meta {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-top: 4px;
   flex-wrap: wrap;
 }
 
 .project-course {
   display: inline-block;
-  font-size: 10px;
+  font-size: 11px;
   color: var(--text-dim);
   background: var(--bg-secondary);
   padding: 1px 8px;
@@ -106,133 +101,43 @@
   color: var(--text-dim);
 }
 
-/* ── Problem / Solution ─────────────────────────────────── */
-.project-body {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.project-desc {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.7;
   flex: 1;
 }
 
-.project-ps-row {
-  display: flex;
-  gap: 8px;
-  align-items: flex-start;
-}
-
-.ps-label {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  padding: 2px 7px;
-  border-radius: 3px;
-  white-space: nowrap;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-
-.problem-label {
-  background: rgba(248, 81, 73, 0.15);
-  color: #f85149;
-  border: 1px solid rgba(248, 81, 73, 0.3);
-}
-
-.solution-label {
-  background: rgba(63, 185, 80, 0.12);
-  color: #3fb950;
-  border: 1px solid rgba(63, 185, 80, 0.25);
-}
-
-.ps-text {
-  font-size: 12px;
-  color: var(--text-dim);
-  line-height: 1.65;
-}
-
-/* ── Diagram toggle ─────────────────────────────────────── */
-.diagram-toggle {
-  width: 100%;
-  background: transparent;
-  border: 1px dashed var(--border);
-  border-radius: 4px;
-  color: var(--text-dim);
-  font-family: var(--font);
-  font-size: 11px;
-  padding: 6px;
-  cursor: pointer;
-  transition: all 0.15s;
-}
-.diagram-toggle:hover {
-  border-color: var(--green-dim);
-  color: var(--text);
-}
-
-/* ── Tags ───────────────────────────────────────────────── */
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 6px;
 }
 
 .project-tag {
-  font-size: 10px;
-  background: rgba(255, 255, 255, 0.05);
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--green-dim);
-  color: var(--text-dim);
+  color: var(--green);
   padding: 2px 8px;
   border-radius: 3px;
 }
 
-/* ── Links ──────────────────────────────────────────────── */
 .project-links {
   display: flex;
-  gap: 10px;
+  gap: 16px;
   border-top: 1px solid var(--border);
   padding-top: 12px;
-  flex-wrap: wrap;
 }
 
 .project-link {
-  font-size: 11px;
-  padding: 4px 12px;
-  border-radius: 3px;
-  border: 1px solid;
-  transition: all 0.15s;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.demo-link {
-  color: #e3b341;
-  border-color: rgba(227, 179, 65, 0.4);
-  background: rgba(227, 179, 65, 0.08);
-}
-
-.demo-link:hover {
-  background: rgba(227, 179, 65, 0.15);
-  color: #f0c060;
-}
-
-.code-link {
-  color: var(--text-dim);
-  border-color: var(--border);
-  background: transparent;
-}
-
-.code-link:hover {
-  color: var(--text);
-  border-color: var(--green-dim);
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.paper-link {
+  font-size: 12px;
   color: var(--green);
-  border-color: var(--green-dim);
-  background: rgba(255, 255, 255, 0.04);
+  display: block;
+  transition: color 0.15s;
 }
 
-.paper-link:hover {
+.project-link:hover {
   color: var(--green-bright);
-  background: rgba(255, 255, 255, 0.08);
+  text-decoration: none;
 }

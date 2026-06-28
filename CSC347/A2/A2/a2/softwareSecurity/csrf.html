@@ -1,0 +1,77 @@
+<html>
+	<body>
+		<h1> # FIX OWASP A8: CSRF (Cross Site Request Forgery) </h1>
+		<h2> The Vulnerability </h2>
+		<ul>
+			<li> Brief explanation:
+<xmp>
+		The attacker create a webpage that contain malicious http request. When the victim visit the webpage,
+		the malicious request will be sent to the vulnerable web application automatically. If the victim is logged
+		in the vulnerable web application, the request will be executed with the victim's privilege.
+</xmp>
+			</li>
+			<li> Example code etc.:
+<xmp>
+		<form method="post">
+				<td><input type="text" name="expression"/> </td>
+				<td><input type="submit" value="add"/></td>
+				<input type="hidden" name="value" value="<?=$i?>"/>
+				<input type="hidden" name="operation" value="addExpression"/>
+				<input type="hidden" name="accountId" value="<?=$g_accountId ?>"/>
+		</form>
+</xmp>
+			</li>
+			<li> How attacker exploits this: 
+<xmp>
+		The attacker could create a webpage that contain the above form. When the victim visit the webpage, the form will be submitted automatically.
+		For example, the attacker could create a webpage with the following code:
+		<body onload="setTimeout(() => { document.forms[0].submit(); }, 1000);">
+		<form action="https://fourFours.com/add" method="POST">
+			<input type="hidden" name="operation" value="addExpression"/>
+			<input type="hidden" name="expression" value="1+1">
+			<input type="hidden" name="value" value="2">
+			<input type="hidden" name="accountId" value="<?=$g_accountId ?>"/>
+		</form>
+		</body>
+		If the victim submit this form from the fake website created by attacker, fourFours web application will process the request and
+		update user's account. the expression "1+1" will be added to the victim's account.
+</xmp>
+			</li>
+			<li> Impact: CIAaa and some details
+<xmp>
+		Confidentiality: gain access to victim's account information.
+		Integrity: modify victim's account information.
+		Availability: delete victim's account information.
+		Authentication: perform actions on behalf of the victim.
+		Authorization: perform actions that the victim is authorized to do.
+</xmp>
+			</li>
+		</ul>
+
+		<h2> INSTRUCTIONS TO VERIFY VULNERABILITY BELOW </h2>
+<xmp>
+		1. Go to fourFours web application and login as user
+		2. go to the attacker's webpage
+		3. Wait for 1 second, the form will be submitted automatically
+		4. Go back to fourFours web application, you should see that a new expression "1+1" has been added to victim's account.
+</xmp>
+		<h2> The Fix </h2>
+		<ul>
+			<li> Explain the fix: 
+<xmp>
+		We generate a unique CSRF token for each user session and include it as a hidden field in expression forms.
+		csrf token generated using  $_SESSION['csrfToken'] = bin2hex(random_bytes(16)); and store it into session data.
+		We expect user to submit the token along with login form as well as other forms that modify data. Also, I attach 
+		the csrf token as a GET parameter in the delete link, so that when user click the delete link, the token is also submitted.
+</xmp>
+			</li>
+			<li> How the fix resolves the issue:
+<xmp>
+	When the form is submitted, we check if the token in the request matches the token stored in the user's session. If they do not match,
+	the request is rejected. This way, even if an attacker tricks a user into submitting a form, the server will catch because attacker does
+	not know the csrf token in the original form.
+</xmp>
+			</li>
+		</ul>
+	</body>
+</html>

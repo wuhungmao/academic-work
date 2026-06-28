@@ -1,0 +1,24 @@
+Nov 10 18:20:31 ubuntuA3 tripwire[6688]: Database initialization Failed: File could not be opened.
+Nov 10 18:26:09 ubuntuA3 tripwire[6727]: Database initialized: /var/lib/tripwire/ubuntuA3.twd
+Nov 10 18:27:04 ubuntuA3 tripwire[6740]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201110182701 V:176 S:100 A:87 R:86 C:3
+Nov 10 18:35:50 ubuntuA3 tripwire[6813]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201110183547 V:182 S:100 A:89 R:87 C:6
+Nov 10 18:58:20 ubuntuA3 tripwire[5628]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201110185814 V:15619 S:100 A:7565 R:7974 C:80
+Nov 10 19:01:55 ubuntuA3 tripwire[5633]: Database Update Complete: /var/lib/tripwire/ubuntuA3.twd
+Nov 10 19:02:10 ubuntuA3 tripwire[5639]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201110190207 V:172 S:100 A:86 R:86 C:0
+Nov 10 19:03:25 ubuntuA3 tripwire[5645]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201110190322 V:172 S:100 A:86 R:86 C:0
+Nov 10 19:05:01 ubuntuA3 tripwire[5679]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201110190458 V:172 S:100 A:86 R:86 C:0
+Nov 10 19:49:40 ubuntuA3 tripwire[5601]: Database Update Failed: File could not be opened.
+Nov 10 19:50:05 ubuntuA3 tripwire[5602]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201110194958 V:16812 S:100 A:8228 R:8438 C:146
+Nov 10 19:50:12 ubuntuA3 tripwire[5604]: Database Update Failed: File could not be opened.
+Nov 10 19:54:12 ubuntuA3 tripwire[5608]: Database Update Complete: /var/lib/tripwire/ubuntuA3.twd
+Nov 10 19:55:34 ubuntuA3 tripwire[5635]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201110195531 V:173 S:100 A:86 R:86 C:1
+Nov 11 10:20:44 ubuntuA3 tripwire[5690]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201111102038 V:11977 S:100 A:6000 R:5793 C:184
+Nov 11 10:23:00 ubuntuA3 tripwire[5692]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201111102142 V:12059 S:100 A:6082 R:5793 C:184
+Nov 11 10:23:14 ubuntuA3 tripwire[5695]: Database Update Failed: File could not be opened.
+Nov 11 10:26:14 ubuntuA3 tripwire[5712]: Database Update Complete: /var/lib/tripwire/ubuntuA3.twd
+Nov 11 10:29:01 ubuntuA3 tripwire[5622]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201111102855 V:17486 S:100 A:8656 R:8733 C:97
+Nov 13 08:15:56 ubuntuA3 tripwire[5631]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201113081550 V:17683 S:100 A:8754 R:8832 C:97
+Nov 13 08:22:02 ubuntuA3 tripwire[5632]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201113081609 V:17765 S:100 A:8836 R:8832 C:97
+Nov 13 08:25:22 ubuntuA3 tripwire[5648]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201113082205 V:17769 S:100 A:8840 R:8832 C:97
+Nov 13 08:28:06 ubuntuA3 tripwire[5656]: Integrity Check Complete: /var/lib/tripwire/ubuntuA3.twd TWReport ubuntuA3 20201113082803 V:17687 S:100 A:8758 R:8832 C:97
+Nov 13 08:38:18 ubuntuA3 tripwire[5764]: Integrity Check Failed: File could not be opened for writing.

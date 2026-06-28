@@ -1,0 +1,131 @@
+[8 points] You will want to use a combination of tcpdump, Kali Linux and other command line tools for this question.
+You are given a pcap file conterIntelligence.pcap
+If you need additional help getting started, please come to my office hours.
+
+Background Story:
+You are working as a cyber security specialist and are contracted to a government intelligence agency.
+Your boss gave you pcap file from a network capture (counterIntelligence.pcap) and asked you to investigate it.
+In particular, your boss suspects that one of the persons under observation communicated with an agent from some other US-based intelligence organization who potentially has been compromised.
+
+Your boss has reason to believe that they arranged a meeting and are planning to exchange classified information
+
+In order to prevent potentially leaking of sensitive information and compromising other government agents,
+your boss needs you to find out everything you can by using ONLY INFORMATION IN THIS PCAP FILE (!!!!)
+about this employee, the US intelligence organization, the agent who may be compromised,
+the location and details of their meeting point.
+
+Prepare answers to the following questions for your report.
+Important: Document how you discovered the answers from the pcap file.
+
+Questions to answer:
+1) What time of day did the pcap begin capturing data (0.5 points)?
+└─$ tcpdump -nr counterIntelligence.pcap | head
+reading from file counterIntelligence.pcap, link-type EN10MB (Ethernet), snapshot length 65535
+09:34:08.112737 IP 192.168.1.10.52111 > 192.168.1.30.514: SYSLOG kernel.warning, length: 188
+09:34:11.607705 ARP, Request who-has 192.168.1.159 tell 192.168.1.2, length 28
+09:34:11.607998 ARP, Reply 192.168.1.159 is-at 00:21:70:4d:4f:ae, length 28
+09:34:13.110907 ARP, Request who-has 192.168.1.30 tell 192.168.1.10, length 28
+09:34:13.111146 ARP, Reply 192.168.1.30 is-at 00:0c:29:c0:89:a6, length 28
+09:34:41.108072 IP 192.168.1.10.123 > 192.168.1.255.123: NTPv4, Broadcast, length 48
+09:34:41.108795 IP 192.168.1.10.52111 > 192.168.1.30.514: SYSLOG kernel.warning, length: 194
+09:34:46.107915 ARP, Request who-has 192.168.1.30 tell 192.168.1.10, length 28
+09:34:46.108517 ARP, Reply 192.168.1.30 is-at 00:0c:29:c0:89:a6, length 28
+09:34:57.170987 IP 192.168.1.159.138 > 192.168.1.255.138: UDP, length 174
+tcpdump: Unable to write output: Broken pipe
+
+so... my answer is 09:34:08
+
+2) What is the source IP of the email sender (0.5 points)?
+09:38:11.999463 IP 192.168.1.159.1036 > 64.12.102.142.587: ...
+basically 192.168.1.159
+
+3) What is the computer ID of the email sender (0.5 points)?
+in the email headers there is a Message-ID:
+Message-ID: <000901ca49ae$89d698c0$9f01a8c0@annlaptop>
+the part after the @ is the computer ID: annlaptop
+
+4) Who is the sender of the email (0.5 points)?
+the From header shows:
+From: "kgb spycover" <sneakyycio@nsa.com>
+kgb spycover
+
+5) What username does the sender of the email use to log into the mail system (0.5 points)?
+sneakyg33k@aol.com
+
+6) What is the sender's email address (0.5 points)?
+same From header as above:
+From: "kgb spycover" <sneakyycio@nsa.com>
+sneakyycio@nsa.com
+
+7) Do you find any vulnerabilities in the mail system (0.5 points)?
+the client uses AUTH LOGIN over plain SMTP without STARTTLS first
+this means the username and password are only base64-encoded and can be read from the pcap
+credentials are sent in clear over SMTP (no encryption)
+
+8) What organization was the email sent to (0.5 points)?
+one email header has:
+To: <mistersecretx@nsa.com>
+the domain nsa.com belongs to the NSA
+NSA (nsa.com)
+
+9) What encoding scheme does the mail system for coding usernames/passwords use (0.5 points)?
+during AUTH LOGIN the server sends:
+334 VXNlcm5hbWU6
+which is "Username:" encoded in Base64, and the client replies with similar Base64 strings
+Base64 encoding
+
+10) What is the email user's password (0.5 points)?
+558r00lz
+
+11) Who was an email sent to (0.5 points)?
+sec558@gmail.com
+
+12) What is the NAME of the attachment sent (0.5 points)?
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><FONT face=3DArial size=3D2>Hi sweetheart! Bring your fake passport =
+and a=20
+bathing suit. Address attached. love, kgb</FONT></DIV></BODY></HTML>
+
+------=_NextPart_00
+09:38:12.000034 IP 64.12.102.142.587 > 192.168.1.159.1038: Flags [.], ack 1602, win 64240, length 0
+E..(.......<@.f......K...*j.m...P....-..
+09:38:12.000430 IP 192.168.1.159.1038 > 64.12.102.142.587: Flags [.], seq 1602:3062, ack 471, win 63770, length 1460
+E.....@.........@.f....Km....*j.P....3..1_000E_01CA497C.9DEC1E70--
+
+------=_NextPart_000_000D_01CA497C.9DEC1E70
+Content-Type: application/octet-stream;
+        name="secretrlocationn.docx"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+        filename="secretrlocationn.docx"
+
+
+secretrlocationn.docx
+
+13) What is the person instructed to bring with them (0.5 points)?
+a fake passport and a bathing suit
+
+14) What is the sha256sum of the attachment sent (0.5 points)?
+now i open pcap up in wireshark
+okay i save entire block into @secretrlocationn.b64 from:
+------=_NextPart_000_000D_01CA497C.9DEC1E70
+Content-Type: application/octet-stream;
+	name="secretrlocationn.docx"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	filename="secretrlocationn.docx"
+~~ HERES THE BLOcK THAT I COPY~~
+then:
+base64 -d secretrlocationn.b64 > secretrlocationn.docx
+sha256sum secretrlocationn.docx
+
+0eeacf280329a375498dc71c837ad4d773d3b9bdaee1593e60ad434c2a1c723b
+
+15) In what city is their meeting point (0.5 points)?
+literally the imagine in docx_unzip in this directory to word, then media
+playa del carmen
+
+16) What is the MD5sum of the image embedded in the document (0.5 points)?
+aadeace50997b1ba24b09ac2ef1940b7

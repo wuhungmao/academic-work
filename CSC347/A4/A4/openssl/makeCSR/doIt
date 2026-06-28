@@ -1,0 +1,39 @@
+#!/bin/bash
+	
+# CREATING A CERTIFICATE SIGNING REQUEST (CSR)
+# SWITCH ROLES, YOU ARE NOW A CLIENT
+# WHAT DOES THE FOLLOWING DO, AS BEFORE, LIST FILES CREATED, 
+# WHAT THEY CONTAIN AND THEIR ROLE
+# YOUR ANSWER GOES HERE
+# What does the following do: 
+#   The following codes generates a private key and store it in key.pem. 
+#   Then generate a public key using the private key in key.pem, and store it in pubkey.pem. 
+#   Then create a CSR using the private key in key.pem and the subject information, and store it in req.pem. 
+# Files generated: 
+# $DEMOCA/makeCSR/key.pem
+#   It contains a private key, which will be used to sign the CSR. 
+#
+# $DEMOCA/makeCSR/pubkey.pem
+#   It contains the public key generate using the private key in key.pem. 
+#   Its role to view the public key. 
+#
+# $DEMOCA/makeCSR/req.pem
+#   It contains the CSR, which contains the public key, the subject information and a digital signature created
+#   using the the private key. 
+#   Its role is to be signed and verified. 
+
+openssl genrsa -out key.pem 1024
+
+# The following is not a necessary part of generating a CSR, but it is informative...
+openssl pkey -in key.pem -pubout -out pubkey.pem
+
+openssl req -new -key key.pem -out req.pem
+# SEND YOUR CSR TO ANOTHER TEAM TO GET THEM TO GENERATE 
+# A SIGNED CERTIFICATE, PLACE YOUR SIGNED CERTIFICATE IN THIS DIRECTORY
+# WHO SIGNED YOUR CERTIFICATE?
+# YOUR ANSWER GOES HERE
+# I signed my certificate myself. 
+# You can of course sign your own, of have a team member sign it.
+# It might just be more "fun" and help your team and another team
+# verify that you are on the right track if you collaborate on the
+# signing of the certificate.

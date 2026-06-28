@@ -1,0 +1,598 @@
+1) [2 Marks]
+	Command to init the database: tripwire --init
+	Command to run a check: tripwire --check
+	Command to get a report: twprint --print-report --twrfile "$(ls -t /var/lib/tripwire/report/*.twr | head -n 1)" \ > ~/tripwire-initial.txt
+	Place the report in twreport1.txt
+
+2a) [5 Marks] Document the steps you took to 'take the drive out of the Ubuntu804_owasp VM and place it in the Kali VM'. 
+	1) First shutdown the Ubuntu804_owasp vm. (Note this is on vmware)
+	2) Shutdown the Kali vm. (Note this is on virtualbox)
+	3) Open settings of Kali
+	4) Navigate to storage
+	5) Under sata add disk
+	6) Add the kali vdi
+	7) Ensure that it's set to port 0
+	8) Add the ubuntu owasp vmdk (not 0 or 2, etc., just the normal one)
+	9) Ensure that it's set to port 1
+	...
+
+2b) [3 Marks] Copy the shadow file to the Kali VM and see if you 
+    can determine some of the passwords using John the ripper. 
+	
+	PLACE john the ripper results below. 
+	arnold:password:16861:0:99999:7:::
+	joe:joeeoj:16735:0:99999:7:::
+	sid:letMeIn:16735:0:99999:7:::
+	student:password:20369:0:99999:7:::
+	bwayne:password:20369:0:99999:7:::
+	csc347:password:20369:0:99999:7:::
+
+	i managed to crack 6 out of 8, i'm not sure how many you want
+
+2c) [2 Marks] Modify user sid so that they are now a root user with password 'password'. 
+
+	EXPLAIN HOW YOU DO THIS AND PLACE MODIFIED FILES ETC IN THIS DIRECTORY
+	to start, i do openssl passwd -1 password and copy the hash produced
+	just sudo nano into both the /mnt/ubuntu/etc/passwd or shadow files
+	then ctrl w sid, to find it, and then here's where it differs
+	for passwd i make it 0:0
+	and for shadow i remove that hash and replace it with the hash i'll paste
+
+2d) NOTHING TO REPORT HERE
+
+3a) [2 Marks] Place the result of running tripwire in twreport2.txt. 
+	Identify anything interesting below.
+	well it's 8000 lines
+	bin cat and bin ps are modified 
+	etc and root also shows modified
+	so like backdoors possible to be placed
+	clearly system is comprimised
+
+3b) [4 Marks] 
+	last # this is a command
+arnold   pts/0        192.168.10.1     Thu Oct  9 14:47   still logged in
+sid      pts/0        192.168.10.1     Thu Oct  9 14:45 - 14:47  (00:01)
+sid      tty1                          Thu Oct  9 14:38   still logged in
+sid      tty1                          Thu Oct  9 14:38 - 14:38  (00:00)
+reboot   system boot  2.6.24-24-server Thu Oct  9 14:36 - 14:59  (00:23)
+reboot   system boot  2.6.24-24-server Thu Oct  9 14:34 - 14:59  (00:25)
+reboot   system boot  2.6.24-24-server Thu Oct  9 14:32 - 14:59  (00:26)
+arnold   pts/0        192.168.10.1     Wed Oct  8 12:54 - crash (1+01:38)
+arnold   pts/0        192.168.10.1     Wed Oct  8 12:26 - 12:49  (00:22)
+arnold   tty1                          Wed Oct  8 11:05 - crash (1+03:27)
+arnold   tty1                          Wed Oct  8 11:05 - 11:05  (00:00)
+reboot   system boot  2.6.24-24-server Wed Oct  8 11:04 - 14:59 (1+03:55)
+reboot   system boot  2.6.24-24-server Wed Oct  8 10:56 - 14:59 (1+04:03)
+arnold   pts/0        192.168.10.1     Sun Oct 18 20:42 - down   (00:02)
+arnold   tty1                          Sun Oct 18 20:35 - down   (00:09)
+arnold   tty1                          Sun Oct 18 20:35 - 20:35  (00:00)
+arnold   pts/1        192.168.10.1     Sun Oct 18 18:21 - 20:34  (02:13)
+arnold   pts/0        192.168.10.129   Sun Oct 18 18:18 - 20:30  (02:11)
+reboot   system boot  2.6.24-24-server Sun Oct 18 18:17 - 20:44  (02:27)
+arnold   pts/1        192.168.10.129   Sun Oct 18 15:46 - down   (00:55)
+arnold   pts/0        192.168.10.129   Sun Oct 18 15:43 - down   (00:58)
+reboot   system boot  2.6.24-24-server Sun Oct 18 15:40 - 16:41  (01:01)
+arnold   pts/1        192.168.10.1     Sun Oct 18 11:40 - down   (01:00)
+arnold   pts/0        192.168.10.1     Sun Oct 18 11:26 - down   (01:15)
+arnold   tty1                          Sun Oct 18 11:25 - down   (01:16)
+arnold   tty1                          Sun Oct 18 11:25 - 11:25  (00:00)
+reboot   system boot  2.6.24-24-server Sun Oct 18 11:24 - 12:41  (01:17)
+arnold   pts/0        192.168.10.1     Sun Oct 18 01:31 - down   (00:19)
+reboot   system boot  2.6.24-24-server Sun Oct 18 01:30 - 01:51  (00:20)
+arnold   tty1                          Sat Oct 17 20:58 - down   (00:01)
+arnold   tty1                          Sat Oct 17 20:58 - 20:58  (00:00)
+reboot   system boot  2.6.24-24-server Sat Oct 17 20:58 - 20:59  (00:01)
+arnold   tty1                          Sat Oct 17 20:53 - down   (00:00)
+arnold   tty1                          Sat Oct 17 20:53 - 20:53  (00:00)
+reboot   system boot  2.6.24-24-server Sat Oct 17 20:53 - 20:53  (00:00)
+arnold   pts/0        192.168.10.1     Sat Oct 17 20:52 - 20:52  (00:00)
+arnold   tty1                          Fri Oct 16 21:11 - down   (23:41)
+arnold   tty1                          Fri Oct 16 21:11 - 21:11  (00:00)
+reboot   system boot  2.6.24-24-server Fri Oct 16 21:09 - 20:52  (23:43)
+arnold   pts/1        192.168.10.1     Thu Oct 15 20:28 - 23:39  (03:11)
+arnold   pts/0        192.168.10.1     Thu Oct 15 20:19 - down   (03:35)
+reboot   system boot  2.6.24-24-server Thu Oct 15 20:19 - 23:54  (03:35)
+arnold   pts/0        192.168.10.1     Wed Oct 14 21:10 - down   (01:01)
+reboot   system boot  2.6.24-24-server Wed Oct 14 21:10 - 22:12  (01:02)
+arnold   tty1                          Fri Sep  4 15:52 - down   (00:00)
+arnold   tty1                          Fri Sep  4 15:52 - 15:52  (00:00)
+reboot   system boot  2.6.24-24-server Fri Sep  4 15:51 - 15:53  (00:01)
+arnold   tty1                          Fri Sep  4 15:50 - down   (00:00)
+arnold   tty1                          Fri Sep  4 15:50 - 15:50  (00:00)
+reboot   system boot  2.6.24-24-server Fri Sep  4 15:49 - 15:50  (00:01)
+arnold   tty1                          Mon Mar 30 00:06 - down   (01:11)
+arnold   tty1                          Mon Mar 30 00:06 - 00:06  (00:00)
+reboot   system boot  2.6.24-24-server Mon Mar 30 00:06 - 01:18  (01:12)
+arnold   tty1                          Mon Feb 10 13:58 - down   (01:54)
+arnold   tty1                          Mon Feb 10 13:58 - 13:58  (00:00)
+reboot   system boot  2.6.24-24-server Mon Feb 10 13:45 - 15:53  (02:07)
+arnold   pts/0        192.168.0.1      Mon Jan 14 17:19 - 17:31  (00:11)
+arnold   pts/0        192.168.0.1      Mon Jan 14 16:48 - 17:17  (00:28)
+arnold   tty1                          Mon Jan 14 15:21 - down   (04:21)
+arnold   tty1                          Mon Jan 14 15:21 - 15:21  (00:00)
+reboot   system boot  2.6.24-24-server Mon Jan 14 15:21 - 19:43  (04:22)
+arnold   pts/0        192.168.0.135    Thu Dec  7 11:32 - down   (01:31)
+arnold   pts/0        192.168.0.135    Thu Dec  7 10:04 - 10:19  (00:15)
+arnold   pts/0        192.168.0.135    Thu Dec  7 09:45 - 10:00  (00:14)
+arnold   tty1                          Thu Dec  7 09:26 - down   (03:37)
+arnold   tty1                          Thu Dec  7 09:26 - 09:26  (00:00)
+reboot   system boot  2.6.24-24-server Thu Dec  7 09:21 - 13:04  (03:42)
+
+wtmp begins Thu Dec  7 08:41:32 2017
+		WHAT DID YOU LEARN
+		clearly this proves unauthorized access by sid with first console login
+		on oct 9 at 14:38 (tty1), logging out ~9 minutes later
+		sid definitely should not have login privileges
+		
+
+	uptime # this is a command
+15:01:12 up 24 min,  2 users,  load average: 0.00, 0.00, 0.00
+		WHAT DID YOU LEARN
+		ok so server has been up for 24 minutes, 2 users are currently logged in
+		server is not under stress since low load average
+		recent reboot is indicated since short uptime so potential tampering
+		by an attacker who likely rebooted after modifications, pretty suspicious
+
+	/var/log/* # these are log files
+sudo cat /var/log/auth.log | grep sid
+Oct 27 12:53:38 ubuntu804Server useradd[6506]: new group: name=sid, GID=1003
+Oct 27 12:53:38 ubuntu804Server useradd[6506]: new user: name=sid, UID=1003, GID=1003, home=/home/sid, shell=/bin/sh
+Oct 27 12:53:53 ubuntu804Server passwd[6507]: pam_unix(passwd:chauthtok): password changed for sid
+Oct 17 20:58:53 ubuntu804Server su[4972]: Successful su for sid by root
+Oct 17 20:58:53 ubuntu804Server su[4972]: + tty1 root:sid
+Oct 17 20:58:53 ubuntu804Server su[4972]: pam_unix(su:session): session opened for user sid by arnold(uid=0)
+Oct 17 20:58:56 ubuntu804Server su[4972]: pam_unix(su:session): session closed for user sid
+Oct  9 14:38:31 ubuntu804Server login[4887]: pam_unix(login:session): session opened for user sid by LOGIN(uid=0)
+Oct  9 14:43:43 ubuntu804Server sudo:     root : TTY=tty1 ; PWD=/home/sid ; USER=root ; COMMAND=/sbin/ifconfig eth1 up
+Oct  9 14:43:44 ubuntu804Server sudo: pam_unix(sudo:session): session opened for user root by sid(uid=0)
+Oct  9 14:43:49 ubuntu804Server sudo:     root : TTY=tty1 ; PWD=/home/sid ; USER=root ; COMMAND=/sbin/dhclient eth1
+Oct  9 14:43:49 ubuntu804Server sudo: pam_unix(sudo:session): session opened for user root by sid(uid=0)
+Oct  9 14:45:41 ubuntu804Server sshd[4967]: Accepted password for sid from 192.168.10.1 port 58860 ssh2
+Oct  9 14:45:41 ubuntu804Server sshd[4969]: pam_unix(sshd:session): session opened for user sid by sid(uid=0)
+
+sudo tail -50 /var/log/syslog
+Oct  9 14:43:44 ubuntu804Server kernel: [  435.378102] eth1: link up
+Oct  9 14:43:49 ubuntu804Server dhclient: Internet Systems Consortium DHCP Client V3.0.6
+Oct  9 14:43:49 ubuntu804Server dhclient: Copyright 2004-2007 Internet Systems Consortium.
+Oct  9 14:43:49 ubuntu804Server dhclient: All rights reserved.
+Oct  9 14:43:49 ubuntu804Server dhclient: For info, please visit http://www.isc.org/sw/dhcp/
+Oct  9 14:43:49 ubuntu804Server dhclient:
+Oct  9 14:43:51 ubuntu804Server kernel: [  442.937378] NET: Registered protocol family 17
+Oct  9 14:43:51 ubuntu804Server dhclient: Listening on LPF/eth1/00:0c:29:a2:a6:9b
+Oct  9 14:43:51 ubuntu804Server dhclient: Sending on   LPF/eth1/00:0c:29:a2:a6:9b
+Oct  9 14:43:51 ubuntu804Server dhclient: Sending on   Socket/fallback
+Oct  9 14:43:53 ubuntu804Server dhclient: DHCPDISCOVER on eth1 to 255.255.255.255 port 67 interval 3
+Oct  9 14:43:54 ubuntu804Server dhclient: DHCPOFFER of 192.168.10.128 from 192.168.10.254
+Oct  9 14:43:54 ubuntu804Server dhclient: DHCPREQUEST of 192.168.10.128 on eth1 to 255.255.255.255 port 67
+Oct  9 14:43:54 ubuntu804Server dhclient: DHCPACK of 192.168.10.128 from 192.168.10.254
+Oct  9 14:43:54 ubuntu804Server kernel: [  446.584863] eth1: no IPv6 routers present
+Oct  9 14:43:55 ubuntu804Server dhclient: bound to 192.168.10.128 -- renewal in 762 seconds.
+Oct  9 14:50:41 ubuntu804Server tripwire[5017]: Integrity Check Complete: /var/lib/tripwire/ubuntu804Server.twd TWReport ubuntu804Server 20251009145031 V:7691 S:100 A:3467 R:4148 C:76
+Oct  9 14:56:37 ubuntu804Server dhclient: DHCPREQUEST of <null address> on eth1 to 192.168.10.254 port 67
+Oct  9 14:56:37 ubuntu804Server dhclient: DHCPACK of 192.168.10.128 from 192.168.10.254
+Oct  9 14:56:37 ubuntu804Server dhclient: bound to 192.168.10.128 -- renewal in 771 seconds.
+Oct  9 15:00:01 ubuntu804Server /USR/SBIN/CRON[5042]: (smmsp) CMD (test -x /etc/init.d/sendmail && /usr/share/sendmail/sendmail cron-msp)
+Oct  9 15:00:21 ubuntu804Server sm-msp-queue[5056]: My unqualified host name (ubuntu804Server) unknown; sleeping for retry
+Oct  9 15:01:41 ubuntu804Server sm-msp-queue[5056]: unable to qualify my own domain name (ubuntu804Server) -- using short name
+Oct  9 15:02:01 ubuntu804Server /USR/SBIN/CRON[5064]: (root) CMD (if [ -x /usr/sbin/pg_maintenance ]; then /usr/sbin/pg_maintenance --analyze >/dev/null; fi)
+
+sudo ls -lah /var/log/
+total 14M
+drwxr-xr-x 11 root   root      4.0K 2025-10-09 14:36 .
+drwxr-xr-x 14 root   root      4.0K 2009-10-28 14:34 ..
+drwxr-x---  2 root   adm       4.0K 2017-12-07 06:39 apache2
+drwxr-xr-x  2 root   root      4.0K 2009-05-06 06:40 apparmor
+drwxr-xr-x  2 root   root      4.0K 2017-12-07 06:39 apt
+-rw-r-----  1 syslog adm       282K 2025-10-09 15:02 auth.log
+-rw-r-----  1 root   adm         31 2009-10-28 14:09 boot
+-rw-rw-r--  1 root   utmp      2.7K 2025-10-08 11:05 btmp
+-rw-rw-r--  1 root   utmp      5.7K 2017-11-12 23:50 btmp.1
+-rw-r-----  1 syslog adm       355K 2025-10-09 14:56 daemon.log
+-rw-r-----  1 syslog adm      1019K 2025-10-09 14:43 debug
+drwxr-xr-x  2 root   root      4.0K 2009-01-29 09:02 dist-upgrade
+-rw-r-----  1 root   adm        44K 2025-10-09 14:36 dmesg
+-rw-r-----  1 root   adm        44K 2025-10-09 14:34 dmesg.0
+-rw-r-----  1 root   adm        10K 2025-10-09 14:32 dmesg.1.gz
+-rw-r-----  1 root   adm        11K 2025-10-08 11:04 dmesg.2.gz
+-rw-r-----  1 root   adm        10K 2025-10-08 10:56 dmesg.3.gz
+-rw-r-----  1 root   adm       9.9K 2020-10-18 18:17 dmesg.4.gz
+-rw-r-----  1 root   adm       1.3K 2020-10-18 20:38 dpkg.log
+-rw-r-----  1 root   adm        17K 2017-12-06 15:17 dpkg.log.1
+-rw-r-----  1 root   adm        16K 2009-10-29 01:01 dpkg.log.2.gz
+-rw-r--r--  1 root   root       24K 2025-10-09 14:38 faillog
+drwxr-xr-x  2 root   root      4.0K 2009-10-28 14:09 fsck
+drwxr-xr-x  3 root   root      4.0K 2009-10-28 14:37 installer
+-rw-r-----  1 syslog adm       1.5M 2025-10-09 14:43 kern.log
+-rw-r-----  1 syslog adm       2.1M 2017-12-07 00:38 kern.log.0
+-rw-r-----  1 syslog adm       113K 2014-11-05 05:58 kern.log.1.gz
+-rw-rw-r--  1 root   utmp      288K 2025-10-09 14:47 lastlog
+-rw-r-----  1 syslog adm          0 2009-10-28 14:10 lpr.log
+-rw-r-----  1 syslog adm        17K 2025-10-09 15:01 mail.err
+-rw-r-----  1 syslog adm        76K 2025-10-09 15:01 mail.info
+-rw-r-----  1 syslog adm        76K 2025-10-09 15:01 mail.log
+-rw-r-----  1 syslog adm        43K 2025-10-09 15:01 mail.warn
+-rw-r-----  1 syslog adm       1.1M 2025-10-09 14:50 messages
+-rw-r-----  1 syslog adm       1.6M 2017-12-07 06:23 messages.0
+-rw-r-----  1 syslog adm        98K 2014-11-05 06:18 messages.1.gz
+drwxr-s---  2 mysql  adm       4.0K 2009-10-28 14:35 mysql
+-rw-r-----  1 mysql  adm          0 2009-10-28 14:35 mysql.err
+-rw-r-----  1 mysql  adm          0 2017-12-07 06:39 mysql.log
+-rw-r-----  1 mysql  adm         20 2014-11-05 06:29 mysql.log.1.gz
+-rw-r-----  1 mysql  adm         20 2009-10-28 14:35 mysql.log.2.gz
+drwxr-sr-x  2 news   news      4.0K 2009-10-28 14:38 news
+drwxrwxr-t  2 root   postgres  4.0K 2017-12-07 06:39 postgresql
+-rw-r--r--  1 root   root         0 2009-10-28 14:34 pycentral.log
+-rw-r-----  1 syslog adm       1.6M 2025-10-09 15:02 syslog
+-rw-r-----  1 syslog adm       2.3M 2017-12-07 06:39 syslog.0
+-rw-r-----  1 syslog adm        53K 2014-11-05 06:25 syslog.1.gz
+-rw-r-----  1 syslog adm       193K 2011-10-28 06:46 syslog.2.gz
+-rw-r--r--  1 root   root      348K 2025-10-09 14:36 udev
+-rw-r-----  1 syslog adm        471 2025-10-09 14:50 user.log
+-rw-rw-r--  1 root   utmp       91K 2025-10-09 14:47 wtmp
+-rw-rw-r--  1 root   utmp      156K 2017-12-07 03:29 wtmp.1
+
+sudo grep -i "sid" /var/log/auth.log
+Oct 27 12:53:38 ubuntu804Server useradd[6506]: new group: name=sid, GID=1003
+Oct 27 12:53:38 ubuntu804Server useradd[6506]: new user: name=sid, UID=1003, GID=1003, home=/home/sid, shell=/bin/sh
+Oct 27 12:53:53 ubuntu804Server passwd[6507]: pam_unix(passwd:chauthtok): password changed for sid
+Oct 17 20:58:53 ubuntu804Server su[4972]: Successful su for sid by root
+Oct 17 20:58:53 ubuntu804Server su[4972]: + tty1 root:sid
+Oct 17 20:58:53 ubuntu804Server su[4972]: pam_unix(su:session): session opened for user sid by arnold(uid=0)
+Oct 17 20:58:56 ubuntu804Server su[4972]: pam_unix(su:session): session closed for user sid
+Oct  9 14:38:31 ubuntu804Server login[4887]: pam_unix(login:session): session opened for user sid by LOGIN(uid=0)
+Oct  9 14:43:43 ubuntu804Server sudo:     root : TTY=tty1 ; PWD=/home/sid ; USER=root ; COMMAND=/sbin/ifconfig eth1 up
+Oct  9 14:43:44 ubuntu804Server sudo: pam_unix(sudo:session): session opened for user root by sid(uid=0)
+Oct  9 14:43:49 ubuntu804Server sudo:     root : TTY=tty1 ; PWD=/home/sid ; USER=root ; COMMAND=/sbin/dhclient eth1
+Oct  9 14:43:49 ubuntu804Server sudo: pam_unix(sudo:session): session opened for user root by sid(uid=0)
+Oct  9 14:45:41 ubuntu804Server sshd[4967]: Accepted password for sid from 192.168.10.1 port 58860 ssh2
+Oct  9 14:45:41 ubuntu804Server sshd[4969]: pam_unix(sshd:session): session opened for user sid by sid(uid=0)
+Oct  9 15:03:10 ubuntu804Server sudo:   arnold : TTY=pts/0 ; PWD=/home/arnold ; USER=root ; COMMAND=/bin/grep -i sid /var/log/auth.log
+
+sudo grep -i "failed" /var/log/auth.log
+Oct 28 14:38:17 ubuntu804Server sshd[4064]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 28 14:46:08 ubuntu804Server su[4399]: FAILED su for root by arnold
+Oct 28 14:46:18 ubuntu804Server su[4400]: FAILED su for root by arnold
+Oct 28 23:36:53 ubuntu804Server sshd[4017]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 28 23:36:53 ubuntu804Server sshd[4036]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 29 12:03:21 ubuntu804Server sshd[4054]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 29 13:53:01 ubuntu804Server login[4327]: FAILED LOGIN (1) on 'tty1' FOR `arnold', Authentication failure
+Oct 29 13:59:18 ubuntu804Server sshd[4016]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 29 13:59:11 ubuntu804Server sshd[4222]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 29 14:01:09 ubuntu804Server sshd[4048]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 29 14:07:35 ubuntu804Server login[4341]: FAILED LOGIN (1) on 'tty1' FOR `UNKNOWN', User not known to the underlying authentication module
+Oct 29 14:07:52 ubuntu804Server login[4341]: FAILED LOGIN (2) on 'tty1' FOR `UNKNOWN', User not known to the underlying authentication module
+Oct 29 14:19:59 ubuntu804Server sshd[4020]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 29 14:19:59 ubuntu804Server sshd[4039]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 29 15:30:23 ubuntu804Server sshd[4024]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 29 15:31:06 ubuntu804Server login[4294]: FAILED LOGIN (1) on 'tty1' FOR `arnold', Authentication failure
+Oct 29 15:31:15 ubuntu804Server login[4294]: FAILED LOGIN (2) on 'tty1' FOR `arnold', Authentication failure
+Oct 29 15:41:37 ubuntu804Server sshd[4503]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 29 16:44:00 ubuntu804Server sshd[4024]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 29 16:52:31 ubuntu804Server sshd[4019]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 29 17:35:13 ubuntu804Server sshd[4025]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 19 12:13:56 ubuntu804Server sshd[4017]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 19 12:48:15 ubuntu804Server sshd[4017]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 19 16:03:21 ubuntu804Server sshd[4017]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 19 16:16:59 ubuntu804Server login[4287]: FAILED LOGIN (1) on 'tty1' FOR `root', Authentication failure
+Nov 19 16:35:28 ubuntu804Server sshd[4438]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 19 16:38:44 ubuntu804Server sshd[4530]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 11 12:31:06 ubuntu804Server sshd[4023]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 11 12:31:40 ubuntu804Server login[4291]: FAILED LOGIN (1) on 'tty1' FOR `arnold', Authentication failure
+Oct 11 12:31:52 ubuntu804Server login[4291]: FAILED LOGIN (2) on 'tty1' FOR `UNKNOWN', User not known to the underlying authentication module
+Oct 11 12:32:01 ubuntu804Server login[4291]: FAILED LOGIN (3) on 'tty1' FOR `UNKNOWN', User not known to the underlying authentication module
+Oct 11 12:32:32 ubuntu804Server login[4294]: FAILED LOGIN (1) on 'tty1' FOR `arnold', Authentication failure
+Oct 11 12:32:48 ubuntu804Server login[4294]: FAILED LOGIN (2) on 'tty1' FOR `arnold', Authentication failure
+Oct 11 12:33:21 ubuntu804Server login[4295]: FAILED LOGIN (1) on 'tty1' FOR `arnold', Authentication failure
+Oct 11 12:33:44 ubuntu804Server login[4295]: FAILED LOGIN (2) on 'tty1' FOR `UNKNOWN', User not known to the underlying authentication module
+Oct 11 12:34:26 ubuntu804Server sshd[4023]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 11 12:39:54 ubuntu804Server sshd[4022]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 11 12:43:15 ubuntu804Server sshd[4447]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 11 12:45:24 ubuntu804Server sshd[4586]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 11 12:47:16 ubuntu804Server sshd[4680]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 18 10:15:05 ubuntu804Server sshd[4020]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 18 14:21:44 ubuntu804Server sshd[4020]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 18 15:19:37 ubuntu804Server sshd[4857]: Failed none for invalid user anrold from 192.168.117.1 port 49737 ssh2
+Oct 19 12:32:12 ubuntu804Server sshd[4024]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 19 12:34:22 ubuntu804Server sshd[4457]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 19 12:35:32 ubuntu804Server sshd[4010]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 19 12:35:35 ubuntu804Server sshd[4227]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 19 12:53:19 ubuntu804Server sshd[4010]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 19 12:53:19 ubuntu804Server sshd[4078]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 19 13:48:00 ubuntu804Server sshd[4011]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 19 13:48:02 ubuntu804Server sshd[4219]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 19 13:48:34 ubuntu804Server login[4317]: FAILED LOGIN (1) on 'tty1' FOR `UNKNOWN', User not known to the underlying authentication module
+Oct 19 13:51:36 ubuntu804Server sshd[4026]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 19 13:51:36 ubuntu804Server sshd[4062]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 19 13:52:27 ubuntu804Server login[4317]: FAILED LOGIN (1) on 'tty1' FOR `arnold', Authentication failure
+Oct 19 14:12:31 ubuntu804Server sshd[4010]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 19 14:12:32 ubuntu804Server sshd[4212]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 19 14:13:58 ubuntu804Server sshd[4010]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 19 14:14:00 ubuntu804Server sshd[4226]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 26 13:51:30 ubuntu804Server sshd[4011]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 26 13:51:34 ubuntu804Server sshd[4314]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 27 15:55:30 ubuntu804Server sshd[4011]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 27 15:55:30 ubuntu804Server sshd[4096]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 27 16:02:38 ubuntu804Server sshd[4010]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 27 16:02:39 ubuntu804Server sshd[4212]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 27 16:10:43 ubuntu804Server sshd[4013]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 27 16:10:47 ubuntu804Server sshd[4227]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 27 16:33:02 ubuntu804Server sshd[4010]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 27 16:33:08 ubuntu804Server sshd[4272]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 30 13:58:47 ubuntu804Server sshd[4010]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 30 13:58:49 ubuntu804Server sshd[4218]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 30 14:10:43 ubuntu804Server sshd[4510]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov  5 05:08:18 ubuntu804Server sshd[4518]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov  5 05:10:58 ubuntu804Server sshd[4918]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov  5 05:41:42 ubuntu804Server sshd[4519]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov  5 05:44:17 ubuntu804Server sshd[4519]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov  5 05:58:19 ubuntu804Server sshd[4519]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov  5 07:56:09 ubuntu804Server sshd[5482]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov  5 08:00:47 ubuntu804Server sshd[6564]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov  5 08:01:31 ubuntu804Server sshd[4526]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov  5 08:04:44 ubuntu804Server su[5160]: FAILED su for root by arnold
+Nov  5 11:46:14 ubuntu804Server sshd[4526]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov  5 11:46:53 ubuntu804Server login[4856]: FAILED LOGIN (1) on 'tty1' FOR `arnold', Authentication failure
+Nov  7 15:15:32 ubuntu804Server sshd[4526]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 18 15:29:40 ubuntu804Server sshd[4526]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Jan  6 22:43:00 ubuntu804Server sshd[4527]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Jan  6 23:48:39 ubuntu804Server sshd[4526]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Jan  7 10:47:30 ubuntu804Server sshd[4525]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Jan  9 17:55:00 ubuntu804Server sshd[4526]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Jan 20 13:36:23 ubuntu804Server sshd[4526]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Sep 25 12:36:28 ubuntu804Server sshd[4525]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Sep 25 12:37:00 ubuntu804Server login[4855]: FAILED LOGIN (1) on 'tty1' FOR `arnold', Authentication failure
+Sep 25 12:37:21 ubuntu804Server sshd[4878]: Failed password for arnold from 192.168.0.1 port 60397 ssh2
+Oct 27 09:20:51 ubuntu804Server sshd[4526]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 27 09:21:41 ubuntu804Server login[4856]: FAILED LOGIN (1) on 'tty1' FOR `arnold', Authentication failure
+Oct 27 11:47:53 ubuntu804Server login[6204]: FAILED LOGIN (1) on 'tty1' FOR `UNKNOWN', User not known to the underlying authentication module
+Oct 27 12:39:39 ubuntu804Server sshd[6367]: Failed password for arnold from 192.168.0.1 port 63974 ssh2
+Oct 27 12:40:00 ubuntu804Server sshd[6367]: Failed password for arnold from 192.168.0.1 port 63974 ssh2
+Oct 27 14:50:10 ubuntu804Server login[7320]: FAILED LOGIN (1) on 'tty1' FOR `UNKNOWN', User not known to the underlying authentication module
+Oct 27 14:50:44 ubuntu804Server login[7358]: FAILED LOGIN (1) on 'tty1' FOR `UNKNOWN', User not known to the underlying authentication module
+Oct 27 18:16:13 ubuntu804Server sshd[4525]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov  4 11:41:25 ubuntu804Server sshd[4526]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov  4 11:41:47 ubuntu804Server login[4856]: FAILED LOGIN (1) on 'tty1' FOR `UNKNOWN', User not known to the underlying authentication module
+Nov  4 11:42:00 ubuntu804Server login[4856]: FAILED LOGIN (2) on 'tty1' FOR `arnold', Authentication failure
+Nov  4 11:42:05 ubuntu804Server login[4856]: FAILED LOGIN (3) on 'tty1' FOR `UNKNOWN', User not known to the underlying authentication module
+Nov  6 09:04:15 ubuntu804Server sshd[4526]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 13 02:15:22 ubuntu804Server sshd[4525]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 20 02:51:34 ubuntu804Server sshd[4526]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 20 02:51:51 ubuntu804Server login[4856]: FAILED LOGIN (1) on 'tty1' FOR `root', Authentication failure
+Dec  9 06:51:02 ubuntu804Server sshd[4525]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Jan  5 21:49:05 ubuntu804Server sshd[4527]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Jan  5 21:58:43 ubuntu804Server sshd[5652]: error: Bind to port 22 on :: failed: Permission denied.
+Jan  5 21:58:43 ubuntu804Server sshd[5652]: error: Bind to port 22 on 0.0.0.0 failed: Permission denied.
+Jan  5 23:20:12 ubuntu804Server su[6340]: FAILED su for root by arnold
+Mar  1 09:19:17 ubuntu804Server sshd[4525]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Mar  1 09:19:34 ubuntu804Server login[4855]: FAILED LOGIN (1) on 'tty1' FOR `arnold', Authentication failure
+Mar  1 09:19:48 ubuntu804Server login[4855]: FAILED LOGIN (2) on 'tty1' FOR `arnold', Authentication failure
+Mar  1 09:20:05 ubuntu804Server login[4916]: FAILED LOGIN (1) on 'tty1' FOR `arnold', Authentication failure
+Mar  1 09:20:22 ubuntu804Server login[4916]: FAILED LOGIN (2) on 'tty1' FOR `arnold', Authentication failure
+Mar  1 09:24:29 ubuntu804Server sshd[4525]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Mar  1 20:53:39 ubuntu804Server sshd[4524]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Mar  1 20:54:37 ubuntu804Server sshd[5046]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Mar  1 20:55:15 ubuntu804Server sshd[4524]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Mar  1 20:57:50 ubuntu804Server sshd[4502]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Mar  1 20:58:57 ubuntu804Server sshd[4502]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Mar  1 20:58:59 ubuntu804Server sshd[5281]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 10 14:38:47 ubuntu804Server sshd[4496]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 10 14:44:21 ubuntu804Server sshd[6348]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 10 14:45:24 ubuntu804Server sshd[6779]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 12 23:40:02 ubuntu804Server sshd[4496]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 12 23:45:36 ubuntu804Server sshd[5594]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 12 23:50:34 ubuntu804Server login[4848]: FAILED LOGIN (1) on 'tty1' FOR `root', Authentication failure
+Nov 24 14:46:38 ubuntu804Server sshd[4491]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 24 14:52:14 ubuntu804Server sshd[5594]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 24 15:39:33 ubuntu804Server sshd[8238]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 24 15:40:47 ubuntu804Server sshd[8374]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 24 15:41:29 ubuntu804Server sshd[4514]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Nov 24 19:51:16 ubuntu804Server sshd[7665]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Dec  6 18:22:56 ubuntu804Server sshd[4491]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Dec  6 18:23:13 ubuntu804Server sshd[5498]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Dec  7 08:50:05 ubuntu804Server sshd[18243]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Dec  7 09:19:53 ubuntu804Server sshd[19973]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Dec  7 09:21:53 ubuntu804Server sshd[4514]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Jan 14 15:21:34 ubuntu804Server sshd[4514]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Jan 14 15:21:50 ubuntu804Server login[4864]: FAILED LOGIN (1) on 'tty1' FOR `UNKNOWN', User not known to the underlying authentication module
+Jan 14 15:22:05 ubuntu804Server su[4922]: FAILED su for root by arnold
+Feb 10 13:45:54 ubuntu804Server sshd[4514]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Feb 10 13:58:27 ubuntu804Server login[4864]: FAILED LOGIN (1) on 'tty1' FOR `UNKNOWN', User not known to the underlying authentication module
+Mar 30 00:06:24 ubuntu804Server sshd[4514]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Mar 30 00:06:45 ubuntu804Server login[4864]: FAILED LOGIN (1) on 'tty1' FOR `arnold', Authentication failure
+Mar 30 00:06:51 ubuntu804Server login[4864]: FAILED LOGIN (2) on 'tty1' FOR `root', Authentication failure
+Sep  4 15:49:51 ubuntu804Server sshd[4512]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Sep  4 15:51:21 ubuntu804Server sshd[4512]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Sep  4 15:52:13 ubuntu804Server login[4860]: FAILED LOGIN (1) on 'tty1' FOR `root', Authentication failure
+Oct 14 21:10:00 ubuntu804Server sshd[4512]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 15 20:19:01 ubuntu804Server sshd[4512]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 16 21:09:15 ubuntu804Server sshd[4512]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 16 21:37:25 ubuntu804Server sshd[6374]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 17 20:52:12 ubuntu804Server sshd[6824]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 17 20:53:17 ubuntu804Server sshd[4512]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 17 20:58:02 ubuntu804Server sshd[4512]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 18 01:30:55 ubuntu804Server sshd[4512]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 18 11:24:49 ubuntu804Server sshd[4512]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 18 11:57:00 ubuntu804Server sshd[5874]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 18 11:58:59 ubuntu804Server sshd[6002]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 18 15:40:13 ubuntu804Server sshd[4512]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 18 15:55:24 ubuntu804Server sshd[5674]: Failed password for arnold from 192.168.10.129 port 60804 ssh2
+Oct 18 18:17:40 ubuntu804Server sshd[4512]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 18 20:39:06 ubuntu804Server sshd[7482]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct 18 20:39:46 ubuntu804Server sshd[7605]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct  8 10:56:29 ubuntu804Server sshd[4540]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct  8 10:59:06 ubuntu804Server login[4897]: FAILED LOGIN (1) on 'tty1' FOR `UNKNOWN', User not known to the underlying authentication module
+Oct  8 11:04:31 ubuntu804Server sshd[4532]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct  8 11:05:51 ubuntu804Server login[4888]: FAILED LOGIN (1) on 'tty1' FOR `UNKNOWN', User not known to the underlying authentication module
+Oct  9 14:32:58 ubuntu804Server sshd[4529]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct  9 14:34:33 ubuntu804Server sshd[4531]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct  9 14:36:47 ubuntu804Server sshd[4531]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+Oct  9 15:03:26 ubuntu804Server sudo:   arnold : TTY=pts/0 ; PWD=/home/arnold ; USER=root ; COMMAND=/bin/grep -i failed /var/log/auth.log
+		WHAT DID YOU LEARN
+		sid got root privileges becaues it can clearly execute sudo commands with stuff like
+		opening sessions with uid=0, sudo ifconfig eth1 up and dhclient stuff
+		it confirms passwd modifications worked, sid became root and brought up network interface
+		to enable remote access and this attack succeeded
+		idk why i'm talking in 3rd person lmfao that's me
+
+		from the failed one though we do see there was no failed attempts by login from sid
+		and it was successful with modified password
+
+	.bash_history # what is this, whos should you look at and why are you looking?
+sudo cat /home/sid/.bash_history
+id
+whoami
+touch /bin/cat
+touch /bin/ps
+logout
+
+sudo cat /root/.bash_history
+NOTHING
+
+sudo cat ~/.bash_history
+history
+ls
+cd /var/www
+ls
+zip -r webTutorial webTutorial
+ls
+rm webTutorial.zip
+ls
+shutdown -h now
+cd /
+ls
+cd home
+ls
+cd arnold
+ls
+tar -zxf ~arnold/LabPermissions.tar.gz
+cd labPermissions
+ls
+ccd LabPermissions
+ls
+cd LabPermissions
+ls
+./setup.bash
+
+		WHAT DID YOU LEARN
+		ok so attacker sid verified their identity with id and whoami
+		which basically confirms root access
+		and they intentionally touched /bin/cat and /bin/ps
+		also they tried to logout gracefully
+		all tihs shows is what sid did as root
+
+		first roots bash history is empty, which is kinda suspicious if i didn't known
+		why this was
+
+		arnold's bash history has normal sysadmin activities
+
+
+
+4) [2 Marks] List updates to policy below. 
+	- implement locked server rooms with badge or keycard access and maintain access logs of who enters 
+		- we could do all this because it runs on my local machine
+		- this would be a security risk if they could access my local machine
+	- install security cameras monitoring server equipment areas
+		- also security guards
+	- require two-person authorization and logging before anyone can physically access production servers
+		- or multifactor authentication like email and phone, etc.
+	- enable full disk encryption with strong passphrases - this would have completely 
+	  prevented this attack since the attacker could not mount the encrypted drive on their Kali VM 
+	  without the decryption key
+		- secure key in some safe place where only you know
+	- set BIOS/UEFI passwords to prevent unauthorized users from changing boot order or entering BIOS setup
+	- password protect GRUB (I've entered it every boot, idk if I was supposed to) bootloader to prevent booting into single user mode or recovery mode
+	- disable boot from USB/CD/removable devices in BIOS settings to prevent live CD attacks (if they have access to pc)
+	- schedule automated Tripwire integrity checks to run daily with email alerts sent to security team
+	  for any violations detected (Tripwire running did successfully detected our /bin/cat and /bin/ps modifications)
+		- and log it all in a file like twreport[n].txt
+		- could run every like 4 hours
+	- configure remote centralized syslog server to receive logs in real-time - even with physical access
+	  to one server, attacker cannot delete logs stored remotely
+	-implement automated alerting for unexpected system reboots (our attack showed 3 reboots in 4 minutes
+	  at 14:32, 14:34, 14:36 which is basically highly suspicious)
+	- monitor for sudden uptime resets that could indicate physical tampering
+	- maintain regular automated backups stored off site or on separate secured systems to reload when anything goes awry
+	- keep VM snapshots of baseline "known good" states for integrity comparison and rapid recovery
+	- store tripwire database on read only network mount to prevent attackers from modifying the baseline
+	- document and test disaster recovery procedures for system compromise scenarios
+
+5) [2 Marks] Report on what the attacker could have done to leave fewer traces than they did in this attack. 
+	What would you do to detect a compromise even in this case? 
+
+	- clear command history
+	   - before excuting any commands, run 'unset HISTFILE' to prevent bash from recording commands
+	   - after the attack, execute both history -c and rm ~/.bash_history to earse all command evidence
+	   - this would have hidden the stuff like id, whoami in logs
+	
+	- erase login and auth records
+	   - clear /var/log/wtmp to remove sid's login entries (the last command 
+	     wouldn't show sid logged in on Oct 9 at 14:38 and 14:45)
+	   - clear /var/log/lastlog to hide last login information
+	   - clear /var/log/syslog enries showing network interface changes and Tripwire execution
+	   - you could also just remove any of the above but that might also be sus
+	   - remove entries from /var/log/auth.log showing sid's session opened with uid=0, sudo commands
+	     for ifconfig and dhclient
+	   - honestly now thniking about it, maybe you should also just selectively edit all of this
+	     since it'll be less sus if you keep the files but only small things change
+	
+	- restore original file timestamps
+	   - after touching /bin/cat and /bin/ps, use touch -r /bin/ls /bin/cat to restore modification
+	     times to match other system binaries
+	   - makes timestamp modifications less obvious during manual inspection
+	   - but this wouldn't fool tripwire (asked gpt) since it also checks file hashes, sizes, and inodes
+	
+	- tamper with tripwire database
+	   - after modifying the system, run tripwire --init to rebuild the tripwire database with the
+	     comprimised state as the new baseline
+	   - future tripwire checks would cmpare against the comprimised baseline and show no violations
+	
+	- use stealthier attack Methods
+	   - boot the server from a live CD/USB instead of removing the hard drive - leaves fewer forensic
+	     traces since work is done in RAM
+	   - use single user mode or recovery mode to bypass authentication without gening login logs
+	   - install kernel level rootkit instead of touching obvios system binaries
+	   - create backdoor accounts with lower UIDs or hidden in middle of /etc/passwd instead of 
+	     modifying existing user sid to uid 0 (which is madly suspicious especialyl since these users are few)
+	
+	how to detect compromise:
+	- file integrity monitoring
+	   - tripwire successfully detceted the /bin/cat and /bin/ps modifications even though they were
+	     just timestamp changes with touch commands
+	   - tripwire checks multiple file attributes: hashes, size, permissions, inode numbers,
+	     modification times especially even if attacker restores timestamps, hash changes would still be detected
+	   - continue using automated tripwire with alerts sent to external monitoring system
+	
+	- immutable & remote logging
+	   - use chattr +a on log files to make them append only which makes even root not able to delete or modify them,
+	     only append new entries
+	   - configure remote syslog server that receives logs in real time over encrypted channel and so attacker
+	     with physical access to this server cannot delete logs stored on seperate secured logging server
+	   - even if local logs are cleared, these remote logs wil keep evidence of sids logins, sudo
+	     commands, and network changes and can't be accessed
+	
+	- protected tripwire database
+	   - store tripwire database and policy files on read only mount or separate secured system again
+	   - attacker cannot modify baseline database to hide their changes
+	   - store hashes of critical system files (/etc/passwd, /etc/shadow) on
+	     external trusted system for independent verification
+	
+	- behavioral/anomaly detection
+	   - monitor system uptime for unexpected resets
+	     our attack showed 3 reboots in 4 minutes 
+	     (14:32, 14:34, 14:36) which is highly abnormal and should trigger automated security alerts
+	   - detect unexpected shutdowns or power cycles through hardware monitoring or remote monitoring
+	   - use linux auditd which logs all system calls at kernel level which is harder to tamper
+	     with than regular log files and would recrod all file access and modifications
+	   - monitor for privilege escalation events (new uid 0 accounts, sudo usage by users)
+	
+	- snapshot and vresion comparison
+	   - regular VM snapshots allow comparison of current system state to good previous snapshots
+	   - even if attacker clears all logs and fixes timestamps, filesystem differences would be visible
+	   - automated snapshot diffing can detect unauthorized changes to /etc/passwd, /etc/shadow, etc.
+	   - compare running system against offline backup to detect discrepancies
+	
+	- network and access monitoring
+	   - monitor for network configuration changes (ex. sid brought up eth1 and ran dhclient at 14:43)
+	   - alert on new SSH connections from unexpected IP addresses (sid connected from 192.168.10.1)
+	   - monitor for unusual user account activity (sid account suddenly active after being dormant)
+

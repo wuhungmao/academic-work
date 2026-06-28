@@ -1,0 +1,89 @@
+
+Enumeration and misconfigured services
+
+Enumeration is the process of gathering information on a target in order to find potential attack vectors and aid in exploitation.
+This process is essential for an attack to be successful, as wasting time with exploits that either don't work or can crash the system can be a waste of energy. Enumeration can be used to gather usernames, passwords, network information, hostnames, application data, services, or any other information that may be valuable to an attacker.
+
+SMB
+Typically, there are SMB share drives on a server that can be connected to and used to view or transfer files. SMB can often be a great starting point for an attacker looking to discover sensitive information - you'd be surprised what is sometimes included on these shares. 
+
+Later, in your career, you may find yourself in a situation as a pen-tester where you need to discover these services and make recommendations on the fixes which would close/eliminate these vulnerabilities.
+
+
+---------------------------------------
+Setup Guidance:
+For this question, use the VM ubuntu22043, this is a fairly modern VM running a recent Ubuntu OS (it would work identically on the latest version since we are not exploiting a weakness in the OS, but rather a misconfigured service - service misconfiguration being a large cause of vulnerabilities in real life). In this question you are going to gain familiarity with: enumeration, smb servers, and learn that misconfigurations are a common source for security leaks. 
+Set up the VM and make sure you can connect to the VM from the "outside" (i.e., a Kali VM). 
+
+The VM is configured to automatically pick up new network adapters and obtain an IP address from any adapter you connect it to. However, this only seems to work with VMWare. On VirtualBox you will have to manually run the dhclient utility to enable the virtual en0 adapter. (similar procedure as for lab 4). . 
+
+As always, we recommend you either pick any network setup that lets you connect Kali to this VM (so we suggest placing this UbuntuVM on the same network as Kali).
+
+You will need to determine the IP address of the VM. Log in as student/student (username/password). 
+Then run: /sbin/ip addr show
+Look for an IP address that is not 127.0.0.1 (unless you gave it Host-Only) of course).
+
+If you do not have an IP address that is not 127.0.0.1 then you need to bring up the VM's network card. 
+You have sudo power for one command only. As student, run "sudo dhclient", provide the password "student". 
+Then check the ip address again. This is now your VM's IP address. 
+With that IP address in hand you can connect to the VM (you might have to set up port forwarding depending on your settings). 
+
+---------------------------------------
+1.  Enumeration.
+Use nmap to scan the Ubuntu22043 VM for open ports. 
+Question: Which port is samba running on (provide the actual port that is used for accepting connections in modern times, do NOT provide multiple ports).
+Answer: 445
+Provide the command you used here: nmap -sV -p- 142.1.46.134
+
+
+2. Use the tool enum4linux on Kali to find interesting shares on the Ubuntu22043 VM. 
+ Question: which share looks interesting?
+ Answer: csc347share
+Provide the command you used here: enum4linux 142.1.46.134
+
+3. Using the tool smbclient on Kali,  
+  Question: does this smb server allow passwordless and anonymous access, what command did you use to test this?  
+  Answer: Y/N? Yes 
+Provide the single/one command you used here: smbclient //142.1.46.134/csc347share
+
+4. Explore the smb share after connecting to it from Kali: 
+   Question: What is the flag in flag.txt in the share on Ubuntu22043
+   Answer: smb broken flag
+
+   Question: Now that you have access to the smb share, explore further. What is another potential user name on the Ubuntu22043 VM?
+   Answer: bob
+   How did you find out what the other usernames are (command or what did you do): I saw a letter written to Bob about removing
+	their ssh key in message.txt, so I believe bob is another potential user name on Ubuntu22043 VM. I used the following
+	commands: 
+	(in smb)
+	lcm /home/kali
+	get message.txt
+	exit
+	cat message.txt
+
+5. Widening your reach through horizontal privilege escalation (taking over more accounts of the same level of privilege on the same system). Use hydra to obtain the login of that other user. 
+How do you use hydra? man hydra, but on the next line there is a sample usage provided to you, you will need to change it to make it work for your setup. 
+
+"hydra -t 4 -l <username> -P /usr/share/wordlists/seclists/Passwords/darkweb2017-top1000.txt vV 10.10.10.6 ssh" 
+You can use any wordlist you want, I just know that the password is guaranteed to be in this one (if you do not have this wordlist in Kali, it is also provided in the starter files).  
+(this might take up to 45 minutes, as you don’t want to overwhelm the ssh server, often ssh servers limit the number of connections, you may also want to shuffle this file's contents, or break it down into smaller chunks to run separately)). 
+What is the user’s password: corvette
+What is the flag in the the flag.txt file when logging in as that user?: you_found_bobs_flag
+What is the exact command you used to obtain the password (and how long did it take approximately): 
+hydra -t 4 -l bob -P darkweb2017-top1000.txt -f 142.1.46.134 ssh
+It took roughly 20 minutes. 
+
+6. What would be the steps to take to correct this vulnerabilityand to correctly configure the smb server. (high level one/two sentences explanation is ok). 
+Answer: To correct this vulnerability, I would disable passwordless and anonymous access, so that unauthorized users wouldn't
+be able to access the smb server. 
+
+7.  Assume that instead of an ssh server, you'd be using hydra to connect to an ftp server, what is the hydra command for this? 
+Answer: 
+hydra -t 4 -l bob -P darkweb2017-top1000.txt -f 142.1.46.134 ftp
+
+8. What other file shareing servers/services do exist that hyrda can be used for?
+Answer:  
+adam6500 asterisk cisco cisco-enable cobaltstrike cvs firebird ftp[s] http[s]-{head|get|post} http[s]-{get|post}-form http-proxy http-proxy-urlenum icq imap[s] irc ldap2[s] ldap3[-{cram|digest}md5][s] memcached mongodb mssql mysql nntp oracle-listener oracle-sid pcanywhere pcnfs pop3[s] postgres radmin2 rdp redis rexec rlogin rpcap rsh rtsp s7-300 sip smb smtp[s] smtp-enum snmp socks5 ssh sshkey svn teamspeak telnet[s] vmauthd vnc xmpp
+
+
+End of question (8 questions for this topic).

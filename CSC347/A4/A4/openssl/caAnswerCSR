@@ -1,0 +1,52 @@
+#!/bin/bash
+
+DEMOCA="demoCA";
+
+rm -fr client
+mkdir client
+
+# ANSWER MY CSR (on the assignment page, req.pem).
+# TAKE IT, PLACE IT IN the $DEMOCA/requests DIRECTORY
+
+openssl ca -config openssl.conf  -in $DEMOCA/requests/req.pem -out client/newcert.pem
+# The above does ...
+#
+# 	YOUR ANSWER GOES HERE
+#   This command signs req.pem using the private key in cakey.pem, and the signed x.509 certificate
+#   is stored in client/newcert.pem. 
+#
+# As in caSetup, document files created below.
+# The following files will be created in ... (take a look at newcerts directory as well)
+# ...
+
+# YOUR ANSWER GOES HERE
+# $DEMOCA/client/newcert.pem
+#   It contains the x.509 certificate signed by me. 
+#
+# $DEMOCA/newcerts/1000.pem
+#   It is a copy of newcert.pem, where "1000" is the serial number. 
+#
+# $DEMOCA/index.txt 
+#   It now contains the record of the newly created certificate, which contains "V" as valid. 
+#
+# $DEMOCA/index.txt.attr
+#   It contains "unique_subject = yes", which forces different subjects for different certificates. 
+#
+# $DEMOCA/index.txt.old
+#   It contains the old index.txt, which is used to keep the previous version of index.txt. 
+#
+# $DEMOCA/serial 
+#   It contains the current serial number (updated to 1001). 
+#
+# $DEMOCA/serial.old
+#   It contains the last serial number (1000). 
+
+# SEND client/newcert.pem back to the requesting client. 
+
+# To take a look at the new certificate...
+openssl x509 -in client/newcert.pem -inform PEM -text -noout
+
+# This verifies the certificate chain 
+openssl verify -verbose -CAfile $DEMOCA/cacert.pem  client/newcert.pem
+
+

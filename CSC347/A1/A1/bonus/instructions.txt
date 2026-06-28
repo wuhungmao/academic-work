@@ -1,0 +1,16 @@
+Take a look at tmp2.s
+
+Question A) 
+What is this function doing? (be as brief as possible, one word is enough).
+
+YOUR ANSWER GOES HERE
+
+Question B) 
+How did you determine what this function is doing? Describe briefly what gave it away, when did you realize that this is what the function is doing?
+(We'll accept any reasonable answer that convinces us that you understand this piece of code, but keep it below 4 sentences, don't go overboard with your explanation).
+
+YOUR ANSWER GOES HERE
+
+
+
+

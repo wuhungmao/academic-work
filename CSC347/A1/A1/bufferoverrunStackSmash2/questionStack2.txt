@@ -1,0 +1,13 @@
+
+
+stack.c from lecture 1 currently seg faults after it has called function hacked. 
+
+Modify this file as specified below and name it stackNoCrash.c, place this .c file in this directory,
+The goal is to modify it in a way so that it does not crash and has the following functionality. 
+When compiled like so: gcc -g stackNoCrash.c && ./a.out 
+then the function hacked should run corretly and the program should exit normally.
+
+
+Restrictions:
+- You are only allowed to modify function sumNums, nothing else.
+- You are only allowed to manipulate/add C code that alters array c in function sumNums.

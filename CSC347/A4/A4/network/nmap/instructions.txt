@@ -1,0 +1,86 @@
+
+
+From your Kali VM.
+
+Use nmap to scan the OWASP VM of csc347.
+
+A) (2 Points) List your command(s) which: scans ports 1 to 15000; attempts to detect which OS the VM is running;
+and which services are up.
+
+(Ensure that your command will detect and report the apache and php versions).
+Also paste the output of the scan below.
+
+└─$ sudo nmap -p 1-15000 -sS -sV --version-all -O 192.168.10.128
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-11-23 10:01 EST
+Nmap scan report for 192.168.10.128
+Host is up (0.0014s latency).
+Not shown: 14996 closed tcp ports (reset)
+PORT     STATE SERVICE   VERSION
+22/tcp   open  ssh       OpenSSH 4.7p1 Debian 8ubuntu1.2 (protocol 2.0)
+80/tcp   open  http      Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.7 with Suhosin-Patch)
+7779/tcp open  jetdirect JetDirect
+7780/tcp open  unknown
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port7780-TCP:V=7.95%I=9%D=11/23%Time=692321C0%P=x86_64-pc-linux-gnu%r(G
+SF:enericLines,96,"ERROR:\x20processing\x20start,\x20expecting\x20digit\nU
+SF:SAGE:\x20start,stop,step\x20where\x20each\x20is\x20an\x20integer\x20fro
+SF:m\x200/1\x20to\x202147483647\nUSAGE:\x20try\x201,4,1\x20or\x201,5,1\x20
+SF:for\x20example\n")%r(GetRequest,96,"ERROR:\x20processing\x20start,\x20e
+SF:xpecting\x20digit\nUSAGE:\x20start,stop,step\x20where\x20each\x20is\x20
+SF:an\x20integer\x20from\x200/1\x20to\x202147483647\nUSAGE:\x20try\x201,4,
+SF:1\x20or\x201,5,1\x20for\x20example\n")%r(HTTPOptions,96,"ERROR:\x20proc
+SF:essing\x20start,\x20expecting\x20digit\nUSAGE:\x20start,stop,step\x20wh
+SF:ere\x20each\x20is\x20an\x20integer\x20from\x200/1\x20to\x202147483647\n
+SF:USAGE:\x20try\x201,4,1\x20or\x201,5,1\x20for\x20example\n")%r(RTSPReque
+SF:st,96,"ERROR:\x20processing\x20start,\x20expecting\x20digit\nUSAGE:\x20
+SF:start,stop,step\x20where\x20each\x20is\x20an\x20integer\x20from\x200/1\
+SF:x20to\x202147483647\nUSAGE:\x20try\x201,4,1\x20or\x201,5,1\x20for\x20ex
+SF:ample\n")%r(RPCCheck,96,"ERROR:\x20processing\x20start,\x20expecting\x2
+SF:0digit\nUSAGE:\x20start,stop,step\x20where\x20each\x20is\x20an\x20integ
+SF:er\x20from\x200/1\x20to\x202147483647\nUSAGE:\x20try\x201,4,1\x20or\x20
+SF:1,5,1\x20for\x20example\n")%r(DNSVersionBindReqTCP,96,"ERROR:\x20proces
+SF:sing\x20start,\x20expecting\x20digit\nUSAGE:\x20start,stop,step\x20wher
+SF:e\x20each\x20is\x20an\x20integer\x20from\x200/1\x20to\x202147483647\nUS
+SF:AGE:\x20try\x201,4,1\x20or\x201,5,1\x20for\x20example\n")%r(DNSStatusRe
+SF:questTCP,96,"ERROR:\x20processing\x20start,\x20expecting\x20digit\nUSAG
+SF:E:\x20start,stop,step\x20where\x20each\x20is\x20an\x20integer\x20from\x
+SF:200/1\x20to\x202147483647\nUSAGE:\x20try\x201,4,1\x20or\x201,5,1\x20for
+SF:\x20example\n")%r(Hello,96,"ERROR:\x20processing\x20start,\x20expecting
+SF:\x20digit\nUSAGE:\x20start,stop,step\x20where\x20each\x20is\x20an\x20in
+SF:teger\x20from\x200/1\x20to\x202147483647\nUSAGE:\x20try\x201,4,1\x20or\
+SF:x201,5,1\x20for\x20example\n")%r(Help,96,"ERROR:\x20processing\x20start
+SF:,\x20expecting\x20digit\nUSAGE:\x20start,stop,step\x20where\x20each\x20
+SF:is\x20an\x20integer\x20from\x200/1\x20to\x202147483647\nUSAGE:\x20try\x
+SF:201,4,1\x20or\x201,5,1\x20for\x20example\n");
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.95%E=4%D=11/23%OT=22%CT=1%CU=40940%PV=Y%DS=2%DC=I%G=Y%TM=692321
+OS:D1%P=x86_64-pc-linux-gnu)SEQ(SP=CB%GCD=1%ISR=CD%TI=Z%CI=Z%II=I%TS=7)SEQ(
+OS:SP=CB%GCD=1%ISR=D1%TI=Z%CI=Z%II=I%TS=7)SEQ(SP=CE%GCD=1%ISR=CF%TI=Z%CI=Z%
+OS:II=I%TS=7)SEQ(SP=CF%GCD=1%ISR=D0%TI=Z%CI=Z%II=I%TS=7)SEQ(SP=D0%GCD=1%ISR
+OS:=D0%TI=Z%CI=Z%II=I%TS=7)OPS(O1=M5B4ST11NW5%O2=M5B4ST11NW5%O3=M5B4NNT11NW
+OS:5%O4=M5B4ST11NW5%O5=M5B4ST11NW5%O6=M5B4ST11)WIN(W1=16A0%W2=16A0%W3=16A0%
+OS:W4=16A0%W5=16A0%W6=16A0)ECN(R=Y%DF=Y%T=40%W=16D0%O=M5B4NNSNW5%CC=N%Q=)T1
+OS:(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%
+OS:S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(
+OS:R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F
+OS:=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=6
+OS:05D%RUD=G)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=6077%R
+OS:UD=G)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=6083%RUD=G)
+OS:U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=609D%RUD=G)U1(R=
+OS:Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=60A7%RUD=G)IE(R=Y%DFI
+OS:=N%T=40%CD=S)
+
+Network Distance: 2 hops
+Service Info: OS: Linux; Device: printer; CPE: cpe:/o:linux:linux_kernel
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 29.83 seconds
+
+
+B)  (1 Point) Why would unicornscan likely not be able to detect the OS if nmap wasn't able to detect the OS?
+(Hint, unicornscan --help).
+
+unicorn scan port scanner is fast, asynch & does not implement full tcp/ip os fingerprinting like nmap
+basically if nmaps -O which is their os detection, and fingerprint database can't identify the os
+then a tool like unicornscan, which lakcs comparable os detection, is even less likely to be able to determine os

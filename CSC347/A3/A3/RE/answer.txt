@@ -1,0 +1,3 @@
+
+Successful input candidate: tbbyb
+Flag: flag-{full_marks_for_the_bonus}

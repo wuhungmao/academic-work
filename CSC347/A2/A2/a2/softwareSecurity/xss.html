@@ -1,0 +1,69 @@
+<html>
+	<body>
+		<h1> # FIX: XSS: user input/output is not vetted </h1>
+		<h2> The Vulnerability </h2>
+		<ul>
+			<li> Brief explanation:
+<xmp>
+        XSS stands for Cross-Site Scripting. The attacker could inject malicious code through input field 
+        if the input is not sanitized properly. Other users's browsers will execute the malicious code when they view the page.
+</xmp>
+                        </li>
+			<li> Example code etc.:
+
+<xmp>
+                                <script type="text/javascript">
+                                    alert("XSS malicious code executing");
+                                </script>
+</xmp>
+                        </li>
+			<li> How attacker exploits this: 
+<xmp>
+        The attacker could inject the malicious code through input field, for example, the attacker could inject malicious code 
+        into our database through expression input field. Then when another user views the page, php will echo malicious code in 
+        $expression which it retrieve from the data base.
+</xmp>
+                        </li>
+			<li> Impact: CIAaa and some details
+<xmp>
+        Confidentiality:  steals user's cookies and hijack user's session.
+        Integrity:  modifies the content of the web page.
+        Availability: redirects user to a malicious website.
+        Authentication: steals user's cookies and hijack user's session.
+        Authorization: steals user's cookies and hijack user's session.
+</xmp>
+                        </li>
+		</ul>
+
+		<h2> INSTRUCTIONS TO VERIFY VULNERABILITY BELOW </h2>
+<xmp>
+                1. Go to fourFours web application
+                2. In the expression input field, enter the following code:
+                        <script type="text/javascript">
+                            alert("XSS malicious code executing...");
+                        </script>
+                3. Click on submit button.
+                4. You should see an alert box pop up with the message "XSS malicious code executing...".
+</xmp>
+               <h2> INSTRUCTIONS TO VERIFY VULNERABILITY BELOW </h2>
+<xmp>
+</xmp>
+                <h2> The Fix </h2>
+                <ul>
+                        <li> Explain the fix:
+<xmp>
+        We use the PHP function htmlspecialchars() to sanitize user input. This function converts special characters to HTML entities.
+        For example, it will convert < to &lt; and > to &gt;. So when php echo the string, the browser will not interpret it as JavaScript code.
+        we also sanitize/escape the output using htmlspecialchars() function before echoing it to the browser. Giving us double security.
+</xmp>
+                        </li>
+                        <li> How the fix resolves the issue:
+<xmp>
+        The fix prevents the attacker from injecting malicious code through input field. The browser will not interpret the input as JavaScript code.
+        So the malicious code will not be executed.
+</xmp>
+                        </li>
+                </ul>
+
+	</body>
+</html>

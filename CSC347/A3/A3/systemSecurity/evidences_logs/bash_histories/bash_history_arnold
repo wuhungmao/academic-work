@@ -1,0 +1,15 @@
+shutdown -h now
+adduser charlie
+usermod -a -G admin bill
+history | grep -ie tripwire
+tripwire --check
+tripwire --check | more
+tripwire --update
+ls /var/lib/tripwire/report/ubuntuA3-2020111*
+tripwire --update /var/lib/tripwire/report/ubuntuA3-20201111-102142.twr
+tripwire --help
+tripwire --update --twrfile /var/lib/tripwire/report/ubuntuA3-20201111-102142.twr
+shutdown -h now
+tripwire --check
+ls
+shutdown -h now

@@ -1,0 +1,62 @@
+<html>
+	<body>
+		<h1> # FIX OWASP 2013 A2: SESSION FIXATION </h1>
+		<h2> The Vulnerability </h2>
+		<ul>
+			<li> Brief explanation:
+<xmp>
+		Session fixation is an attack that allows an attacker to hijack a valid user session. The attacker tricks the user into using a session ID known to the attacker.
+		After the user logs in, the attacker uses the known session ID to gain unauthorized access to the user's account.
+</xmp>
+			</li>
+			<li> Example code etc.:
+<xmp>
+		https://fourFours/index.php?PHPSESSID=abc123
+</xmp>
+			</li>
+			<li> How attacker exploits this: 
+<xmp>
+	    The attacker first get a session id by visiting fourFours website. Then the attacker sends a user above link, tricking the user
+		into using the attacker's session id to login into fourFours. After the user logs in, the attacker uses the known session id to 
+		login and retrieve user's information.
+</xmp>
+			</li>
+			<li> Impact: CIAaa and some details
+<xmp>
+		Confidentiality:  gain unauthorized access to user's account and retrieve sensitive information.
+		Integrity:  modify user's information.
+		Availability:  delete user's account.
+		Authentication: bypass authentication and login as another user.
+		Authorization: gain unauthorized access to data.
+</xmp>
+			</li>
+		</ul>
+
+		<h2> INSTRUCTIONS TO VERIFY VULNERABILITY BELOW </h2>
+<xmp>
+		1. Attacker go to fourFours web application and login, gaining a session id "abc123"
+		2. Send a link containing his session id to a user. User click the link and login to fourFours with attacker's session id
+		3. User successfully logged in, do something while attacker notes down the session id "abc123"
+		4. Attacker use the known session id "abc123" to login to fourFours, gaining unauthorized access to user's account
+</xmp>
+               <h2> INSTRUCTIONS TO VERIFY VULNERABILITY BELOW </h2>
+<xmp>
+</xmp>
+                <h2> The Fix </h2>
+                <ul>
+                        <li> Explain the fix:
+<xmp>
+		In the code, after login, we regenerate a new session id for the user using session_regenerate_id(true).
+</xmp>
+                        </li>
+                        <li> How the fix resolves the issue:
+<xmp>
+		The fix will clear the old session id and generate a new session id for the user after login. 
+		So even if the attacker tricks the user into using a session id known to the attacker, 
+		the session id will be different after login, preventing the attacker from using the known session id to log into user's account.
+</xmp>
+                        </li>
+                </ul>
+
+	</body>
+</html>

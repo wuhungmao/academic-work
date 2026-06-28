@@ -1,0 +1,185 @@
+=============================
+Q1 Marking Scheme (Out of 10)
+=============================
+- explanation.txt  (1 Mark)
+====================
+	- hacker will run race as root
+	- When the setuid bit is used and an executable is launched, it does not
+	run with the privileges of the user who launched it, but with that of the file
+	owner instead. So, for example, if race has the setuid bit set on it, and
+	it's owned by root, when launched by hacker, it will run with root privileges.
+
+	-.5 to a minimum of 0, if there is some conceptual error.
+	For example, if they say that the file
+	has root permissions because root compiled it. It is because root owns the executable.
+
+- modifyRoot.txt: (2 Marks)
+=====================
+	- explanation that understands the race condition as the difference
+	in time between checking access for the file and opening the file.
+
+	It is not the fact that there is a scanf in there, this just makes it easier
+	to target.
+
+- rootShell.txt: (3 Marks)
+=====================
+  Complete description we can easily cut and paste, example:
+
+	We open two terminals,
+       		In terminal 1, we run "/questions/race/race"
+       		In terminal 2, we execute 'ln -sf "/etc/passwd" "/tmp/permitted" '
+       		In terminal 1, we enter the desired data, and hit enter.
+
+		The desired data in question is
+		"hacker:x:0:0::/home/hacker:/bin/bash" (to use hackers old password)
+		"root2:aa7msUHrA64bE:0:1000:ExploitedRootAccess:/home/hacker:/bin/bash" (uses a new password in place in passwd)
+
+  	Script/program we can run
+
+  	Description with the general idea
+
+  	Anything else
+
+race.c: (4 Marks)
+=====================
+- fixes:
+4/4
+
+	- Ensure that the file that is checked has the same inode number as the file that is opened
+
+	- Reduce privilege, once you know that the user can access the file, modify privilege
+		so that the fopen takes place in the context of the executing user.
+
+		seteuid(getuid());
+
+3/4: Open on direct files, not links as in the example below...
+
+    If user other than hacker previously accessed /tmp/permitted, attacker can
+    ln to a file they have access to, and then remove the link
+    so the attacker can access the /tmp/permitted they were not supposed
+    to access.
+
+    if(!access(fn, W_OK)){
+        scanf("%100s", buffer );
+        int fd = open(fn, O_NOFOLLOW);
+        fp = fdopen(fd, "w");
+
+3/4: make more difficult:
+	- Check access repeatedly to make timing more difficult for the attacker.
+	if(!access("/tmp/permitted", W_OK)){
+                if(!access("/tmp/permitted", W_OK)){
+                        if(!access("/tmp/permitted", W_OK)){
+                                fd = open("/tmp/permitted",1);
+
+
+
+2/4: Decrease the time between access and fopen:
+   		by moving the scanf("%100s", buffer );
+
+1/4:Things that do not work:
+  - Switch order of fopen and access call. This is again a race condition.
+	First ln to /etc/passwd, then quickly unlink
+
+	fp = fopen(fn, "w");
+	if(!access(fn, W_OK)){
+
+  - hardcoding a particular id for calls like
+    seteuid(501);
+
+
+
+=============================
+Q2 Marking Scheme (25 Marks)
+=============================
+Correctly identified vulnerabilities in REPORT.txt (10 Marks)
+Fixes (10 Marks)
+=========================
+addUser()
+    1. Validate User and password, if not already done in main() [??????]
+
+getAccount()
+    1. Check strncat size for bufferoverrun, path + user + null terminator may exceed fileName[100] [??????]
+
+setAccount()
+    1. Check strncat size for bufferoverrun, path + user + null terminator may exceed fileName[100] [??????]
+
+logTransaction()
+    1. Validate Transaction or WhiteList transactions [??????]
+
+authenticate()
+    1. Check if password file deleted [??????]
+    2. Add limits on fscanf, otherwise buffer overrun on u[100] p[100] or null terminate user/pass in main or addUser[??????]
+    3. [BONUS] fclose before return 1 or return 0 [??????]
+
+report()
+    1. Check strncat size for bufferoverrun, path + user may exceed fileName[100] [??????]
+    2. Quit with error if username is truncated, if not already done in main(); [??????]
+
+main()
+    1. Validate/Whitelist username [??????]
+    2. null terminate username [??????]
+    3. check username length and quit with error if truncated [??????]
+    4. verify length of args to prevent bufferoverrun on transaction or null terminate it [??????]
+    5. validate/whitelist password [??????]
+    6. null terminate password and quit with error if truncated [??????]
+    7. validate amounts to make sure integer, check positive [??????]
+    8. verify amounts for integer overflow & make sure target doesnt overflow [??????]
+    9. validate targetAccount and length [??????]
+    10. check that target is not user [??????]
+    11. verify that the correct user is executing this, getenv is not safe. [??????]
+
+Issues Fixed 0/10
+
+Vulnerabilities Exploited (15 Marks)
+===========================
+-Vulnerabilities should exploit issues related to the fixes above.
+The lower half of the marking scheme, upto 4 Vulns is fixed; the upper half of the marking scheme may change.
+15 to INF Vulns > 13-15 marks
+10 Vulns > 12 marks
+7 Vulns > 11 Marks
+4 Vulns > 8 marks
+2 Vulns > 5 marks
+1 Vuln > 2 marks
+0 Vulns > 0 marks
+
+Duplicate exploits are not counted, these need to be unique exploits and vulnerabilities.
+
+
+=============================
+Q3 Marking Scheme (Out of 12 Marks)
+=============================
+Part A (1 Marks)
+===================
+	0.5 Correct IP and Port
+	0.5 Bufferoverflow with larger string
+
+Part B(5 Marks)
+===================
+	1 You tried
+	1 Needs <= 2 Fixes to Work
+	1 Needs <= 1 fix to Work
+	1 Needs <=1 typo or very small fix
+	1 Works perfectly
+
+Part C(1 Mark)
+==================
+	1 Printf Exploit (%x, %p)
+
+Part D(5 Marks)
+==================
+	1 Recompile and correct replacement script
+	2 Buffer length check (code)
+	1.5 Printf fix (code)
+	0.5 Discuss other fixes
+
+
+=============================
+Q4 Marking Scheme (7 Marks)
+=============================
+Part A (2 Marks)
+=============================
+correct answer (1), explanation (1)
+
+Part B (5 Marks)
+=============================
+correct answer (1), explanation (4)
