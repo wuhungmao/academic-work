@@ -96,13 +96,13 @@ University of Toronto Mississauga (expected graduation with PEY CO-OP - August 2
 \section*{AI \& Machine Learning Projects}
 \begin{itemize}
 
-\item[] \textbf{AI-Video Detection Ensemble} $\mid$ \textit{Python, PyTorch, React, Modal, Vercel} \hfill \href{https://github.com/utmgdsc/AI-Video-Detection}{GitHub} $\mid$ \href{https://deepfake-detector-gamma.vercel.app/}{Live Demo} $\mid$ Feb 2026
+\item[] \textbf{AI-Video Detection Ensemble} $\mid$ \textit{Python, PyTorch, OpenCV, NumPy} \hfill \href{https://github.com/utmgdsc/AI-Video-Detection}{Link} $\mid$ Feb 2026
   \begin{itemize}
-    \item \textbf{Deployed} a full-stack deepfake detection web app: React frontend on Vercel and serverless GPU inference backend on Modal, accessible at \href{https://deepfake-detector-gamma.vercel.app/}{deepfake-detector-gamma.vercel.app}.
     \item Built an ensemble composed of 4 models (EfficientNet, MesoNet, XceptionNet, AASIST) to detect general \& deepfake AI-generated video.
     \item Fine-tuned a pre-trained EfficientNet-B1 model on datasets such as AIGVDBench and FaceForensics++, which use diffusion and face transfer methods to generate deepfake videos.
     \item Leveraged Transfer Learning to detect AI-generated media with high precision.
     \item Integrated the EfficientNet-B1 inference logic into the ensemble, utilizing MTCNN for face detection and cropping, and Albumentations for high-performance preprocessing.
+    \item Designed an ensemble architectural diagram including preprocessing, inference, and postprocessing stages.
     \item Enabled parallel inference and took weighted scores to make the final REAL/FAKE prediction; communicated backend results with the frontend through HTTP requests.
     \item Co-authored the unpublished research manuscript {``Ensemble Deep Learning Approaches for AI-Altered Video Detection,''} detailing the multimodal architecture, performance metrics, and ensemble strategies.
     \item Served as both Project Manager and Senior Developer of a 5-member team; actively participated in two weekly meetings --- a Sunday sync facilitated by the mentor to review weekly progress, identify blockers, and plan upcoming tasks, and a Monday meeting to present results to the professor.
