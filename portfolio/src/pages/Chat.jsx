@@ -15,13 +15,13 @@ const QUICK_ACTIONS = [
 export default function Chat() {
   const navigate = useNavigate()
   const bottomRef = useRef(null)
-  const inputRef = useRef(null)
   const [draft, setDraft] = useState('')
 
-  const { messages, append, isLoading } = useChat({
+  const { messages, sendMessage, status } = useChat({
     api: '/api/chat',
   })
 
+  const isLoading = status === 'submitted' || status === 'streaming'
   const hasMessages = messages.length > 0
 
   useEffect(() => {
@@ -34,7 +34,7 @@ export default function Chat() {
     const q = text.trim()
     if (!q || isLoading) return
     setDraft('')
-    append({ role: 'user', content: q })
+    sendMessage({ text: q })
   }
 
   function handleKey(e) {
@@ -44,22 +44,40 @@ export default function Chat() {
     }
   }
 
+  function renderMessage(msg) {
+    const parts = msg.parts ?? []
+    if (parts.length === 0) {
+      const text = typeof msg.content === 'string' ? msg.content : ''
+      return text ? <p className="chat-msg-text">{text}</p> : null
+    }
+    return parts.map((part, j) => {
+      if (part.type === 'text') {
+        return <p key={j} className="chat-msg-text">{part.text}</p>
+      }
+      // Static tools: type is 'tool-{toolName}' (e.g. 'tool-getProjects')
+      // Dynamic tools: type is 'dynamic-tool' with a toolName property
+      if (part.type.startsWith('tool-') || part.type === 'dynamic-tool') {
+        if (part.state !== 'output-available') return null
+        const toolName = part.type === 'dynamic-tool' ? part.toolName : part.type.slice(5)
+        return <ToolResult key={j} toolName={toolName} output={part.output} />
+      }
+      return null
+    })
+  }
+
   return (
     <div className="chat-page">
-      {/* Back button */}
       <button className="chat-back" onClick={() => navigate('/')}>
         ← back
       </button>
 
       {!hasMessages ? (
-        /* ── Landing state: centered search bar ── */
         <div className="chat-landing">
           <div className="chat-landing-title">Chat with Marvin</div>
           <p className="chat-landing-sub">Ask me about my projects, skills, experience, or anything else.</p>
 
           <div className="chat-input-wrap chat-input-wrap--landing">
             <input
-              ref={inputRef}
               className="chat-input"
               placeholder="Ask me anything..."
               value={draft}
@@ -86,7 +104,6 @@ export default function Chat() {
           </div>
         </div>
       ) : (
-        /* ── Conversation state ── */
         <div className="chat-conversation">
           <div className="chat-messages">
             {messages.map((msg, i) => (
@@ -95,27 +112,7 @@ export default function Chat() {
                   {msg.role === 'user' ? 'you' : 'marvin'}
                 </span>
                 <div className="chat-msg-body">
-                  {msg.parts ? (
-                    msg.parts.map((part, j) => {
-                      if (part.type === 'text') {
-                        return <p key={j} className="chat-msg-text">{part.text}</p>
-                      }
-                      if (
-                        part.type === 'tool-invocation' &&
-                        part.toolInvocation?.state === 'result'
-                      ) {
-                        return (
-                          <ToolResult
-                            key={j}
-                            toolName={part.toolInvocation.toolName}
-                          />
-                        )
-                      }
-                      return null
-                    })
-                  ) : (
-                    <p className="chat-msg-text">{msg.content}</p>
-                  )}
+                  {renderMessage(msg)}
                 </div>
               </div>
             ))}
@@ -133,7 +130,6 @@ export default function Chat() {
             <div ref={bottomRef} />
           </div>
 
-          {/* Sticky input bar */}
           <div className="chat-input-bar">
             <div className="chat-input-wrap">
               <input

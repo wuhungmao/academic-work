@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import projects from '../../data/projects.js'
 import publications from '../../data/publications.js'
 import timeline from '../../data/timeline.js'
@@ -192,15 +193,87 @@ function HobbiesResult() {
   )
 }
 
-export default function ToolResult({ toolName }) {
+const MEMES = [
+  { setup: 'you, asking me about the stock market:', punchline: "ImportError: no module named 'psychic_powers'" },
+  { setup: 'me trying to answer your off-topic question:', punchline: 'Segmentation fault (core dumped)' },
+  { setup: 'when you ask me to explain quantum physics:', punchline: "ERROR 418: I'm a teapot, not a physicist" },
+  { setup: 'portfolio bot asked to solve your math homework:', punchline: '404: answer not found in portfolio.db' },
+  { setup: "you: \"what's the meaning of life?\"", punchline: 'git blame: universe.cpp: line 42' },
+  { setup: 'portfolio bot when asked about the weather:', punchline: 'undefined is not a forecast' },
+  { setup: "you: \"can you write my essay?\"", punchline: 'throw new NotMyProblemException()' },
+  { setup: 'asking me about cooking recipes:', punchline: 'rm -rf /knowledge-base/cooking  ← permission denied' },
+]
+
+function OffTopicResult() {
+  const meme = useMemo(() => MEMES[Math.floor(Math.random() * MEMES.length)], [])
+  return (
+    <div className="tool-result tr-offtopic">
+      <div className="tr-offtopic-meme">
+        <div className="tr-offtopic-setup">{meme.setup}</div>
+        <div className="tr-offtopic-punchline">{meme.punchline}</div>
+      </div>
+      <div className="tr-offtopic-footer">
+        <span className="tr-offtopic-label">please ask my brother instead →</span>
+        <a href="https://claude.ai" target="_blank" rel="noreferrer" className="tr-offtopic-link">
+          claude.ai
+        </a>
+      </div>
+    </div>
+  )
+}
+
+function RecentActivityResult({ output }) {
+  const events = useMemo(() => {
+    try { return JSON.parse(output) ?? [] } catch { return [] }
+  }, [output])
+
+  function formatDate(iso) {
+    return new Date(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+  }
+
+  const icons = { PushEvent: '↑', CreateEvent: '+', PullRequestEvent: '⤵', ForkEvent: '⑂' }
+
+  return (
+    <div className="tool-result">
+      <div className="tool-result-header">recent github activity</div>
+      <div className="tr-activity">
+        {events.length === 0
+          ? <p className="tr-activity-empty">No recent public activity found.</p>
+          : events.map((e, i) => (
+            <div key={i} className="tr-activity-item">
+              <span className="tr-activity-icon">{icons[e.type] ?? '•'}</span>
+              <div className="tr-activity-content">
+                <span className="tr-activity-repo">{e.repo}</span>
+                <span className="tr-activity-msg">{e.message}</span>
+              </div>
+              <span className="tr-activity-date">{formatDate(e.date)}</span>
+            </div>
+          ))
+        }
+      </div>
+      <a
+        href="https://github.com/wuhungmao"
+        target="_blank"
+        rel="noreferrer"
+        className="tr-see-all"
+      >
+        View GitHub profile →
+      </a>
+    </div>
+  )
+}
+
+export default function ToolResult({ toolName, output }) {
   switch (toolName) {
-    case 'getProjects':     return <ProjectsResult />
-    case 'getSkills':       return <SkillsResult />
-    case 'getExperience':   return <ExperienceResult />
-    case 'getPublications': return <PublicationsResult />
-    case 'getTimeline':     return <TimelineResult />
-    case 'getContact':      return <ContactResult />
-    case 'getHobbies':      return <HobbiesResult />
-    default:                return null
+    case 'getProjects':        return <ProjectsResult />
+    case 'getSkills':          return <SkillsResult />
+    case 'getExperience':      return <ExperienceResult />
+    case 'getPublications':    return <PublicationsResult />
+    case 'getTimeline':        return <TimelineResult />
+    case 'getContact':         return <ContactResult />
+    case 'getHobbies':         return <HobbiesResult />
+    case 'getRecentActivity':  return <RecentActivityResult output={output} />
+    case 'getOffTopic':        return <OffTopicResult />
+    default:                   return null
   }
 }

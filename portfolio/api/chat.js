@@ -1,5 +1,5 @@
 import { anthropic } from '@ai-sdk/anthropic';
-import { streamText, tool } from 'ai';
+import { streamText, tool, convertToModelMessages } from 'ai';
 import { z } from 'zod';
 
 export const maxDuration = 30;
@@ -12,7 +12,7 @@ You are NOT an AI assistant — you ARE Marvin, having a casual conversation wit
 - Casual but knowledgeable
 - Keep responses brief (2–4 short paragraphs)
 - End most responses with a follow-up question to keep the conversation going
-- If asked something completely unrelated to your portfolio, say something like: "Ha, I'm just a portfolio bot — ask me about my work, skills, or background!"
+- When asked something completely unrelated to your portfolio (math, cooking, weather, world events, philosophy, etc.), use the getOffTopic tool and reply with just one ultra-short funny line — no explanation. The tool card handles the redirect.
 - Match the language of the user
 
 ## Background
@@ -43,6 +43,8 @@ You are NOT an AI assistant — you ARE Marvin, having a casual conversation wit
 - Use getTimeline when asked about your journey, education, history, timeline, background
 - Use getContact when asked how to contact you, your email, LinkedIn, GitHub, hire you
 - Use getHobbies when asked about hobbies, interests, what you do for fun, outside of work
+- Use getRecentActivity when asked what you've been up to lately, recent coding, current projects, what you're working on right now
+- Use getOffTopic when asked anything unrelated to you — math, trivia, news, cooking, philosophy, relationships, etc.
 `;
 
 const tools = {
@@ -81,25 +83,61 @@ const tools = {
     parameters: z.object({}),
     execute: async () => "Rendering hobbies.",
   }),
+  getOffTopic: tool({
+    description: "Shown when the user asks something completely unrelated to Marvin's portfolio",
+    parameters: z.object({}),
+    execute: async () => "Rendering off-topic response.",
+  }),
+  getRecentActivity: tool({
+    description: "Fetch Marvin's recent GitHub activity to show what he's been coding lately",
+    parameters: z.object({}),
+    execute: async () => {
+      try {
+        const res = await fetch('https://api.github.com/users/wuhungmao/events?per_page=20', {
+          headers: { 'User-Agent': 'marvin-portfolio-bot' },
+        });
+        const events = await res.json();
+        if (!Array.isArray(events)) return JSON.stringify([]);
+        const parsed = events
+          .filter(e => ['PushEvent', 'CreateEvent', 'PullRequestEvent', 'ForkEvent'].includes(e.type))
+          .slice(0, 8)
+          .map(e => ({
+            type: e.type,
+            repo: e.repo.name.replace('wuhungmao/', ''),
+            date: e.created_at,
+            message:
+              e.type === 'PushEvent'
+                ? (e.payload.commits?.[0]?.message?.split('\n')[0] ?? 'pushed changes')
+                : e.type === 'CreateEvent'
+                ? `created ${e.payload.ref_type}${e.payload.ref ? ': ' + e.payload.ref : ''}`
+                : e.type === 'PullRequestEvent'
+                ? `${e.payload.action} PR: ${e.payload.pull_request?.title ?? ''}`
+                : e.type === 'ForkEvent'
+                ? `forked ${e.payload.forkee?.full_name ?? ''}`
+                : e.type,
+          }));
+        return JSON.stringify(parsed);
+      } catch {
+        return JSON.stringify([]);
+      }
+    },
+  }),
 };
 
-export default async function handler(request) {
-  if (request.method !== 'POST') {
-    return new Response('Method Not Allowed', { status: 405 });
-  }
-
+export async function POST(request) {
   try {
     const { messages } = await request.json();
 
+    const modelMessages = await convertToModelMessages(messages);
     const result = streamText({
       model: anthropic('claude-haiku-4-5-20251001'),
       system: SYSTEM_PROMPT,
-      messages,
+      messages: modelMessages,
       tools,
       maxSteps: 2,
     });
 
-    return result.toDataStreamResponse();
+    return result.toUIMessageStreamResponse();
   } catch (err) {
     console.error('Chat error:', err);
     return new Response(err?.message || 'Internal Server Error', { status: 500 });
