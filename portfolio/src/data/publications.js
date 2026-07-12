@@ -5,9 +5,9 @@ const publications = [
     authors: 'Wu, H.-M., Bi, F., Abdelhadi, Y., Lin, W., Khan, L.',
     venue: 'Computer Science Implementation Project (CSC492), University of Toronto Mississauga',
     date: 'Apr 2026',
-    status: 'unpublished',
+    status: 'published',
     description: 'Proposes a multimodal ensemble architecture combining EfficientNet-B1, MesoNet, XceptionNet, and AASIST to detect AI-generated and deepfake video. Details fine-tuning strategies on AIGVDBench and FaceForensics++, MTCNN-based face detection, Albumentations preprocessing, parallel inference with weighted scoring, and ensemble architectural design.',
-    pdf: 'https://drive.google.com/file/d/1KaVo7DM9onu-ap9cOaXpPX9bg1vr4znx/view?usp=sharing',
+    pdf: 'https://arxiv.org/abs/2607.06872',
     tags: ['Deep Learning', 'Deepfake Detection', 'Ensemble Methods', 'Computer Vision'],
   },
   {
