@@ -26,7 +26,7 @@ const projects = [
     category: 'AI & ML',
     date: 'Feb 2026',
     tags: ['Python', 'PyTorch', 'OpenCV', 'NumPy', 'EfficientNet', 'MTCNN'],
-    description: 'Built an ensemble of 4 models (EfficientNet, MesoNet, XceptionNet, AASIST) to detect deepfake and AI-generated video. Fine-tuned EfficientNet-B1 on AIGVDBench and FaceForensics++. Led a 5-person team as Project Manager and Senior Developer. Co-authored a research manuscript on the multimodal architecture, published on arXiv (2607.06872).',
+    description: 'Built an ensemble of 4 models (EfficientNet, MesoNet, XceptionNet, AASIST) to detect deepfake and AI-generated video. Fine-tuned EfficientNet-B1 on AIGVDBench and FaceForensics++. Led a 5-person team as Project Manager and Senior Developer. Co-authored a research manuscript on the multimodal architecture, accepted to the Journal of Computing, Data, and Exploration (CODEX) and also available on arXiv (2607.06872).',
     link: 'https://github.com/utmgdsc/AI-Video-Detection',
   },
   {
