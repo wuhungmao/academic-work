@@ -190,7 +190,7 @@ function ContactResult() {
         </div>
         <div className="tr-contact-row">
           <span className="tr-contact-key">resume</span>
-          <a href="/academic-work/resume.pdf" target="_blank" rel="noreferrer" className="tr-contact-val">
+          <a href="https://wuhungmao.github.io/academic-work/resume.pdf" target="_blank" rel="noreferrer" className="tr-contact-val">
             resume.pdf ↓
           </a>
         </div>
