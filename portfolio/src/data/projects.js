@@ -27,9 +27,9 @@ const projects = [
     date: 'Apr 2026',
     tags: ['Python', 'PyTorch', 'OpenCV', 'NumPy', 'EfficientNet', 'MTCNN', 'Modal', 'Vercel'],
     description: 'Multimodal ensemble that routes faces, video frames, and audio to four models (EfficientNet-B1, MesoNet, XceptionNet, AASIST) to detect deepfake and AI-generated video. Fine-tuned EfficientNet-B1 on AIGVDBench and FaceForensics++ and integrated it with MTCNN face cropping and Albumentations preprocessing. Built the parallel inference pipeline fusing model scores into a REAL/FAKE verdict, and analyzed the ~70% cross-domain accuracy on FakeAVCeleb (vs 90%+ in-domain), attributing the gap to domain shift. Recruited three teammates and served as senior developer on the 5-member team; deployed the app with a Vercel frontend and serverless GPU inference on Modal. Published in CODEX (vol. 2, 2026).',
-    link: 'https://github.com/utmgdsc/AI-Video-Detection',
+    link: 'https://github.com/gdgutm/AI-Video-Detection',
     demo: 'https://deepfake-detector-gamma.vercel.app/',
-    pdf: 'https://arxiv.org/abs/2607.06872',
+    pdf: 'https://doi.org/10.33137/codex.v2i1.47792',
   },
   {
     id: 'fall-detection',
@@ -47,7 +47,7 @@ const projects = [
     date: 'Jul 2026',
     tags: ['Python', 'OpenRouter API', 'LLM Evaluation'],
     description: 'Replicated a 2024 finding on sycophancy bias in LLMs — whether newer models resist "suggested-answer" bias when a user states a belief before asking a factual question. Built an evaluation pipeline on the OpenRouter API benchmarking Claude, GPT, and Gemini models on 60 multiple-choice questions from MMLU, TruthfulQA, LogiQA, and HellaSwag, and computed a per-model "biasing rate" to compare robustness across model generations.',
-    link: null,
+    link: 'https://github.com/wuhungmao/TAISI-Intensive/tree/main/sycophancy_bct_replication',
   },
   {
     id: 'frozen-lake',

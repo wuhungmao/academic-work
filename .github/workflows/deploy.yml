@@ -32,8 +32,11 @@ jobs:
       - name: Build
         run: cd portfolio && npm run build
 
-      - name: Copy resume PDF
-        run: cp Marvin_Wu_resume.pdf portfolio/dist/resume.pdf
+      - name: Compile resume PDF
+        run: |
+          sudo apt-get install -y texlive-latex-extra texlive-fonts-recommended > /dev/null 2>&1
+          pdflatex -interaction=nonstopmode -halt-on-error main.tex
+          cp main.pdf portfolio/dist/resume.pdf
 
       - name: Copy hobby images into build
         run: |

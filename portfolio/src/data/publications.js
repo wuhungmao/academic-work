@@ -7,7 +7,7 @@ const publications = [
     date: 'Sep 2026',
     status: 'published',
     description: 'Presents a multimodal deepfake-detection ensemble — AASIST for audio; EfficientNet-B1, XceptionNet, and MesoNet for video frames — trained on AIGVDBench, FaceForensics++, and ASVspoof 2019 and evaluated on FakeAVCeleb, comparing five fusion strategies.',
-    pdf: 'https://arxiv.org/abs/2607.06872',
+    pdf: 'https://doi.org/10.33137/codex.v2i1.47792',
     tags: ['Deep Learning', 'Deepfake Detection', 'Ensemble Methods', 'Computer Vision', 'Peer-reviewed'],
   },
   {
