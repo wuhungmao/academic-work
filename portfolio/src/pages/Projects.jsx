@@ -42,6 +42,11 @@ export default function Projects() {
                 {p.tags.map(t => <span key={t} className="project-tag">{t}</span>)}
               </div>
               <div className="project-links">
+                {p.demo && (
+                  <a href={p.demo} target="_blank" rel="noreferrer" className="project-link">
+                    live demo →
+                  </a>
+                )}
                 {p.link && (
                   <a href={p.link} target="_blank" rel="noreferrer" className="project-link">
                     view code →

@@ -8,14 +8,15 @@ import './ToolResult.css'
 const skills = {
   Languages: ['Python', 'C', 'C++', 'Java', 'SQL', 'JavaScript', 'HTML/CSS', 'PHP'],
   Frameworks: ['React', 'Node.js', 'jQuery', 'Django', 'Express.js', 'Vue3'],
-  Tools: ['Linux', 'Git', 'Docker', 'AWS', 'Jenkins', 'Jira', 'Bazel', 'Gerrit'],
+  'ML & CV': ['PyTorch', 'OpenCV', 'NumPy', 'Pandas', 'Hugging Face', 'Albumentations'],
+  Tools: ['Linux', 'Git', 'Docker', 'AWS', 'Jenkins', 'Jira', 'Bazel', 'Gerrit', 'Modal', 'Vercel'],
   Databases: ['PostgreSQL', 'SQLite'],
   'HPC & Profiling': ['CUDA', 'OpenMP', 'MPI', 'Nsight Systems', 'LTTng', 'Valgrind'],
 }
 
 function ProjectsResult() {
   const featured = projects.filter(p =>
-    ['gphy2', 'gemini', 'ai-video-detection', 'jetbrains-lca', 'file-system'].includes(p.id)
+    ['gastric-cancer', 'fall-detection', 'ai-video-detection', 'gphy2', 'gemini', 'jetbrains-lca'].includes(p.id)
   )
   return (
     <div className="tool-result">
@@ -66,6 +67,30 @@ function ExperienceResult() {
   return (
     <div className="tool-result">
       <div className="tool-result-header">Work Experience</div>
+      <div className="tr-exp-card">
+        <div className="tr-exp-header">
+          <div>
+            <div className="tr-exp-role">Research — Gastric Cancer Detection from Endoscopy Videos</div>
+            <div className="tr-exp-company">Dept. of Computer Science, University of Toronto</div>
+          </div>
+          <span className="tr-exp-date">Oct 2026 – Present</span>
+        </div>
+        <ul className="tr-exp-bullets">
+          <li>Building an annotated upper-GI endoscopy video dataset and a real-time segmentation model for early-stage gastric cancer detection with clinicians</li>
+        </ul>
+      </div>
+      <div className="tr-exp-card">
+        <div className="tr-exp-header">
+          <div>
+            <div className="tr-exp-role">Teaching Assistant — CSC105 (AI Literacy)</div>
+            <div className="tr-exp-company">University of Toronto Mississauga</div>
+          </div>
+          <span className="tr-exp-date">Sep 2026 – Dec 2026</span>
+        </div>
+        <ul className="tr-exp-bullets">
+          <li>Office hours and Piazza support for ~215 students; teach weekly 4-hour labs for a 40-student section</li>
+        </ul>
+      </div>
       <div className="tr-exp-card">
         <div className="tr-exp-header">
           <div>

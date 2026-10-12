@@ -122,6 +122,10 @@
   padding: 14px;
 }
 
+.tr-exp-card + .tr-exp-card {
+  margin-top: 10px;
+}
+
 .tr-exp-header {
   display: flex;
   justify-content: space-between;
