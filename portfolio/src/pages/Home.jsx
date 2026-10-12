@@ -6,9 +6,10 @@ import './Home.css'
 const skills = {
   'Languages': ['Python', 'C', 'C++', 'Java', 'SQL', 'JavaScript', 'HTML/CSS', 'PHP'],
   'Frameworks': ['React', 'Node.js', 'jQuery', 'Django', 'Express.js', 'Vue3'],
-  'Tools': ['Linux', 'Git', 'Docker', 'AWS', 'Jenkins', 'Jira', 'Bazel', 'Gerrit'],
+  'ML & CV': ['PyTorch', 'OpenCV', 'NumPy', 'Pandas', 'Hugging Face', 'Albumentations'],
+  'Tools': ['Linux', 'Git', 'Docker', 'AWS', 'Jenkins', 'Jira', 'Bazel', 'Gerrit', 'Modal', 'Vercel'],
   'Databases': ['PostgreSQL', 'SQLite'],
-  'Profiling & HPC': ['CUDA', 'OpenMP', 'MPI', 'Nsight Systems', 'LTTng', 'Valgrind'],
+  'Profiling & HPC': ['CUDA', 'OpenMP', 'MPI', 'Nsight Systems', 'Nsight Compute', 'LTTng', 'Valgrind', 'HPC clusters'],
 }
 
 function TypeWriter({ text, speed = 40, onDone }) {
@@ -49,7 +50,7 @@ export default function Home() {
         <div className="mode-select-container">
           <div className="mode-select-greeting">
             <span className="mode-select-name">Hi, I&apos;m Marvin Wu</span>
-            <span className="mode-select-sub">CS Specialist @ UofT &nbsp;·&nbsp; Ex-Ericsson vDU Intern</span>
+            <span className="mode-select-sub">CS Specialist @ UofT &nbsp;·&nbsp; Ex-Ericsson vDU Intern &nbsp;·&nbsp; Computer Vision Research</span>
           </div>
           <p className="mode-select-prompt">How would you like to explore?</p>
           <div className="mode-select-cards">
@@ -89,7 +90,7 @@ export default function Home() {
             {step >= 1 && (
               <div className="tw-output">
                 <TypeWriter
-                  text="CS Specialist @ UofT Mississauga | Former Physical Layer (vDU) Developer Intern @ Ericsson | C++, CUDA & Machine Learning"
+                  text="Research interest: reliable, efficient computer-vision systems on real-world hardware and data."
                   speed={18}
                   onDone={() => setStep(2)}
                 />
@@ -101,7 +102,13 @@ export default function Home() {
               <div className="tw-output bio-text">
                 <p>
                   Honours BSc Computer Science Specialist at the University of Toronto Mississauga
-                  (GPA 3.45/4.0, graduating August 2026 with PEY CO-OP).
+                  (GPA 3.44/4.0 cumulative, 3.54 over the last two years; graduating December 2026 with PEY CO-OP).
+                </p>
+                <p style={{ marginTop: 8 }}>
+                  Right now I&apos;m doing <strong>computer vision research</strong> on gastric cancer detection from
+                  endoscopy videos with clinicians at UofT, working on a capstone that tests whether specialized
+                  fall-detection models hold up across camera viewpoints better than generic vision-language models, and
+                  TAing CSC105 (AI Literacy).
                 </p>
                 <p style={{ marginTop: 8 }}>
                   Most recently a <strong>Physical Layer (vDU) Developer Intern at Ericsson</strong> (May 2024 – Sep 2025),
@@ -110,10 +117,11 @@ export default function Home() {
                   (Vue3), multi-threaded CUDA unit tests, and an SQLite + LTTng channel quality analysis pipeline.
                 </p>
                 <p style={{ marginTop: 8 }}>
-                  I work across the full stack — from CUDA kernels and OS-level systems programming to React frontends
-                  and REST APIs. Currently focused on AI/ML: led a 5-person team building an ensemble deep learning
-                  system for AI-generated video detection (EfficientNet, MesoNet, XceptionNet, AASIST), and contributed
-                  to the JetBrains LCA benchmark for evaluating coding agents like Claude Code and Codex.
+                  I work across the stack — from CUDA kernels and OS-level systems programming to React frontends.
+                  On the AI/ML side: co-authored a peer-reviewed paper in CODEX on an ensemble deep learning system for
+                  AI-generated video detection (EfficientNet-B1, MesoNet, XceptionNet, AASIST), replicated LLM
+                  sycophancy-bias research at the TAISI Intensive, and contributed to the JetBrains LCA benchmark for
+                  evaluating coding agents like Claude Code and Codex.
                 </p>
               </div>
             )}
@@ -123,12 +131,33 @@ export default function Home() {
               <div className="experience-block">
                 <div className="exp-item">
                   <div className="exp-header">
+                    <span className="exp-role">Research — Gastric Cancer Detection from Endoscopy Videos</span>
+                    <span className="exp-date">Oct 2026 – Present</span>
+                  </div>
+                  <div className="exp-company">Dept. of Computer Science, University of Toronto · Supervisor: Dr. Ameya Pore</div>
+                  <ul className="exp-bullets">
+                    <li>Working with clinicians to build an annotated upper-GI endoscopy video dataset and a real-time segmentation model for early-stage gastric cancer detection, aimed at deployment on the hospital&apos;s server</li>
+                  </ul>
+                </div>
+                <div className="exp-item">
+                  <div className="exp-header">
+                    <span className="exp-role">Teaching Assistant — CSC105 (AI Literacy)</span>
+                    <span className="exp-date">Sep 2026 – Dec 2026</span>
+                  </div>
+                  <div className="exp-company">University of Toronto Mississauga · Supervisor: Prof. Josh Jung</div>
+                  <ul className="exp-bullets">
+                    <li>Weekly office hours and Piazza support for ~215 students</li>
+                    <li>Prepare and teach 4-hour weekly labs for a 40-student section; grade labs and invigilate exams</li>
+                  </ul>
+                </div>
+                <div className="exp-item">
+                  <div className="exp-header">
                     <span className="exp-role">Physical Layer (vDU) Developer Intern</span>
                     <span className="exp-date">May 2024 – Sep 2025</span>
                   </div>
                   <div className="exp-company">Ericsson · Ottawa, Ontario</div>
                   <ul className="exp-bullets">
-                    <li>Offloaded LDPC encoding onto latest Nvidia GPU (Gphy2.0) using CUDA; profiled with Nsight Systems & Compute</li>
+                    <li>Moved LDPC encoding from an Intel accelerator to NVIDIA GPUs (Gphy2.0) with senior engineers; profiled with Nsight Systems & Compute across A10, A100, and Grace Hopper servers</li>
                     <li>Built digital twin (Gemini) for Radio, RF Channel & UE simulation using Vue3 and the Ericsson Design System</li>
                     <li>Wrote multi-threaded CUDA unit tests for a real-time system under ~35 μs timing constraint</li>
                     <li>Developed SQLite + LTTng histogram pipeline for channel quality analysis</li>
@@ -187,7 +216,7 @@ export default function Home() {
               <span className="quick-icon">📄</span>
               <div>
                 <div className="quick-name">Publications</div>
-                <div className="quick-desc">2 co-authored research papers</div>
+                <div className="quick-desc">1 peer-reviewed paper + 1 manuscript</div>
               </div>
               <span className="quick-arrow">→</span>
             </Link>

@@ -322,3 +322,7 @@
 .quick-card:hover .quick-arrow {
   color: var(--green);
 }
+
+.exp-item + .exp-item {
+  margin-top: 16px;
+}
