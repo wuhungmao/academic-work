@@ -4,7 +4,7 @@ import TerminalWindow, { Prompt } from '../components/TerminalWindow'
 import PhotoAlbum from '../components/PhotoAlbum'
 import './HobbyPage.css'
 
-const BASE = '/academic-work/images'
+const BASE = 'https://wuhungmao.github.io/academic-work/images'
 
 export default function HobbyPage() {
   const { id } = useParams()

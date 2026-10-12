@@ -3,5 +3,6 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/academic-work/',
+  // GitHub Pages serves the site under /academic-work/; Vercel serves it from the root.
+  base: process.env.VERCEL ? '/' : '/academic-work/',
 })

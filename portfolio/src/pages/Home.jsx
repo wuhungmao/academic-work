@@ -237,7 +237,7 @@ export default function Home() {
               <span className="quick-arrow">→</span>
             </Link>
             <a
-              href="/academic-work/resume.pdf"
+              href="https://wuhungmao.github.io/academic-work/resume.pdf"
               target="_blank"
               rel="noreferrer"
               className="quick-card resume-btn"
