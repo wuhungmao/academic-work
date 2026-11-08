@@ -6,17 +6,17 @@ import hobbies from '../../data/hobbies.js'
 import './ToolResult.css'
 
 const skills = {
-  Languages: ['Python', 'C', 'C++', 'Java', 'SQL', 'JavaScript', 'HTML/CSS', 'PHP'],
+  Languages: ['Python', 'C', 'C++', 'CUDA', 'Java', 'SQL', 'JavaScript', 'HTML/CSS', 'PHP'],
   Frameworks: ['React', 'Node.js', 'jQuery', 'Django', 'Express.js', 'Vue3'],
-  'ML & CV': ['PyTorch', 'OpenCV', 'NumPy', 'Pandas', 'Hugging Face', 'Albumentations'],
-  Tools: ['Linux', 'Git', 'Docker', 'AWS', 'Jenkins', 'Jira', 'Bazel', 'Gerrit', 'Modal', 'Vercel'],
+  'ML & CV': ['PyTorch', 'OpenCV', 'NumPy', 'Pandas', 'Hugging Face', 'PEFT / LoRA', 'MTCNN', 'Albumentations', 'Gradio'],
+  Tools: ['Linux', 'Git', 'Docker', 'AWS', 'Jenkins', 'Jira', 'Bazel', 'Gerrit', 'CVAT', 'Modal', 'Vercel'],
   Databases: ['PostgreSQL', 'SQLite'],
-  'HPC & Profiling': ['CUDA', 'OpenMP', 'MPI', 'Nsight Systems', 'LTTng', 'Valgrind'],
+  'HPC & Profiling': ['CUDA', 'OpenMP', 'MPI', 'Nsight Systems', 'Nsight Compute', 'LTTng', 'DCGM', 'Valgrind', 'ROCm', 'HPC cluster (Fir)'],
 }
 
 function ProjectsResult() {
   const featured = projects.filter(p =>
-    ['gastric-cancer', 'fall-detection', 'ai-video-detection', 'gphy2', 'gemini', 'jetbrains-lca'].includes(p.id)
+    ['gastric-cancer', 'fall-detection', 'polyp-detection', 'ai-video-detection', 'gphy2', 'jetbrains-lca'].includes(p.id)
   )
   return (
     <div className="tool-result">
@@ -70,20 +70,33 @@ function ExperienceResult() {
       <div className="tr-exp-card">
         <div className="tr-exp-header">
           <div>
-            <div className="tr-exp-role">Research — Gastric Cancer Detection from Endoscopy Videos</div>
-            <div className="tr-exp-company">Dept. of Computer Science, University of Toronto</div>
+            <div className="tr-exp-role">Research — Early Gastric Neoplasia Grading from Endoscopy Videos</div>
+            <div className="tr-exp-company">University of Toronto · Dr. Ameya Pore</div>
           </div>
           <span className="tr-exp-date">Oct 2026 – Present</span>
         </div>
         <ul className="tr-exp-bullets">
-          <li>Building an annotated upper-GI endoscopy video dataset and a real-time segmentation model for early-stage gastric cancer detection with clinicians</li>
+          <li>Building an annotated upper-GI endoscopy video dataset with clinicians for grading early gastric neoplasia</li>
+          <li>Integrated MedSAM2 into CVAT with AMD ROCm GPU acceleration and a multi-user tracking service (3,790-frame video in ~70 s)</li>
+        </ul>
+      </div>
+      <div className="tr-exp-card">
+        <div className="tr-exp-header">
+          <div>
+            <div className="tr-exp-role">Research — Diffusion Models</div>
+            <div className="tr-exp-company">University of Toronto · Prof. Samir Hamdi</div>
+          </div>
+          <span className="tr-exp-date">Sep 2026 – Present</span>
+        </div>
+        <ul className="tr-exp-bullets">
+          <li>Research plan and scope are being defined with the professor</li>
         </ul>
       </div>
       <div className="tr-exp-card">
         <div className="tr-exp-header">
           <div>
             <div className="tr-exp-role">Teaching Assistant — CSC105 (AI Literacy)</div>
-            <div className="tr-exp-company">University of Toronto Mississauga</div>
+            <div className="tr-exp-company">University of Toronto</div>
           </div>
           <span className="tr-exp-date">Sep 2026 – Dec 2026</span>
         </div>
