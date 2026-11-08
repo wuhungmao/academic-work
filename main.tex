@@ -15,21 +15,21 @@
 \begin{document}
 
 \begin{center}
-    Marvin Wu(Wu Hung Mao)
+    Marvin Wu (Wu Hung Mao)
 
 hongmao.wu@mail.utoronto.ca $\mid$
-\href{https://www.linkedin.com/in/hungmao-wu/}{Linkedin} $\mid$
-\href{https://github.com/wuhungmao}{Github} $\mid$
+\href{https://www.linkedin.com/in/hungmao-wu/}{LinkedIn} $\mid$
+\href{https://github.com/wuhungmao}{GitHub} $\mid$
 (+1)437-970-3837 $\mid$
 \href{https://wuhungmao.github.io/academic-work/}{Personal website}
 
-\textit{Research interest: reliable, efficient computer-vision systems on real-world hardware and data.}
+\textit{Research interest: efficient, interpretable video understanding for medical imaging, with weak supervision and selective attention.}
 \end{center}
 \vspace{-4px}
 
 \section*{Education}
 \vspace{-8px}
-Honours Bachelor of Science (HBSc), Computer Science specialist. \hfill Sep. 2021 - Dec. 2026\\
+Honours Bachelor of Science (HBSc), Computer Science specialist, Mathematics minor. \hfill Sep 2021 - Dec 2026\\
 University of Toronto Mississauga (expected graduation with PEY CO-OP - December 2026)\\
 GPA (as of Oct 2026): 3.44/4.0 cumulative $\mid$ 3.54/4.0 last two years of study (excl. co-op)
 \vspace{-12px}
@@ -41,32 +41,15 @@ GPA (as of Oct 2026): 3.44/4.0 cumulative $\mid$ 3.54/4.0 last two years of stud
   \begin{itemize}
     \item Presents a multimodal deepfake-detection ensemble (AASIST for audio; EfficientNet-B1, XceptionNet, and MesoNet for video frames) trained on AIGVDBench, FaceForensics++, and ASVspoof 2019 and evaluated on FakeAVCeleb, comparing five fusion strategies.
   \end{itemize}
-  \vspace{3px}
-
-  \item[] \textbf{Course research manuscript} \hfill Apr 2026 \\
-  Riku, T., Ahmed, K., \textbf{Wu, H.-M.}, Usman, R. \href{https://drive.google.com/file/d/1YPqEK_rhctJtD1Wj-wzSBSfd9r5xmhBI/view?usp=sharing}{``Can Agents Debug Better Than a Software Engineer?''} CSC398, University of Toronto Mississauga.
-  \begin{itemize}
-    \item Evaluates the bug-localization and automated-fix capabilities of LLM-based coding agents against the JetBrains LCA benchmark.
-  \end{itemize}
-\end{itemize}
-
-\section*{Research Experience}
-\begin{itemize}
-  \item[] \textbf{Gastric Cancer Detection from Endoscopy Videos} \hfill Oct 2026 - Present \\
-  \textit{Department of Computer Science, University of Toronto} \hfill \textit{Supervisor: Dr. Ameya Pore, Postdoctoral Fellow}
-  \vspace{-5px}
-  \begin{itemize}
-    \item Joined a project with clinicians building an annotated upper-GI endoscopy video dataset and a real-time segmentation model for early-stage gastric cancer detection, with the goal of deploying it on the hospital's server.
-  \end{itemize}
 \end{itemize}
 
 \section*{Work Experience}
 \begin{itemize}
   \item[] \textbf{Teaching Assistant --- CSC105H5F (Artificial Intelligence Literacy)} \hfill Sep 2026 - Dec 2026 \\
-  \textit{University of Toronto Mississauga} \hfill \textit{Supervisor: Prof. Josh Jung}
+  \textit{University of Toronto} \hfill \textit{Supervisor: Prof. Josh Jung}
   \vspace{-5px}
   \begin{itemize}
-    \item Hold weekly office hours and provide asynchronous student support via Piazza for an introductory AI literacy course of approximately 215 students.
+    \item Hold weekly office hours and provide Piazza support for an introductory AI literacy course of approximately 215 students.
     \item Prepare and teach 4-hour weekly lab sessions for a 40-student section, grade lab submissions, and invigilate examinations to support course assessment and academic integrity.
   \end{itemize}
   \vspace{3px}
@@ -79,19 +62,52 @@ GPA (as of Oct 2026): 3.44/4.0 cumulative $\mid$ 3.54/4.0 last two years of stud
     \begin{itemize}
       \item Worked alongside senior engineers to move LDPC encoding from an Intel accelerator to NVIDIA GPUs, integrating the GPU branch into the existing codebase.
       \item Profiled latency of the GPU branch with Nsight Systems and Nsight Compute, comparing reports collected across servers with different GPUs (NVIDIA A10, A100, and Grace Hopper) and adjusting kernels to improve SM occupancy.
-      \item Collected latency with the Intel accelerator branch calculated with the CPU cycle.
-      \item Reported results to the team in daily sync-ups and worked with teammates to identify concurrency bugs.
-      \item \textbf{Environment:} Bazel\texttt{(rules\_cuda)}, Gerrit, Nsight Systems, Nsight Compute
     \end{itemize}
     \vspace{3px}
     \item[] \textbf{Project: Gemini} (May 2024 - Feb 2025)
     \begin{itemize}
       \item Digital twin for Radio, RF Channel, and UEs.
-      \item Created a constellation diagram using the Ericsson Design System library and Vue3 framework.
       \item Wrote multi-threaded unit tests in CUDA to test a real-time system under a strict timing constraint ($\sim$ 35 \textmu s).
       \item Wrote an SQLite script that drew histograms based on data collected from LTTng traces for channel quality analysis.
-      \item \textbf{Environment:} Docker, Wireshark, Gerrit, Gitlab, Jenkins, Jfrog, Sqlite3, AWS(EC2)
     \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\section*{Research Experience}
+\begin{itemize}
+  \item[] \textbf{Early Gastric Neoplasia Grading from Endoscopy Videos} \hfill Oct 2026 - Present \\
+  \textit{University of Toronto} \hfill \textit{Supervisor: Dr. Ameya Pore, Postdoctoral Fellow}
+  \vspace{-5px}
+  \begin{itemize}
+    \item Joined a project with clinicians building an annotated upper-GI endoscopy video dataset for grading early gastric neoplasia; real-time deployment on the hospital's server is planned as a demonstration.
+    \item Integrated MedSAM2 into the CVAT annotation platform as a GPU-backed interactor and mask tracker, adding mask propagation across endoscopy videos.
+    \item Enabled AMD ROCm GPU acceleration for CVAT's containerized AI models, which only support NVIDIA by default, and ported the MedSAM2 and TransT models from CPU to GPU.
+    \item Built a multi-user tracking service with a job queue, live progress, cancellation, and CVAT-based authentication, processing a 3,790-frame video in about 70 s.
+    \item \textbf{Environment:} Docker, ROCm, PyTorch, CVAT, Nuclio; built with AI-assisted development (Claude)
+  \end{itemize}
+  \vspace{3px}
+
+  \item[] \begin{minipage}[t]{\linewidth}
+  \textbf{Diffusion Model Research} \hfill Sep 2026 - Present \\
+  \textit{University of Toronto} \hfill \textit{Supervisor: Prof. Samir Hamdi}
+  \vspace{-5px}
+  \setlength{\leftmargini}{2.2em}
+  \begin{itemize}
+    \item Joined a research project on diffusion models; the research plan and scope are being defined with the professor.
+  \end{itemize}
+  \end{minipage}
+  \vspace{3px}
+
+  \item[] \textbf{AI-Video Detection Ensemble} $\mid$ \textit{Python, PyTorch, OpenCV, NumPy} \hfill \href{https://github.com/gdgutm/AI-Video-Detection}{Link} $\mid$ Apr 2026 \\
+  \textit{University of Toronto} \hfill \textit{Supervisor: Prof. Josh Jung}
+  \vspace{-5px}
+  \begin{itemize}
+    \item Designed a multimodal ensemble that routes faces, video frames, and audio to four different models (EfficientNet, MesoNet, XceptionNet, AASIST) to detect general \& deepfake AI-generated video.
+    \item Fine-tuned a pre-trained EfficientNet-B1 model on datasets such as AIGVDBench and FaceForensics++, which use diffusion and face transfer methods to generate deepfake videos.
+    \item Integrated EfficientNet-B1 inference into the ensemble, with MTCNN face cropping and Albumentations preprocessing.
+    \item Built the ensemble's parallel inference pipeline, fusing model scores by mean averaging or stacking (five fusion strategies are compared in the paper) into the final REAL/FAKE prediction; communicated backend results with the frontend through HTTP requests.
+    \item Analyzed the ensemble's ${\sim}70\%$ accuracy on the unseen FakeAVCeleb dataset, against 90\%+ in-domain accuracy for individual models such as XceptionNet, and attributed the gap mainly to domain shift.
+    \item Recruited three fellow undergraduates and served as a senior developer on the 5-member team.
   \end{itemize}
 \end{itemize}
 
@@ -99,54 +115,42 @@ GPA (as of Oct 2026): 3.44/4.0 cumulative $\mid$ 3.54/4.0 last two years of stud
 \section*{Computer Vision \& Machine Learning Systems Projects}
 \begin{itemize}
 
-\item[] \textbf{Fall Detection Capstone Project (CSC490)} $\mid$ \textit{Hugging Face, Vision-Language Models, Fir HPC} \hfill Sep 2026 - Dec 2026
+\item[] \textbf{Multi-Camera Fall Detection (CSC490 Capstone)} $\mid$ \textit{VideoMAE, Gemma 3} \hfill \href{https://youtu.be/GD_KssecW6U}{Demo} $\mid$ \href{https://github.com/soloadio/CSC490-Fall-Detection-Capstone-Project}{Code} $\mid$ Sep 2026 - Dec 2026
   \begin{itemize}
-    \item Investigate whether specialized fall-detection models are more robust to camera-viewpoint changes than generic vision-language models, in a 4-person team using OmniFall, a multi-view dataset of 14,000+ real and synthetic fall videos (33+ hours, 16 labels).
-    \item Set up GPU compute on the Fir HPC cluster (Digital Research Alliance of Canada, formerly Compute Canada) and downloaded the OmniFall dataset, which aggregates 10 relabelled source datasets.
-    \item Analyze the dataset to scope the evaluation to the 5 sources that film the same fall from at least two camera angles; benchmark generic vision-language models (e.g., Kimi K3) for the generic-vs-specialized comparison.
-    \item Evaluate under a controlled protocol (identical test set, resolution, preprocessing, and labels; no training on the test set), reporting accuracy, precision, recall, F1, specificity, and confusion matrices separately for each camera view.
+    \item Built a real-time fall detection system in a 4-person team, where several phone cameras stream to one ``room'' and vote on each alarm; deployed on Hugging Face Spaces with push alerts to phones.
+    \item Fine-tuned a VideoMAE video transformer on three public fall datasets (EDF, MCFD, UP-Fall) and quantized it to int8 for CPU inference; on held-out recordings replayed as a live stream, it caught 93\% of falls a median 1.2 s after onset.
+    \item Required two cameras to agree before raising an alarm, cutting false alarms from 24 to 2 on paired held-out recordings while still catching 94\% of falls on those recordings.
+    \item Fine-tuned Gemma 3 12B with LoRA on ${\sim}$3,000 clips (H100 GPUs on the Fir cluster) as a second-stage verifier that explains its verdicts and votes alongside a teammate's Qwen2-VL 7B verifier; trained on label-conditioned base-model descriptions, it reached 93.8--96.7\% balanced accuracy and removed 5 of 7 false alarms while keeping 132 of 136 falls.
+    \item \textbf{Environment:} PyTorch, Hugging Face Transformers, PEFT, Gradio, Modal; built with AI-assisted development (Claude)
   \end{itemize}
   \vspace{3px}
 
-\item[] \textbf{AI-Video Detection Ensemble} $\mid$ \textit{Python, PyTorch, OpenCV, NumPy} \hfill \href{https://github.com/gdgutm/AI-Video-Detection}{Link} $\mid$ Apr 2026
+\item[] \textbf{Weakly Supervised Polyp Detection in Colonoscopy Video (CSC413)} $\mid$ \textit{DINOv2, Transformers} \hfill Oct 2026 - Dec 2026
   \begin{itemize}
-    \item Designed a multimodal ensemble that routes faces, video frames, and audio to four different models (EfficientNet, MesoNet, XceptionNet, AASIST) to detect general \& deepfake AI-generated video.
-    \item Fine-tuned a pre-trained EfficientNet-B1 model on datasets such as AIGVDBench and FaceForensics++, which use diffusion and face transfer methods to generate deepfake videos.
-    \item Integrated the EfficientNet-B1 inference logic into the ensemble, utilizing MTCNN for face detection and cropping, and Albumentations for high-performance preprocessing.
-    \item Designed an ensemble architectural diagram including preprocessing, inference, and postprocessing stages.
-    \item Built the ensemble's parallel inference pipeline, fusing model scores by mean averaging or stacking (five fusion strategies are compared in the paper) into the final REAL/FAKE prediction; communicated backend results with the frontend through HTTP requests.
-    \item Analyzed the ensemble's ${\sim}70\%$ accuracy on the unseen FakeAVCeleb dataset, against 90\%+ in-domain accuracy for individual models such as XceptionNet, and attributed the gap mainly to domain shift.
-    \item Recruited three fellow undergraduates and agreed on the project scope with teammates and the supervisor; served as a senior developer on the 5-member team, participating in two weekly meetings --- a Sunday sync facilitated by the mentor to review weekly progress, identify blockers, and plan upcoming tasks, and a Monday meeting to present results to the professor.
+    \item Proposed a weakly supervised video transformer that keeps only the top-$k$ most lesion-like patches per frame before temporal attention and trains from video-level labels only, cutting attention cost by ${\sim}1{,}000\times$ in theory ($k=8$ of 256 patches).
+    \item Reviewed related work on token selection, multiple instance learning, and video polyp detection, finding few prior methods that combine learned patch selection with weak supervision in endoscopy video.
+    \item Model lead on a 3-person team: co-wrote the NeurIPS-format proposal with baselines and an evaluation plan (video AUROC, frame-level localization, patch hit rate, compute) on public colonoscopy datasets, as a testbed for the gastric neoplasia grading research.
   \end{itemize}
   \vspace{3px}
 
-  \item[] \textbf{Sycophancy Bias Replication (TAISI Intensive)} $\mid$ \textit{Python, OpenRouter API} \hfill \href{https://github.com/wuhungmao/TAISI-Intensive/tree/main/sycophancy_bct_replication}{Link} $\mid$ Jul 2026
-  \begin{itemize}
-    \item Replicated a 2024 research finding on sycophancy bias in LLMs, testing whether newer models resist "suggested-answer" bias where a user states a belief about the answer before asking a factual question.
-    \item Built an evaluation pipeline against the OpenRouter API to benchmark Claude, GPT, and Gemini models on 60 sampled multiple-choice questions from MMLU, TruthfulQA, LogiQA, and HellaSwag, under biased and unbiased conditions.
-    \item Computed a ``biasing rate'' metric per model to quantify how often each model switched its answer to match an incorrectly suggested option, comparing robustness across model generations.
-  \end{itemize}
-  \vspace{3px}
-
-  \item[] \textbf{JetBrains LCA Benchmark Contribution} $\mid$ \textit{Python, Docker, OpenAI API, Hugging Face API} \hfill \href{https://github.com/CSC392-CSC492-Building-AI-ML-systems/JetBrains-LCA-Winter2026}{Link} $\mid$ Apr 2026
+\item[] \textbf{JetBrains LCA Benchmark Contribution} $\mid$ \textit{Python, Docker, OpenAI API, Hugging Face API} \hfill \href{https://github.com/CSC392-CSC492-Building-AI-ML-systems/JetBrains-LCA-Winter2026}{Link} $\mid$ Apr 2026
   \begin{itemize}
     \item Contributed to the open-source JetBrains LCA benchmark, expanding the bug localization benchmark's capability from identifying the buggy file to automatically applying a fix.
-    \item Used the OpenAI API to generate code patches and the Hugging Face API to programmatically download and manage large-scale repositories.
     \item Expanded evaluation metrics of the original benchmark by adding token usage count, iteration count, etc. for popular coding agents like Claude Code and Codex.
     \item Co-authored a technical white paper detailing the multi-agent architecture and evaluation metrics used to benchmark Claude Code and Codex; delivered a group presentation to \textbf{40+ attendees}.
   \end{itemize}
 
 \end{itemize}
 
-\section*{Third/Fourth Year Courses}
+\section*{Technical Skills}
 \begin{itemize}
-    \item \textbf{AI \& Robotics:} Introduction to Machine Learning, Introduction to Artificial Intelligence, Fundamentals of Robotics
+    \item \textbf{Languages:} Python, C, C++, CUDA, Java, SQL, JavaScript
     \vspace{-8px}
-    \item \textbf{Systems \& Networks:} Operating Systems, Parallel Programming, Principles of Computer Networks
+    \item \textbf{ML \& Computer Vision:} PyTorch, OpenCV, NumPy, Hugging Face, MTCNN, Albumentations
     \vspace{-8px}
-    \item \textbf{Algorithms:} Algorithm Design and Analysis
+    \item \textbf{Systems \& Profiling:} Linux, Docker, Bazel, Nsight Systems, Nsight Compute, LTTng, DCGM, Valgrind
     \vspace{-8px}
-    \item \textbf{In Progress:} Neural Networks and Deep Learning (CSC413), Robotic Perception (CSC478), Capstone Design Course (CSC490)
+    \item \textbf{Tools \& Infrastructure:} Git/GitHub/GitLab, Gerrit, Jenkins, AWS, HPC cluster (Fir), SQLite, PostgreSQL
 \end{itemize}
 
 \end{document}
