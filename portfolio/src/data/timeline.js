@@ -123,19 +123,37 @@ const timeline = [
     date: 'Sep 2026',
     type: 'education',
     title: 'Fall 2026 — Final Term',
-    description: 'Taking CSC413 (Neural Networks & Deep Learning), CSC478 (Robotic Perception), and CSC490 (Capstone: ML for Vision — fall detection across camera viewpoints).',
+    description: 'Taking CSC413 (Neural Networks & Deep Learning), CSC478 (Robotic Perception), and CSC490 (Capstone: ML for Vision).',
+  },
+  {
+    date: 'Sep 2026',
+    type: 'work',
+    title: 'Research — Diffusion Models',
+    description: 'Joined a diffusion-model research project with Prof. Samir Hamdi; the research plan and scope are being defined.',
+  },
+  {
+    date: 'Sep 2026',
+    type: 'project',
+    title: 'Multi-Camera Fall Detection (CSC490 Capstone)',
+    description: 'Real-time system where several phone cameras vote on each alarm; VideoMAE detector caught 93% of falls a median 1.2 s after onset, and two-camera agreement cut false alarms from 24 to 2. Gemma 3 12B LoRA verifier explains each verdict.',
   },
   {
     date: 'Oct 2026',
     type: 'work',
-    title: 'Research — Gastric Cancer Detection',
-    description: 'Joined a UofT CS project with clinicians (supervisor: Dr. Ameya Pore) building an endoscopy video dataset and a real-time segmentation model for early gastric cancer detection.',
+    title: 'Research — Early Gastric Neoplasia Grading',
+    description: 'Joined a UofT project with clinicians (supervisor: Dr. Ameya Pore) building an endoscopy video dataset; integrated MedSAM2 into CVAT with AMD ROCm GPU acceleration and a multi-user tracking service.',
+  },
+  {
+    date: 'Oct 2026',
+    type: 'project',
+    title: 'Weakly Supervised Polyp Detection (CSC413)',
+    description: 'Model lead proposing a video transformer that keeps only the top-k most lesion-like patches per frame and trains from video-level labels; NeurIPS-format proposal as a testbed for the gastric research.',
   },
   {
     date: 'Dec 2026',
     type: 'education',
     title: 'Expected Graduation',
-    description: 'Honours BSc Computer Science Specialist with PEY CO-OP, University of Toronto Mississauga. Cumulative GPA 3.44 (3.54 over the last two years).',
+    description: 'Honours BSc Computer Science Specialist, Mathematics minor, with PEY CO-OP, University of Toronto Mississauga. Cumulative GPA 3.44 (3.54 over the last two years).',
   },
 ]
 

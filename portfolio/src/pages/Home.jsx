@@ -4,12 +4,12 @@ import TerminalWindow, { Prompt } from '../components/TerminalWindow'
 import './Home.css'
 
 const skills = {
-  'Languages': ['Python', 'C', 'C++', 'Java', 'SQL', 'JavaScript', 'HTML/CSS', 'PHP'],
+  'Languages': ['Python', 'C', 'C++', 'CUDA', 'Java', 'SQL', 'JavaScript', 'HTML/CSS', 'PHP'],
   'Frameworks': ['React', 'Node.js', 'jQuery', 'Django', 'Express.js', 'Vue3'],
-  'ML & CV': ['PyTorch', 'OpenCV', 'NumPy', 'Pandas', 'Hugging Face', 'Albumentations'],
-  'Tools': ['Linux', 'Git', 'Docker', 'AWS', 'Jenkins', 'Jira', 'Bazel', 'Gerrit', 'Modal', 'Vercel'],
+  'ML & CV': ['PyTorch', 'OpenCV', 'NumPy', 'Pandas', 'Hugging Face', 'PEFT / LoRA', 'MTCNN', 'Albumentations', 'Gradio'],
+  'Tools': ['Linux', 'Git', 'Docker', 'AWS', 'Jenkins', 'Jira', 'Bazel', 'Gerrit', 'CVAT', 'Modal', 'Vercel'],
   'Databases': ['PostgreSQL', 'SQLite'],
-  'Profiling & HPC': ['CUDA', 'OpenMP', 'MPI', 'Nsight Systems', 'Nsight Compute', 'LTTng', 'Valgrind', 'HPC clusters'],
+  'Profiling & HPC': ['CUDA', 'OpenMP', 'MPI', 'Nsight Systems', 'Nsight Compute', 'LTTng', 'DCGM', 'Valgrind', 'ROCm', 'HPC cluster (Fir)'],
 }
 
 function TypeWriter({ text, speed = 40, onDone }) {
@@ -50,7 +50,7 @@ export default function Home() {
         <div className="mode-select-container">
           <div className="mode-select-greeting">
             <span className="mode-select-name">Hi, I&apos;m Marvin Wu</span>
-            <span className="mode-select-sub">CS Specialist @ UofT &nbsp;·&nbsp; Ex-Ericsson vDU Intern &nbsp;·&nbsp; Computer Vision Research</span>
+            <span className="mode-select-sub">CS Specialist @ UofT &nbsp;·&nbsp; Ex-Ericsson vDU Intern &nbsp;·&nbsp; Medical Video Understanding Research</span>
           </div>
           <p className="mode-select-prompt">How would you like to explore?</p>
           <div className="mode-select-cards">
@@ -90,7 +90,7 @@ export default function Home() {
             {step >= 1 && (
               <div className="tw-output">
                 <TypeWriter
-                  text="Research interest: reliable, efficient computer-vision systems on real-world hardware and data."
+                  text="Research interest: efficient, interpretable video understanding for medical imaging, with weak supervision and selective attention."
                   speed={18}
                   onDone={() => setStep(2)}
                 />
@@ -101,14 +101,14 @@ export default function Home() {
             {step >= 2 && (
               <div className="tw-output bio-text">
                 <p>
-                  Honours BSc Computer Science Specialist at the University of Toronto Mississauga
+                  Honours BSc Computer Science Specialist with a Mathematics minor at the University of Toronto Mississauga
                   (GPA 3.44/4.0 cumulative, 3.54 over the last two years; graduating December 2026 with PEY CO-OP).
                 </p>
                 <p style={{ marginTop: 8 }}>
-                  Right now I&apos;m doing <strong>computer vision research</strong> on gastric cancer detection from
-                  endoscopy videos with clinicians at UofT, working on a capstone that tests whether specialized
-                  fall-detection models hold up across camera viewpoints better than generic vision-language models, and
-                  TAing CSC105 (AI Literacy).
+                  Right now I&apos;m doing <strong>medical video research</strong> with clinicians at UofT on grading
+                  early gastric neoplasia from endoscopy videos, plus a new project on diffusion models. I&apos;m also
+                  building a real-time multi-camera fall detection system for my capstone, proposing a weakly supervised
+                  video transformer for polyp detection in CSC413, and TAing CSC105 (AI Literacy).
                 </p>
                 <p style={{ marginTop: 8 }}>
                   Most recently a <strong>Physical Layer (vDU) Developer Intern at Ericsson</strong> (May 2024 – Sep 2025),
@@ -131,12 +131,25 @@ export default function Home() {
               <div className="experience-block">
                 <div className="exp-item">
                   <div className="exp-header">
-                    <span className="exp-role">Research — Gastric Cancer Detection from Endoscopy Videos</span>
+                    <span className="exp-role">Research — Early Gastric Neoplasia Grading from Endoscopy Videos</span>
                     <span className="exp-date">Oct 2026 – Present</span>
                   </div>
-                  <div className="exp-company">Dept. of Computer Science, University of Toronto · Supervisor: Dr. Ameya Pore</div>
+                  <div className="exp-company">University of Toronto · Supervisor: Dr. Ameya Pore, Postdoctoral Fellow</div>
                   <ul className="exp-bullets">
-                    <li>Working with clinicians to build an annotated upper-GI endoscopy video dataset and a real-time segmentation model for early-stage gastric cancer detection, aimed at deployment on the hospital&apos;s server</li>
+                    <li>Working with clinicians to build an annotated upper-GI endoscopy video dataset for grading early gastric neoplasia; a real-time demo on the hospital&apos;s server is planned</li>
+                    <li>Integrated MedSAM2 into the CVAT annotation platform as a GPU-backed interactor and mask tracker, with mask propagation across videos</li>
+                    <li>Enabled AMD ROCm GPU acceleration for CVAT&apos;s containerized models (NVIDIA-only by default); ported MedSAM2 and TransT from CPU to GPU</li>
+                    <li>Built a multi-user tracking service with a job queue, live progress, cancellation, and CVAT authentication, processing a 3,790-frame video in about 70 s</li>
+                  </ul>
+                </div>
+                <div className="exp-item">
+                  <div className="exp-header">
+                    <span className="exp-role">Research — Diffusion Models</span>
+                    <span className="exp-date">Sep 2026 – Present</span>
+                  </div>
+                  <div className="exp-company">University of Toronto · Supervisor: Prof. Samir Hamdi</div>
+                  <ul className="exp-bullets">
+                    <li>Joined a research project on diffusion models; the research plan and scope are being defined with the professor</li>
                   </ul>
                 </div>
                 <div className="exp-item">
@@ -144,7 +157,7 @@ export default function Home() {
                     <span className="exp-role">Teaching Assistant — CSC105 (AI Literacy)</span>
                     <span className="exp-date">Sep 2026 – Dec 2026</span>
                   </div>
-                  <div className="exp-company">University of Toronto Mississauga · Supervisor: Prof. Josh Jung</div>
+                  <div className="exp-company">University of Toronto · Supervisor: Prof. Josh Jung</div>
                   <ul className="exp-bullets">
                     <li>Weekly office hours and Piazza support for ~215 students</li>
                     <li>Prepare and teach 4-hour weekly labs for a 40-student section; grade labs and invigilate exams</li>
