@@ -32,6 +32,14 @@ export default function Chat() {
   const isLoading = status === 'submitted' || status === 'streaming'
   const hasMessages = messages.length > 0
 
+  // The model scales to zero when idle, so the first reply can take a minute.
+  const [slowStart, setSlowStart] = useState(false)
+  useEffect(() => {
+    if (status !== 'submitted') return
+    const timer = setTimeout(() => setSlowStart(true), 8000)
+    return () => clearTimeout(timer)
+  }, [status])
+
   useEffect(() => {
     if (hasMessages) {
       bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -42,6 +50,7 @@ export default function Chat() {
     const q = text.trim()
     if (!q || isLoading) return
     setDraft('')
+    setSlowStart(false)
     sendMessage({ text: q })
   }
 
@@ -131,7 +140,7 @@ export default function Chat() {
                 <div className="chat-msg-body">
                   <p className="chat-msg-text chat-error">
                     Sorry, I couldn&apos;t answer that just now.{' '}
-                    <button className="chat-retry-btn" onClick={() => regenerate()}>Try again</button>
+                    <button className="chat-retry-btn" onClick={() => { setSlowStart(false); regenerate() }}>Try again</button>
                   </p>
                 </div>
               </div>
@@ -144,6 +153,9 @@ export default function Chat() {
                   <span className="chat-typing">
                     <span /><span /><span />
                   </span>
+                  {slowStart && status === 'submitted' && (
+                    <p className="chat-waking">Waking up the model — the first reply can take a minute.</p>
+                  )}
                 </div>
               </div>
             )}

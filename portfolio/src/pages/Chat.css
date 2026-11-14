@@ -193,6 +193,12 @@
   color: #f0b4ae;
 }
 
+.chat-waking {
+  margin: 8px 0 0;
+  font-size: 0.78rem;
+  color: #8b949e;
+}
+
 .chat-retry-btn {
   background: transparent;
   border: 1px solid #30363d;

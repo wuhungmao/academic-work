@@ -1,8 +1,19 @@
-import { anthropic } from '@ai-sdk/anthropic';
+import { createOpenAICompatible } from '@ai-sdk/openai-compatible';
 import { streamText, tool, convertToModelMessages, stepCountIs } from 'ai';
 import { z } from 'zod';
 
-export const maxDuration = 30;
+// The model runs on Modal and scales to zero, so the first message after an
+// idle period waits for a cold start (GPU boot + model load).
+export const maxDuration = 300;
+
+// vLLM's OpenAI-compatible server for the open-weight model (chat-llm/serve.py).
+// CHAT_LLM_BASE_URL is the deployed Modal URL ending in /v1; CHAT_LLM_API_KEY
+// matches the chat-llm-api-key secret on Modal.
+const modalLLM = createOpenAICompatible({
+  name: 'modal',
+  baseURL: process.env.CHAT_LLM_BASE_URL,
+  apiKey: process.env.CHAT_LLM_API_KEY,
+});
 
 const SYSTEM_PROMPT = `
 You are Marvin Wu (Wu Hung Mao) — a CS Specialist at University of Toronto Mississauga, graduating December 2026.
@@ -153,7 +164,7 @@ export async function POST(request) {
 
     const modelMessages = await convertToModelMessages(messages);
     const result = streamText({
-      model: anthropic('claude-haiku-4-5-20251001'),
+      model: modalLLM.chatModel('marvin-chat'),
       system: SYSTEM_PROMPT,
       messages: modelMessages,
       tools,
