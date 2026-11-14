@@ -1,5 +1,5 @@
 import { anthropic } from '@ai-sdk/anthropic';
-import { streamText, tool, convertToModelMessages } from 'ai';
+import { streamText, tool, convertToModelMessages, stepCountIs } from 'ai';
 import { z } from 'zod';
 
 export const maxDuration = 30;
@@ -136,6 +136,17 @@ const tools = {
   }),
 };
 
+// The GitHub Pages copy of the site calls this endpoint cross-origin.
+const CORS_HEADERS = {
+  'Access-Control-Allow-Origin': 'https://wuhungmao.github.io',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+};
+
+export function OPTIONS() {
+  return new Response(null, { status: 204, headers: CORS_HEADERS });
+}
+
 export async function POST(request) {
   try {
     const { messages } = await request.json();
@@ -146,12 +157,20 @@ export async function POST(request) {
       system: SYSTEM_PROMPT,
       messages: modelMessages,
       tools,
-      maxSteps: 2,
+      stopWhen: stepCountIs(2),
     });
 
-    return result.toUIMessageStreamResponse();
+    return result.toUIMessageStreamResponse({
+      headers: CORS_HEADERS,
+      // Errors during streaming (e.g. a rejected API key) otherwise reach the
+      // client only as a generic message, so log them for the Vercel logs.
+      onError: (err) => {
+        console.error('Chat stream error:', err);
+        return 'Something went wrong while generating a response.';
+      },
+    });
   } catch (err) {
     console.error('Chat error:', err);
-    return new Response(err?.message || 'Internal Server Error', { status: 500 });
+    return new Response(err?.message || 'Internal Server Error', { status: 500, headers: CORS_HEADERS });
   }
 }

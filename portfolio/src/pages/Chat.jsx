@@ -1,8 +1,16 @@
 import { useChat } from '@ai-sdk/react'
+import { DefaultChatTransport } from 'ai'
 import { useRef, useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import ToolResult from '../components/chat/ToolResult'
 import './Chat.css'
+
+// The chat backend (api/chat.js) runs only on Vercel. GitHub Pages serves static
+// files, so the copy there sends messages to the Vercel deployment instead.
+const CHAT_API = import.meta.env.BASE_URL === '/'
+  ? '/api/chat'
+  : 'https://portfolio-mauve-eta-79.vercel.app/api/chat'
+const transport = new DefaultChatTransport({ api: CHAT_API })
 
 const QUICK_ACTIONS = [
   { label: 'Projects',     query: "What projects have you built?" },
@@ -17,8 +25,8 @@ export default function Chat() {
   const bottomRef = useRef(null)
   const [draft, setDraft] = useState('')
 
-  const { messages, sendMessage, status } = useChat({
-    api: '/api/chat',
+  const { messages, sendMessage, regenerate, status, error } = useChat({
+    transport,
   })
 
   const isLoading = status === 'submitted' || status === 'streaming'
@@ -116,6 +124,18 @@ export default function Chat() {
                 </div>
               </div>
             ))}
+
+            {error && !isLoading && (
+              <div className="chat-msg chat-msg--assistant">
+                <span className="chat-msg-label">marvin</span>
+                <div className="chat-msg-body">
+                  <p className="chat-msg-text chat-error">
+                    Sorry, I couldn&apos;t answer that just now.{' '}
+                    <button className="chat-retry-btn" onClick={() => regenerate()}>Try again</button>
+                  </p>
+                </div>
+              </div>
+            )}
 
             {isLoading && (
               <div className="chat-msg chat-msg--assistant">
