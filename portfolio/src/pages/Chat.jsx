@@ -32,6 +32,12 @@ export default function Chat() {
   const isLoading = status === 'submitted' || status === 'streaming'
   const hasMessages = messages.length > 0
 
+  // Start booting the model as soon as the page opens, so it is warming up
+  // while the visitor types. Fire-and-forget: the chat works without it.
+  useEffect(() => {
+    fetch(CHAT_API).catch(() => {})
+  }, [])
+
   // The model scales to zero when idle, so the first reply can take a minute.
   const [slowStart, setSlowStart] = useState(false)
   useEffect(() => {
@@ -154,7 +160,7 @@ export default function Chat() {
                     <span /><span /><span />
                   </span>
                   {slowStart && status === 'submitted' && (
-                    <p className="chat-waking">Waking up the model — the first reply can take a minute.</p>
+                    <p className="chat-waking">Waking up the model — the first reply can take a moment.</p>
                   )}
                 </div>
               </div>

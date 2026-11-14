@@ -3,16 +3,21 @@ import { streamText, tool, convertToModelMessages, stepCountIs } from 'ai';
 import { z } from 'zod';
 
 // The model runs on Modal and scales to zero, so the first message after an
-// idle period waits for a cold start (GPU boot + model load).
+// idle period waits for a cold start (snapshot restore + model wake-up).
 export const maxDuration = 300;
 
 // vLLM's OpenAI-compatible server for the open-weight model (chat-llm/serve.py).
-// CHAT_LLM_BASE_URL is the deployed Modal URL ending in /v1; CHAT_LLM_API_KEY
-// matches the chat-llm-api-key secret on Modal.
+// CHAT_LLM_BASE_URL is the deployed Modal URL ending in /v1. The endpoint
+// requires a Modal proxy auth token, sent as the Modal-Key / Modal-Secret headers.
+const MODAL_AUTH_HEADERS = {
+  'Modal-Key': process.env.CHAT_LLM_MODAL_KEY ?? '',
+  'Modal-Secret': process.env.CHAT_LLM_MODAL_SECRET ?? '',
+};
+
 const modalLLM = createOpenAICompatible({
   name: 'modal',
   baseURL: process.env.CHAT_LLM_BASE_URL,
-  apiKey: process.env.CHAT_LLM_API_KEY,
+  headers: MODAL_AUTH_HEADERS,
 });
 
 const SYSTEM_PROMPT = `
@@ -150,12 +155,28 @@ const tools = {
 // The GitHub Pages copy of the site calls this endpoint cross-origin.
 const CORS_HEADERS = {
   'Access-Control-Allow-Origin': 'https://wuhungmao.github.io',
-  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type',
 };
 
 export function OPTIONS() {
   return new Response(null, { status: 204, headers: CORS_HEADERS });
+}
+
+// Warm-up: the chat page calls this when it opens, so the model starts booting
+// while the visitor reads and types. vLLM's /health answers once it is ready.
+export async function GET() {
+  const healthURL = (process.env.CHAT_LLM_BASE_URL ?? '').replace(/\/v1\/?$/, '') + '/health';
+  try {
+    const res = await fetch(healthURL, {
+      headers: MODAL_AUTH_HEADERS,
+      signal: AbortSignal.timeout(150_000),
+    });
+    return new Response(null, { status: res.ok ? 204 : 503, headers: CORS_HEADERS });
+  } catch (err) {
+    console.error('Chat warm-up error:', err);
+    return new Response(null, { status: 503, headers: CORS_HEADERS });
+  }
 }
 
 export async function POST(request) {
