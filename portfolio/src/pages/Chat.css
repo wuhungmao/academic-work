@@ -189,6 +189,32 @@
   padding: 10px 14px;
 }
 
+.chat-error {
+  color: #f0b4ae;
+}
+
+.chat-waking {
+  margin: 8px 0 0;
+  font-size: 0.78rem;
+  color: #8b949e;
+}
+
+.chat-retry-btn {
+  background: transparent;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  color: #e6edf3;
+  font: inherit;
+  font-size: 0.8rem;
+  padding: 2px 10px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.chat-retry-btn:hover {
+  border-color: #8b949e;
+}
+
 /* ── Typing indicator ────────────────────────────────────── */
 .chat-typing {
   display: flex;

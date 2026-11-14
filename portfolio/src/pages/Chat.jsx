@@ -1,8 +1,16 @@
 import { useChat } from '@ai-sdk/react'
+import { DefaultChatTransport } from 'ai'
 import { useRef, useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import ToolResult from '../components/chat/ToolResult'
 import './Chat.css'
+
+// The chat backend (api/chat.js) runs only on Vercel. GitHub Pages serves static
+// files, so the copy there sends messages to the Vercel deployment instead.
+const CHAT_API = import.meta.env.BASE_URL === '/'
+  ? '/api/chat'
+  : 'https://portfolio-mauve-eta-79.vercel.app/api/chat'
+const transport = new DefaultChatTransport({ api: CHAT_API })
 
 const QUICK_ACTIONS = [
   { label: 'Projects',     query: "What projects have you built?" },
@@ -17,12 +25,20 @@ export default function Chat() {
   const bottomRef = useRef(null)
   const [draft, setDraft] = useState('')
 
-  const { messages, sendMessage, status } = useChat({
-    api: '/api/chat',
+  const { messages, sendMessage, regenerate, status, error } = useChat({
+    transport,
   })
 
   const isLoading = status === 'submitted' || status === 'streaming'
   const hasMessages = messages.length > 0
+
+  // The model scales to zero when idle, so the first reply can take a minute.
+  const [slowStart, setSlowStart] = useState(false)
+  useEffect(() => {
+    if (status !== 'submitted') return
+    const timer = setTimeout(() => setSlowStart(true), 8000)
+    return () => clearTimeout(timer)
+  }, [status])
 
   useEffect(() => {
     if (hasMessages) {
@@ -34,6 +50,7 @@ export default function Chat() {
     const q = text.trim()
     if (!q || isLoading) return
     setDraft('')
+    setSlowStart(false)
     sendMessage({ text: q })
   }
 
@@ -117,6 +134,18 @@ export default function Chat() {
               </div>
             ))}
 
+            {error && !isLoading && (
+              <div className="chat-msg chat-msg--assistant">
+                <span className="chat-msg-label">marvin</span>
+                <div className="chat-msg-body">
+                  <p className="chat-msg-text chat-error">
+                    Sorry, I couldn&apos;t answer that just now.{' '}
+                    <button className="chat-retry-btn" onClick={() => { setSlowStart(false); regenerate() }}>Try again</button>
+                  </p>
+                </div>
+              </div>
+            )}
+
             {isLoading && (
               <div className="chat-msg chat-msg--assistant">
                 <span className="chat-msg-label">marvin</span>
@@ -124,6 +153,9 @@ export default function Chat() {
                   <span className="chat-typing">
                     <span /><span /><span />
                   </span>
+                  {slowStart && status === 'submitted' && (
+                    <p className="chat-waking">Waking up the model — the first reply can take a minute.</p>
+                  )}
                 </div>
               </div>
             )}

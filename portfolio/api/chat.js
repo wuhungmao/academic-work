@@ -1,8 +1,19 @@
-import { anthropic } from '@ai-sdk/anthropic';
-import { streamText, tool, convertToModelMessages } from 'ai';
+import { createOpenAICompatible } from '@ai-sdk/openai-compatible';
+import { streamText, tool, convertToModelMessages, stepCountIs } from 'ai';
 import { z } from 'zod';
 
-export const maxDuration = 30;
+// The model runs on Modal and scales to zero, so the first message after an
+// idle period waits for a cold start (GPU boot + model load).
+export const maxDuration = 300;
+
+// vLLM's OpenAI-compatible server for the open-weight model (chat-llm/serve.py).
+// CHAT_LLM_BASE_URL is the deployed Modal URL ending in /v1; CHAT_LLM_API_KEY
+// matches the chat-llm-api-key secret on Modal.
+const modalLLM = createOpenAICompatible({
+  name: 'modal',
+  baseURL: process.env.CHAT_LLM_BASE_URL,
+  apiKey: process.env.CHAT_LLM_API_KEY,
+});
 
 const SYSTEM_PROMPT = `
 You are Marvin Wu (Wu Hung Mao) — a CS Specialist at University of Toronto Mississauga, graduating December 2026.
@@ -136,22 +147,41 @@ const tools = {
   }),
 };
 
+// The GitHub Pages copy of the site calls this endpoint cross-origin.
+const CORS_HEADERS = {
+  'Access-Control-Allow-Origin': 'https://wuhungmao.github.io',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+};
+
+export function OPTIONS() {
+  return new Response(null, { status: 204, headers: CORS_HEADERS });
+}
+
 export async function POST(request) {
   try {
     const { messages } = await request.json();
 
     const modelMessages = await convertToModelMessages(messages);
     const result = streamText({
-      model: anthropic('claude-haiku-4-5-20251001'),
+      model: modalLLM.chatModel('marvin-chat'),
       system: SYSTEM_PROMPT,
       messages: modelMessages,
       tools,
-      maxSteps: 2,
+      stopWhen: stepCountIs(2),
     });
 
-    return result.toUIMessageStreamResponse();
+    return result.toUIMessageStreamResponse({
+      headers: CORS_HEADERS,
+      // Errors during streaming (e.g. a rejected API key) otherwise reach the
+      // client only as a generic message, so log them for the Vercel logs.
+      onError: (err) => {
+        console.error('Chat stream error:', err);
+        return 'Something went wrong while generating a response.';
+      },
+    });
   } catch (err) {
     console.error('Chat error:', err);
-    return new Response(err?.message || 'Internal Server Error', { status: 500 });
+    return new Response(err?.message || 'Internal Server Error', { status: 500, headers: CORS_HEADERS });
   }
 }
